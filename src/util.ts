@@ -1,4 +1,4 @@
-import type {KnownUrl} from './types.js';
+import type {KnownUrl, ModuleReplacement} from './types.js';
 
 export function resolveDocUrl(url?: KnownUrl): string | null {
   if (!url) return null;
@@ -14,4 +14,11 @@ export function resolveDocUrl(url?: KnownUrl): string | null {
     default:
       return null;
   }
+}
+
+export function getReplacementDescription(
+  replacement: ModuleReplacement
+): string | undefined {
+  if (!('description' in replacement)) return undefined;
+  return replacement.description;
 }
