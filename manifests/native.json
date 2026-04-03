@@ -2402,6 +2402,11 @@
       "moduleName": "repeat-string",
       "replacements": ["String.prototype.repeat"]
     },
+    "safe-buffer": {
+      "type": "module",
+      "moduleName": "safe-buffer",
+      "replacements": ["safe-buffer"]
+    },
     "setprototypeof": {
       "type": "module",
       "moduleName": "setprototypeof",
