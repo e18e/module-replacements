@@ -544,6 +544,11 @@
       "moduleName": "isobject",
       "replacements": ["snippet::is-object"]
     },
+    "js-base64": {
+      "type": "module",
+      "moduleName": "js-base64",
+      "replacements": ["snippet::base64"]
+    },
     "jsonfile": {
       "type": "module",
       "moduleName": "jsonfile",
