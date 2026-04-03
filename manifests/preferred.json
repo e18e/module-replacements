@@ -2566,6 +2566,12 @@
       "replacements": ["sort-object", "sort-object-keys", "sortobject"],
       "url": {"type": "e18e", "id": "sort-object"}
     },
+    "source-map-explorer": {
+      "type": "module",
+      "moduleName": "source-map-explorer",
+      "replacements": ["webpack-bundle-analyzer", "rollup-plugin-visualizer", "sonda"],
+      "url": {"type": "e18e", "id": "source-map-explorer"}
+    },
     "split": {
       "type": "module",
       "moduleName": "split",
@@ -3320,11 +3326,23 @@
         "id": "api/readline.html#readlinecreateinterfaceoptions"
       }
     },
+    "rollup-plugin-visualizer": {
+      "id": "rollup-plugin-visualizer",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "source-map-explorer"},
+      "replacementModule": "rollup-plugin-visualizer"
+    },
     "smol-toml": {
       "id": "smol-toml",
       "type": "documented",
       "url": {"type": "e18e", "id": "toml"},
       "replacementModule": "smol-toml"
+    },
+    "sonda": {
+      "id": "sonda",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "source-map-explorer"},
+      "replacementModule": "sonda"
     },
     "sort-object": {
       "id": "sort-object",
@@ -3450,6 +3468,12 @@
       "type": "native",
       "nodeFeatureId": {"moduleName": "node:util", "exportName": "types"},
       "url": {"type": "node", "id": "api/util.html#utiltypes"}
+    },
+    "webpack-bundle-analyzer": {
+      "id": "webpack-bundle-analyzer",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "source-map-explorer"},
+      "replacementModule": "webpack-bundle-analyzer"
     },
     "webpack.output.clean": {
       "id": "webpack.output.clean",
