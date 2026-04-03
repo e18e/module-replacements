@@ -2569,7 +2569,11 @@
     "source-map-explorer": {
       "type": "module",
       "moduleName": "source-map-explorer",
-      "replacements": ["webpack-bundle-analyzer", "rollup-plugin-visualizer", "sonda"],
+      "replacements": [
+        "webpack-bundle-analyzer",
+        "rollup-plugin-visualizer",
+        "sonda"
+      ],
       "url": {"type": "e18e", "id": "source-map-explorer"}
     },
     "split": {
