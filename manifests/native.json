@@ -1972,15 +1972,15 @@
       "moduleName": "es-string-html-methods",
       "replacements": ["es-string-html-methods"]
     },
-    "es6-promise": {
-      "type": "module",
-      "moduleName": "es6-promise",
-      "replacements": ["Promise"]
-    },
     "es5-shim": {
       "type": "module",
       "moduleName": "es5-shim",
       "replacements": ["es5-shim"]
+    },
+    "es6-promise": {
+      "type": "module",
+      "moduleName": "es6-promise",
+      "replacements": ["Promise"]
     },
     "es6-shim": {
       "type": "module",
