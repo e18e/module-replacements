@@ -81,6 +81,7 @@ ESLint plugin.
 - [`ora`](./ora.md)
 - [`path-exists`](./path-exists.md)
 - [`portal-vue`](./portal-vue.md)
+- [`portfinder`](./portfinder.md)
 - [`pkg-dir`](./pkg-dir.md)
 - [`qs`](./qs.md)
 - [`react-helmet`](./react-helmet.md)

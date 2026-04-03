@@ -2448,6 +2448,12 @@
       "replacements": ["Teleport"],
       "url": {"type": "e18e", "id": "portal-vue"}
     },
+    "portfinder": {
+      "type": "module",
+      "moduleName": "portfinder",
+      "replacements": ["get-port"],
+      "url": {"type": "e18e", "id": "portfinder"}
+    },
     "preferred-pm": {
       "type": "module",
       "moduleName": "preferred-pm",
@@ -3067,6 +3073,12 @@
         "exportName": "rmdir"
       },
       "url": {"type": "node", "id": "api/fs.html#fspromisesrmdirpath-options"}
+    },
+    "get-port": {
+      "id": "get-port",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "portfinder"},
+      "replacementModule": "get-port"
     },
     "grammy": {
       "id": "grammy",
