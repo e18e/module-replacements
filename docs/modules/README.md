@@ -99,6 +99,7 @@ ESLint plugin.
 - [`strip-ansi`](./strip-ansi.md)
 - [`tempy`](./tempy.md)
 - [`through`](./through.md)
+- [`tokml`](./tokml.md)
 - [`toml`](./toml.md)
 - [`traverse`](./traverse.md)
 - [`uri-js`](./uri-js.md)
