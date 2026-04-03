@@ -87,9 +87,7 @@ export default defineConfig({
   build: {
     sourcemap: true
   },
-  plugins: [
-    Sonda() 
-  ]
+  plugins: [Sonda()]
 })
 ```
 
