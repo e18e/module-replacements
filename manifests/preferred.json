@@ -2614,6 +2614,12 @@
       "replacements": ["node:stream"],
       "url": {"type": "e18e", "id": "through"}
     },
+    "tokml": {
+      "type": "module",
+      "moduleName": "tokml",
+      "replacements": ["@placemarkio/tokml"],
+      "url": {"type": "e18e", "id": "tokml"}
+    },
     "toml": {
       "type": "module",
       "moduleName": "toml",
@@ -2704,6 +2710,12 @@
       "type": "documented",
       "url": {"type": "e18e", "id": "materialize-css"},
       "replacementModule": "@materializecss/materialize"
+    },
+    "@placemarkio/tokml": {
+      "id": "@placemarkio/tokml",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "tokml"},
+      "replacementModule": "@placemarkio/tokml"
     },
     "@vitest/eslint-plugin": {
       "id": "@vitest/eslint-plugin",
