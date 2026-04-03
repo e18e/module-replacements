@@ -61,6 +61,7 @@ ESLint plugin.
 - [`glob`](./glob.md)
 - [`globby`](./globby.md)
 - [`graphemer`](./graphemer.md)
+- [`graphviz`](./graphviz.md)
 - [`gzip-size`](./gzip-size.md)
 - [`inherits`](./inherits.md)
 - [`invariant`](./invariant.md)

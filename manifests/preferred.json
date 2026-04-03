@@ -366,6 +366,12 @@
       "replacements": ["Intl.Segmenter", "unicode-segmenter"],
       "url": {"type": "e18e", "id": "graphemer"}
     },
+    "graphviz": {
+      "type": "module",
+      "moduleName": "graphviz",
+      "replacements": ["ts-graphviz"],
+      "url": {"type": "e18e", "id": "graphviz"}
+    },
     "gzip-size": {
       "type": "module",
       "moduleName": "gzip-size",
@@ -3382,6 +3388,12 @@
       "type": "documented",
       "url": {"type": "e18e", "id": "express"},
       "replacementModule": "@tinyhttp/app"
+    },
+    "ts-graphviz": {
+      "id": "ts-graphviz",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "graphviz"},
+      "replacementModule": "ts-graphviz"
     },
     "unicode-segmenter": {
       "id": "unicode-segmenter",
