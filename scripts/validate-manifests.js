@@ -23,15 +23,13 @@ export async function validateManifests() {
     const manifestPath = path.join(manifestsDir, manifestName);
     const manifest = JSON.parse(
       await readFile(manifestPath, {encoding: 'utf8'})
-    );
-    
+    );    
     const isValid = validate(manifest);
     if (!isValid) {
       console.log(validate.errors);
       throw new Error(`Validation for ${manifestPath} failed!`);
     }
 
-    // Validate replacements integrity
     for (const [id, replacement] of Object.entries(manifest.replacements)) {
       if (replacement.id !== id) {
         throw new Error(
