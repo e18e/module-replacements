@@ -16,11 +16,13 @@ import { toKML } from '@placemarkio/tokml' // [!code ++]
 
 const geojson = {
   type: 'FeatureCollection',
-  features: [{
-    type: 'Feature',
-    geometry: { type: 'Point', coordinates: [1, 2] },
-    properties: { name: 'Marker' }
-  }]
+  features: [
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [1, 2] },
+      properties: { name: 'Marker' }
+    }
+  ]
 }
 
 const kml = tokml(geojson) // [!code --]
