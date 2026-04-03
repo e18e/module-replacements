@@ -24,12 +24,14 @@ export async function validateManifests() {
     const manifest = JSON.parse(
       await readFile(manifestPath, {encoding: 'utf8'})
     );
+    
     const isValid = validate(manifest);
     if (!isValid) {
       console.log(validate.errors);
       throw new Error(`Validation for ${manifestPath} failed!`);
     }
 
+    // Validate replacements integrity
     for (const [id, replacement] of Object.entries(manifest.replacements)) {
       if (replacement.id !== id) {
         throw new Error(
@@ -55,6 +57,8 @@ export async function validateManifests() {
       }
     }
 
+    const usedReplacementIds = new Set();
+
     for (const [key, mapping] of Object.entries(manifest.mappings)) {
       if (mapping.type === 'module' && mapping.moduleName !== key) {
         throw new Error(
@@ -68,6 +72,15 @@ export async function validateManifests() {
             `${manifestPath}: mapping "${key}" references unknown replacement "${replacementId}"`
           );
         }
+        usedReplacementIds.add(replacementId);
+      }
+    }
+
+    for (const id of Object.keys(manifest.replacements)) {
+      if (!usedReplacementIds.has(id)) {
+        throw new Error(
+          `${manifestPath}: replacement "${id}" is defined but not used by any mapping.`
+        );
       }
     }
   }
