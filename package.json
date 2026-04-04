@@ -28,14 +28,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/es-tooling/module-replacements.git"
+    "url": "git+https://github.com/e18e/module-replacements.git"
   },
   "author": "James Garbutt (https://github.com/43081j)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/es-tooling/module-replacements/issues"
+    "url": "https://github.com/e18e/module-replacements/issues"
   },
-  "homepage": "https://github.com/es-tooling/module-replacements#readme",
+  "homepage": "https://github.com/e18e/module-replacements#readme",
   "devDependencies": {
     "@mdn/browser-compat-data": "^7.3.2",
     "@types/node": "^24.10.2",

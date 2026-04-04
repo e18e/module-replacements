@@ -55,7 +55,7 @@ There are different types of replacements available:
 
 When using the `documented` type, you should generally follow these guidelines:
 
-- The mapping should have a `url` which points to an e18e documentation page (i.e. those in the [modules](https://github.com/es-tooling/module-replacements/tree/main/docs/modules) directory of the repo) which describes the replacement and how to migrate to it. Documentation here will be automatically synced weekly to the e18e website.
+- The mapping should have a `url` which points to an e18e documentation page (i.e. those in the [modules](https://github.com/e18e/module-replacements/tree/main/docs/modules) directory of the repo) which describes the replacement and how to migrate to it. Documentation here will be automatically synced weekly to the e18e website.
 - The replacement does not necessarily need a `url` itself
 - The replacement does not need a `description`
 
@@ -74,7 +74,7 @@ When using the `simple` type:
 
 When using the `removal` type:
 
-- There should usually be one replacement to one mapping, with the same ID (e.g. the `airbnb-js-shims` [replacement](https://github.com/es-tooling/module-replacements/blob/131e2d8bb4a4793f54b7193ab9b7433c3f2ae839/manifests/native.json#L1366-L1370) has the same ID as the [mapping](https://github.com/es-tooling/module-replacements/blob/131e2d8bb4a4793f54b7193ab9b7433c3f2ae839/manifests/native.json#L1632-L1636))
+- There should usually be one replacement to one mapping, with the same ID (e.g. the `airbnb-js-shims` [replacement](https://github.com/e18e/module-replacements/blob/131e2d8bb4a4793f54b7193ab9b7433c3f2ae839/manifests/native.json#L1366-L1370) has the same ID as the [mapping](https://github.com/e18e/module-replacements/blob/131e2d8bb4a4793f54b7193ab9b7433c3f2ae839/manifests/native.json#L1632-L1636))
 - The replacement description should briefly explain why the module is no longer needed
 
 ## Removing a replacement
