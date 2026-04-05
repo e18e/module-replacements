@@ -1422,12 +1422,12 @@
     "es5-shim": {
       "id": "es5-shim",
       "type": "removal",
-      "description": "Every modern environment has support for ES5 apis."
+      "description": "Every modern environment has support for ES5 APIs."
     },
     "es6-shim": {
       "id": "es6-shim",
       "type": "removal",
-      "description": "Every modern environment has support for ES6/ES2015 apis."
+      "description": "Every modern environment has support for ES6/ES2015 APIs."
     },
     "es7-shim": {
       "id": "es7-shim",
