@@ -2608,6 +2608,12 @@
       "replacements": ["fs.mkdtemp", "Deno.makeTempDir"],
       "url": {"type": "e18e", "id": "tempy"}
     },
+    "then-request": {
+      "type": "module",
+      "moduleName": "then-request",
+      "replacements": ["fetch", "ofetch", "ky"],
+      "url": {"type": "e18e", "id": "fetch"}
+    },
     "through": {
       "type": "module",
       "moduleName": "through",
