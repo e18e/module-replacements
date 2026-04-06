@@ -2570,9 +2570,9 @@
       "type": "module",
       "moduleName": "source-map-explorer",
       "replacements": [
-        "webpack-bundle-analyzer",
         "rollup-plugin-visualizer",
-        "sonda"
+        "sonda",
+        "webpack-bundle-analyzer"
       ],
       "url": {"type": "e18e", "id": "source-map-explorer"}
     },
