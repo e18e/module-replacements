@@ -2394,6 +2394,12 @@
       "replacements": ["fs.mkdir"],
       "url": {"type": "e18e", "id": "mkdirp"}
     },
+    "mockdate": {
+      "type": "module",
+      "moduleName": "mockdate",
+      "replacements": ["node:test", "vitest", "bun:test"],
+      "url": {"type": "e18e", "id": "mockdate"}
+    },
     "moment": {
       "type": "module",
       "moduleName": "moment",
@@ -2831,10 +2837,7 @@
         "featureId": "async-clipboard",
         "compatKey": "api.Clipboard"
       },
-      "url": {
-        "type": "mdn",
-        "id": "Web/API/Clipboard_API"
-      }
+      "url": {"type": "mdn", "id": "Web/API/Clipboard_API"}
     },
     "Date": {
       "id": "Date",
@@ -2930,6 +2933,12 @@
         "exportName": "builtinModules"
       },
       "url": {"type": "node", "id": "api/module.html#modulebuiltinmodules"}
+    },
+    "bun:test": {
+      "id": "bun:test",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "mockdate"},
+      "replacementModule": "bun:test"
     },
     "concurrently": {
       "id": "concurrently",
@@ -3288,6 +3297,12 @@
       "nodeFeatureId": {"moduleName": "node:stream"},
       "url": {"type": "node", "id": "api/stream.html"}
     },
+    "node:test": {
+       "id": "node:test",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:test"},
+      "url": {"type": "node", "id": "api/test.html"}
+    },
     "npm-run-all2": {
       "id": "npm-run-all2",
       "type": "documented",
@@ -3547,6 +3562,12 @@
       "type": "documented",
       "url": {"type": "e18e", "id": "source-map-explorer"},
       "replacementModule": "webpack-bundle-analyzer"
+    },
+    "vitest": {
+      "id": "vitest",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "mockdate"},
+      "replacementModule": "vitest"
     },
     "webpack.output.clean": {
       "id": "webpack.output.clean",
