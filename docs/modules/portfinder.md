@@ -6,7 +6,7 @@ description: Modern alternatives to the portfinder package for finding an availa
 
 ## `get-port`
 
-[`get-port`](https://github.com/lukeed/get-port) provides a more generic way to find files and directories upwards.
+[`get-port`](https://github.com/sindresorhus/get-port) is a lighter and more modern package for finding an available port.
 
 Example:
 
