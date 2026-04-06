@@ -1,5 +1,17 @@
 {
   "replacements": {
+    "%TypedArray%": {
+      "id": "%TypedArray%",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/TypedArray"
+      },
+      "webFeatureId": {
+        "featureId": "typed-arrays",
+        "compatKey": "javascript.builtins.TypedArray"
+      }
+    },
     "%TypedArray%.prototype.buffer": {
       "id": "%TypedArray%.prototype.buffer",
       "type": "native",
@@ -2541,6 +2553,11 @@
       "type": "module",
       "moduleName": "typed-array-length",
       "replacements": ["%TypedArray%.prototype.length"]
+    },
+    "typedarray": {
+      "type": "module",
+      "moduleName": "typedarray",
+      "replacements": ["%TypedArray%"]
     },
     "typedarray.prototype.slice": {
       "type": "module",
