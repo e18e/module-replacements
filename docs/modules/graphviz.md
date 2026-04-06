@@ -4,11 +4,9 @@ description: Modern alternatives to the graphviz package
 
 # Replacements for `graphviz`
 
-`graphviz` did not receive a new update for more than 6 years and requires GraphViz to be installed
-
 ## `ts-graphviz`
 
-[`ts-graphviz`](https://github.com/ts-graphviz/ts-graphviz) graphviz implementation in pure TypeScript.
+[`ts-graphviz`](https://github.com/ts-graphviz/ts-graphviz) is a well-maintained graphviz implementation in pure TypeScript.
 
 Example:
 
