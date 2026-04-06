@@ -414,6 +414,12 @@
       "replacements": ["yaml", "YAML"],
       "url": {"type": "e18e", "id": "js-yaml"}
     },
+    "jsonwebtoken": {
+      "type": "module",
+      "moduleName": "jsonwebtoken",
+      "replacements": ["jose"],
+      "url": {"type": "e18e", "id": "jsonwebtoken"}
+    },
     "jsx-ast-utils": {
       "type": "module",
       "moduleName": "jsx-ast-utils",
@@ -3121,6 +3127,12 @@
       "type": "native",
       "nodeFeatureId": {"moduleName": "node:module", "exportName": "isBuiltin"},
       "url": {"type": "node", "id": "api/module.html#moduleisbuiltinmodulename"}
+    },
+    "jose": {
+      "id": "jose",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "jsonwebtoken"},
+      "replacementModule": "jose"
     },
     "jquery": {
       "id": "jquery",
