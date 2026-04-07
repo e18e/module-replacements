@@ -23,7 +23,5 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - name: Check formatting
-        run: npm run lint:format
-      - name: Validate manifests
-        run: npm run lint:manifests
+      - name: Lint
+        run: npm run lint
