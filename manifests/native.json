@@ -2019,6 +2019,11 @@
       "moduleName": "filter-array",
       "replacements": ["Array.prototype.filter"]
     },
+    "find-index": {
+      "type": "module",
+      "moduleName": "find-index",
+      "replacements": ["Array.prototype.findIndex"]
+    },
     "for-each": {
       "type": "module",
       "moduleName": "for-each",
