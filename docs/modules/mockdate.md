@@ -28,7 +28,7 @@ test('freeze date', () => {
 
 ## `node:test`
 
-[`node:test`](https://nodejs.org/en/learn/test-runner/mocking#time) supports freezing time via `mock.timers` since node 20.4.0 and later.
+[`node:test`](https://nodejs.org/en/learn/test-runner/mocking#time) supports mocking time via `mock.timers` since node 20.4.0 and later.
 
 ```ts
 import MockDate from 'mockdate' // [!code --]
