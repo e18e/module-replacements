@@ -544,6 +544,11 @@
       "moduleName": "isobject",
       "replacements": ["snippet::is-object"]
     },
+    "isstream": {
+      "type": "module",
+      "moduleName": "isstream",
+      "replacements": ["snippet::is-stream"]
+    },
     "js-base64": {
       "type": "module",
       "moduleName": "js-base64",
