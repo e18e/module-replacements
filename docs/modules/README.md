@@ -95,6 +95,7 @@ ESLint plugin.
 - [`rimraf`](./rimraf.md)
 - [`shortid`](./shortid.md)
 - [`sort-object`](./sort-object.md)
+- [`source-map-explorer`](./source-map-explorer.md)
 - [`split`](./split.md)
 - [`stream-buffers`](./stream-buffers.md)
 - [`string-width`](./string-width.md)
