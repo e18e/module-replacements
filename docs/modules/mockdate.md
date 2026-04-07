@@ -8,7 +8,7 @@ description: Modern alternatives to the mockdate package for freezing time in te
 
 ## `vitest`
 
-[`vitest`](https://vitest.dev/guide/mocking.html#mock-the-current-date) provides `vi.useFakeTimers()` and `vi.setSystemTime()` for freezing the current date during tests.
+[`vitest`](https://vitest.dev/guide/mocking.html#mock-the-current-date) provides `vi.useFakeTimers()` and `vi.setSystemTime()` for mocking the current date during tests.
 
 ```ts
 import MockDate from 'mockdate' // [!code --]
