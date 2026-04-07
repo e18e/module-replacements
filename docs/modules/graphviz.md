@@ -6,7 +6,7 @@ description: Modern alternatives to the graphviz package
 
 ## `ts-graphviz`
 
-[`ts-graphviz`](https://github.com/ts-graphviz/ts-graphviz) is a well-maintained graphviz implementation in pure TypeScript.
+[`ts-graphviz`](https://github.com/ts-graphviz/ts-graphviz) is an actively maintained graphviz implementation in pure TypeScript.
 
 Example:
 
