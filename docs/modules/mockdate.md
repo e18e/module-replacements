@@ -47,7 +47,7 @@ test('freeze date', (t) => {
 
 ## `bun:test`
 
-[`bun:test`](https://bun.com/docs/guides/test/mock-clock) provides `mock.timers.enable()` for freezing the clock in tests.
+[`bun:test`](https://bun.com/docs/guides/test/mock-clock) provides `mock.timers.enable()` for mocking time in tests.
 
 ```ts
 import MockDate from 'mockdate' // [!code --]

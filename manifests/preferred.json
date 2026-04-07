@@ -2936,9 +2936,8 @@
     },
     "bun:test": {
       "id": "bun:test",
-      "type": "documented",
-      "url": {"type": "e18e", "id": "mockdate"},
-      "replacementModule": "bun:test"
+      "type": "native",
+      "url": "https://bun.com/docs/test"
     },
     "concurrently": {
       "id": "concurrently",
@@ -3298,7 +3297,7 @@
       "url": {"type": "node", "id": "api/stream.html"}
     },
     "node:test": {
-       "id": "node:test",
+      "id": "node:test",
       "type": "native",
       "nodeFeatureId": {"moduleName": "node:test"},
       "url": {"type": "node", "id": "api/test.html"}
@@ -3557,17 +3556,17 @@
       "nodeFeatureId": {"moduleName": "node:util", "exportName": "types"},
       "url": {"type": "node", "id": "api/util.html#utiltypes"}
     },
-    "webpack-bundle-analyzer": {
-      "id": "webpack-bundle-analyzer",
-      "type": "documented",
-      "url": {"type": "e18e", "id": "source-map-explorer"},
-      "replacementModule": "webpack-bundle-analyzer"
-    },
     "vitest": {
       "id": "vitest",
       "type": "documented",
       "url": {"type": "e18e", "id": "mockdate"},
       "replacementModule": "vitest"
+    },
+    "webpack-bundle-analyzer": {
+      "id": "webpack-bundle-analyzer",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "source-map-explorer"},
+      "replacementModule": "webpack-bundle-analyzer"
     },
     "webpack.output.clean": {
       "id": "webpack.output.clean",
