@@ -1,10 +1,10 @@
 ---
-description: Native alternatives to the pbkdf2 package
+description: Native alternatives to the pbkdf2 package for secure, iterative password-based key derivation
 ---
 
 # Replacements for `pbkdf2`
 
-## `crypto.subtle.deriveBits` (native, browsers)
+## `crypto.subtle.deriveBits` (native)
 
 From [`MDN documentation`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/deriveBits#pbkdf2):
 
