@@ -2436,6 +2436,12 @@
       "replacements": ["fs.access", "fs.existsSync", "Bun.file"],
       "url": {"type": "e18e", "id": "path-exists"}
     },
+    "pbkdf2": {
+      "type": "module",
+      "moduleName": "pbkdf2",
+      "replacements": ["node:crypto", "crypto"],
+      "url": {"type": "e18e", "id": "pbkdf2"}
+    },
     "pkg-dir": {
       "type": "module",
       "moduleName": "pkg-dir",
