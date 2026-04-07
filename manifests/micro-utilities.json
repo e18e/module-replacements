@@ -4,7 +4,7 @@
       "id": "snippet::array-coerce",
       "type": "simple",
       "description": "You can use a combination of a ternary operator and `Array.isArray` to make sure a value, `undefined`, `null` or an array is always returned as an array.",
-      "example": "(val == null ? [] : Array.isArray(val) ? val : [val])\n// Or if you need to convert iterable into array\nArray.from(iterable)"
+      "example": "(val == null ? [] : Array.isArray(val) ? val : [val])\n// Or if you need to convert an iterable into an array\nArray.from(iterable)"
     },
     "snippet::array-difference": {
       "id": "snippet::array-difference",
