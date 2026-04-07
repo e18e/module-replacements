@@ -47,6 +47,7 @@ ESLint plugin.
 - [`event-stream`](./event-stream.md)
 - [`execa`](./execa.md)
 - [`express`](./express.md)
+- [`extend`](./extend.md)
 - [`ezspawn`](./ez-spawn.md)
 - [`faker`](./faker.md)
 - [`fast-glob`](./fast-glob.md)

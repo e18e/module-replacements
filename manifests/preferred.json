@@ -258,6 +258,12 @@
       "replacements": ["h3", "tinyhttp", "hono", "elysia"],
       "url": {"type": "e18e", "id": "express"}
     },
+    "extend": {
+      "type": "module",
+      "moduleName": "extend",
+      "replacements": ["structuredClone", "defu"],
+      "url": {"type": "e18e", "id": "extend"}
+    },
     "ez-spawn": {
       "type": "module",
       "moduleName": "ez-spawn",
@@ -2958,6 +2964,12 @@
       "url": {"type": "e18e", "id": "moment"},
       "replacementModule": "day.js"
     },
+    "defu": {
+      "id": "defu",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "extend"},
+      "replacementModule": "defu"
+    },
     "dequal": {
       "id": "dequal",
       "type": "documented",
@@ -3416,6 +3428,15 @@
         "compatKey": "api.ReadableStream"
       },
       "url": {"type": "mdn", "id": "Web/API/Streams_API"}
+    },
+    "structuredClone": {
+      "id": "structuredClone",
+      "type": "native",
+      "webFeatureId": {
+        "featureId": "structured-clone",
+        "compatKey": "api.structuredClone"
+      },
+      "url": {"type": "mdn", "id": "Web/API/Window/structuredClone"}
     },
     "tiny-invariant": {
       "id": "tiny-invariant",
