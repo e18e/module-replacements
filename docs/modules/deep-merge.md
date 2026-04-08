@@ -1,8 +1,8 @@
 ---
-description: Modern alternatives to the @75lb/deep-merge package for deep merging objects
+description: Modern alternatives to packages for deep merging objects
 ---
 
-# Replacements for `@75lb/deep-merge`
+# Replacements to packages for deep merging objects
 
 ## `defu`
 
