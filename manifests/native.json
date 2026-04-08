@@ -2034,6 +2034,11 @@
       "moduleName": "for-in",
       "replacements": ["for...in"]
     },
+    "foreachasync": {
+      "type": "module",
+      "moduleName": "foreachasync",
+      "replacements": ["for...of"]
+    },
     "fs.realpath": {
       "type": "module",
       "moduleName": "fs.realpath",
