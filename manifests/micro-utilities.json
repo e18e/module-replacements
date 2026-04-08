@@ -509,6 +509,11 @@
       "moduleName": "is-primitive",
       "replacements": ["snippet::is-primitve"]
     },
+    "is-regex": {
+      "type": "module",
+      "moduleName": "is-regex",
+      "replacements": ["snippet::is-regexp"]
+    },
     "is-regexp": {
       "type": "module",
       "moduleName": "is-regexp",
