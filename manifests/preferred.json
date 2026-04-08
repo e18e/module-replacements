@@ -3299,7 +3299,7 @@
     "node:test": {
       "id": "node:test",
       "type": "native",
-      "nodeFeatureId": {"moduleName": "node:test"},
+      "nodeFeatureId": {"moduleName": "test"},
       "url": {"type": "node", "id": "api/test.html"}
     },
     "npm-run-all2": {

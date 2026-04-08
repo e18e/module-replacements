@@ -1,5 +1,5 @@
 ---
-description: Modern alternatives to the mockdate package for freezing time in tests
+description: Modern alternatives to the mockdate package for mocking time in tests
 ---
 
 # Replacements for `mockdate`
