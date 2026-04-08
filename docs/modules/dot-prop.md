@@ -20,23 +20,14 @@ setProperty(obj, 'foo.bar.baz', 'value') // [!code --]
 dset(obj, 'foo.bar.baz', 'value') // [!code ++]
 ```
 
-## `object-path`
+## `.reduce` (native)
 
-[`object-path`](https://github.com/mariocasciaro/object-path) provides get/set/has/delete operations plus array methods like push, insert, and empty.
+If you only need to get a nested value you can use a simple function:
 
-```ts
-import { deleteProperty, getProperty, hasProperty, setProperty } from 'dot-prop' // [!code --]
-import objectPath from 'object-path' // [!code ++]
+```js
+function getProperty(obj, key) {
+  return key.split('.').reduce((acc, k) => acc?.[k], obj)
+}
 
-const value = getProperty(obj, 'foo.bar.baz') // [!code --]
-const value = objectPath.get(obj, 'foo.bar.baz') // [!code ++]
-
-setProperty(obj, 'foo.bar.baz', 'value') // [!code --]
-objectPath.set(obj, 'foo.bar.baz', 'value') // [!code ++]
-
-const exists = hasProperty(obj, 'foo.bar.baz') // [!code --]
-const exists = objectPath.has(obj, 'foo.bar.baz') // [!code ++]
-
-deleteProperty(obj, 'foo.bar.baz') // [!code --]
-objectPath.del(obj, 'foo.bar.baz') // [!code ++]
+const value = getProperty(obj, 'foo.bar.baz')
 ```

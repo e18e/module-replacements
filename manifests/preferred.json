@@ -183,7 +183,7 @@
     "dot-prop": {
       "type": "module",
       "moduleName": "dot-prop",
-      "replacements": ["dlv", "object-path"],
+      "replacements": ["dlv", "dset"],
       "url": {"type": "e18e", "id": "dot-prop"}
     },
     "dotenv": {
@@ -191,6 +191,12 @@
       "moduleName": "dotenv",
       "replacements": ["--env-file"],
       "url": {"type": "e18e", "id": "dotenv"}
+    },
+    "dottie": {
+      "type": "module",
+      "moduleName": "dottie",
+      "replacements": ["dlv", "dset"],
+      "url": {"type": "e18e", "id": "dot-prop"}
     },
     "duplexer": {
       "type": "module",
@@ -345,7 +351,7 @@
     "get-value": {
       "type": "module",
       "moduleName": "get-value",
-      "replacements": ["dlv", "object-path"],
+      "replacements": ["dlv"],
       "url": {"type": "e18e", "id": "dot-prop"}
     },
     "glob": {
@@ -2427,7 +2433,7 @@
     "object-path": {
       "type": "module",
       "moduleName": "object-path",
-      "replacements": ["dlv", "object-path"],
+      "replacements": ["dlv", "dset"],
       "url": {"type": "e18e", "id": "dot-prop"}
     },
     "ora": {
@@ -2575,7 +2581,7 @@
     "set-value": {
       "type": "module",
       "moduleName": "set-value",
-      "replacements": ["dlv", "object-path"],
+      "replacements": ["dset"],
       "url": {"type": "e18e", "id": "dot-prop"}
     },
     "shortid": {
@@ -2982,6 +2988,12 @@
       "url": {"type": "e18e", "id": "dot-prop"},
       "replacementModule": "dlv"
     },
+    "dset": {
+      "id": "dset",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "dot-prop"},
+      "replacementModule": "dset"
+    },
     "elysia": {
       "id": "elysia",
       "type": "documented",
@@ -3293,12 +3305,6 @@
       "type": "documented",
       "url": {"type": "e18e", "id": "npm-run-all"},
       "replacementModule": "npm-run-all2"
-    },
-    "object-path": {
-      "id": "object-path",
-      "type": "documented",
-      "url": {"type": "e18e", "id": "dot-prop"},
-      "replacementModule": "object-path"
     },
     "obug": {
       "id": "obug",
