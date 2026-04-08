@@ -330,6 +330,12 @@
       "replacements": ["fs"],
       "url": {"type": "e18e", "id": "fs-extra"}
     },
+    "fs.extra": {
+      "type": "module",
+      "moduleName": "fs.extra",
+      "replacements": ["fs"],
+      "url": {"type": "e18e", "id": "fs-extra"}
+    },
     "gaxios": {
       "type": "module",
       "moduleName": "gaxios",
@@ -357,6 +363,12 @@
     "globby": {
       "type": "module",
       "moduleName": "globby",
+      "replacements": ["tinyglobby"],
+      "url": {"type": "e18e", "id": "globby"}
+    },
+    "globule": {
+      "type": "module",
+      "moduleName": "globule",
       "replacements": ["tinyglobby"],
       "url": {"type": "e18e", "id": "globby"}
     },
@@ -2689,6 +2701,12 @@
       "moduleName": "utf8",
       "replacements": ["TextEncoder", "Buffer.prototype.toString"],
       "url": {"type": "e18e", "id": "utf8"}
+    },
+    "uuid": {
+      "type": "module",
+      "moduleName": "uuid",
+      "replacements": ["node:crypto", "crypto"],
+      "url": {"type": "e18e", "id": "uuidv4"}
     },
     "uuidv4": {
       "type": "module",

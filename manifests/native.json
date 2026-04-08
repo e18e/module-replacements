@@ -2040,6 +2040,11 @@
       "moduleName": "for-in",
       "replacements": ["for...in"]
     },
+    "foreachasync": {
+      "type": "module",
+      "moduleName": "foreachasync",
+      "replacements": ["for...of"]
+    },
     "fs-then-native": {
       "type": "module",
       "moduleName": "fs-then-native",
