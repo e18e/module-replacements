@@ -20,7 +20,7 @@ setProperty(obj, 'foo.bar.baz', 'value') // [!code --]
 dset(obj, 'foo.bar.baz', 'value') // [!code ++]
 ```
 
-## `.reduce` (native)
+## `String.prototype.split` + `Array.prototype.reduce` (native)
 
 If you only need to get a nested value you can use a simple function:
 
@@ -31,3 +31,7 @@ function getProperty(obj, key) {
 
 const value = getProperty(obj, 'foo.bar.baz')
 ```
+
+> [!NOTE]
+> This assumes that you do not consume dot paths as user input.
+> If you do, ensure you sanitize keys before accessing them (e.g. through `Object.hasOwn`).
