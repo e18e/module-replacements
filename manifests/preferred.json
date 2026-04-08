@@ -360,6 +360,12 @@
       "replacements": ["tinyglobby"],
       "url": {"type": "e18e", "id": "globby"}
     },
+    "globule": {
+      "type": "module",
+      "moduleName": "globby",
+      "replacements": ["globule"],
+      "url": {"type": "e18e", "id": "globby"}
+    },
     "grapheme-splitter": {
       "type": "module",
       "moduleName": "grapheme-splitter",
