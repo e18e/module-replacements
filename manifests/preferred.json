@@ -330,6 +330,12 @@
       "replacements": ["fs"],
       "url": {"type": "e18e", "id": "fs-extra"}
     },
+    "fs.extra": {
+      "type": "module",
+      "moduleName": "fs.extra",
+      "replacements": ["fs"],
+      "url": {"type": "e18e", "id": "fs-extra"}
+    },
     "gaxios": {
       "type": "module",
       "moduleName": "gaxios",
