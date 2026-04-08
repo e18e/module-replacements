@@ -2702,6 +2702,12 @@
       "replacements": ["TextEncoder", "Buffer.prototype.toString"],
       "url": {"type": "e18e", "id": "utf8"}
     },
+    "uuid": {
+      "type": "module",
+      "moduleName": "uuid",
+      "replacements": ["node:crypto", "crypto"],
+      "url": {"type": "e18e", "id": "uuidv4"}
+    },
     "uuidv4": {
       "type": "module",
       "moduleName": "uuidv4",
