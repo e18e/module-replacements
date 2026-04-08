@@ -362,8 +362,8 @@
     },
     "globule": {
       "type": "module",
-      "moduleName": "globby",
-      "replacements": ["globule"],
+      "moduleName": "globule",
+      "replacements": ["tinyglobby"],
       "url": {"type": "e18e", "id": "globby"}
     },
     "grapheme-splitter": {
