@@ -319,6 +319,16 @@
       "moduleName": "arr-diff",
       "replacements": ["snippet::array-difference"]
     },
+    "array-back": {
+      "type": "module",
+      "moduleName": "array-back",
+      "replacements": ["snippet::array-coerce"]
+    },
+    "array-ify": {
+      "type": "module",
+      "moduleName": "array-ify",
+      "replacements": ["snippet::array-coerce"]
+    },
     "array-initial": {
       "type": "module",
       "moduleName": "array-initial",
