@@ -65,11 +65,20 @@ export async function validateManifests() {
       }
 
       for (const replacementId of mapping.replacements) {
-        if (!manifest.replacements[replacementId]) {
+        const replacement = manifest.replacements[replacementId];
+
+        if (!replacement) {
           throw new Error(
             `${manifestPath}: mapping "${key}" references unknown replacement "${replacementId}"`
           );
         }
+
+        if (replacement.replacementModule === key) {
+          throw new Error(
+            `${manifestPath}: mapping "${key}" defines a replacementModule that is identical to itself.`
+          );
+        }
+
         usedReplacementIds.add(replacementId);
       }
     }
