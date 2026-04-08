@@ -1,5 +1,11 @@
 {
   "mappings": {
+    "@75lb/deep-merge": {
+      "type": "module",
+      "moduleName": "@75lb/deep-merge",
+      "replacements": ["defu"],
+      "url": {"type": "e18e", "id": "deep-merge"}
+    },
     "@iarna/toml": {
       "type": "module",
       "moduleName": "@iarna/toml",
@@ -2967,7 +2973,7 @@
     "defu": {
       "id": "defu",
       "type": "documented",
-      "url": {"type": "e18e", "id": "extend"},
+      "url": {"type": "e18e", "id": "deep-merge"},
       "replacementModule": "defu"
     },
     "dequal": {
