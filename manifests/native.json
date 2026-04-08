@@ -1493,7 +1493,7 @@
       "id": "fsPromises",
       "type": "native",
       "url": {"type": "node", "id": "api/fs.html#promises-api"},
-      "nodeFeatureId": {"moduleName": "fs/promises"}
+      "nodeFeatureId": {"moduleName": "fs"}
     },
     "globalThis": {
       "id": "globalThis",
