@@ -183,7 +183,7 @@
     "dot-prop": {
       "type": "module",
       "moduleName": "dot-prop",
-      "replacements": ["dlv", "dset"],
+      "replacements": ["dlv"],
       "url": {"type": "e18e", "id": "dot-prop"}
     },
     "dotenv": {
