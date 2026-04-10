@@ -311,6 +311,12 @@
       "type": "simple",
       "description": "You can check the start of a path for the Windows extended-length path prefix and if it's not present, replace backslashes with forward slashes.",
       "example": "path.startsWith('\\\\\\\\?\\\\') ? path : path.replace(/\\\\/g, '/')"
+    },
+    "snippet::year": {
+      "id": "snippet::year",
+      "type": "simple",
+      "description": "You can use `new Date().getUTCFullYear()` to get the current year.",
+      "example": "new Date().getUTCFullYear()"
     }
   },
   "mappings": {
@@ -482,12 +488,12 @@
     "is-number": {
       "type": "module",
       "moduleName": "is-number",
-      "replacements": ["snippet:is-number"]
+      "replacements": ["snippet::is-number"]
     },
     "is-number-object": {
       "type": "module",
       "moduleName": "is-number-object",
-      "replacements": ["snippet:is-number"]
+      "replacements": ["snippet::is-number"]
     },
     "is-obj": {
       "type": "module",
@@ -643,6 +649,11 @@
       "type": "module",
       "moduleName": "upper-case",
       "replacements": ["snippet::to-uppercase"]
+    },
+    "year": {
+      "type": "module",
+      "moduleName": "year",
+      "replacements": ["snippet::year"]
     }
   }
 }
