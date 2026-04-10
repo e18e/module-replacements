@@ -1,5 +1,11 @@
 {
   "mappings": {
+    "@cypress/request": {
+      "type": "module",
+      "moduleName": "@cypress/request",
+      "replacements": ["fetch", "ofetch", "ky"],
+      "url": {"type": "e18e", "id": "fetch"}
+    },
     "@iarna/toml": {
       "type": "module",
       "moduleName": "@iarna/toml",
