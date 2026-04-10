@@ -12,6 +12,12 @@
       "description": "You can use a combination of `filter` and `includes` to calculate the difference between two arrays.",
       "example": "const difference = (a, b) => a.filter((item) => !b.includes(item))"
     },
+    "snippet::array-flatten": {
+      "id": "snippet::array-flatten",
+      "type": "simple",
+      "description": "You can use `Array.prototype.flat` with `Infinity` as an argument to fully flatten an array.",
+      "example": "array.flat(Infinity)"
+    },
     "snippet::array-from-count": {
       "id": "snippet::array-from-count",
       "type": "simple",
@@ -318,6 +324,11 @@
       "type": "module",
       "moduleName": "arr-diff",
       "replacements": ["snippet::array-difference"]
+    },
+    "arr-flatten": {
+      "type": "module",
+      "moduleName": "arr-flatten",
+      "replacements": ["snippet::array-flatten"]
     },
     "array-back": {
       "type": "module",
