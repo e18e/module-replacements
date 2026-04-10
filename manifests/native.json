@@ -2209,6 +2209,11 @@
       "moduleName": "left-pad",
       "replacements": ["String.prototype.padStart"]
     },
+    "long": {
+      "type": "module",
+      "moduleName": "long",
+      "replacements": ["BigInt"]
+    },
     "math-log2": {
       "type": "module",
       "moduleName": "math-log2",
