@@ -162,6 +162,12 @@
       "description": "If the current environment is npm the `npm_config_user_agent` environment variable will be set and start with `\"npm\"`.",
       "example": "const isNpm = process.env.npm_config_user_agent?.startsWith(\"npm\")"
     },
+    "snippet::is-number": {
+      "id": "snippet::is-number",
+      "type": "simple",
+      "description": "You can check if a value is a number by using `typeof` or coercing it to a number and using `Number.isFinite`.",
+      "example": "const isNumber = (v) => typeof v === \"number\" || (typeof v === \"string\" && Number.isFinite(+v));"
+    },
     "snippet::is-object": {
       "id": "snippet::is-object",
       "type": "simple",
@@ -305,12 +311,6 @@
       "type": "simple",
       "description": "You can check the start of a path for the Windows extended-length path prefix and if it's not present, replace backslashes with forward slashes.",
       "example": "path.startsWith('\\\\\\\\?\\\\') ? path : path.replace(/\\\\/g, '/')"
-    },
-    "snippet:is-number": {
-      "id": "snippet:is-number",
-      "type": "simple",
-      "description": "You can check if a value is a number by using `typeof` or coercing it to a number and using `Number.isFinite`.",
-      "example": "const isNumber = (v) => typeof v === \"number\" || (typeof v === \"string\" && Number.isFinite(+v));"
     }
   },
   "mappings": {

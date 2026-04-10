@@ -37,6 +37,12 @@ export async function validateManifests() {
         );
       }
 
+      if (replacement.type === 'simple' && !id.startsWith('snippet::')) {
+        throw new Error(
+          `${manifestPath}: replacement "${id}" is type "simple" and must start with the "snippet::" prefix.`
+        );
+      }
+
       if (!replacement.webFeatureId) continue;
 
       const {featureId, compatKey} = replacement.webFeatureId;
@@ -51,12 +57,6 @@ export async function validateManifests() {
       if (!feature.compat_features?.includes(compatKey)) {
         throw new Error(
           `${manifestPath}: replacement "${id}" has compatKey "${compatKey}" not found in web-features feature "${featureId}"`
-        );
-      }
-
-      if (replacement.type === 'simple' && !id.startsWith('snippet::')) {
-        throw new Error(
-          `${manifestPath}: replacement "${id}" is type "simple" and must start with the "snippet::" prefix.`
         );
       }
     }
