@@ -2579,6 +2579,11 @@
       "moduleName": "typedarray.prototype.slice",
       "replacements": ["%TypedArray%.prototype.slice"]
     },
+    "url-parse": {
+      "type": "module",
+      "moduleName": "url-parse",
+      "replacements": ["URL"]
+    },
     "util.promisify": {
       "type": "module",
       "moduleName": "util.promisify",
