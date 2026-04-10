@@ -666,6 +666,18 @@
         "compatKey": "javascript.builtins.Function.name"
       }
     },
+    "Intl.DateTimeFormat": {
+      "id": "Intl.DateTimeFormat",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat"
+      },
+      "webFeatureId": {
+        "featureId": "intl",
+        "compatKey": "javascript.builtins.Intl.DateTimeFormat.DateTimeFormat"
+      }
+    },
     "Iterator.prototype": {
       "id": "Iterator.prototype",
       "type": "native",
@@ -1914,6 +1926,11 @@
       "replacements": ["DataView.prototype.byteOffset"]
     },
     "date": {"type": "module", "moduleName": "date", "replacements": ["Date"]},
+    "dateformat": {
+      "type": "module",
+      "moduleName": "dateformat",
+      "replacements": ["Intl.DateTimeFormat"]
+    },
     "defaults": {
       "type": "module",
       "moduleName": "defaults",
