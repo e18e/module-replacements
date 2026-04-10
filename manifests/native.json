@@ -1404,6 +1404,15 @@
         "compatKey": "api.btoa"
       }
     },
+    "crypto.randomBytes": {
+      "id": "crypto.randomBytes",
+      "type": "native",
+      "url": {
+        "type": "node",
+        "id": "api/crypto.html#cryptorandombytessize-callback"
+      },
+      "nodeFeatureId": {"moduleName": "crypto", "exportName": "randomBytes"}
+    },
     "crypto.timingSafeEqual": {
       "id": "crypto.timingSafeEqual",
       "type": "native",
@@ -2418,6 +2427,11 @@
       "type": "module",
       "moduleName": "queue-microtask",
       "replacements": ["queueMicrotask"]
+    },
+    "random-bytes": {
+      "type": "module",
+      "moduleName": "random-bytes",
+      "replacements": ["crypto.randomBytes"]
     },
     "reflect.getprototypeof": {
       "type": "module",
