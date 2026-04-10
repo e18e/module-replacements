@@ -53,6 +53,12 @@ export async function validateManifests() {
           `${manifestPath}: replacement "${id}" has compatKey "${compatKey}" not found in web-features feature "${featureId}"`
         );
       }
+
+      if (replacement.type === 'simple' && !id.startsWith('snippet::')) {
+        throw new Error(
+          `${manifestPath}: replacement "${id}" is type "simple" and must start with the "snippet::" prefix.`
+        );
+      }
     }
 
     const usedReplacementIds = new Set();
