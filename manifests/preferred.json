@@ -1,5 +1,11 @@
 {
   "mappings": {
+    "@75lb/deep-merge": {
+      "type": "module",
+      "moduleName": "@75lb/deep-merge",
+      "replacements": ["defu", "@fastify/deepmerge"],
+      "url": {"type": "e18e", "id": "deep-merge"}
+    },
     "@cypress/request": {
       "type": "module",
       "moduleName": "@cypress/request",
@@ -2775,6 +2781,12 @@
       "url": {"type": "e18e", "id": "faker"},
       "replacementModule": "@faker-js/faker"
     },
+    "@fastify/deepmerge": {
+      "id": "@fastify/deepmerge",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "deep-merge"},
+      "replacementModule": "@fastify/deepmerge"
+    },
     "@material/web": {
       "id": "@material/web",
       "type": "documented",
@@ -3005,7 +3017,7 @@
     "defu": {
       "id": "defu",
       "type": "documented",
-      "url": {"type": "e18e", "id": "extend"},
+      "url": {"type": "e18e", "id": "deep-merge"},
       "replacementModule": "defu"
     },
     "dequal": {

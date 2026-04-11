@@ -12,6 +12,7 @@ ESLint plugin.
 
 ## List of modules
 
+- [`@75lb/deep-merge`](./deep-merge.md)
 - [`@jsdevtools/ezspawn`](./ez-spawn.md)
 - [`axios`](./fetch.md)
 - [`bluebird`](./bluebird-q.md)

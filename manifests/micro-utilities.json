@@ -12,6 +12,12 @@
       "description": "You can use a combination of `filter` and `includes` to calculate the difference between two arrays.",
       "example": "const difference = (a, b) => a.filter((item) => !b.includes(item))"
     },
+    "snippet::array-flatten": {
+      "id": "snippet::array-flatten",
+      "type": "simple",
+      "description": "You can use `Array.prototype.flat` with `Infinity` as an argument to fully flatten an array.",
+      "example": "array.flat(Infinity)"
+    },
     "snippet::array-from-count": {
       "id": "snippet::array-from-count",
       "type": "simple",
@@ -162,6 +168,12 @@
       "description": "If the current environment is npm the `npm_config_user_agent` environment variable will be set and start with `\"npm\"`.",
       "example": "const isNpm = process.env.npm_config_user_agent?.startsWith(\"npm\")"
     },
+    "snippet::is-number": {
+      "id": "snippet::is-number",
+      "type": "simple",
+      "description": "You can check if a value is a number by using `typeof` or coercing it to a number and using `Number.isFinite`.",
+      "example": "const isNumber = (v) => typeof v === \"number\" || (typeof v === \"string\" && Number.isFinite(+v));"
+    },
     "snippet::is-object": {
       "id": "snippet::is-object",
       "type": "simple",
@@ -306,11 +318,11 @@
       "description": "You can check the start of a path for the Windows extended-length path prefix and if it's not present, replace backslashes with forward slashes.",
       "example": "path.startsWith('\\\\\\\\?\\\\') ? path : path.replace(/\\\\/g, '/')"
     },
-    "snippet:is-number": {
-      "id": "snippet:is-number",
+    "snippet::year": {
+      "id": "snippet::year",
       "type": "simple",
-      "description": "You can check if a value is a number by using `typeof` or coercing it to a number and using `Number.isFinite`.",
-      "example": "const isNumber = (v) => typeof v === \"number\" || (typeof v === \"string\" && Number.isFinite(+v));"
+      "description": "You can use `new Date().getUTCFullYear()` to get the current year.",
+      "example": "new Date().getUTCFullYear()"
     }
   },
   "mappings": {
@@ -318,6 +330,11 @@
       "type": "module",
       "moduleName": "arr-diff",
       "replacements": ["snippet::array-difference"]
+    },
+    "arr-flatten": {
+      "type": "module",
+      "moduleName": "arr-flatten",
+      "replacements": ["snippet::array-flatten"]
     },
     "array-back": {
       "type": "module",
@@ -482,12 +499,12 @@
     "is-number": {
       "type": "module",
       "moduleName": "is-number",
-      "replacements": ["snippet:is-number"]
+      "replacements": ["snippet::is-number"]
     },
     "is-number-object": {
       "type": "module",
       "moduleName": "is-number-object",
-      "replacements": ["snippet:is-number"]
+      "replacements": ["snippet::is-number"]
     },
     "is-obj": {
       "type": "module",
@@ -643,6 +660,11 @@
       "type": "module",
       "moduleName": "upper-case",
       "replacements": ["snippet::to-uppercase"]
+    },
+    "year": {
+      "type": "module",
+      "moduleName": "year",
+      "replacements": ["snippet::year"]
     }
   }
 }

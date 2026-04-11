@@ -666,6 +666,18 @@
         "compatKey": "javascript.builtins.Function.name"
       }
     },
+    "Intl.DateTimeFormat": {
+      "id": "Intl.DateTimeFormat",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat"
+      },
+      "webFeatureId": {
+        "featureId": "intl",
+        "compatKey": "javascript.builtins.Intl.DateTimeFormat.DateTimeFormat"
+      }
+    },
     "Iterator.prototype": {
       "id": "Iterator.prototype",
       "type": "native",
@@ -1489,6 +1501,12 @@
       },
       "nodeFeatureId": {"moduleName": "fs"}
     },
+    "fsPromises": {
+      "id": "fsPromises",
+      "type": "native",
+      "url": {"type": "node", "id": "api/fs.html#promises-api"},
+      "nodeFeatureId": {"moduleName": "fs"}
+    },
     "globalThis": {
       "id": "globalThis",
       "type": "native",
@@ -1914,6 +1932,11 @@
       "replacements": ["DataView.prototype.byteOffset"]
     },
     "date": {"type": "module", "moduleName": "date", "replacements": ["Date"]},
+    "dateformat": {
+      "type": "module",
+      "moduleName": "dateformat",
+      "replacements": ["Intl.DateTimeFormat"]
+    },
     "defaults": {
       "type": "module",
       "moduleName": "defaults",
@@ -2038,6 +2061,11 @@
       "type": "module",
       "moduleName": "foreachasync",
       "replacements": ["for...of"]
+    },
+    "fs-then-native": {
+      "type": "module",
+      "moduleName": "fs-then-native",
+      "replacements": ["fsPromises"]
     },
     "fs.realpath": {
       "type": "module",
@@ -2208,6 +2236,11 @@
       "type": "module",
       "moduleName": "left-pad",
       "replacements": ["String.prototype.padStart"]
+    },
+    "long": {
+      "type": "module",
+      "moduleName": "long",
+      "replacements": ["BigInt"]
     },
     "math-log2": {
       "type": "module",
