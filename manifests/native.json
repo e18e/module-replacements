@@ -618,6 +618,18 @@
         "compatKey": "javascript.builtins.Date"
       }
     },
+    "Date.now": {
+      "id": "Date.now",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Date/now"
+      },
+      "webFeatureId": {
+        "featureId": "date",
+        "compatKey": "javascript.builtins.Date.now"
+      }
+    },
     "Error.isError": {
       "id": "Error.isError",
       "type": "native",
@@ -1932,6 +1944,11 @@
       "replacements": ["DataView.prototype.byteOffset"]
     },
     "date": {"type": "module", "moduleName": "date", "replacements": ["Date"]},
+    "date-now": {
+      "type": "module",
+      "moduleName": "date-now",
+      "replacements": ["Date.now"]
+    },
     "dateformat": {
       "type": "module",
       "moduleName": "dateformat",
