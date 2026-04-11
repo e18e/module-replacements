@@ -2,7 +2,7 @@
 description: Modern alternatives to packages for deep merging objects
 ---
 
-# Replacements to packages for deep merging objects
+# Replacements for deep merge packages
 
 ## `defu`
 
