@@ -1501,6 +1501,12 @@
       },
       "nodeFeatureId": {"moduleName": "fs"}
     },
+    "fsPromises": {
+      "id": "fsPromises",
+      "type": "native",
+      "url": {"type": "node", "id": "api/fs.html#promises-api"},
+      "nodeFeatureId": {"moduleName": "fs"}
+    },
     "globalThis": {
       "id": "globalThis",
       "type": "native",
@@ -2055,6 +2061,11 @@
       "type": "module",
       "moduleName": "foreachasync",
       "replacements": ["for...of"]
+    },
+    "fs-then-native": {
+      "type": "module",
+      "moduleName": "fs-then-native",
+      "replacements": ["fsPromises"]
     },
     "fs.realpath": {
       "type": "module",
