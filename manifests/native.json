@@ -1633,6 +1633,18 @@
         "compatKey": "api.queueMicrotask"
       }
     },
+    "requestAnimationFrame": {
+      "id": "requestAnimationFrame",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/API/Window/requestAnimationFrame"
+      },
+      "webFeatureId": {
+        "featureId": "request-animation-frame",
+        "compatKey": "api.Window.requestAnimationFrame"
+      }
+    },
     "safe-buffer": {
       "id": "safe-buffer",
       "type": "removal",
@@ -2451,6 +2463,11 @@
       "type": "module",
       "moduleName": "queue-microtask",
       "replacements": ["queueMicrotask"]
+    },
+    "raf": {
+      "type": "module",
+      "moduleName": "raf",
+      "replacements": ["requestAnimationFrame"]
     },
     "reflect.getprototypeof": {
       "type": "module",
