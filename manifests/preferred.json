@@ -3,7 +3,7 @@
     "@75lb/deep-merge": {
       "type": "module",
       "moduleName": "@75lb/deep-merge",
-      "replacements": ["defu"],
+      "replacements": ["defu", "@fastify/deepmerge"],
       "url": {"type": "e18e", "id": "deep-merge"}
     },
     "@iarna/toml": {
@@ -2744,6 +2744,12 @@
       "type": "documented",
       "url": {"type": "e18e", "id": "faker"},
       "replacementModule": "@faker-js/faker"
+    },
+    "@fastify/deepmerge": {
+      "id": "@fastify/deepmerge",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "deep-merge"},
+      "replacementModule": "@fastify/deepmerge"
     },
     "@material/web": {
       "id": "@material/web",
