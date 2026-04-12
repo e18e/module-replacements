@@ -4,7 +4,7 @@ description: Modern alternatives to the readable-stream package for working with
 
 # Replacements for `readable-stream`
 
-[`readable-stream`](https://www.npmjs.com/package/readable-stream) mirrors Node’s core streams and works in browsers. In most cases, prefer native options.
+[`readable-stream`](https://github.com/nodejs/readable-stream) mirrors Node’s core streams and works in browsers. In most cases, prefer native options.
 
 ## `node:stream` (native, since Node.js v0.9.4)
 

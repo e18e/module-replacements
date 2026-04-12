@@ -6,7 +6,7 @@ description: Modern alternatives to lint-staged for running commands on staged G
 
 ## `nano-staged`
 
-[`nano-staged`](https://www.npmjs.com/package/nano-staged) is a tiny pre-commit runner for staged (and more) files; much smaller and faster than `lint-staged`, with a simple config.
+[`nano-staged`](https://github.com/usmanyunusov/nano-staged) is a tiny pre-commit runner for staged (and more) files; much smaller and faster than `lint-staged`, with a simple config.
 
 package.json config:
 

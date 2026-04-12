@@ -1,5 +1,5 @@
 ---
-description: Modern  replacements for the unmaintained faker package generating massive amounts of fake (but realistic) data
+description: Modern replacements for the unmaintained faker package generating massive amounts of fake (but realistic) data
 ---
 
 # Replacements for `faker`

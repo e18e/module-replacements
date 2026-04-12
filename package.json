@@ -2,33 +2,25 @@
   "name": "module-replacements",
   "description": "This package provides a set of manifests which each define a mapping of JS modules to their suggested replacements.",
   "version": "1.0.0",
-  "main": "./dist/commonjs/main.js",
+  "main": "./dist/main.js",
   "scripts": {
     "build": "npm run clean && npm run build:types",
-    "build:types": "tsc --noEmit",
+    "build:types": "tsc",
     "build:update-manifest-paths": "node scripts/update-manifests-dist-path.js",
     "clean": "node -e \"fs.rmSync('./dist', {force: true, recursive: true})\"",
     "format": "prettier --write \"./**/*.{js,ts,json,md,yml}\"",
     "generate-schema": "node scripts/generate-schema.js",
-    "prepare": "tshy && npm run build:update-manifest-paths",
+    "prepare": "tsc",
     "lint": "npm run lint:format && npm run lint:manifests",
     "lint:format": "prettier --check \"./**/*.{js,ts,json,md,yml}\"",
-    "lint:manifests": "node scripts/validate-modules.js",
+    "lint:manifests": "node --experimental-vm-modules scripts/validate-modules.js",
     "sort-manifests": "node scripts/sort-manifests.js",
-    "update-engines": "npm run update-engines:web && npm run update-engines:bcd && npm run update-engines:runtimes",
+    "update-engines": "npm run update-engines:web && npm run update-engines:bcd && npm run update-engines:runtimes && npm run update-engines:node",
     "update-engines:web": "node scripts/update-engines-web.ts",
     "update-engines:bcd": "node scripts/update-engines-bcd.ts",
     "update-engines:runtimes": "node scripts/update-engines-runtimes.ts",
+    "update-engines:node": "node scripts/update-engines-node.ts",
     "prepublishOnly": "npm run update-engines"
-  },
-  "tshy": {
-    "exports": {
-      ".": "./src/main.ts",
-      "./package.json": "./package.json",
-      "./manifests/micro-utilities.json": "./manifests/micro-utilities.json",
-      "./manifests/native.json": "./manifests/native.json",
-      "./manifests/preferred.json": "./manifests/preferred.json"
-    }
   },
   "files": [
     "dist",
@@ -36,40 +28,33 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/es-tooling/module-replacements.git"
+    "url": "git+https://github.com/e18e/module-replacements.git"
   },
   "author": "James Garbutt (https://github.com/43081j)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/es-tooling/module-replacements/issues"
+    "url": "https://github.com/e18e/module-replacements/issues"
   },
-  "homepage": "https://github.com/es-tooling/module-replacements#readme",
+  "homepage": "https://github.com/e18e/module-replacements#readme",
   "devDependencies": {
     "@mdn/browser-compat-data": "^7.3.2",
     "@types/node": "^24.10.2",
     "ajv": "^8.16.0",
     "prettier": "^3.8.1",
     "ts-json-schema-generator": "^2.4.0",
-    "tshy": "^1.11.0",
     "typescript": "^5.9.3",
     "web-features": "^3.11.0"
   },
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/esm/main.d.ts",
-        "default": "./dist/esm/main.js"
-      },
-      "require": {
-        "types": "./dist/commonjs/main.d.ts",
-        "default": "./dist/commonjs/main.js"
+        "types": "./dist/main.d.ts",
+        "default": "./dist/main.js"
       }
     },
-    "./package.json": "./package.json",
-    "./manifests/micro-utilities.json": "./manifests/micro-utilities.json",
-    "./manifests/native.json": "./manifests/native.json",
-    "./manifests/preferred.json": "./manifests/preferred.json"
+    "./manifests/*.json": "./manifests/*.json",
+    "./package.json": "./package.json"
   },
-  "types": "./dist/commonjs/main.d.ts",
+  "types": "./dist/main.d.ts",
   "type": "module"
 }

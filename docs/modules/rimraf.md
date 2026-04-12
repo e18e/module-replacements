@@ -24,8 +24,8 @@ await rm('./dist', { recursive: true, force: true }) // [!code ++]
 import rimraf from 'rimraf' // [!code --]
 import * as fs from 'node:fs' // [!code ++]
 
-await rimraf.sync('./dist') // [!code --]
-await fs.rmSync('./dist', { recursive: true, force: true }) // [!code ++]
+rimraf.sync('./dist') // [!code --]
+fs.rmSync('./dist', { recursive: true, force: true }) // [!code ++]
 ```
 
 > [!IMPORTANT]

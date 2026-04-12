@@ -1,6 +1,7 @@
 import {readdir, readFile, access} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import * as path from 'node:path';
+import vm from 'node:vm';
 
 const scriptDir = fileURLToPath(new URL('.', import.meta.url));
 const manifestsDir = path.resolve(scriptDir, '../manifests');
@@ -68,9 +69,24 @@ export async function checkManifestsForProblems() {
     await checkManifestForDuplicates(manifestName, manifest);
     checkManifestIsSorted(manifestName, manifest);
     checkNoEngines(manifestName, manifest);
+    checkExamplesAreValidJS(manifestName, manifest);
     await checkDocPathsExist(manifestName, manifest);
   }
   console.log('OK');
+}
+
+function checkExamplesAreValidJS(name, manifest) {
+  for (const [id, replacement] of Object.entries(manifest.replacements)) {
+    if (replacement.example !== undefined) {
+      try {
+        new vm.SourceTextModule(replacement.example);
+      } catch (err) {
+        throw new Error(
+          `Replacement ${id} in ${name} has an invalid JS example: ${err.message}`
+        );
+      }
+    }
+  }
 }
 
 async function checkDocExists(name, id, label) {

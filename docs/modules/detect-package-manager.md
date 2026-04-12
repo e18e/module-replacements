@@ -6,7 +6,7 @@ description: Lightweight alternative to detect-package-manager for detecting the
 
 ## `package-manager-detector`
 
-[`package-manager-detector`](https://www.npmjs.com/package/package-manager-detector) is a lightweight alternative for detecting the package manager being used in a project.
+[`package-manager-detector`](https://github.com/antfu-collective/package-manager-detector) is a lightweight alternative for detecting the package manager being used in a project.
 
 ### Key differences
 

@@ -23,7 +23,7 @@ const a = sp.getAll('a') // [!code ++]
 
 ## `fast-querystring`
 
-[`fast-querystring`](https://www.npmjs.com/package/fast-querystring) is tiny and very fast. It handles flat key/value pairs and repeated keys as arrays; it does not support nested objects. Use it when you need arrays but not nesting.
+[`fast-querystring`](https://github.com/anonrig/fast-querystring) is tiny and very fast. It handles flat key/value pairs and repeated keys as arrays; it does not support nested objects. Use it when you need arrays but not nesting.
 
 Example:
 
@@ -40,7 +40,7 @@ const str = fqs.stringify({ tag: ['a', 'b'], q: 'x y' }) // [!code ++]
 
 ## `picoquery`
 
-[`picoquery`](https://www.npmjs.com/package/picoquery) supports nesting and arrays with a fast single‑pass parser and configurable syntax. v2.x and above are ESM‑only; v1.x is CommonJS and will be maintained with non‑breaking changes. `nestingSyntax: 'js'` offers the highest compatibility with `qs`, though you can pick other syntaxes for performance.
+[`picoquery`](https://github.com/43081j/picoquery) supports nesting and arrays with a fast single‑pass parser and configurable syntax. v2.x and above are ESM‑only; v1.x is CommonJS and will be maintained with non‑breaking changes. `nestingSyntax: 'js'` offers the highest compatibility with `qs`, though you can pick other syntaxes for performance.
 
 Example:
 
@@ -67,7 +67,7 @@ const str = stringify({ user: { name: 'foo' }, tags: ['bar', 'baz'] }, opts) // 
 
 ## `neoqs`
 
-[`neoqs`](https://www.npmjs.com/package/neoqs) is a fork of `qs` without legacy polyfills, with TypeScript types included, and with both ESM and CommonJS builds (plus a legacy ES5 mode). Choose it when you want `qs`‑level compatibility with modern packaging options.
+[`neoqs`](https://github.com/PuruVJ/neoqs) is a fork of `qs` without legacy polyfills, with TypeScript types included, and with both ESM and CommonJS builds (plus a legacy ES5 mode). Choose it when you want `qs`‑level compatibility with modern packaging options.
 
 Example:
 

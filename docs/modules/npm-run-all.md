@@ -60,3 +60,29 @@ For more advanced workflows, consider [Wireit](https://github.com/google/wireit)
   }
 }
 ```
+
+## `bun run --parallel` / `bun run --sequential`
+
+If you are using bun you can use [`bun run --parallel`](https://bun.com/docs/runtime#param-parallel) and [`bun run --sequential`](https://bun.com/docs/runtime#param-sequential).
+
+### Parallel
+
+```json
+{
+  "scripts": {
+    "dev": "npm-run-all --parallel \"dev:*\"", // [!code --]
+    "dev": "bun run --parallel dev:*" // [!code ++]
+  }
+}
+```
+
+### Sequential
+
+```json
+{
+  "scripts": {
+    "build": "run-s clean lint compile", // [!code --]
+    "build": "bun run --sequential clean lint compile" // [!code ++]
+  }
+}
+```

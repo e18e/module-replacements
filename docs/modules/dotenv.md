@@ -16,7 +16,7 @@ node --env-file=.env index.js
 
 Also supported by:
 
-- [tsx](https://www.npmjs.com/package/tsx)
+- [tsx](https://github.com/privatenumber/tsx)
 - [Bun](https://bun.sh/docs/runtime/env#manually-specifying-env-files)
 - [Deno](https://docs.deno.com/runtime/reference/env_variables/#.env-file)
 

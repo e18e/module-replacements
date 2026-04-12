@@ -1,5 +1,17 @@
 {
   "replacements": {
+    "%TypedArray%": {
+      "id": "%TypedArray%",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/TypedArray"
+      },
+      "webFeatureId": {
+        "featureId": "typed-arrays",
+        "compatKey": "javascript.builtins.TypedArray"
+      }
+    },
     "%TypedArray%.prototype.buffer": {
       "id": "%TypedArray%.prototype.buffer",
       "type": "native",
@@ -504,6 +516,18 @@
         "compatKey": "javascript.builtins.ArrayBuffer.slice"
       }
     },
+    "AsyncIterator.prototype": {
+      "id": "AsyncIterator.prototype",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/AsyncIterator"
+      },
+      "webFeatureId": {
+        "featureId": "async-iterators",
+        "compatKey": "javascript.builtins.AsyncIterator"
+      }
+    },
     "BigInt": {
       "id": "BigInt",
       "type": "native",
@@ -594,6 +618,18 @@
         "compatKey": "javascript.builtins.Date"
       }
     },
+    "Date.now": {
+      "id": "Date.now",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Date/now"
+      },
+      "webFeatureId": {
+        "featureId": "date",
+        "compatKey": "javascript.builtins.Date.now"
+      }
+    },
     "Error.isError": {
       "id": "Error.isError",
       "type": "native",
@@ -618,6 +654,18 @@
         "compatKey": "javascript.builtins.Error.cause"
       }
     },
+    "EventTarget": {
+      "id": "EventTarget",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/API/EventTarget"
+      },
+      "webFeatureId": {
+        "featureId": "events",
+        "compatKey": "api.EventTarget"
+      }
+    },
     "Function.prototype.bind": {
       "id": "Function.prototype.bind",
       "type": "native",
@@ -640,6 +688,18 @@
       "webFeatureId": {
         "featureId": "functions",
         "compatKey": "javascript.builtins.Function.name"
+      }
+    },
+    "Intl.DateTimeFormat": {
+      "id": "Intl.DateTimeFormat",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat"
+      },
+      "webFeatureId": {
+        "featureId": "intl",
+        "compatKey": "javascript.builtins.Intl.DateTimeFormat.DateTimeFormat"
       }
     },
     "Iterator.prototype": {
@@ -885,7 +945,7 @@
     "Object.assign": {
       "id": "Object.assign",
       "type": "native",
-      "description": "Object.assign, or if deep clones are needed, use structuredClone",
+      "description": "`Object.assign`, or if deep clones are needed, use `structuredClone`",
       "url": {
         "type": "mdn",
         "id": "Web/JavaScript/Reference/Global_Objects/Object/assign"
@@ -1327,6 +1387,18 @@
         "compatKey": "javascript.builtins.Symbol.description"
       }
     },
+    "URL": {
+      "id": "URL",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/API/URL"
+      },
+      "webFeatureId": {
+        "featureId": "url",
+        "compatKey": "api.URL"
+      }
+    },
     "WeakMap": {
       "id": "WeakMap",
       "type": "native",
@@ -1338,6 +1410,11 @@
         "featureId": "weakmap",
         "compatKey": "javascript.builtins.WeakMap"
       }
+    },
+    "airbnb-js-shims": {
+      "id": "airbnb-js-shims",
+      "type": "removal",
+      "description": "Every modern environment has native support for all of the APIs included in this library."
     },
     "atob": {
       "id": "atob",
@@ -1375,7 +1452,7 @@
     "es-errors": {
       "id": "es-errors",
       "type": "removal",
-      "description": "Error and its subclasses are natively built into all modern environments.",
+      "description": "`Error` and its subclasses are natively built into all modern environments.",
       "url": {
         "type": "mdn",
         "id": "Web/JavaScript/Reference/Global_Objects/Error"
@@ -1384,11 +1461,21 @@
     "es-string-html-methods": {
       "id": "es-string-html-methods",
       "type": "removal",
-      "description": "All the methods exported by this modules are generally available on the String prototype in modern environments.",
+      "description": "All the methods exported by this modules are generally available on the `String` prototype in modern environments.",
       "url": {
         "type": "mdn",
         "id": "Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods"
       }
+    },
+    "es5-shim": {
+      "id": "es5-shim",
+      "type": "removal",
+      "description": "Every modern environment has support for ES5 APIs."
+    },
+    "es6-shim": {
+      "id": "es6-shim",
+      "type": "removal",
+      "description": "Every modern environment has support for ES6/ES2015 APIs."
     },
     "es7-shim": {
       "id": "es7-shim",
@@ -1410,7 +1497,7 @@
     "for...of": {
       "id": "for...of",
       "type": "native",
-      "description": "for...of (using \"Object.entries\" if dealing with objects)",
+      "description": "`for...of` (using `Object.entries` if dealing with objects)",
       "url": {
         "type": "mdn",
         "id": "Web/JavaScript/Reference/Statements/for...of"
@@ -1438,6 +1525,12 @@
       },
       "nodeFeatureId": {"moduleName": "fs"}
     },
+    "fsPromises": {
+      "id": "fsPromises",
+      "type": "native",
+      "url": {"type": "node", "id": "api/fs.html#promises-api"},
+      "nodeFeatureId": {"moduleName": "fs"}
+    },
     "globalThis": {
       "id": "globalThis",
       "type": "native",
@@ -1453,7 +1546,7 @@
     "has-bigints": {
       "id": "has-bigints",
       "type": "removal",
-      "description": "Every modern environment has support for BigInt. You can just remove the check.",
+      "description": "Every modern environment has support for `BigInt`. You can just remove the check.",
       "url": {
         "type": "mdn",
         "id": "Web/JavaScript/Reference/Global_Objects/BigInt"
@@ -1462,7 +1555,7 @@
     "has-dynamic-import": {
       "id": "has-dynamic-import",
       "type": "removal",
-      "description": "Every modern environment has support for dynamic import. You can just remove the check.",
+      "description": "Every modern environment has support for dynamic `import()`. You can just remove the check.",
       "url": {
         "type": "mdn",
         "id": "Web/JavaScript/Reference/Operators/import"
@@ -1489,7 +1582,7 @@
     "has-proto": {
       "id": "has-proto",
       "type": "removal",
-      "description": "Every modern environment has support for __proto__. You can just remove the check.",
+      "description": "Every modern environment has support for `__proto__`. You can just remove the check.",
       "url": {
         "type": "mdn",
         "id": "Web/JavaScript/Reference/Operators/Object_initializer#prototype_setter"
@@ -1498,7 +1591,7 @@
     "has-symbols": {
       "id": "has-symbols",
       "type": "removal",
-      "description": "Every modern environment has support for Symbols. You can just remove the check.",
+      "description": "Every modern environment has support for `Symbol`. You can just remove the check.",
       "url": {
         "type": "mdn",
         "id": "Web/JavaScript/Reference/Global_Objects/Symbol"
@@ -1530,12 +1623,6 @@
         "type": "mdn",
         "id": "Web/JavaScript/Reference/Global_Objects/TypedArray"
       }
-    },
-    "inherits": {
-      "id": "inherits",
-      "type": "removal",
-      "description": "You can just use the `class` syntax.",
-      "url": {"type": "mdn", "id": "Web/JavaScript/Reference/Classes/extends"}
     },
     "parseInt": {
       "id": "parseInt",
@@ -1570,11 +1657,29 @@
         "compatKey": "api.queueMicrotask"
       }
     },
+    "requestAnimationFrame": {
+      "id": "requestAnimationFrame",
+      "type": "native",
+      "url": {"type": "mdn", "id": "Web/API/Window/requestAnimationFrame"},
+      "webFeatureId": {
+        "featureId": "request-animation-frame",
+        "compatKey": "api.Window.requestAnimationFrame"
+      }
+    },
     "safe-buffer": {
       "id": "safe-buffer",
       "type": "removal",
       "description": "All modern versions of Node have `Buffer.from` for safely creating buffers from arbitrary types.",
       "url": {"type": "node", "id": "api/buffer.html"}
+    },
+    "util.promisify": {
+      "id": "util.promisify",
+      "type": "native",
+      "url": {
+        "type": "node",
+        "id": "api/util.html#utilpromisifyoriginal"
+      },
+      "nodeFeatureId": {"moduleName": "util", "exportName": "promisify"}
     },
     "zlib.crc32": {
       "id": "zlib.crc32",
@@ -1596,6 +1701,11 @@
       "type": "module",
       "moduleName": "aggregate-error",
       "replacements": ["AggregateError"]
+    },
+    "airbnb-js-shims": {
+      "type": "module",
+      "moduleName": "airbnb-js-shims",
+      "replacements": ["airbnb-js-shims"]
     },
     "arr-filter": {
       "type": "module",
@@ -1792,9 +1902,24 @@
       "moduleName": "arraybuffer.prototype.slice",
       "replacements": ["ArrayBuffer.prototype.slice"]
     },
+    "arraybuffer.slice": {
+      "type": "module",
+      "moduleName": "arraybuffer.slice",
+      "replacements": ["ArrayBuffer.prototype.slice"]
+    },
+    "asynciterator.prototype": {
+      "type": "module",
+      "moduleName": "asynciterator.prototype",
+      "replacements": ["AsyncIterator.prototype"]
+    },
     "atob": {
       "type": "module",
       "moduleName": "atob",
+      "replacements": ["atob"]
+    },
+    "atob-lite": {
+      "type": "module",
+      "moduleName": "atob-lite",
       "replacements": ["atob"]
     },
     "btoa": {
@@ -1817,6 +1942,12 @@
       "type": "module",
       "moduleName": "buffer-from",
       "replacements": ["Buffer.from"]
+    },
+    "collection-map": {
+      "type": "module",
+      "moduleName": "collection-map",
+      "replacements": ["Array.prototype.map", "Object.keys", "Object.values"],
+      "url": {"type": "e18e", "id": "collection-map"}
     },
     "concat-map": {
       "type": "module",
@@ -1844,6 +1975,16 @@
       "replacements": ["DataView.prototype.byteOffset"]
     },
     "date": {"type": "module", "moduleName": "date", "replacements": ["Date"]},
+    "date-now": {
+      "type": "module",
+      "moduleName": "date-now",
+      "replacements": ["Date.now"]
+    },
+    "dateformat": {
+      "type": "module",
+      "moduleName": "dateformat",
+      "replacements": ["Intl.DateTimeFormat"]
+    },
     "defaults": {
       "type": "module",
       "moduleName": "defaults",
@@ -1914,6 +2055,21 @@
       "moduleName": "es-string-html-methods",
       "replacements": ["es-string-html-methods"]
     },
+    "es5-shim": {
+      "type": "module",
+      "moduleName": "es5-shim",
+      "replacements": ["es5-shim"]
+    },
+    "es6-promise": {
+      "type": "module",
+      "moduleName": "es6-promise",
+      "replacements": ["Promise"]
+    },
+    "es6-shim": {
+      "type": "module",
+      "moduleName": "es6-shim",
+      "replacements": ["es6-shim"]
+    },
     "es7-shim": {
       "type": "module",
       "moduleName": "es7-shim",
@@ -1923,6 +2079,11 @@
       "type": "module",
       "moduleName": "escape-string-regexp",
       "replacements": ["RegExp.escape"]
+    },
+    "event-target-shim": {
+      "type": "module",
+      "moduleName": "event-target-shim",
+      "replacements": ["EventTarget"]
     },
     "extend-shallow": {
       "type": "module",
@@ -1934,6 +2095,11 @@
       "moduleName": "filter-array",
       "replacements": ["Array.prototype.filter"]
     },
+    "find-index": {
+      "type": "module",
+      "moduleName": "find-index",
+      "replacements": ["Array.prototype.findIndex"]
+    },
     "for-each": {
       "type": "module",
       "moduleName": "for-each",
@@ -1943,6 +2109,16 @@
       "type": "module",
       "moduleName": "for-in",
       "replacements": ["for...in"]
+    },
+    "foreachasync": {
+      "type": "module",
+      "moduleName": "foreachasync",
+      "replacements": ["for...of"]
+    },
+    "fs-then-native": {
+      "type": "module",
+      "moduleName": "fs-then-native",
+      "replacements": ["fsPromises"]
     },
     "fs.realpath": {
       "type": "module",
@@ -2059,11 +2235,6 @@
       "moduleName": "index-of",
       "replacements": ["Array.prototype.indexOf"]
     },
-    "inherits": {
-      "type": "module",
-      "moduleName": "inherits",
-      "replacements": ["inherits"]
-    },
     "is-buffer": {
       "type": "module",
       "moduleName": "is-buffer",
@@ -2119,6 +2290,11 @@
       "moduleName": "left-pad",
       "replacements": ["String.prototype.padStart"]
     },
+    "long": {
+      "type": "module",
+      "moduleName": "long",
+      "replacements": ["BigInt"]
+    },
     "math-log2": {
       "type": "module",
       "moduleName": "math-log2",
@@ -2173,6 +2349,11 @@
       "type": "module",
       "moduleName": "math.sign",
       "replacements": ["Math.sign"]
+    },
+    "native-promise-only": {
+      "type": "module",
+      "moduleName": "native-promise-only",
+      "replacements": ["Promise"]
     },
     "node-int64": {
       "type": "module",
@@ -2319,10 +2500,25 @@
       "moduleName": "promise.prototype.finally",
       "replacements": ["Promise.prototype.finally"]
     },
+    "promish": {
+      "type": "module",
+      "moduleName": "promish",
+      "replacements": ["Promise"]
+    },
     "queue-microtask": {
       "type": "module",
       "moduleName": "queue-microtask",
       "replacements": ["queueMicrotask"]
+    },
+    "queue-tick": {
+      "type": "module",
+      "moduleName": "queue-tick",
+      "replacements": ["queueMicrotask"]
+    },
+    "raf": {
+      "type": "module",
+      "moduleName": "raf",
+      "replacements": ["requestAnimationFrame"]
     },
     "reflect.getprototypeof": {
       "type": "module",
@@ -2348,6 +2544,16 @@
       "type": "module",
       "moduleName": "repeat-string",
       "replacements": ["String.prototype.repeat"]
+    },
+    "safe-buffer": {
+      "type": "module",
+      "moduleName": "safe-buffer",
+      "replacements": ["safe-buffer"]
+    },
+    "safer-buffer": {
+      "type": "module",
+      "moduleName": "safer-buffer",
+      "replacements": ["safe-buffer"]
     },
     "setprototypeof": {
       "type": "module",
@@ -2469,15 +2675,30 @@
       "moduleName": "typed-array-length",
       "replacements": ["%TypedArray%.prototype.length"]
     },
+    "typedarray": {
+      "type": "module",
+      "moduleName": "typedarray",
+      "replacements": ["%TypedArray%"]
+    },
     "typedarray.prototype.slice": {
       "type": "module",
       "moduleName": "typedarray.prototype.slice",
       "replacements": ["%TypedArray%.prototype.slice"]
     },
+    "util.promisify": {
+      "type": "module",
+      "moduleName": "util.promisify",
+      "replacements": ["util.promisify"]
+    },
     "weak-map": {
       "type": "module",
       "moduleName": "weak-map",
       "replacements": ["WeakMap"]
+    },
+    "whatwg-url": {
+      "type": "module",
+      "moduleName": "whatwg-url",
+      "replacements": ["URL"]
     },
     "xtend": {
       "type": "module",

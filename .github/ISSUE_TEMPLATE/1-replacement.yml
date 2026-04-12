@@ -1,0 +1,70 @@
+name: Replacement
+description: Recommend a replacement
+title: '[Replacement]: '
+labels: ['replacement', 'triage']
+type: replacement
+body:
+  - type: input
+    id: package
+    attributes:
+      label: Package to replace
+      description: The npm package name you are recommending a replacement for.
+      placeholder: e.g. is-odd
+    validations:
+      required: true
+
+  - type: textarea
+    id: replacements
+    attributes:
+      label: Suggested replacement(s)
+      description: What should replace it? List native APIs, other packages, or "removal" if it can simply be deleted.
+      placeholder: |
+        e.g. Number.isInteger() (native)
+        e.g. another-package
+        e.g. removal – no longer needed
+    validations:
+      required: true
+
+  - type: dropdown
+    id: manifest
+    attributes:
+      label: Manifest type
+      description: Which manifest does this replacement belong in? See the README for descriptions of each.
+      options:
+        - native (replaceable by a built-in platform feature)
+        - micro-utility (tiny utility replaceable with native code or removal)
+        - preferred (lighter or more modern alternative package)
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: |
+        Why should this replacement be added? For example:
+        - The package is a pseudo-polyfill for a feature now widely available
+        - The package is unmaintained and the suggested alternative is a maintained fork
+        - The package is a micro-utility that duplicates native functionality
+    validations:
+      required: true
+
+  - type: textarea
+    id: availability
+    attributes:
+      label: Availability
+      description: |
+        If proposing a native replacement, how long has the feature been available?
+        Note: very newly available features are unlikely to be added since they are not yet widely used.
+        Include browser/Node.js version support where relevant (e.g. "Node.js v14.14.0+, all modern browsers").
+    validations:
+      required: false
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Code example (optional)
+      description: A before/after snippet showing how to migrate.
+      render: js
+    validations:
+      required: false

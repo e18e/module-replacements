@@ -68,7 +68,11 @@ function isFeatureSupported(
   moduleName: string,
   exportName?: string
 ): boolean {
-  const moduleSupport = runtimeData.builtinModules[moduleName];
+  let moduleSupport = runtimeData.builtinModules[moduleName];
+
+  if (moduleSupport === undefined && !moduleName.startsWith('node:')) {
+    moduleSupport = runtimeData.builtinModules[`node:${moduleName}`];
+  }
 
   if (moduleSupport === false || moduleSupport === undefined) {
     return false;
@@ -105,7 +109,7 @@ function extractRuntimeEngines(
     if (isFeatureSupported(runtimeData, moduleName, exportName)) {
       engines.push({
         engine: runtimeName,
-        minVersion: runtimeData.version
+        minVersion: '0.0.1' // Assuming all versions support it
       });
     }
   }

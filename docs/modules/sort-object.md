@@ -48,7 +48,7 @@ const sorted = Object.fromEntries( // [!code ++]
 
 ## `sort-object-keys`
 
-[`sort-object-keys`](https://www.npmjs.com/package/sort-object-keys) is zero‑dependency and matches common `sort-object` use cases (custom order array or comparator).
+[`sort-object-keys`](https://github.com/keithamus/sort-object-keys) is zero‑dependency and matches common `sort-object` use cases (custom order array or comparator).
 
 ```ts
 import sortObj from 'sort-object' // [!code --]
@@ -65,7 +65,7 @@ const sortedByCmp = sortObjectKeys(object, (a, b) => a.localeCompare(b)) // [!co
 
 ## `sortobject`
 
-[`sortobject`](https://www.npmjs.com/package/sortobject) is zero‑dependency and deeply sorts nested objects.
+[`sortobject`](https://github.com/bevry/sortobject) is zero‑dependency and deeply sorts nested objects.
 
 ```ts
 import sortObj from 'sort-object' // [!code --]

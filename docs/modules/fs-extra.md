@@ -4,30 +4,194 @@ description: Modern alternatives to the fs-extra package for working with the fi
 
 # Replacements for `fs-extra`
 
-## Node.js
+## `fs` and `fs/promises` (native, Node.js)
 
-Modern Node.js includes built-in fs and fs/promises APIs that cover what [`fs-extra`](https://github.com/jprichardson/node-fs-extra) historically provided. The table below maps `fs-extra` methods to Node.js APIs and highlights significant differences
+Modern Node.js includes built-in `fs` and `fs/promises` APIs that cover what [`fs-extra`](https://github.com/jprichardson/node-fs-extra) historically provided.
 
-| fs-extra                                                                                                                                                                                                                                                                                                                          | node:fs                                                                                                                                                                                                                  | Notes                                                                                                                          |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| [`copy(src, dest[, options])`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/copy.md)                                                                                                                                                                                                                            | [`fsPromises.cp(src, dest[, options])`](https://nodejs.org/api/fs.html#fspromisescpsrc-dest-options)                                                                                                                     | If src is a file and dest is an existing directory, `fs-extra` throws; `fs.cp` copies into the directory. filter must be sync. |
-| [`copySync(src, dest[, options])`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/copy-sync.md)                                                                                                                                                                                                                   | [`fs.cpSync(src, dest[, options])`](https://nodejs.org/api/fs.html#fscpsyncsrc-dest-options)                                                                                                                             |                                                                                                                                |
-| [`remove(path[, callback])`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/remove.md)                                                                                                                                                                                                                            | [`fsPromises.rm(path[, options])`](https://nodejs.org/api/fs.html#fspromisesrmpath-options)                                                                                                                              | Use `force: true` to match fs-extra’s "silently ignore missing path". Consider `maxRetries`/`retryDelay`.                      |
-| [`removeSync(path)`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/remove-sync.md)                                                                                                                                                                                                                               | [`fs.rmSync(path[, options])`](https://nodejs.org/api/fs.html#fsrmsyncpath-options)                                                                                                                                      |                                                                                                                                |
-| [`mkdirs(dir[, options][, callback])`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/ensureDir.md), [`mkdirp(...)`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/ensureDir.md), [`ensureDir(...)`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/ensureDir.md)                | [`fsPromises.mkdir(path[, options])`](https://nodejs.org/api/fs.html#fspromisesmkdirpath-options)                                                                                                                        | Use `{ recursive: true }`.                                                                                                     |
-| [`mkdirsSync(dir[, options])`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/ensureDir-sync.md), [`mkdirpSync(...)`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/ensureDir-sync.md), [`ensureDirSync(...)`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/ensureDir-sync.md) | [`fs.mkdirSync(path[, options])`](https://nodejs.org/api/fs.html#fsmkdirsyncpath-options)                                                                                                                                | Use `{ recursive: true }`.                                                                                                     |
-| [`pathExists(path)`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/pathExists.md)                                                                                                                                                                                                                                | [`fsPromises.access(path[, mode])`](https://nodejs.org/api/fs.html#fspromisesaccesspath-mode)                                                                                                                            | Return `boolean` (wrap resolve/reject).                                                                                        |
-| [`pathExistsSync(path)`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/pathExists-sync.md)                                                                                                                                                                                                                       | [`fs.existsSync(path)`](https://nodejs.org/api/fs.html#fsexistssyncpath)                                                                                                                                                 |                                                                                                                                |
-| [`outputFile(file, data[, options])`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/outputFile.md)                                                                                                                                                                                                               | [`fsPromises.mkdir(path[, options])`](https://nodejs.org/api/fs.html#fspromisesmkdirpath-options) + [`fsPromises.writeFile(file, data[, options])`](https://nodejs.org/api/fs.html#fspromiseswritefilefile-data-options) | Ensure parent directory.                                                                                                       |
-| [`outputFileSync(file, data[, options])`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/outputFile-sync.md)                                                                                                                                                                                                      | [`fs.mkdirSync(path[, options])`](https://nodejs.org/api/fs.html#fsmkdirsyncpath-options) + [`fs.writeFileSync(file, data[, options])`](https://nodejs.org/api/fs.html#fswritefilesyncfile-data-options)                 |                                                                                                                                |
-| [`readJson(file[, options])`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/readJson.md)                                                                                                                                                                                                                         | [`fsPromises.readFile(path[, options])`](https://nodejs.org/api/fs.html#fspromisesreadfilepath-options)                                                                                                                  | Use `JSON.parse`; ensure 'utf8'. fs-extra’s `throws:false` is not built-in.                                                    |
-| [`writeJson(file, obj[, options])`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/writeJson.md)                                                                                                                                                                                                                  | [`fsPromises.writeFile(file, data[, options])`](https://nodejs.org/api/fs.html#fspromiseswritefilefile-data-options)                                                                                                     | Use `JSON.stringify`; EOL option not built-in.                                                                                 |
-| [`outputJson(file, obj[, options])`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/outputJson.md)                                                                                                                                                                                                                | [`fsPromises.mkdir(path[, options])`](https://nodejs.org/api/fs.html#fspromisesmkdirpath-options) + [`fsPromises.writeFile(file, data[, options])`](https://nodejs.org/api/fs.html#fspromiseswritefilefile-data-options) | Ensure parent directory; EOL not built-in.                                                                                     |
-| [`ensureFile(file)`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/ensureFile.md) / [`createFile(file)`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/ensureFile.md)                                                                                                                           | [`fsPromises.mkdir(path[, options])`](https://nodejs.org/api/fs.html#fspromisesmkdirpath-options) + [`fsPromises.writeFile(file, data[, options])`](https://nodejs.org/api/fs.html#fspromiseswritefilefile-data-options) | Non-truncating create (e.g., `{ flag: 'a' }`).                                                                                 |
-| [`ensureFileSync(file)`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/ensureFile-sync.md) / [`createFileSync(file)`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/ensureFile-sync.md)                                                                                                         | [`fs.mkdirSync(path[, options])`](https://nodejs.org/api/fs.html#fsmkdirsyncpath-options) + [`fs.writeFileSync(file, data[, options])`](https://nodejs.org/api/fs.html#fswritefilesyncfile-data-options)                 |                                                                                                                                |
-| [`ensureLink(src, dst)`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/ensureLink.md) / [`createLink(src, dst)`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/ensureLink.md)                                                                                                                   | [`fsPromises.mkdir(path[, options])`](https://nodejs.org/api/fs.html#fspromisesmkdirpath-options) + [`fsPromises.link(existingPath, newPath)`](https://nodejs.org/api/fs.html#fspromiseslinkexistingpath-newpath)        | Same device only.                                                                                                              |
-| [`ensureLinkSync(src, dst)`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/ensureLink-sync.md) / [`createLinkSync(src, dst)`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/ensureLink-sync.md)                                                                                                 | [`fs.mkdirSync(path[, options])`](https://nodejs.org/api/fs.html#fsmkdirsyncpath-options) + [`fs.linkSync(existingPath, newPath)`](https://nodejs.org/api/fs.html#fslinksyncexistingpath-newpath)                        |                                                                                                                                |
-| [`ensureSymlink(src, dst[, type])`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/ensureSymlink.md) / [`createSymlink(...)`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/ensureSymlink.md)                                                                                                    | [`fsPromises.mkdir(path[, options])`](https://nodejs.org/api/fs.html#fspromisesmkdirpath-options) + [`fsPromises.symlink(target, path[, type])`](https://nodejs.org/api/fs.html#fspromisessymlinktarget-path-type)       |                                                                                                                                |
-| [`ensureSymlinkSync(src, dst[, type])`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/ensureSymlink-sync.md) / [`createSymlinkSync(...)`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/ensureSymlink-sync.md)                                                                                  | [`fs.mkdirSync(path[, options])`](https://nodejs.org/api/fs.html#fsmkdirsyncpath-options) + [`fs.symlinkSync(target, path[, type])`](https://nodejs.org/api/fs.html#fssymlinksynctarget-path-type)                       |                                                                                                                                |
-| [`emptyDir(dir)`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/emptyDir.md) / `emptydir(dir)`                                                                                                                                                                                                                   | [`fsPromises.rm(path[, options])`](https://nodejs.org/api/fs.html#fspromisesrmpath-options) + [`fsPromises.mkdir(path[, options])`](https://nodejs.org/api/fs.html#fspromisesmkdirpath-options)                          | Preserves dir inode vs `rm`+`mkdir` (inode changes).                                                                           |
-| [`move(src, dest[, options])`](https://github.com/jprichardson/node-fs-extra/blob/master/docs/move.md)                                                                                                                                                                                                                            | [`fsPromises.rename(oldPath, newPath)`](https://nodejs.org/api/fs.html#fspromisesrenameoldpath-newpath)                                                                                                                  | Not cross-device; add `cp` + `rm` fallback. No overwrite option - handle existing dest.                                        |
+```js
+import fsExtra from 'fs-extra' // [!code --]
+import * as fs from 'node:fs' // [!code ++]
+import * as fsPromises from 'node:fs/promises' // [!code ++]
+```
+
+### `copy`
+
+```js
+await fsExtra.copy(src, dest) // [!code --]
+await fsPromises.cp(src, dest, { recursive: true }) // [!code ++]
+```
+
+> [!NOTE]
+> If src is a file and dest is an existing directory, `fs-extra` throws; `fs.cp` copies into the directory.
+
+### `copySync`
+
+```js
+fsExtra.copySync(src, dest) // [!code --]
+fs.cpSync(src, dest, { recursive: true }) // [!code ++]
+```
+
+### `remove`
+
+```js
+await fsExtra.remove(path) // [!code --]
+await fsPromises.rm(path, { recursive: true, force: true }) // [!code ++]
+```
+
+> [!IMPORTANT]
+> Remember to set `{ recursive: true, force: true }` to match the behavior of `fs-extra`.
+
+```js
+fsExtra.removeSync(path) // [!code --]
+fs.rmSync(path, { recursive: true, force: true }) // [!code ++]
+```
+
+### `mkdirs` / `mkdirp` / `ensureDir`
+
+```js
+await fsExtra.mkdirs(dir) // [!code --]
+await fsPromises.mkdir(dir, { recursive: true }) // [!code ++]
+```
+
+### `mkdirsSync` / `mkdirpSync` / `ensureDirSync`
+
+```js
+fsExtra.mkdirsSync(dir) // [!code --]
+fs.mkdirSync(dir, { recursive: true }) // [!code ++]
+```
+
+### `pathExists`
+
+<!-- prettier-ignore -->
+```js
+await fsExtra.pathExists(path) // [!code --]
+await fsPromises.access(path).then(() => true, () => false) // [!code ++]
+```
+
+### `pathExistsSync`
+
+```js
+fsExtra.pathExistsSync(path) // [!code --]
+fs.existsSync(path) // [!code ++]
+```
+
+### `outputFile`
+
+```js
+await fsExtra.outputFile(file, data) // [!code --]
+
+await fsPromises.mkdir(path.dirname(file), { recursive: true }) // [!code ++]
+await fsPromises.writeFile(file, data) // [!code ++]
+```
+
+### `outputFileSync`
+
+```js
+fsExtra.outputFileSync(file, data) // [!code --]
+
+fs.mkdirSync(path.dirname(file), { recursive: true }) // [!code ++]
+fs.writeFileSync(file, data) // [!code ++]
+```
+
+### `readJson`
+
+```js
+await fsExtra.readJson(file) // [!code --]
+await fsPromises.readFile(file, 'utf8').then(JSON.parse) // [!code ++]
+```
+
+### `writeJson` / `outputJson`
+
+```js
+await fsExtra.writeJson(file, obj) // [!code --]
+
+await fsPromises.mkdir(path.dirname(file), { recursive: true }) // [!code ++]
+await fsPromises.writeFile(file, JSON.stringify(obj, null, 2)) // [!code ++]
+```
+
+### `ensureFile` / `createFile`
+
+```js
+await fsExtra.ensureFile(file) // [!code --]
+
+await fsPromises.mkdir(path.dirname(file), { recursive: true }) // [!code ++]
+await fsPromises.access(file).catch(() => fsPromises.writeFile(file, '')) // [!code ++]
+```
+
+### `ensureFileSync` / `createFileSync`
+
+```js
+fsExtra.ensureFileSync(file) // [!code --]
+
+fs.mkdirSync(path.dirname(file), { recursive: true }) // [!code ++]
+fs.writeFileSync(file, '') // [!code ++]
+```
+
+### `ensureLink` / `createLink`
+
+```js
+await fsExtra.ensureLink(src, dest) // [!code --]
+
+await fsPromises.mkdir(path.dirname(dest), { recursive: true }) // [!code ++]
+await fsPromises.link(src, dest) // [!code ++]
+```
+
+### `ensureLinkSync` / `createLinkSync`
+
+```js
+fsExtra.ensureLinkSync(src, dest) // [!code --]
+fs.mkdirSync(path.dirname(dest), { recursive: true }) // [!code ++]
+fs.linkSync(src, dest) // [!code ++]
+```
+
+### `ensureSymlink` / `createSymlink`
+
+```js
+await fsExtra.ensureSymlink(src, dest) // [!code --]
+
+await fsPromises.mkdir(path.dirname(dest), { recursive: true }) // [!code ++]
+await fsPromises.symlink(src, dest) // [!code ++]
+```
+
+### `ensureSymlinkSync` / `createSymlinkSync`
+
+```js
+fsExtra.ensureSymlinkSync(src, dest) // [!code --]
+
+fs.mkdirSync(path.dirname(dest), { recursive: true }) // [!code ++]
+fs.symlinkSync(src, dest) // [!code ++]
+```
+
+### `emptyDir` / `emptydir`
+
+```js
+await fsExtra.emptyDir(dir) // [!code --]
+
+await fsPromises.rm(dir, { recursive: true, force: true }) // [!code ++]
+await fsPromises.mkdir(dir, { recursive: true }) // [!code ++]
+```
+
+### `move`
+
+```js
+await fsExtra.move(src, dest) // [!code --]
+await fsPromises.rename(src, dest) // [!code ++]
+```
+
+> [!NOTE]
+> Does not work cross-device; add `cp` + `rm` fallback.
+
+For example:
+
+```js
+try {
+  await fsPromises.rename(src, dest)
+} catch (err) {
+  if (err.code === 'EXDEV') {
+    await fsPromises.cp(src, dest, { recursive: true })
+    await fsPromises.rm(src, { recursive: true, force: true })
+  } else {
+    throw err
+  }
+}
+```
