@@ -1,5 +1,17 @@
 {
   "mappings": {
+    "@75lb/deep-merge": {
+      "type": "module",
+      "moduleName": "@75lb/deep-merge",
+      "replacements": ["defu", "@fastify/deepmerge"],
+      "url": {"type": "e18e", "id": "deep-merge"}
+    },
+    "@cypress/request": {
+      "type": "module",
+      "moduleName": "@cypress/request",
+      "replacements": ["fetch", "ofetch", "ky"],
+      "url": {"type": "e18e", "id": "fetch"}
+    },
     "@iarna/toml": {
       "type": "module",
       "moduleName": "@iarna/toml",
@@ -183,7 +195,7 @@
     "dot-prop": {
       "type": "module",
       "moduleName": "dot-prop",
-      "replacements": ["dlv", "object-path"],
+      "replacements": ["dlv"],
       "url": {"type": "e18e", "id": "dot-prop"}
     },
     "dotenv": {
@@ -191,6 +203,12 @@
       "moduleName": "dotenv",
       "replacements": ["--env-file"],
       "url": {"type": "e18e", "id": "dotenv"}
+    },
+    "dottie": {
+      "type": "module",
+      "moduleName": "dottie",
+      "replacements": ["dlv", "dset"],
+      "url": {"type": "e18e", "id": "dot-prop"}
     },
     "duplexer": {
       "type": "module",
@@ -258,6 +276,12 @@
       "replacements": ["h3", "tinyhttp", "hono", "elysia"],
       "url": {"type": "e18e", "id": "express"}
     },
+    "extend": {
+      "type": "module",
+      "moduleName": "extend",
+      "replacements": ["structuredClone", "defu"],
+      "url": {"type": "e18e", "id": "extend"}
+    },
     "ez-spawn": {
       "type": "module",
       "moduleName": "ez-spawn",
@@ -324,6 +348,12 @@
       "replacements": ["fs"],
       "url": {"type": "e18e", "id": "fs-extra"}
     },
+    "fs.extra": {
+      "type": "module",
+      "moduleName": "fs.extra",
+      "replacements": ["fs"],
+      "url": {"type": "e18e", "id": "fs-extra"}
+    },
     "gaxios": {
       "type": "module",
       "moduleName": "gaxios",
@@ -339,7 +369,7 @@
     "get-value": {
       "type": "module",
       "moduleName": "get-value",
-      "replacements": ["dlv", "object-path"],
+      "replacements": ["dlv"],
       "url": {"type": "e18e", "id": "dot-prop"}
     },
     "glob": {
@@ -354,6 +384,12 @@
       "replacements": ["tinyglobby"],
       "url": {"type": "e18e", "id": "globby"}
     },
+    "globule": {
+      "type": "module",
+      "moduleName": "globule",
+      "replacements": ["tinyglobby"],
+      "url": {"type": "e18e", "id": "globby"}
+    },
     "grapheme-splitter": {
       "type": "module",
       "moduleName": "grapheme-splitter",
@@ -365,6 +401,12 @@
       "moduleName": "graphemer",
       "replacements": ["Intl.Segmenter", "unicode-segmenter"],
       "url": {"type": "e18e", "id": "graphemer"}
+    },
+    "graphviz": {
+      "type": "module",
+      "moduleName": "graphviz",
+      "replacements": ["ts-graphviz"],
+      "url": {"type": "e18e", "id": "graphviz"}
     },
     "gzip-size": {
       "type": "module",
@@ -413,6 +455,12 @@
       "moduleName": "js-yaml",
       "replacements": ["yaml", "YAML"],
       "url": {"type": "e18e", "id": "js-yaml"}
+    },
+    "jsonwebtoken": {
+      "type": "module",
+      "moduleName": "jsonwebtoken",
+      "replacements": ["jose"],
+      "url": {"type": "e18e", "id": "jsonwebtoken"}
     },
     "jsx-ast-utils": {
       "type": "module",
@@ -2376,6 +2424,12 @@
       "replacements": ["fs.mkdir"],
       "url": {"type": "e18e", "id": "mkdirp"}
     },
+    "mockdate": {
+      "type": "module",
+      "moduleName": "mockdate",
+      "replacements": ["node:test", "vitest", "bun:test"],
+      "url": {"type": "e18e", "id": "mockdate"}
+    },
     "moment": {
       "type": "module",
       "moduleName": "moment",
@@ -2409,7 +2463,7 @@
     "object-path": {
       "type": "module",
       "moduleName": "object-path",
-      "replacements": ["dlv", "object-path"],
+      "replacements": ["dlv", "dset"],
       "url": {"type": "e18e", "id": "dot-prop"}
     },
     "ora": {
@@ -2429,6 +2483,12 @@
       "moduleName": "path-exists",
       "replacements": ["fs.access", "fs.existsSync", "Bun.file"],
       "url": {"type": "e18e", "id": "path-exists"}
+    },
+    "pbkdf2": {
+      "type": "module",
+      "moduleName": "pbkdf2",
+      "replacements": ["node:crypto", "crypto"],
+      "url": {"type": "e18e", "id": "pbkdf2"}
     },
     "pkg-dir": {
       "type": "module",
@@ -2557,7 +2617,7 @@
     "set-value": {
       "type": "module",
       "moduleName": "set-value",
-      "replacements": ["dlv", "object-path"],
+      "replacements": ["dset"],
       "url": {"type": "e18e", "id": "dot-prop"}
     },
     "shortid": {
@@ -2571,6 +2631,16 @@
       "moduleName": "sort-object",
       "replacements": ["sort-object", "sort-object-keys", "sortobject"],
       "url": {"type": "e18e", "id": "sort-object"}
+    },
+    "source-map-explorer": {
+      "type": "module",
+      "moduleName": "source-map-explorer",
+      "replacements": [
+        "rollup-plugin-visualizer",
+        "sonda",
+        "webpack-bundle-analyzer"
+      ],
+      "url": {"type": "e18e", "id": "source-map-explorer"}
     },
     "split": {
       "type": "module",
@@ -2614,11 +2684,23 @@
       "replacements": ["fs.mkdtemp", "Deno.makeTempDir"],
       "url": {"type": "e18e", "id": "tempy"}
     },
+    "then-request": {
+      "type": "module",
+      "moduleName": "then-request",
+      "replacements": ["fetch", "ofetch", "ky"],
+      "url": {"type": "e18e", "id": "fetch"}
+    },
     "through": {
       "type": "module",
       "moduleName": "through",
       "replacements": ["node:stream"],
       "url": {"type": "e18e", "id": "through"}
+    },
+    "tokml": {
+      "type": "module",
+      "moduleName": "tokml",
+      "replacements": ["@placemarkio/tokml"],
+      "url": {"type": "e18e", "id": "tokml"}
     },
     "toml": {
       "type": "module",
@@ -2631,6 +2713,12 @@
       "moduleName": "traverse",
       "replacements": ["neotraverse"],
       "url": {"type": "e18e", "id": "traverse"}
+    },
+    "uid-safe": {
+      "type": "module",
+      "moduleName": "uid-safe",
+      "replacements": ["node:crypto", "crypto"],
+      "url": {"type": "e18e", "id": "uuidv4"}
     },
     "underscore": {
       "type": "module",
@@ -2649,6 +2737,12 @@
       "moduleName": "utf8",
       "replacements": ["TextEncoder", "Buffer.prototype.toString"],
       "url": {"type": "e18e", "id": "utf8"}
+    },
+    "uuid": {
+      "type": "module",
+      "moduleName": "uuid",
+      "replacements": ["node:crypto", "crypto"],
+      "url": {"type": "e18e", "id": "uuidv4"}
     },
     "uuidv4": {
       "type": "module",
@@ -2699,6 +2793,12 @@
       "url": {"type": "e18e", "id": "faker"},
       "replacementModule": "@faker-js/faker"
     },
+    "@fastify/deepmerge": {
+      "id": "@fastify/deepmerge",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "deep-merge"},
+      "replacementModule": "@fastify/deepmerge"
+    },
     "@material/web": {
       "id": "@material/web",
       "type": "documented",
@@ -2710,6 +2810,12 @@
       "type": "documented",
       "url": {"type": "e18e", "id": "materialize-css"},
       "replacementModule": "@materializecss/materialize"
+    },
+    "@placemarkio/tokml": {
+      "id": "@placemarkio/tokml",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "tokml"},
+      "replacementModule": "@placemarkio/tokml"
     },
     "@vitest/eslint-plugin": {
       "id": "@vitest/eslint-plugin",
@@ -2785,10 +2891,7 @@
         "featureId": "async-clipboard",
         "compatKey": "api.Clipboard"
       },
-      "url": {
-        "type": "mdn",
-        "id": "Web/API/Clipboard_API"
-      }
+      "url": {"type": "mdn", "id": "Web/API/Clipboard_API"}
     },
     "Date": {
       "id": "Date",
@@ -2885,6 +2988,11 @@
       },
       "url": {"type": "node", "id": "api/module.html#modulebuiltinmodules"}
     },
+    "bun:test": {
+      "id": "bun:test",
+      "type": "native",
+      "url": "https://bun.com/docs/test"
+    },
     "concurrently": {
       "id": "concurrently",
       "type": "documented",
@@ -2918,6 +3026,12 @@
       "url": {"type": "e18e", "id": "moment"},
       "replacementModule": "day.js"
     },
+    "defu": {
+      "id": "defu",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "deep-merge"},
+      "replacementModule": "defu"
+    },
     "dequal": {
       "id": "dequal",
       "type": "documented",
@@ -2929,6 +3043,12 @@
       "type": "documented",
       "url": {"type": "e18e", "id": "dot-prop"},
       "replacementModule": "dlv"
+    },
+    "dset": {
+      "id": "dset",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "dot-prop"},
+      "replacementModule": "dset"
     },
     "elysia": {
       "id": "elysia",
@@ -3116,6 +3236,12 @@
       "nodeFeatureId": {"moduleName": "node:module", "exportName": "isBuiltin"},
       "url": {"type": "node", "id": "api/module.html#moduleisbuiltinmodulename"}
     },
+    "jose": {
+      "id": "jose",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "jsonwebtoken"},
+      "replacementModule": "jose"
+    },
     "jquery": {
       "id": "jquery",
       "type": "removal",
@@ -3236,17 +3362,17 @@
       "nodeFeatureId": {"moduleName": "node:stream"},
       "url": {"type": "node", "id": "api/stream.html"}
     },
+    "node:test": {
+      "id": "node:test",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "test"},
+      "url": {"type": "node", "id": "api/test.html"}
+    },
     "npm-run-all2": {
       "id": "npm-run-all2",
       "type": "documented",
       "url": {"type": "e18e", "id": "npm-run-all"},
       "replacementModule": "npm-run-all2"
-    },
-    "object-path": {
-      "id": "object-path",
-      "type": "documented",
-      "url": {"type": "e18e", "id": "dot-prop"},
-      "replacementModule": "object-path"
     },
     "obug": {
       "id": "obug",
@@ -3332,11 +3458,23 @@
         "id": "api/readline.html#readlinecreateinterfaceoptions"
       }
     },
+    "rollup-plugin-visualizer": {
+      "id": "rollup-plugin-visualizer",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "source-map-explorer"},
+      "replacementModule": "rollup-plugin-visualizer"
+    },
     "smol-toml": {
       "id": "smol-toml",
       "type": "documented",
       "url": {"type": "e18e", "id": "toml"},
       "replacementModule": "smol-toml"
+    },
+    "sonda": {
+      "id": "sonda",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "source-map-explorer"},
+      "replacementModule": "sonda"
     },
     "sort-object": {
       "id": "sort-object",
@@ -3364,6 +3502,15 @@
         "compatKey": "api.ReadableStream"
       },
       "url": {"type": "mdn", "id": "Web/API/Streams_API"}
+    },
+    "structuredClone": {
+      "id": "structuredClone",
+      "type": "native",
+      "webFeatureId": {
+        "featureId": "structured-clone",
+        "compatKey": "api.structuredClone"
+      },
+      "url": {"type": "mdn", "id": "Web/API/Window/structuredClone"}
     },
     "tiny-invariant": {
       "id": "tiny-invariant",
@@ -3394,6 +3541,12 @@
       "type": "documented",
       "url": {"type": "e18e", "id": "express"},
       "replacementModule": "@tinyhttp/app"
+    },
+    "ts-graphviz": {
+      "id": "ts-graphviz",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "graphviz"},
+      "replacementModule": "ts-graphviz"
     },
     "unicode-segmenter": {
       "id": "unicode-segmenter",
@@ -3462,6 +3615,18 @@
       "type": "native",
       "nodeFeatureId": {"moduleName": "node:util", "exportName": "types"},
       "url": {"type": "node", "id": "api/util.html#utiltypes"}
+    },
+    "vitest": {
+      "id": "vitest",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "mockdate"},
+      "replacementModule": "vitest"
+    },
+    "webpack-bundle-analyzer": {
+      "id": "webpack-bundle-analyzer",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "source-map-explorer"},
+      "replacementModule": "webpack-bundle-analyzer"
     },
     "webpack.output.clean": {
       "id": "webpack.output.clean",
