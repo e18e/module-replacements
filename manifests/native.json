@@ -1879,6 +1879,11 @@
       "moduleName": "atob",
       "replacements": ["atob"]
     },
+    "atob-lite": {
+      "type": "module",
+      "moduleName": "atob-lite",
+      "replacements": ["atob"]
+    },
     "btoa": {
       "type": "module",
       "moduleName": "btoa",
