@@ -114,6 +114,12 @@
       "replacements": ["util.styleText", "picocolors", "ansis"],
       "url": {"type": "e18e", "id": "chalk"}
     },
+    "commander": {
+      "type": "module",
+      "moduleName": "commander",
+      "replacements": ["sade"],
+      "url": {"type": "e18e", "id": "commander"}
+    },
     "copy-text-to-clipboard": {
       "type": "module",
       "moduleName": "copy-text-to-clipboard",
@@ -2412,6 +2418,12 @@
       "replacements": ["node:crypto"],
       "url": {"type": "e18e", "id": "md5"}
     },
+    "meow": {
+      "type": "module",
+      "moduleName": "meow",
+      "replacements": ["sade"],
+      "url": {"type": "e18e", "id": "commander"}
+    },
     "mkdirp": {
       "type": "module",
       "moduleName": "mkdirp",
@@ -2749,6 +2761,12 @@
       "moduleName": "xmldom",
       "replacements": ["@xmldom/xmldom"],
       "url": {"type": "e18e", "id": "xmldom"}
+    },
+    "yargs": {
+      "type": "module",
+      "moduleName": "yargs",
+      "replacements": ["sade"],
+      "url": {"type": "e18e", "id": "commander"}
     }
   },
   "replacements": {
@@ -3439,6 +3457,12 @@
       "type": "documented",
       "url": {"type": "e18e", "id": "source-map-explorer"},
       "replacementModule": "rollup-plugin-visualizer"
+    },
+    "sade": {
+      "id": "sade",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "commander"},
+      "replacementModule": "sade"
     },
     "smol-toml": {
       "id": "smol-toml",
