@@ -30,31 +30,6 @@ export async function validateManifests() {
       throw new Error(`Validation for ${manifestPath} failed!`);
     }
 
-    for (const [id, replacement] of Object.entries(manifest.replacements)) {
-      if (replacement.id !== id) {
-        throw new Error(
-          `${manifestPath}: replacement key "${id}" does not match its id property "${replacement.id}"`
-        );
-      }
-
-      if (!replacement.webFeatureId) continue;
-
-      const {featureId, compatKey} = replacement.webFeatureId;
-      const feature = webFeatures[featureId];
-
-      if (!feature) {
-        throw new Error(
-          `${manifestPath}: replacement "${id}" has unknown webFeatureId.featureId "${featureId}"`
-        );
-      }
-
-      if (!feature.compat_features?.includes(compatKey)) {
-        throw new Error(
-          `${manifestPath}: replacement "${id}" has compatKey "${compatKey}" not found in web-features feature "${featureId}"`
-        );
-      }
-    }
-
     const usedReplacementIds = new Set();
 
     for (const [key, mapping] of Object.entries(manifest.mappings)) {
@@ -83,10 +58,39 @@ export async function validateManifests() {
       }
     }
 
-    for (const id of Object.keys(manifest.replacements)) {
+    for (const [id, replacement] of Object.entries(manifest.replacements)) {
+      if (replacement.id !== id) {
+        throw new Error(
+          `${manifestPath}: replacement key "${id}" does not match its id property "${replacement.id}"`
+        );
+      }
+
       if (!usedReplacementIds.has(id)) {
         throw new Error(
           `${manifestPath}: replacement "${id}" is defined but not used by any mapping.`
+        );
+      }
+
+      if (replacement.type === 'simple' && !id.startsWith('snippet::')) {
+        throw new Error(
+          `${manifestPath}: replacement "${id}" is type "simple" and must start with the "snippet::" prefix.`
+        );
+      }
+
+      if (!replacement.webFeatureId) continue;
+
+      const {featureId, compatKey} = replacement.webFeatureId;
+      const feature = webFeatures[featureId];
+
+      if (!feature) {
+        throw new Error(
+          `${manifestPath}: replacement "${id}" has unknown webFeatureId.featureId "${featureId}"`
+        );
+      }
+
+      if (!feature.compat_features?.includes(compatKey)) {
+        throw new Error(
+          `${manifestPath}: replacement "${id}" has compatKey "${compatKey}" not found in web-features feature "${featureId}"`
         );
       }
     }

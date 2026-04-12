@@ -618,6 +618,18 @@
         "compatKey": "javascript.builtins.Date"
       }
     },
+    "Date.now": {
+      "id": "Date.now",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Date/now"
+      },
+      "webFeatureId": {
+        "featureId": "date",
+        "compatKey": "javascript.builtins.Date.now"
+      }
+    },
     "Error.isError": {
       "id": "Error.isError",
       "type": "native",
@@ -642,6 +654,18 @@
         "compatKey": "javascript.builtins.Error.cause"
       }
     },
+    "EventTarget": {
+      "id": "EventTarget",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/API/EventTarget"
+      },
+      "webFeatureId": {
+        "featureId": "events",
+        "compatKey": "api.EventTarget"
+      }
+    },
     "Function.prototype.bind": {
       "id": "Function.prototype.bind",
       "type": "native",
@@ -664,6 +688,18 @@
       "webFeatureId": {
         "featureId": "functions",
         "compatKey": "javascript.builtins.Function.name"
+      }
+    },
+    "Intl.DateTimeFormat": {
+      "id": "Intl.DateTimeFormat",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat"
+      },
+      "webFeatureId": {
+        "featureId": "intl",
+        "compatKey": "javascript.builtins.Intl.DateTimeFormat.DateTimeFormat"
       }
     },
     "Iterator.prototype": {
@@ -1498,6 +1534,12 @@
       },
       "nodeFeatureId": {"moduleName": "fs"}
     },
+    "fsPromises": {
+      "id": "fsPromises",
+      "type": "native",
+      "url": {"type": "node", "id": "api/fs.html#promises-api"},
+      "nodeFeatureId": {"moduleName": "fs"}
+    },
     "globalThis": {
       "id": "globalThis",
       "type": "native",
@@ -1622,6 +1664,15 @@
       "webFeatureId": {
         "featureId": "queuemicrotask",
         "compatKey": "api.queueMicrotask"
+      }
+    },
+    "requestAnimationFrame": {
+      "id": "requestAnimationFrame",
+      "type": "native",
+      "url": {"type": "mdn", "id": "Web/API/Window/requestAnimationFrame"},
+      "webFeatureId": {
+        "featureId": "request-animation-frame",
+        "compatKey": "api.Window.requestAnimationFrame"
       }
     },
     "safe-buffer": {
@@ -1860,6 +1911,11 @@
       "moduleName": "arraybuffer.prototype.slice",
       "replacements": ["ArrayBuffer.prototype.slice"]
     },
+    "arraybuffer.slice": {
+      "type": "module",
+      "moduleName": "arraybuffer.slice",
+      "replacements": ["ArrayBuffer.prototype.slice"]
+    },
     "asynciterator.prototype": {
       "type": "module",
       "moduleName": "asynciterator.prototype",
@@ -1868,6 +1924,11 @@
     "atob": {
       "type": "module",
       "moduleName": "atob",
+      "replacements": ["atob"]
+    },
+    "atob-lite": {
+      "type": "module",
+      "moduleName": "atob-lite",
       "replacements": ["atob"]
     },
     "btoa": {
@@ -1923,6 +1984,16 @@
       "replacements": ["DataView.prototype.byteOffset"]
     },
     "date": {"type": "module", "moduleName": "date", "replacements": ["Date"]},
+    "date-now": {
+      "type": "module",
+      "moduleName": "date-now",
+      "replacements": ["Date.now"]
+    },
+    "dateformat": {
+      "type": "module",
+      "moduleName": "dateformat",
+      "replacements": ["Intl.DateTimeFormat"]
+    },
     "defaults": {
       "type": "module",
       "moduleName": "defaults",
@@ -2018,6 +2089,11 @@
       "moduleName": "escape-string-regexp",
       "replacements": ["RegExp.escape"]
     },
+    "event-target-shim": {
+      "type": "module",
+      "moduleName": "event-target-shim",
+      "replacements": ["EventTarget"]
+    },
     "extend-shallow": {
       "type": "module",
       "moduleName": "extend-shallow",
@@ -2047,6 +2123,11 @@
       "type": "module",
       "moduleName": "foreachasync",
       "replacements": ["for...of"]
+    },
+    "fs-then-native": {
+      "type": "module",
+      "moduleName": "fs-then-native",
+      "replacements": ["fsPromises"]
     },
     "fs.realpath": {
       "type": "module",
@@ -2218,6 +2299,11 @@
       "moduleName": "left-pad",
       "replacements": ["String.prototype.padStart"]
     },
+    "long": {
+      "type": "module",
+      "moduleName": "long",
+      "replacements": ["BigInt"]
+    },
     "math-log2": {
       "type": "module",
       "moduleName": "math-log2",
@@ -2272,6 +2358,11 @@
       "type": "module",
       "moduleName": "math.sign",
       "replacements": ["Math.sign"]
+    },
+    "native-promise-only": {
+      "type": "module",
+      "moduleName": "native-promise-only",
+      "replacements": ["Promise"]
     },
     "node-int64": {
       "type": "module",
@@ -2428,6 +2519,16 @@
       "moduleName": "queue-microtask",
       "replacements": ["queueMicrotask"]
     },
+    "queue-tick": {
+      "type": "module",
+      "moduleName": "queue-tick",
+      "replacements": ["queueMicrotask"]
+    },
+    "raf": {
+      "type": "module",
+      "moduleName": "raf",
+      "replacements": ["requestAnimationFrame"]
+    },
     "random-bytes": {
       "type": "module",
       "moduleName": "random-bytes",
@@ -2461,6 +2562,11 @@
     "safe-buffer": {
       "type": "module",
       "moduleName": "safe-buffer",
+      "replacements": ["safe-buffer"]
+    },
+    "safer-buffer": {
+      "type": "module",
+      "moduleName": "safer-buffer",
       "replacements": ["safe-buffer"]
     },
     "setprototypeof": {
