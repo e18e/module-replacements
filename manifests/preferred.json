@@ -27,7 +27,7 @@
     "arg": {
       "type": "module",
       "moduleName": "arg",
-      "replacements": ["util.parseArgs"],
+      "replacements": ["util.parseArgs", "mri"],
       "url": {"type": "e18e", "id": "parseargs"}
     },
     "@supabase/node-fetch": {
@@ -119,12 +119,6 @@
       "moduleName": "colors",
       "replacements": ["util.styleText", "picocolors", "ansis"],
       "url": {"type": "e18e", "id": "chalk"}
-    },
-    "commander": {
-      "type": "module",
-      "moduleName": "commander",
-      "replacements": ["util.parseArgs"],
-      "url": {"type": "e18e", "id": "parseargs"}
     },
     "copy-text-to-clipboard": {
       "type": "module",
@@ -2424,16 +2418,10 @@
       "replacements": ["node:crypto"],
       "url": {"type": "e18e", "id": "md5"}
     },
-    "meow": {
-      "type": "module",
-      "moduleName": "meow",
-      "replacements": ["util.parseArgs"],
-      "url": {"type": "e18e", "id": "parseargs"}
-    },
     "minimist": {
       "type": "module",
       "moduleName": "minimist",
-      "replacements": ["util.parseArgs"],
+      "replacements": ["util.parseArgs", "mri"],
       "url": {"type": "e18e", "id": "parseargs"}
     },
     "mkdirp": {
@@ -2453,12 +2441,6 @@
       "moduleName": "moment",
       "replacements": ["day.js", "date-fns", "luxon", "Date"],
       "url": {"type": "e18e", "id": "moment"}
-    },
-    "mri": {
-      "type": "module",
-      "moduleName": "mri",
-      "replacements": ["util.parseArgs"],
-      "url": {"type": "e18e", "id": "parseargs"}
     },
     "node-fetch": {
       "type": "module",
@@ -2632,12 +2614,6 @@
       "replacements": ["fs.rm", "fs.rmdir", "premove"],
       "url": {"type": "e18e", "id": "rimraf"}
     },
-    "sade": {
-      "type": "module",
-      "moduleName": "sade",
-      "replacements": ["util.parseArgs"],
-      "url": {"type": "e18e", "id": "parseargs"}
-    },
     "set-value": {
       "type": "module",
       "moduleName": "set-value",
@@ -2786,16 +2762,10 @@
       "replacements": ["@xmldom/xmldom"],
       "url": {"type": "e18e", "id": "xmldom"}
     },
-    "yargs": {
-      "type": "module",
-      "moduleName": "yargs",
-      "replacements": ["util.parseArgs"],
-      "url": {"type": "e18e", "id": "parseargs"}
-    },
     "yargs-parser": {
       "type": "module",
       "moduleName": "yargs-parser",
-      "replacements": ["util.parseArgs"],
+      "replacements": ["util.parseArgs", "mri"],
       "url": {"type": "e18e", "id": "parseargs"}
     }
   },
@@ -3326,6 +3296,12 @@
       "url": {"type": "e18e", "id": "body-parser"},
       "replacementModule": "milliparsec"
     },
+    "mri": {
+      "id": "mri",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "parseargs"},
+      "replacementModule": "mri"
+    },
     "nano-staged": {
       "id": "nano-staged",
       "type": "documented",
@@ -3613,6 +3589,12 @@
         "id": "api/util.html#utilisdeepstrictequalval1-val2-options"
       }
     },
+    "util.parseArgs": {
+      "id": "util.parseArgs",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:util", "exportName": "parseArgs"},
+      "url": {"type": "node", "id": "api/util.html#utilparseargsconfig"}
+    },
     "util.stripVTControlCharacters": {
       "id": "util.stripVTControlCharacters",
       "type": "native",
@@ -3639,12 +3621,6 @@
       "type": "native",
       "nodeFeatureId": {"moduleName": "node:util", "exportName": "types"},
       "url": {"type": "node", "id": "api/util.html#utiltypes"}
-    },
-    "util.parseArgs": {
-      "id": "util.parseArgs",
-      "type": "native",
-      "nodeFeatureId": {"moduleName": "node:util", "exportName": "parseArgs"},
-      "url": {"type": "node", "id": "api/util.html#utilparseargsconfig"}
     },
     "vitest": {
       "id": "vitest",

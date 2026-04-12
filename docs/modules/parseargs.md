@@ -4,9 +4,9 @@ description: Modern alternatives to CLI argument parsing packages using Node.js 
 
 # Replacements for argument parsers
 
-## `util.parseArgs` (native, Node.js)
+## `util.parseArgs` (native, since Node.js 16.x)
 
-[`util.parseArgs`](https://nodejs.org/api/util.html#utilparseargsconfig) is built into Node.js (since 18.3.0 and 16.17.0) and can replace many common CLI parsing libraries such as `minimist`, `mri`, `arg`, `meow`, `yargs-parser`, `yargs`, `commander`, and `sade`.
+[`util.parseArgs`](https://nodejs.org/api/util.html#utilparseargsconfig) is built into Node.js (since 18.3.0 and 16.17.0) and can replace many common CLI options parsing libraries.
 
 Example:
 
@@ -17,11 +17,29 @@ const { values, positionals } = parseArgs({
   args: process.argv.slice(2),
   options: {
     force: { type: 'boolean', short: 'f' },
-    output: { type: 'string', short: 'o' },
+    output: { type: 'string', short: 'o' }
   },
-  allowPositionals: true,
+  allowPositionals: true
 })
 ```
 
 > [!NOTE]
-> `parseArgs` only supports `string` and `boolean` types and does not provide subcommand routing, auto-generated help, or validation. If your CLI relies heavily on these features, evaluate whether the dependency savings justify the added code.
+> `parseArgs` only supports `string` and `boolean` types. If you'd like to support stronger types, one of the other options may be a better fit.
+
+## `mri`
+
+[`mri`](https://github.com/lukeed/mri) is a minimalistic argument parser that supports both short and long options, as well as positional arguments.
+
+Example:
+
+```ts
+import mri from 'mri'
+
+const options = mri(process.argv.slice(2), {
+  alias: {
+    f: 'force',
+    o: 'output'
+  },
+  boolean: ['force']
+})
+```
