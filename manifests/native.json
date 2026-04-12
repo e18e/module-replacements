@@ -75,10 +75,7 @@
     "AbortController": {
       "id": "AbortController",
       "type": "native",
-      "url": {
-        "type": "mdn",
-        "id": "Web/API/AbortController"
-      },
+      "url": {"type": "mdn", "id": "Web/API/AbortController"},
       "webFeatureId": {
         "featureId": "aborting",
         "compatKey": "api.AbortController.AbortController"
@@ -641,6 +638,12 @@
         "featureId": "error-cause",
         "compatKey": "javascript.builtins.Error.cause"
       }
+    },
+    "EventTarget": {
+      "id": "EventTarget",
+      "type": "native",
+      "url": {"type": "mdn", "id": "Web/API/EventTarget"},
+      "webFeatureId": {"featureId": "events", "compatKey": "api.EventTarget"}
     },
     "Function.prototype.bind": {
       "id": "Function.prototype.bind",
@@ -1366,14 +1369,8 @@
     "URL": {
       "id": "URL",
       "type": "native",
-      "url": {
-        "type": "mdn",
-        "id": "Web/API/URL"
-      },
-      "webFeatureId": {
-        "featureId": "url",
-        "compatKey": "api.URL"
-      }
+      "url": {"type": "mdn", "id": "Web/API/URL"},
+      "webFeatureId": {"featureId": "url", "compatKey": "api.URL"}
     },
     "WeakMap": {
       "id": "WeakMap",
@@ -1395,10 +1392,7 @@
     "atob": {
       "id": "atob",
       "type": "native",
-      "url": {
-        "type": "mdn",
-        "id": "Web/API/Window/atob"
-      },
+      "url": {"type": "mdn", "id": "Web/API/Window/atob"},
       "webFeatureId": {
         "featureId": "base64encodedecode",
         "compatKey": "api.atob"
@@ -1407,10 +1401,7 @@
     "btoa": {
       "id": "btoa",
       "type": "native",
-      "url": {
-        "type": "mdn",
-        "id": "Web/API/Window/btoa"
-      },
+      "url": {"type": "mdn", "id": "Web/API/Window/btoa"},
       "webFeatureId": {
         "featureId": "base64encodedecode",
         "compatKey": "api.btoa"
@@ -1419,10 +1410,7 @@
     "crypto.timingSafeEqual": {
       "id": "crypto.timingSafeEqual",
       "type": "native",
-      "url": {
-        "type": "node",
-        "id": "api/crypto.html#cryptotimingsafeequala-b"
-      },
+      "url": {"type": "node", "id": "api/crypto.html#cryptotimingsafeequala-b"},
       "nodeFeatureId": {"moduleName": "crypto", "exportName": "timingSafeEqual"}
     },
     "es-errors": {
@@ -1495,10 +1483,7 @@
     "fs.rm": {
       "id": "fs.rm",
       "type": "native",
-      "url": {
-        "type": "node",
-        "id": "api/fs.html#fsrmpath-options-callback"
-      },
+      "url": {"type": "node", "id": "api/fs.html#fsrmpath-options-callback"},
       "nodeFeatureId": {"moduleName": "fs"}
     },
     "fsPromises": {
@@ -1532,10 +1517,7 @@
       "id": "has-dynamic-import",
       "type": "removal",
       "description": "Every modern environment has support for dynamic `import()`. You can just remove the check.",
-      "url": {
-        "type": "mdn",
-        "id": "Web/JavaScript/Reference/Operators/import"
-      }
+      "url": {"type": "mdn", "id": "Web/JavaScript/Reference/Operators/import"}
     },
     "has-optional-chaining": {
       "id": "has-optional-chaining",
@@ -1577,10 +1559,7 @@
       "id": "has-template-literals",
       "type": "removal",
       "description": "Every modern environment has support for template literals. You can just remove the check.",
-      "url": {
-        "type": "mdn",
-        "id": "Web/JavaScript/Reference/Template_literals"
-      }
+      "url": {"type": "mdn", "id": "Web/JavaScript/Reference/Template_literals"}
     },
     "has-tostringtag": {
       "id": "has-tostringtag",
@@ -1615,19 +1594,13 @@
     "path.parse": {
       "id": "path.parse",
       "type": "native",
-      "url": {
-        "type": "node",
-        "id": "api/path.html#pathparsepath"
-      },
+      "url": {"type": "node", "id": "api/path.html#pathparsepath"},
       "nodeFeatureId": {"moduleName": "path"}
     },
     "queueMicrotask": {
       "id": "queueMicrotask",
       "type": "native",
-      "url": {
-        "type": "mdn",
-        "id": "Web/API/Window/queueMicrotask"
-      },
+      "url": {"type": "mdn", "id": "Web/API/Window/queueMicrotask"},
       "webFeatureId": {
         "featureId": "queuemicrotask",
         "compatKey": "api.queueMicrotask"
@@ -1636,10 +1609,7 @@
     "requestAnimationFrame": {
       "id": "requestAnimationFrame",
       "type": "native",
-      "url": {
-        "type": "mdn",
-        "id": "Web/API/Window/requestAnimationFrame"
-      },
+      "url": {"type": "mdn", "id": "Web/API/Window/requestAnimationFrame"},
       "webFeatureId": {
         "featureId": "request-animation-frame",
         "compatKey": "api.Window.requestAnimationFrame"
@@ -1654,19 +1624,13 @@
     "util.promisify": {
       "id": "util.promisify",
       "type": "native",
-      "url": {
-        "type": "node",
-        "id": "api/util.html#utilpromisifyoriginal"
-      },
+      "url": {"type": "node", "id": "api/util.html#utilpromisifyoriginal"},
       "nodeFeatureId": {"moduleName": "util", "exportName": "promisify"}
     },
     "zlib.crc32": {
       "id": "zlib.crc32",
       "type": "native",
-      "url": {
-        "type": "node",
-        "id": "api/zlib.html#zlibcrc32data-value"
-      },
+      "url": {"type": "node", "id": "api/zlib.html#zlibcrc32data-value"},
       "nodeFeatureId": {"moduleName": "zlib", "exportName": "crc32"}
     }
   },
@@ -1881,21 +1845,23 @@
       "moduleName": "arraybuffer.prototype.slice",
       "replacements": ["ArrayBuffer.prototype.slice"]
     },
+    "arraybuffer.slice": {
+      "type": "module",
+      "moduleName": "arraybuffer.slice",
+      "replacements": ["ArrayBuffer.prototype.slice"]
+    },
     "asynciterator.prototype": {
       "type": "module",
       "moduleName": "asynciterator.prototype",
       "replacements": ["AsyncIterator.prototype"]
     },
-    "atob": {
+    "atob": {"type": "module", "moduleName": "atob", "replacements": ["atob"]},
+    "atob-lite": {
       "type": "module",
-      "moduleName": "atob",
+      "moduleName": "atob-lite",
       "replacements": ["atob"]
     },
-    "btoa": {
-      "type": "module",
-      "moduleName": "btoa",
-      "replacements": ["btoa"]
-    },
+    "btoa": {"type": "module", "moduleName": "btoa", "replacements": ["btoa"]},
     "buffer-crc32": {
       "type": "module",
       "moduleName": "buffer-crc32",
@@ -2043,6 +2009,11 @@
       "type": "module",
       "moduleName": "escape-string-regexp",
       "replacements": ["RegExp.escape"]
+    },
+    "event-target-shim": {
+      "type": "module",
+      "moduleName": "event-target-shim",
+      "replacements": ["EventTarget"]
     },
     "extend-shallow": {
       "type": "module",
@@ -2309,6 +2280,11 @@
       "moduleName": "math.sign",
       "replacements": ["Math.sign"]
     },
+    "native-promise-only": {
+      "type": "module",
+      "moduleName": "native-promise-only",
+      "replacements": ["Promise"]
+    },
     "node-int64": {
       "type": "module",
       "moduleName": "node-int64",
@@ -2464,6 +2440,11 @@
       "moduleName": "queue-microtask",
       "replacements": ["queueMicrotask"]
     },
+    "queue-tick": {
+      "type": "module",
+      "moduleName": "queue-tick",
+      "replacements": ["queueMicrotask"]
+    },
     "raf": {
       "type": "module",
       "moduleName": "raf",
@@ -2497,6 +2478,11 @@
     "safe-buffer": {
       "type": "module",
       "moduleName": "safe-buffer",
+      "replacements": ["safe-buffer"]
+    },
+    "safer-buffer": {
+      "type": "module",
+      "moduleName": "safer-buffer",
       "replacements": ["safe-buffer"]
     },
     "setprototypeof": {
