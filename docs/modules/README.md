@@ -14,6 +14,7 @@ ESLint plugin.
 
 - [`@75lb/deep-merge`](./deep-merge.md)
 - [`@jsdevtools/ezspawn`](./ez-spawn.md)
+- [`arg`](./parseargs.md)
 - [`axios`](./fetch.md)
 - [`bluebird`](./bluebird-q.md)
 - [`body-parser`](./body-parser.md)

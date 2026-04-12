@@ -24,17 +24,17 @@
       "replacements": ["node:stream"],
       "url": {"type": "e18e", "id": "through"}
     },
-    "arg": {
-      "type": "module",
-      "moduleName": "arg",
-      "replacements": ["util.parseArgs", "mri"],
-      "url": {"type": "e18e", "id": "parseargs"}
-    },
     "@supabase/node-fetch": {
       "type": "module",
       "moduleName": "@supabase/node-fetch",
       "replacements": ["fetch", "ofetch", "ky"],
       "url": {"type": "e18e", "id": "fetch"}
+    },
+    "arg": {
+      "type": "module",
+      "moduleName": "arg",
+      "replacements": ["util.parseArgs", "mri"],
+      "url": {"type": "e18e", "id": "parseargs"}
     },
     "axios": {
       "type": "module",
