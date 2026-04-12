@@ -2297,6 +2297,11 @@
       "moduleName": "math.sign",
       "replacements": ["Math.sign"]
     },
+    "native-promise-only": {
+      "type": "module",
+      "moduleName": "native-promise-only",
+      "replacements": ["Promise"]
+    },
     "node-int64": {
       "type": "module",
       "moduleName": "node-int64",
