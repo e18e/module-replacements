@@ -30,6 +30,12 @@
       "replacements": ["fetch", "ofetch", "ky"],
       "url": {"type": "e18e", "id": "fetch"}
     },
+    "arg": {
+      "type": "module",
+      "moduleName": "arg",
+      "replacements": ["util.parseArgs", "mri"],
+      "url": {"type": "e18e", "id": "parseargs"}
+    },
     "axios": {
       "type": "module",
       "moduleName": "axios",
@@ -2412,6 +2418,12 @@
       "replacements": ["node:crypto"],
       "url": {"type": "e18e", "id": "md5"}
     },
+    "minimist": {
+      "type": "module",
+      "moduleName": "minimist",
+      "replacements": ["util.parseArgs", "mri"],
+      "url": {"type": "e18e", "id": "parseargs"}
+    },
     "mkdirp": {
       "type": "module",
       "moduleName": "mkdirp",
@@ -2749,6 +2761,12 @@
       "moduleName": "xmldom",
       "replacements": ["@xmldom/xmldom"],
       "url": {"type": "e18e", "id": "xmldom"}
+    },
+    "yargs-parser": {
+      "type": "module",
+      "moduleName": "yargs-parser",
+      "replacements": ["util.parseArgs", "mri"],
+      "url": {"type": "e18e", "id": "parseargs"}
     }
   },
   "replacements": {
@@ -3278,6 +3296,12 @@
       "url": {"type": "e18e", "id": "body-parser"},
       "replacementModule": "milliparsec"
     },
+    "mri": {
+      "id": "mri",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "parseargs"},
+      "replacementModule": "mri"
+    },
     "nano-staged": {
       "id": "nano-staged",
       "type": "documented",
@@ -3564,6 +3588,12 @@
         "type": "node",
         "id": "api/util.html#utilisdeepstrictequalval1-val2-options"
       }
+    },
+    "util.parseArgs": {
+      "id": "util.parseArgs",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:util", "exportName": "parseArgs"},
+      "url": {"type": "node", "id": "api/util.html#utilparseargsconfig"}
     },
     "util.stripVTControlCharacters": {
       "id": "util.stripVTControlCharacters",
