@@ -24,12 +24,6 @@
       "replacements": ["fetch", "ofetch", "ky"],
       "url": {"type": "e18e", "id": "fetch"}
     },
-    "arg": {
-      "type": "module",
-      "moduleName": "arg",
-      "replacements": ["util.parseArgs"],
-      "url": {"type": "e18e", "id": "parseargs"}
-    },
     "axios": {
       "type": "module",
       "moduleName": "axios",
@@ -359,12 +353,6 @@
       "moduleName": "get-value",
       "replacements": ["dlv", "object-path"],
       "url": {"type": "e18e", "id": "dot-prop"}
-    },
-    "getopts": {
-      "type": "module",
-      "moduleName": "getopts",
-      "replacements": ["util.parseArgs"],
-      "url": {"type": "e18e", "id": "parseargs"}
     },
     "glob": {
       "type": "module",
@@ -2412,12 +2400,6 @@
       "replacements": ["sade"],
       "url": {"type": "e18e", "id": "commander"}
     },
-    "minimist": {
-      "type": "module",
-      "moduleName": "minimist",
-      "replacements": ["util.parseArgs"],
-      "url": {"type": "e18e", "id": "parseargs"}
-    },
     "mkdirp": {
       "type": "module",
       "moduleName": "mkdirp",
@@ -2429,12 +2411,6 @@
       "moduleName": "moment",
       "replacements": ["day.js", "date-fns", "luxon", "Date"],
       "url": {"type": "e18e", "id": "moment"}
-    },
-    "mri": {
-      "type": "module",
-      "moduleName": "mri",
-      "replacements": ["util.parseArgs"],
-      "url": {"type": "e18e", "id": "parseargs"}
     },
     "node-fetch": {
       "type": "module",
@@ -2755,12 +2731,6 @@
       "moduleName": "yargs",
       "replacements": ["sade"],
       "url": {"type": "e18e", "id": "commander"}
-    },
-    "yargs-parser": {
-      "type": "module",
-      "moduleName": "yargs-parser",
-      "replacements": ["util.parseArgs"],
-      "url": {"type": "e18e", "id": "parseargs"}
     }
   },
   "replacements": {
@@ -3568,12 +3538,6 @@
         "type": "node",
         "id": "api/util.html#utilisdeepstrictequalval1-val2-options"
       }
-    },
-    "util.parseArgs": {
-      "id": "util.parseArgs",
-      "type": "native",
-      "nodeFeatureId": {"moduleName": "node:util", "exportName": "parseArgs"},
-      "url": {"type": "node", "id": "api/util.html#utilparseargsconfig"}
     },
     "util.stripVTControlCharacters": {
       "id": "util.stripVTControlCharacters",
