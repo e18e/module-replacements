@@ -2482,6 +2482,11 @@
       "moduleName": "safe-buffer",
       "replacements": ["safe-buffer"]
     },
+    "safer-buffer": {
+      "type": "module",
+      "moduleName": "safer-buffer",
+      "replacements": ["safe-buffer"]
+    },
     "setprototypeof": {
       "type": "module",
       "moduleName": "setprototypeof",
