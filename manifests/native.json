@@ -642,6 +642,18 @@
         "compatKey": "javascript.builtins.Error.cause"
       }
     },
+    "EventTarget": {
+      "id": "EventTarget",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/API/EventTarget"
+      },
+      "webFeatureId": {
+        "featureId": "events",
+        "compatKey": "api.EventTarget"
+      }
+    },
     "Function.prototype.bind": {
       "id": "Function.prototype.bind",
       "type": "native",
@@ -2031,6 +2043,11 @@
       "type": "module",
       "moduleName": "escape-string-regexp",
       "replacements": ["RegExp.escape"]
+    },
+    "event-target-shim": {
+      "type": "module",
+      "moduleName": "event-target-shim",
+      "replacements": ["EventTarget"]
     },
     "extend-shallow": {
       "type": "module",
