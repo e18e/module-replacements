@@ -2702,6 +2702,12 @@
       "replacements": ["neotraverse"],
       "url": {"type": "e18e", "id": "traverse"}
     },
+    "uid-safe": {
+      "type": "module",
+      "moduleName": "uid-safe",
+      "replacements": ["node:crypto", "crypto"],
+      "url": {"type": "e18e", "id": "uuidv4"}
+    },
     "underscore": {
       "type": "module",
       "moduleName": "underscore",
