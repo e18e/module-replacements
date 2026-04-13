@@ -8,17 +8,17 @@ description: Modern alternatives to the fs-extra package for working with the fi
 
 Modern Node.js includes built-in `fs` and `fs/promises` APIs that cover what [`fs-extra`](https://github.com/jprichardson/node-fs-extra) historically provided.
 
-```js
-import fsExtra from 'fs-extra' // [!code --]
-import * as fs from 'node:fs' // [!code ++]
-import * as fsPromises from 'node:fs/promises' // [!code ++]
+```diff
+- import fsExtra from 'fs-extra'
++ import * as fs from 'node:fs'
++ import * as fsPromises from 'node:fs/promises'
 ```
 
 ### `copy`
 
-```js
-await fsExtra.copy(src, dest) // [!code --]
-await fsPromises.cp(src, dest, { recursive: true }) // [!code ++]
+```diff
+- await fsExtra.copy(src, dest)
++ await fsPromises.cp(src, dest, { recursive: true })
 ```
 
 > [!NOTE]
@@ -26,156 +26,156 @@ await fsPromises.cp(src, dest, { recursive: true }) // [!code ++]
 
 ### `copySync`
 
-```js
-fsExtra.copySync(src, dest) // [!code --]
-fs.cpSync(src, dest, { recursive: true }) // [!code ++]
+```diff
+- fsExtra.copySync(src, dest)
++ fs.cpSync(src, dest, { recursive: true })
 ```
 
 ### `remove`
 
-```js
-await fsExtra.remove(path) // [!code --]
-await fsPromises.rm(path, { recursive: true, force: true }) // [!code ++]
+```diff
+- await fsExtra.remove(path)
++ await fsPromises.rm(path, { recursive: true, force: true })
 ```
 
 > [!IMPORTANT]
 > Remember to set `{ recursive: true, force: true }` to match the behavior of `fs-extra`.
 
-```js
-fsExtra.removeSync(path) // [!code --]
-fs.rmSync(path, { recursive: true, force: true }) // [!code ++]
+```diff
+- fsExtra.removeSync(path)
++ fs.rmSync(path, { recursive: true, force: true })
 ```
 
 ### `mkdirs` / `mkdirp` / `ensureDir`
 
-```js
-await fsExtra.mkdirs(dir) // [!code --]
-await fsPromises.mkdir(dir, { recursive: true }) // [!code ++]
+```diff
+- await fsExtra.mkdirs(dir)
++ await fsPromises.mkdir(dir, { recursive: true })
 ```
 
 ### `mkdirsSync` / `mkdirpSync` / `ensureDirSync`
 
-```js
-fsExtra.mkdirsSync(dir) // [!code --]
-fs.mkdirSync(dir, { recursive: true }) // [!code ++]
+```diff
+- fsExtra.mkdirsSync(dir)
++ fs.mkdirSync(dir, { recursive: true })
 ```
 
 ### `pathExists`
 
 <!-- prettier-ignore -->
-```js
-await fsExtra.pathExists(path) // [!code --]
-await fsPromises.access(path).then(() => true, () => false) // [!code ++]
+```diff
+- await fsExtra.pathExists(path)
++ await fsPromises.access(path).then(() => true, () => false)
 ```
 
 ### `pathExistsSync`
 
-```js
-fsExtra.pathExistsSync(path) // [!code --]
-fs.existsSync(path) // [!code ++]
+```diff
+- fsExtra.pathExistsSync(path)
++ fs.existsSync(path)
 ```
 
 ### `outputFile`
 
-```js
-await fsExtra.outputFile(file, data) // [!code --]
+```diff
+- await fsExtra.outputFile(file, data)
 
-await fsPromises.mkdir(path.dirname(file), { recursive: true }) // [!code ++]
-await fsPromises.writeFile(file, data) // [!code ++]
++ await fsPromises.mkdir(path.dirname(file), { recursive: true })
++ await fsPromises.writeFile(file, data)
 ```
 
 ### `outputFileSync`
 
-```js
-fsExtra.outputFileSync(file, data) // [!code --]
+```diff
+- fsExtra.outputFileSync(file, data)
 
-fs.mkdirSync(path.dirname(file), { recursive: true }) // [!code ++]
-fs.writeFileSync(file, data) // [!code ++]
++ fs.mkdirSync(path.dirname(file), { recursive: true })
++ fs.writeFileSync(file, data)
 ```
 
 ### `readJson`
 
-```js
-await fsExtra.readJson(file) // [!code --]
-await fsPromises.readFile(file, 'utf8').then(JSON.parse) // [!code ++]
+```diff
+- await fsExtra.readJson(file)
++ await fsPromises.readFile(file, 'utf8').then(JSON.parse)
 ```
 
 ### `writeJson` / `outputJson`
 
-```js
-await fsExtra.writeJson(file, obj) // [!code --]
+```diff
+- await fsExtra.writeJson(file, obj)
 
-await fsPromises.mkdir(path.dirname(file), { recursive: true }) // [!code ++]
-await fsPromises.writeFile(file, JSON.stringify(obj, null, 2)) // [!code ++]
++ await fsPromises.mkdir(path.dirname(file), { recursive: true })
++ await fsPromises.writeFile(file, JSON.stringify(obj, null, 2))
 ```
 
 ### `ensureFile` / `createFile`
 
-```js
-await fsExtra.ensureFile(file) // [!code --]
+```diff
+- await fsExtra.ensureFile(file)
 
-await fsPromises.mkdir(path.dirname(file), { recursive: true }) // [!code ++]
-await fsPromises.access(file).catch(() => fsPromises.writeFile(file, '')) // [!code ++]
++ await fsPromises.mkdir(path.dirname(file), { recursive: true })
++ await fsPromises.access(file).catch(() => fsPromises.writeFile(file, ''))
 ```
 
 ### `ensureFileSync` / `createFileSync`
 
-```js
-fsExtra.ensureFileSync(file) // [!code --]
+```diff
+- fsExtra.ensureFileSync(file)
 
-fs.mkdirSync(path.dirname(file), { recursive: true }) // [!code ++]
-fs.writeFileSync(file, '') // [!code ++]
++ fs.mkdirSync(path.dirname(file), { recursive: true })
++ fs.writeFileSync(file, '')
 ```
 
 ### `ensureLink` / `createLink`
 
-```js
-await fsExtra.ensureLink(src, dest) // [!code --]
+```diff
+- await fsExtra.ensureLink(src, dest)
 
-await fsPromises.mkdir(path.dirname(dest), { recursive: true }) // [!code ++]
-await fsPromises.link(src, dest) // [!code ++]
++ await fsPromises.mkdir(path.dirname(dest), { recursive: true })
++ await fsPromises.link(src, dest)
 ```
 
 ### `ensureLinkSync` / `createLinkSync`
 
-```js
-fsExtra.ensureLinkSync(src, dest) // [!code --]
-fs.mkdirSync(path.dirname(dest), { recursive: true }) // [!code ++]
-fs.linkSync(src, dest) // [!code ++]
+```diff
+- fsExtra.ensureLinkSync(src, dest)
++ fs.mkdirSync(path.dirname(dest), { recursive: true })
++ fs.linkSync(src, dest)
 ```
 
 ### `ensureSymlink` / `createSymlink`
 
-```js
-await fsExtra.ensureSymlink(src, dest) // [!code --]
+```diff
+- await fsExtra.ensureSymlink(src, dest)
 
-await fsPromises.mkdir(path.dirname(dest), { recursive: true }) // [!code ++]
-await fsPromises.symlink(src, dest) // [!code ++]
++ await fsPromises.mkdir(path.dirname(dest), { recursive: true })
++ await fsPromises.symlink(src, dest)
 ```
 
 ### `ensureSymlinkSync` / `createSymlinkSync`
 
-```js
-fsExtra.ensureSymlinkSync(src, dest) // [!code --]
+```diff
+- fsExtra.ensureSymlinkSync(src, dest)
 
-fs.mkdirSync(path.dirname(dest), { recursive: true }) // [!code ++]
-fs.symlinkSync(src, dest) // [!code ++]
++ fs.mkdirSync(path.dirname(dest), { recursive: true })
++ fs.symlinkSync(src, dest)
 ```
 
 ### `emptyDir` / `emptydir`
 
-```js
-await fsExtra.emptyDir(dir) // [!code --]
+```diff
+- await fsExtra.emptyDir(dir)
 
-await fsPromises.rm(dir, { recursive: true, force: true }) // [!code ++]
-await fsPromises.mkdir(dir, { recursive: true }) // [!code ++]
++ await fsPromises.rm(dir, { recursive: true, force: true })
++ await fsPromises.mkdir(dir, { recursive: true })
 ```
 
 ### `move`
 
-```js
-await fsExtra.move(src, dest) // [!code --]
-await fsPromises.rename(src, dest) // [!code ++]
+```diff
+- await fsExtra.move(src, dest)
++ await fsPromises.rename(src, dest)
 ```
 
 > [!NOTE]

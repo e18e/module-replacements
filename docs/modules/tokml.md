@@ -10,21 +10,21 @@ description: Modern replacements for the tokml package for converting GeoJSON to
 
 Example:
 
-```js
-import tokml from 'tokml' // [!code --]
-import { toKML } from '@placemarkio/tokml' // [!code ++]
+```diff
+- import tokml from 'tokml'
++ import { toKML } from '@placemarkio/tokml'
 
-const geojson = {
-  type: 'FeatureCollection',
-  features: [
-    {
-      type: 'Feature',
-      geometry: { type: 'Point', coordinates: [1, 2] },
-      properties: { name: 'Marker' }
-    }
-  ]
-}
+  const geojson = {
+    type: 'FeatureCollection',
+    features: [
+      {
+        type: 'Feature',
+        geometry: { type: 'Point', coordinates: [1, 2] },
+        properties: { name: 'Marker' }
+      }
+    ]
+  }
 
-const kml = tokml(geojson) // [!code --]
-const kml = toKML(geojson) // [!code ++]
+- const kml = tokml(geojson)
++ const kml = toKML(geojson)
 ```

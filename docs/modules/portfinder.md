@@ -10,10 +10,10 @@ description: Modern alternatives to the portfinder package for finding an availa
 
 Example:
 
-```ts
-import portfinder from 'portfinder' // [!code --]
-import getPort from 'get-port' // [!code ++]
+```diff
+- import portfinder from 'portfinder'
++ import getPort from 'get-port'
 
-const port = await portfinder.getPortPromise() // [!code --]
-const port = await getPort() // [!code ++]
+- const port = await portfinder.getPortPromise()
++ const port = await getPort()
 ```

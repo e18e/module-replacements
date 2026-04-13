@@ -10,74 +10,74 @@ Since Node.js ≥ 16.7.0 [Utility Consumers](https://nodejs.org/api/webstreams.h
 
 Example:
 
-```ts
-import streamBuffers from 'stream-buffers' // [!code --]
-import { pipeline } from 'node:stream/promises' // [!code --]
-import { buffer } from 'node:stream/consumers' // [!code ++]
+```diff
+- import streamBuffers from 'stream-buffers'
+- import { pipeline } from 'node:stream/promises'
++ import { buffer } from 'node:stream/consumers'
 
-const sink = new streamBuffers.WritableStreamBuffer() // [!code --]
-await pipeline(readable, sink) // [!code --]
+- const sink = new streamBuffers.WritableStreamBuffer()
+- await pipeline(readable, sink)
 
-const out = sink.getContents() // [!code --]
-const out = await buffer(readable) // [!code ++]
+- const out = sink.getContents()
++ const out = await buffer(readable)
 ```
 
 Capturing output when an API expects a Writable example:
 
-```ts
-import streamBuffers from 'stream-buffers' // [!code --]
-import { PassThrough } from 'node:stream' // [!code ++]
-import { buffer, text } from 'node:stream/consumers' // [!code ++]
+```diff
+- import streamBuffers from 'stream-buffers'
++ import { PassThrough } from 'node:stream'
++ import { buffer, text } from 'node:stream/consumers'
 
-const sink = new streamBuffers.WritableStreamBuffer() // [!code --]
-const sink = new PassThrough() // [!code ++]
+- const sink = new streamBuffers.WritableStreamBuffer()
++ const sink = new PassThrough()
 
-const outPromise = buffer(sink) // [!code ++]
-await someFnThatWritesTo(sink)
-const out = sink.getContents() // [!code --]
-sink.end() // [!code ++]
-const out = await outPromise // [!code ++]
++ const outPromise = buffer(sink)
+  await someFnThatWritesTo(sink)
+- const out = sink.getContents()
++ sink.end()
++ const out = await outPromise
 ```
 
 Push data over time example:
 
-```ts
-import streamBuffers from 'stream-buffers' // [!code --]
-import { Readable } from 'node:stream' // [!code ++]
+```diff
+- import streamBuffers from 'stream-buffers'
++ import { Readable } from 'node:stream'
 
-const rs = new streamBuffers.ReadableStreamBuffer() // [!code --]
-const rs = new Readable({ read() {} }) // [!code ++]
+- const rs = new streamBuffers.ReadableStreamBuffer()
++ const rs = new Readable({ read() {} })
 
-rs.put('first chunk') // [!code --]
-rs.push('first chunk') // [!code ++]
+- rs.put('first chunk')
++ rs.push('first chunk')
 
-rs.put(Buffer.from('second chunk')) // [!code --]
-rs.push(Buffer.from('second chunk')) // [!code ++]
+- rs.put(Buffer.from('second chunk'))
++ rs.push(Buffer.from('second chunk'))
 
-rs.stop() // [!code --]
-rs.push(null) // [!code ++]
+- rs.stop()
++ rs.push(null)
 ```
 
 Control chunk size and frequency example:
 
 <!-- prettier-ignore -->
-```ts
-import streamBuffers from 'stream-buffers' // [!code --]
-import { Readable } from 'node:stream' // [!code ++]
-import { setTimeout } from 'node:timers/promises' // [!code ++]
-
-const data = Buffer.from('...your data...')
-const frequencyMs = 10
-const chunkSize = 2048
-
-const rs = new streamBuffers.ReadableStreamBuffer({ frequency: frequencyMs, chunkSize: chunkSize }) // [!code --]
-rs.put(data) // [!code --]
-rs.stop() // [!code --]
-
-const rs = Readable.from(async function* () { // [!code ++]
-  for (let i = 0; i < data.length; i += chunkSize) { // [!code ++]
-    yield data.slice(i, i + chunkSize) // [!code ++]
-    await setTimeout(frequencyMs) // [!code ++]
-  } // [!code ++]
-}()) // [!code ++]
+```diff
+- import streamBuffers from 'stream-buffers'
++ import { Readable } from 'node:stream'
++ import { setTimeout } from 'node:timers/promises'
+  
+  const data = Buffer.from('...your data...')
+  const frequencyMs = 10
+  const chunkSize = 2048
+  
+- const rs = new streamBuffers.ReadableStreamBuffer({ frequency: frequencyMs, chunkSize: chunkSize })
+- rs.put(data)
+- rs.stop()
+  
++ const rs = Readable.from(async function* () {
++   for (let i = 0; i < data.length; i += chunkSize) {
++     yield data.slice(i, i + chunkSize)
++     await setTimeout(frequencyMs)
++   }
++ }())
 ```

@@ -11,12 +11,12 @@ description: Modern alternatives to feather packages
 Example:
 
 <!-- prettier-ignore -->
-```js
-import feather from 'feather-icons' // [!code --]
-import { icons } from 'lucide' // [!code ++]
-
-feather.icons.x.toSvg({ class: 'icon icon-x' }) // [!code --]
-icons.x.toSvg({ class: 'icon icon-x' }) // [!code ++]
+```diff
+- import feather from 'feather-icons'
++ import { icons } from 'lucide'
+  
+- feather.icons.x.toSvg({ class: 'icon icon-x' })
++ icons.x.toSvg({ class: 'icon icon-x' })
 ```
 
 ## `lucide-react` for `react-feather`
@@ -26,18 +26,18 @@ icons.x.toSvg({ class: 'icon icon-x' }) // [!code ++]
 Example:
 
 <!-- prettier-ignore -->
-```jsx
-import { Camera, ArrowRight } from 'react-feather' // [!code --]
-import { Camera, ArrowRight } from 'lucide-react' // [!code ++]
-
-export function Header() {
-  return (
-    <>
-      <Camera size={18} />
-      <ArrowRight className="cta-icon" />
-    </>
-  )
-}
+```diff
+- import { Camera, ArrowRight } from 'react-feather'
++ import { Camera, ArrowRight } from 'lucide-react'
+  
+  export function Header() {
+    return (
+      <>
+        <Camera size={18} />
+        <ArrowRight className="cta-icon" />
+      </>
+    )
+  }
 ```
 
 > [!NOTE]

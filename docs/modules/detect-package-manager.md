@@ -16,13 +16,13 @@ description: Lightweight alternative to detect-package-manager for detecting the
 
 ### Migration example
 
-```ts
-import { detect } from 'detect-package-manager' // [!code --]
-import { detect } from 'package-manager-detector' // [!code ++]
+```diff
+- import { detect } from 'detect-package-manager'
++ import { detect } from 'package-manager-detector'
 
-const pm = await detect() // [!code --]
-const result = await detect() // [!code ++]
-const pm = result?.name // [!code ++]
+- const pm = await detect()
++ const result = await detect()
++ const pm = result?.name
 ```
 
 > [!NOTE]

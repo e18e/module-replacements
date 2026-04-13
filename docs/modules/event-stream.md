@@ -6,46 +6,46 @@ description: Modern alternatives to the event-stream package
 
 ## `es.pipeline()` replacement
 
-```ts
-import es from 'event-stream' // [!code --]
-import { pipeline } from 'node:stream/promises' // [!code ++]
+```diff
+- import es from 'event-stream'
++ import { pipeline } from 'node:stream/promises'
 
-es.pipeline(s1, s2, s3) // [!code --]
-await pipeline(s1, s2, s3) // [!code ++]
+- es.pipeline(s1, s2, s3)
++ await pipeline(s1, s2, s3)
 ```
 
 ## `es.split()` replacement
 
-```ts
-import es from 'event-stream' // [!code --]
-import { createReadStream } from 'node:fs' // [!code ++]
-import { createInterface } from 'node:readline' // [!code ++]
+```diff
+- import es from 'event-stream'
++ import { createReadStream } from 'node:fs'
++ import { createInterface } from 'node:readline'
 
-createReadStream('file.txt').pipe(es.split()) // [!code --]
-const lines = createInterface({ input: createReadStream('file.txt') }) // [!code ++]
+- createReadStream('file.txt').pipe(es.split())
++ const lines = createInterface({ input: createReadStream('file.txt') })
 ```
 
 ## `es.map()` replacement
 
 <!-- prettier-ignore -->
-```ts
-import es from 'event-stream' // [!code --]
-
-readableStream.pipe( // [!code --]
-  es.map((data, cb) => cb(null, fn(data))) // [!code --]
-) // [!code --]
-
-readableStream.map((data) => fn(data)) // [!code ++]
+```diff
+- import es from 'event-stream'
+  
+- readableStream.pipe(
+-   es.map((data, cb) => cb(null, fn(data)))
+- )
+  
++ readableStream.map((data) => fn(data))
 ```
 
 ## `es.merge()` replacement
 
-```ts
-import es from 'event-stream' // [!code --]
-import { PassThrough } from 'node:stream' // [!code ++]
+```diff
+- import es from 'event-stream'
++ import { PassThrough } from 'node:stream'
 
-es.merge([s1, s2]) // [!code --]
-const combined = new PassThrough() // [!code ++]
-s1.pipe(combined, { end: false }) // [!code ++]
-s2.pipe(combined, { end: false }) // [!code ++]
+- es.merge([s1, s2])
++ const combined = new PassThrough()
++ s1.pipe(combined, { end: false })
++ s2.pipe(combined, { end: false })
 ```

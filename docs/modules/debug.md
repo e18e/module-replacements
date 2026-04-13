@@ -12,10 +12,10 @@ description: Modern alternatives to the debug package
 
 `obug` v2 refactors some API imports and usage for better support of ESM and TypeScript, easier customization, and an even smaller package size.
 
-```ts
-import debug from 'debug' // [!code --]
-import { createDebug } from 'obug' // [!code ++]
+```diff
+- import debug from 'debug'
++ import { createDebug } from 'obug'
 
-const logger = debug('name') // [!code --]
-const logger = createDebug('name') // [!code ++]
+- const logger = debug('name')
++ const logger = createDebug('name')
 ```

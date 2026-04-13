@@ -10,14 +10,14 @@ Node.js has the [`fs.mkdtemp`](https://nodejs.org/api/fs.html#fsmkdtempprefix-op
 
 Example:
 
-```ts
-import temp from 'temp' // [!code --]
-import { mkdtemp, realpath } from 'node:fs/promises' // [!code ++]
-import { join } from 'node:path' // [!code ++]
-import { tmpdir } from 'node:os' // [!code ++]
+```diff
+- import temp from 'temp'
++ import { mkdtemp, realpath } from 'node:fs/promises'
++ import { join } from 'node:path'
++ import { tmpdir } from 'node:os'
 
-const tempDirPath = temp.mkdirSync('foo') // [!code --]
-const tempDirPath = await mkdtemp(join(await realpath(tmpdir()), 'foo-')) // [!code ++]
+- const tempDirPath = temp.mkdirSync('foo')
++ const tempDirPath = await mkdtemp(join(await realpath(tmpdir()), 'foo-'))
 ```
 
 ## `fs.mkdtempDisposable` (native, since Node.js v20.4.0)
@@ -26,34 +26,34 @@ Node.js now provides [`fs.mkdtempDisposable`](https://nodejs.org/api/fs.html#fsp
 
 Example:
 
-```ts
-import temp from 'temp' // [!code --]
-import { mkdtempDisposable } from 'node:fs/promises' // [!code ++]
-import { join } from 'node:path' // [!code ++]
-import { tmpdir } from 'node:os' // [!code ++]
+```diff
+- import temp from 'temp'
++ import { mkdtempDisposable } from 'node:fs/promises'
++ import { join } from 'node:path'
++ import { tmpdir } from 'node:os'
 
-temp.track() // [!code --]
-const tempDirPath = temp.mkdirSync('foo') // [!code --]
-await using tempDir = await mkdtempDisposable(join(tmpdir(), 'foo-')) // [!code ++]
-const tempDirPath = tempDir.path // [!code ++]
+- temp.track()
+- const tempDirPath = temp.mkdirSync('foo')
++ await using tempDir = await mkdtempDisposable(join(tmpdir(), 'foo-'))
++ const tempDirPath = tempDir.path
 ```
 
 ## Deno
 
 Deno provides built-in [`Deno.makeTempDir`](https://docs.deno.com/api/deno/~/Deno.makeTempDir) and [`Deno.makeTempFile`](https://docs.deno.com/api/deno/~/Deno.makeTempFile) for creating unique temporary directories and files in the system temp directory (or a custom `dir`). You can also set `prefix` and `suffix`. Both return the full path and require `--allow-write`.
 
-```ts
-import { temporaryDirectory } from 'tempy' // [!code --]
+```diff
+- import { temporaryDirectory } from 'tempy'
 
-const tempDir = temporaryDirectory({ prefix: 'foo-' }) // [!code --]
-const tempDir = await Deno.makeTempDir({ prefix: 'foo-' }) // [!code ++]
+- const tempDir = temporaryDirectory({ prefix: 'foo-' })
++ const tempDir = await Deno.makeTempDir({ prefix: 'foo-' })
 ```
 
-```ts
-import { temporaryFile } from 'tempy' // [!code --]
+```diff
+- import { temporaryFile } from 'tempy'
 
-const tempFile = temporaryFile({ extension: 'txt' }) // [!code --]
-const tempFile = await Deno.makeTempFile({ suffix: '.txt' }) // [!code ++]
+- const tempFile = temporaryFile({ extension: 'txt' })
++ const tempFile = await Deno.makeTempFile({ suffix: '.txt' })
 ```
 
 > [!NOTE]

@@ -10,19 +10,19 @@ Since Node 20.x, you can use the [`styleText`](https://nodejs.org/api/util.html#
 
 Example:
 
-```ts
-import { styleText } from 'node:util' // [!code ++]
-import chalk from 'chalk' // [!code --]
+```diff
++ import { styleText } from 'node:util'
+- import chalk from 'chalk'
 
-console.log(`Hello ${chalk.blue('blue')} world!`) // [!code --]
-console.log(`Hello ${styleText('blue', 'blue')} world!`) // [!code ++]
+- console.log(`Hello ${chalk.blue('blue')} world!`)
++ console.log(`Hello ${styleText('blue', 'blue')} world!`)
 ```
 
 When using multiple styles, you can pass an array to `styleText`:
 
-```ts
-console.log(`I am ${chalk.blue.bgRed('blue on red')}!`) // [!code --]
-console.log(`I am ${styleText(['blue', 'bgRed'], 'blue on red')}!`) // [!code ++]
+```diff
+- console.log(`I am ${chalk.blue.bgRed('blue on red')}!`)
++ console.log(`I am ${styleText(['blue', 'bgRed'], 'blue on red')}!`)
 ```
 
 > [!NOTE]
@@ -32,16 +32,16 @@ console.log(`I am ${styleText(['blue', 'bgRed'], 'blue on red')}!`) // [!code ++
 
 [`picocolors`](https://github.com/alexeyraspopov/picocolors) follows a similar API but without chaining:
 
-```ts
-import chalk from 'chalk' // [!code --]
-import picocolors from 'picocolors' // [!code ++]
+```diff
+- import chalk from 'chalk'
++ import picocolors from 'picocolors'
 
-console.log(`Hello ${chalk.blue('blue')} world!`) // [!code --]
-console.log(`Hello ${picocolors.blue('blue')} world!`) // [!code ++]
+- console.log(`Hello ${chalk.blue('blue')} world!`)
++ console.log(`Hello ${picocolors.blue('blue')} world!`)
 
-// A chained example
-console.log(chalk.blue.bgRed('blue on red')) // [!code --]
-console.log(picocolors.blue(picocolors.bgRed('blue on red'))) // [!code ++]
+  // A chained example
+- console.log(chalk.blue.bgRed('blue on red'))
++ console.log(picocolors.blue(picocolors.bgRed('blue on red')))
 ```
 
 > [!NOTE]
@@ -53,26 +53,26 @@ console.log(picocolors.blue(picocolors.bgRed('blue on red'))) // [!code ++]
 
 Example:
 
-```ts
-import ansis from 'ansis' // [!code ++]
-import chalk from 'chalk' // [!code --]
+```diff
++ import ansis from 'ansis'
+- import chalk from 'chalk'
 
-console.log(`Hello ${chalk.blue('blue')} world!`) // [!code --]
-console.log(`Hello ${ansis.blue('blue')} world!`) // [!code ++]
+- console.log(`Hello ${chalk.blue('blue')} world!`)
++ console.log(`Hello ${ansis.blue('blue')} world!`)
 ```
 
 When using multiple styles, you can chain them just like in chalk:
 
-```ts
-console.log(chalk.blue.bgRed('blue on red')) // [!code --]
-console.log(ansis.blue.bgRed('blue on red')) // [!code ++]
+```diff
+- console.log(chalk.blue.bgRed('blue on red'))
++ console.log(ansis.blue.bgRed('blue on red'))
 ```
 
 Similarly, you can use RGB and hex colors:
 
-```ts
-console.log(chalk.rgb(239, 239, 239)('Hello world!')) // [!code --]
-console.log(ansis.rgb(239, 239, 239)('Hello world!')) // [!code ++]
+```diff
+- console.log(chalk.rgb(239, 239, 239)('Hello world!'))
++ console.log(ansis.rgb(239, 239, 239)('Hello world!'))
 ```
 
 ## Browser support

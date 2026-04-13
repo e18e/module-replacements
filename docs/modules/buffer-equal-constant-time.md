@@ -10,16 +10,16 @@ You can use the [`timingSafeEqual`](https://nodejs.org/api/crypto.html#cryptotim
 
 Example:
 
-```ts
-import { Buffer } from 'node:buffer'
-import bufferEqual from 'buffer-equal-constant-time' // [!code --]
-import * as crypto from 'node:crypto' // [!code ++]
+```diff
+  import { Buffer } from 'node:buffer'
+- import bufferEqual from 'buffer-equal-constant-time'
++ import * as crypto from 'node:crypto'
 
-const bufUser = Buffer.from('303')
-const bufSecret = Buffer.from('303')
+  const bufUser = Buffer.from('303')
+  const bufSecret = Buffer.from('303')
 
-bufferEqual(bufUser, bufSecret) // [!code --]
-bufUser.length === bufSecret.length // [!code ++]
-  ? crypto.timingSafeEqual(bufUser, bufSecret) // [!code ++]
-  : !crypto.timingSafeEqual(bufUser, bufUser) // [!code ++]
+- bufferEqual(bufUser, bufSecret)
++ bufUser.length === bufSecret.length
++   ? crypto.timingSafeEqual(bufUser, bufSecret)
++   : !crypto.timingSafeEqual(bufUser, bufUser)
 ```

@@ -22,43 +22,43 @@ Also supported by:
 
 Remove dotenv preload:
 
-```ts
-import 'dotenv/config' // [!code --]
-// No import needed when using --env-file
+```diff
+- import 'dotenv/config'
+  // No import needed when using --env-file
 ```
 
 Remove explicit dotenv config:
 
-```ts
-import dotenv from 'dotenv' // [!code --]
+```diff
+- import dotenv from 'dotenv'
 
-dotenv.config({ path: '.env' }) // [!code --]
-// No runtime configuration needed
+- dotenv.config({ path: '.env' })
+  // No runtime configuration needed
 ```
 
 In package.json scripts:
 
-```json
-{
-  "scripts": {
-    "start": "node index.js", // [!code --]
-    "start": "node --env-file=.env index.js" // [!code ++]
+```diff
+  {
+    "scripts": {
+-     "start": "node index.js",
++     "start": "node --env-file=.env index.js"
+    }
   }
-}
 ```
 
 ## Node.js `parseEnv`
 
 [`parseEnv`](https://nodejs.org/docs/latest-v22.x/api/util.html#utilparseenvcontent) (Node.js v20.12.0+) can be used to parse a `.env` string into an object without loading it into `process.env`.
 
-```ts
-import { parse } from 'dotenv' // [!code --]
-import { parseEnv } from 'node:util' // [!code ++]
+```diff
+- import { parse } from 'dotenv'
++ import { parseEnv } from 'node:util'
 
-const envContent = '...'
+  const envContent = '...'
 
-const env = parse(envContent) // [!code --]
-const env = parseEnv(envContent) // [!code ++]
+- const env = parse(envContent)
++ const env = parseEnv(envContent)
 ```
 
 If the `.env` is a Node.js Buffer, convert it to a string first with `.toString()`.

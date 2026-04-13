@@ -10,12 +10,12 @@ description: Modern alternatives to the read-pkg-up package for reading package.
 
 For example:
 
-```ts
-import { readPackageUp } from 'read-pkg-up' // [!code --]
-import { readPackageJSON } from 'pkg-types' // [!code ++]
+```diff
+- import { readPackageUp } from 'read-pkg-up'
++ import { readPackageJSON } from 'pkg-types'
 
-const packageJson = await readPackageJSON() // [!code ++]
-const packageJson = await readPackageUp() // [!code --]
++ const packageJson = await readPackageJSON()
+- const packageJson = await readPackageUp()
 ```
 
 Similarly, you can get hold of the path via `resolvePackageJSON`:
@@ -32,16 +32,16 @@ const packageJsonPath = await resolvePackageJSON()
 
 It can be combined with `node:fs` to read `package.json` files:
 
-```ts
-import { readPackageUp } from 'read-pkg-up' // [!code --]
-import fs from 'node:fs/promises' // [!code ++]
-import * as pkg from 'empathic' // [!code ++]
+```diff
+- import { readPackageUp } from 'read-pkg-up'
++ import fs from 'node:fs/promises'
++ import * as pkg from 'empathic'
 
-const packageJson = await readPackageUp() // [!code --]
-const packageJsonPath = pkg.up() // [!code ++]
-const packageJson = packageJsonPath // [!code ++]
-  ? JSON.parse(await readFile(packageJsonPath, 'utf8')) // [!code ++]
-  : undefined // [!code ++]
+- const packageJson = await readPackageUp()
++ const packageJsonPath = pkg.up()
++ const packageJson = packageJsonPath
++   ? JSON.parse(await readFile(packageJsonPath, 'utf8'))
++   : undefined
 ```
 
 > [!NOTE]

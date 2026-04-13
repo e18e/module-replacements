@@ -12,10 +12,10 @@ The main difference is that `empathic` is _synchronous_, so you should no longer
 
 Example:
 
-```ts
-import * as pkg from 'empathic/package' // [!code ++]
-import findPkg from 'find-pkg' // [!code --]
+```diff
++ import * as pkg from 'empathic/package'
+- import findPkg from 'find-pkg'
 
-await findPkg(path) // [!code --]
-pkg.up(path) // [!code ++]
+- await findPkg(path)
++ pkg.up(path)
 ```

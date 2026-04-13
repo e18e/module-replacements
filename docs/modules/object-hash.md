@@ -10,12 +10,12 @@ description: Modern alternatives to object-hash for hashing objects and values
 
 Example:
 
-```ts
-import objectHash from 'object-hash' // [!code --]
-import { hash } from 'ohash' // [!code ++]
+```diff
+- import objectHash from 'object-hash'
++ import { hash } from 'ohash'
 
-const h = objectHash(obj) // [!code --]
-const h = hash(obj) // [!code ++]
+- const h = objectHash(obj)
++ const h = hash(obj)
 ```
 
 ## Web Crypto
@@ -24,16 +24,16 @@ Use the standard `SubtleCrypto.digest` available in modern runtimes. Pair it wit
 
 Example:
 
-```ts
-import objectHash from 'object-hash' // [!code --]
-import stringify from 'safe-stable-stringify' // [!code ++]
+```diff
+- import objectHash from 'object-hash'
++ import stringify from 'safe-stable-stringify'
 
-const h = objectHash(obj, { algorithm: 'sha256' }) // [!code --]
-const data = new TextEncoder().encode(stringify(obj)) // [!code ++]
-const buf = await crypto.subtle.digest('SHA-256', data) // [!code ++]
-const h = Array.from(new Uint8Array(buf)) // [!code ++]
-  .map((b) => b.toString(16).padStart(2, '0')) // [!code ++]
-  .join('') // [!code ++]
+- const h = objectHash(obj, { algorithm: 'sha256' })
++ const data = new TextEncoder().encode(stringify(obj))
++ const buf = await crypto.subtle.digest('SHA-256', data)
++ const h = Array.from(new Uint8Array(buf))
++   .map((b) => b.toString(16).padStart(2, '0'))
++   .join('')
 ```
 
 ## Bun `CryptoHasher`
@@ -44,12 +44,12 @@ Docs: https://bun.com/reference/bun/CryptoHasher
 
 Example:
 
-```ts
-import objectHash from 'object-hash' // [!code --]
-import stringify from 'safe-stable-stringify' // [!code ++]
+```diff
+- import objectHash from 'object-hash'
++ import stringify from 'safe-stable-stringify'
 
-const h = objectHash(obj, { algorithm: 'sha256' }) // [!code --]
-const hasher = new CryptoHasher('sha256') // [!code ++]
-hasher.update(stringify(obj)) // [!code ++]
-const h = hasher.digest('hex') // [!code ++]
+- const h = objectHash(obj, { algorithm: 'sha256' })
++ const hasher = new CryptoHasher('sha256')
++ hasher.update(stringify(obj))
++ const h = hasher.digest('hex')
 ```

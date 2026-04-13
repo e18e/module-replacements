@@ -8,14 +8,14 @@ description: Modern alternatives to the clipboardy package for copy/pasting on N
 
 [`tinyclip`](https://github.com/tinylibs/tinyclip) provides cross-platform clipboard functionality to Node.js.
 
-```js
-import clipboard from 'clipboardy' // [!code --]
-import * as clipboard from 'tinyclip' // [!code ++]
+```diff
+- import clipboard from 'clipboardy'
++ import * as clipboard from 'tinyclip'
 
-await clipboard.write('hello world') // [!code --]
-await clipboard.writeText('hello world') // [!code ++]
-await clipboard.read() // [!code --]
-await clipboard.readText() // [!code ++]
+- await clipboard.write('hello world')
++ await clipboard.writeText('hello world')
+- await clipboard.read()
++ await clipboard.readText()
 ```
 
 > [!NOTE]
@@ -25,13 +25,13 @@ await clipboard.readText() // [!code ++]
 
 Learn more about the [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API).
 
-```js
-import clipboard from 'clipboardy' // [!code --]
+```diff
+- import clipboard from 'clipboardy'
 
-await clipboard.write('hello world') // [!code --]
-await navigator.clipboard.writeText('hello world') // [!code ++]
-await clipboard.read() // [!code --]
-await navigator.clipboard.readText() // [!code ++]
+- await clipboard.write('hello world')
++ await navigator.clipboard.writeText('hello world')
+- await clipboard.read()
++ await navigator.clipboard.readText()
 ```
 
 > [!NOTE]

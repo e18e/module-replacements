@@ -8,16 +8,16 @@ description: Modern alternatives to the dot-prop package for getting, setting, a
 
 [`dlv`](https://github.com/developit/dlv) gets nested values with default fallbacks and [`dset`](https://github.com/lukeed/dset) sets nested values with automatic intermediate object creation.
 
-```ts
-import { getProperty, setProperty } from 'dot-prop' // [!code --]
-import delve from 'dlv' // [!code ++]
-import { dset } from 'dset' // [!code ++]
+```diff
+- import { getProperty, setProperty } from 'dot-prop'
++ import delve from 'dlv'
++ import { dset } from 'dset'
 
-const value = getProperty(obj, 'foo.bar.baz') // [!code --]
-const value = delve(obj, 'foo.bar.baz') // [!code ++]
+- const value = getProperty(obj, 'foo.bar.baz')
++ const value = delve(obj, 'foo.bar.baz')
 
-setProperty(obj, 'foo.bar.baz', 'value') // [!code --]
-dset(obj, 'foo.bar.baz', 'value') // [!code ++]
+- setProperty(obj, 'foo.bar.baz', 'value')
++ dset(obj, 'foo.bar.baz', 'value')
 ```
 
 ## `String.prototype.split` + `Array.prototype.reduce` (native)

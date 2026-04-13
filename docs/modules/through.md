@@ -7,15 +7,15 @@ description: Modern alternatives to the through package
 ## `stream.Writable` (native, Node.js)
 
 <!-- prettier-ignore -->
-```ts
-import through from 'through' // [!code --]
-import { Writable } from 'node:stream' // [!code ++]
-
-through(fn) // [!code --]
-new Writable({ // [!code ++]
-  write: (chunk, encoding, callback) => { // [!code ++]
-    fn(chunk) // [!code ++]
-    callback() // [!code ++]
-  } // [!code ++]
-}) // [!code ++]
+```diff
+- import through from 'through'
++ import { Writable } from 'node:stream'
+  
+- through(fn)
++ new Writable({
++   write: (chunk, encoding, callback) => {
++     fn(chunk)
++     callback()
++   }
++ })
 ```
