@@ -6,6 +6,12 @@
       "replacements": ["defu", "@fastify/deepmerge"],
       "url": {"type": "e18e", "id": "deep-merge"}
     },
+    "@cypress/request": {
+      "type": "module",
+      "moduleName": "@cypress/request",
+      "replacements": ["fetch", "ofetch", "ky"],
+      "url": {"type": "e18e", "id": "fetch"}
+    },
     "@iarna/toml": {
       "type": "module",
       "moduleName": "@iarna/toml",
@@ -2514,6 +2520,12 @@
       "replacements": ["Teleport"],
       "url": {"type": "e18e", "id": "portal-vue"}
     },
+    "portfinder": {
+      "type": "module",
+      "moduleName": "portfinder",
+      "replacements": ["get-port"],
+      "url": {"type": "e18e", "id": "portfinder"}
+    },
     "preferred-pm": {
       "type": "module",
       "moduleName": "preferred-pm",
@@ -2713,6 +2725,12 @@
       "moduleName": "traverse",
       "replacements": ["neotraverse"],
       "url": {"type": "e18e", "id": "traverse"}
+    },
+    "uid-safe": {
+      "type": "module",
+      "moduleName": "uid-safe",
+      "replacements": ["node:crypto", "crypto"],
+      "url": {"type": "e18e", "id": "uuidv4"}
     },
     "underscore": {
       "type": "module",
@@ -3193,6 +3211,12 @@
         "exportName": "rmdir"
       },
       "url": {"type": "node", "id": "api/fs.html#fspromisesrmdirpath-options"}
+    },
+    "get-port": {
+      "id": "get-port",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "portfinder"},
+      "replacementModule": "get-port"
     },
     "grammy": {
       "id": "grammy",

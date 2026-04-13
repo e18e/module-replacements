@@ -24,6 +24,12 @@
       "description": "You can use `Array.from` to create an array of sequential integers",
       "example": "Array.from({ length: n }, (_, i) => i);"
     },
+    "snippet::array-from-count-with-start": {
+      "id": "snippet::array-from-count-with-start",
+      "type": "simple",
+      "description": "You can use `Array.from` to create an array of sequential integers starting from a specific integer",
+      "example": "Array.from({ length: end - start }, (_, i) => i + start);"
+    },
     "snippet::array-last": {
       "id": "snippet::array-last",
       "type": "simple",
@@ -355,6 +361,11 @@
       "type": "module",
       "moduleName": "array-last",
       "replacements": ["snippet::array-last"]
+    },
+    "array-range": {
+      "type": "module",
+      "moduleName": "array-range",
+      "replacements": ["snippet::array-from-count-with-start"]
     },
     "array-union": {
       "type": "module",
