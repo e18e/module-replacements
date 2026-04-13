@@ -124,8 +124,7 @@
       "required": [
         "id",
         "replacementModule",
-        "type",
-        "url"
+        "type"
       ],
       "additionalProperties": false
     },
