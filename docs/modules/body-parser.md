@@ -10,18 +10,18 @@ description: Modern alternatives to the body-parser package for parsing HTTP req
 
 Example:
 
-```ts
-import bodyParser from 'body-parser' // [!code --]
-import { json, urlencoded } from 'milliparsec' // [!code ++]
-import express from 'express'
+```diff
+- import bodyParser from 'body-parser'
++ import { json, urlencoded } from 'milliparsec'
+  import express from 'express'
 
-const app = express()
+  const app = express()
 
-app.use(bodyParser.json()) // [!code --]
-app.use(bodyParser.urlencoded({ extended: true })) // [!code --]
+- app.use(bodyParser.json())
+- app.use(bodyParser.urlencoded({ extended: true }))
 
-app.use(json()) // [!code ++]
-app.use(urlencoded()) // [!code ++]
++ app.use(json())
++ app.use(urlencoded())
 ```
 
 For API differences and feature comparison, see the [migration.md](https://github.com/tinyhttp/milliparsec/blob/master/migration.md).

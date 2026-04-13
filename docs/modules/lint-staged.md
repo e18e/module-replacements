@@ -12,13 +12,13 @@ package.json config:
 
 <!-- eslint-skip -->
 
-```json
-{
-  "lint-staged": { // [!code --]
-  "nano-staged": { // [!code ++]
-    "*.{js,ts}": ["prettier --write"]
-  },
-}
+```diff
+  {
+-   "lint-staged": {
++   "nano-staged": {
+      "*.{js,ts}": ["prettier --write"]
+    },
+  }
 ```
 
 > [!NOTE]

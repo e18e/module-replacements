@@ -8,11 +8,11 @@ description: Modern alternatives to the clean-webpack-plugin package
 
 Example:
 
-```js
-const { CleanWebpackPlugin } = require('clean-webpack-plugin') // [!code --]
+```diff
+- const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
-module.exports = {
-  plugins: [new CleanWebpackPlugin()], // [!code --]
-  output: { clean: true } // [!code ++]
-}
+  module.exports = {
+-   plugins: [new CleanWebpackPlugin()],
++   output: { clean: true }
+  }
 ```

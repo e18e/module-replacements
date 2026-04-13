@@ -10,26 +10,26 @@ description: Modern alternatives to the eslint-plugin-react package for React/JS
 
 Flat config example:
 
-```ts
-import eslintReact from '@eslint-react/eslint-plugin' // [!code ++]
-import reactPlugin from 'eslint-plugin-react' // [!code --]
+```diff
++ import eslintReact from '@eslint-react/eslint-plugin'
+- import reactPlugin from 'eslint-plugin-react'
 
-export default [
-  {
-    files: ['**/*.{jsx,tsx}'],
-    plugins: {
-      react: reactPlugin, // [!code --]
-      '@eslint-react': eslintReact // [!code ++]
-    },
-    rules: {
-      ...reactPlugin.configs.recommended.rules, // [!code --]
-      ...eslintReact.configs.recommended.rules, // [!code ++]
+  export default [
+    {
+      files: ['**/*.{jsx,tsx}'],
+      plugins: {
+-       react: reactPlugin,
++       '@eslint-react': eslintReact
+      },
+      rules: {
+-       ...reactPlugin.configs.recommended.rules,
++       ...eslintReact.configs.recommended.rules,
 
-      'react/no-unknown-property': 'error', // [!code --]
-      '@eslint-react/dom/no-unknown-property': 'error' // [!code ++]
+-       'react/no-unknown-property': 'error',
++       '@eslint-react/dom/no-unknown-property': 'error'
+      }
     }
-  }
-]
+  ]
 ```
 
 > [!NOTE]

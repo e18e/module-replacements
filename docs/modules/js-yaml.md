@@ -12,33 +12,33 @@ description: Modern alternatives to js-yaml for YAML parsing and stringifying
 
 Parse (load):
 
-```ts
-import yaml from 'js-yaml' // [!code --]
-import { parse } from 'yaml' // [!code ++]
+```diff
+- import yaml from 'js-yaml'
++ import { parse } from 'yaml'
 
-const obj = yaml.load(src) // [!code --]
-const obj = parse(src) // [!code ++]
+- const obj = yaml.load(src)
++ const obj = parse(src)
 ```
 
 Stringify (dump):
 
-```ts
-import yaml from 'js-yaml' // [!code --]
-import { stringify } from 'yaml' // [!code ++]
+```diff
+- import yaml from 'js-yaml'
++ import { stringify } from 'yaml'
 
-const text = yaml.dump(obj) // [!code --]
-const text = stringify(obj) // [!code ++]
+- const text = yaml.dump(obj)
++ const text = stringify(obj)
 ```
 
 Multi-document:
 
-```ts
-import yaml from 'js-yaml' // [!code --]
-import { parseAllDocuments } from 'yaml' // [!code ++]
+```diff
+- import yaml from 'js-yaml'
++ import { parseAllDocuments } from 'yaml'
 
-const out: any[] = [] // [!code --]
-yaml.loadAll(src, (d) => out.push(d)) // [!code --]
-const out = parseAllDocuments(src).map((d) => d.toJSON()) // [!code ++]
+- const out: any[] = []
+- yaml.loadAll(src, (d) => out.push(d))
++ const out = parseAllDocuments(src).map((d) => d.toJSON())
 ```
 
 ## Bun `YAML` API
@@ -47,10 +47,10 @@ const out = parseAllDocuments(src).map((d) => d.toJSON()) // [!code ++]
 
 Example:
 
-```ts
-import yaml from 'js-yaml' // [!code --]
-import { YAML } from 'bun' // [!code ++]
+```diff
+- import yaml from 'js-yaml'
++ import { YAML } from 'bun'
 
-yaml.load(src) // [!code --]
-YAML.parse(src) // [!code ++]
+- yaml.load(src)
++ YAML.parse(src)
 ```

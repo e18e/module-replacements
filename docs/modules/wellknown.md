@@ -10,23 +10,23 @@ description: Modern replacements for the wellknown package, a WKT parser and str
 
 Example:
 
-```js
-import wellknown from 'wellknown' // [!code --]
-import { wktToGeoJSON, geoJSONToWkt } from 'betterknown' // [!code ++]
+```diff
+- import wellknown from 'wellknown'
++ import { wktToGeoJSON, geoJSONToWkt } from 'betterknown'
 
-wellknown.parse('POINT(1 2)') // [!code --]
-wktToGeoJSON('POINT(1 2)') // [!code ++]
+- wellknown.parse('POINT(1 2)')
++ wktToGeoJSON('POINT(1 2)')
 
-wellknown.stringify({ // [!code --]
-geoJSONToWkt({ // [!code ++]
-  type: 'Point',
-  coordinates: [1, 2]
-})
+- wellknown.stringify({
++ geoJSONToWkt({
+    type: 'Point',
+    coordinates: [1, 2]
+  })
 
-wellknown.stringify({ // [!code --]
-geoJSONToWkt({ // [!code ++]
-  type: 'Feature',
-  geometry: { type: 'Point', coordinates: [1, 2] },
-  properties: {}
-})
+- wellknown.stringify({
++ geoJSONToWkt({
+    type: 'Feature',
+    geometry: { type: 'Point', coordinates: [1, 2] },
+    properties: {}
+  })
 ```

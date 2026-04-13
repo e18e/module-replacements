@@ -8,15 +8,15 @@ description: Modern alternative to the traverse package to traverse and transfor
 
 [`neotraverse`](https://github.com/puruvj/neotraverse) is a TypeScript rewrite of [`traverse`](https://github.com/ljharb/js-traverse) with no dependencies. It offers a drop‑in compatible build as well as a modern API.
 
-```ts
-import traverse from 'traverse' // [!code --]
-import traverse from 'neotraverse' // [!code ++]
+```diff
+- import traverse from 'traverse'
++ import traverse from 'neotraverse'
 
-const obj = [5, 6, -3, [7, 8, -2, 1], { f: 10, g: -13 }]
+  const obj = [5, 6, -3, [7, 8, -2, 1], { f: 10, g: -13 }]
 
-traverse(obj).forEach(function (x) {
-  if (x < 0) this.update(x + 128)
-})
+  traverse(obj).forEach(function (x) {
+    if (x < 0) this.update(x + 128)
+  })
 
-console.log(obj)
+  console.log(obj)
 ```

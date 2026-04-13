@@ -8,12 +8,12 @@ description: Native Node.js alternatives to the is-builtin-module package for ch
 
 For determining if a module is built-in or not, you can use [isBuiltin](https://nodejs.org/api/module.html#moduleisbuiltinmodulename):
 
-```ts
-import { isBuiltin } from 'node:module' // [!code ++]
-import isBuiltinModule from 'is-builtin-module' // [!code --]
+```diff
++ import { isBuiltin } from 'node:module'
+- import isBuiltinModule from 'is-builtin-module'
 
-isBuiltin('fs') // true [!code ++]
-isBuiltinModule('fs') // true [!code --]
++ isBuiltin('fs') // true
+- isBuiltinModule('fs') // true
 ```
 
 ## `builtInModules` (native, since Node.js 6.x and 15.x)
@@ -21,17 +21,17 @@ isBuiltinModule('fs') // true [!code --]
 Before Node.js 16.x, `isBuiltin` was not available, so you need to implement your own check using [builtinModules](https://nodejs.org/api/module.html#modulebuiltinmodules):
 
 <!-- prettier-ignore -->
-```ts
-import { builtinModules } from 'node:module' // [!code ++]
-import isBuiltinModule from 'is-builtin-module' // [!code --]
-
-function isBuiltin(moduleName) { // [!code ++]
-  const name = moduleName.startsWith('node:') // [!code ++]
-    ? moduleName.slice(5) // [!code ++]
-    : moduleName // [!code ++]
-  return builtinModules.includes(name) // [!code ++]
-} // [!code ++]
-
-isBuiltin('fs') // true [!code ++]
-isBuiltinModule('fs') // true [!code --]
+```diff
++ import { builtinModules } from 'node:module'
+- import isBuiltinModule from 'is-builtin-module'
+  
++ function isBuiltin(moduleName) {
++   const name = moduleName.startsWith('node:')
++     ? moduleName.slice(5)
++     : moduleName
++   return builtinModules.includes(name)
++ }
+  
++ isBuiltin('fs') // true
+- isBuiltinModule('fs') // true
 ```

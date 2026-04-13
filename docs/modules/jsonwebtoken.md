@@ -10,22 +10,22 @@ description: Modern alternatives to the jsonwebtoken package for JWT signing and
 
 Compared to `jsonwebtoken`, it works everywhere globalThis.crypto is available: Node.js 18+, Deno, Bun, Cloudflare Workers, and browsers.
 
-```ts
-import jwt from 'jsonwebtoken' // [!code --]
-import { SignJWT, jwtVerify } from 'jose' // [!code ++]
+```diff
+- import jwt from 'jsonwebtoken'
++ import { SignJWT, jwtVerify } from 'jose'
 
-const secret = 'mysecretkey'
-const payload = { userId: 123 }
+  const secret = 'mysecretkey'
+  const payload = { userId: 123 }
 
-const token = jwt.sign(payload, secret, { expiresIn: '1h' }) // [!code --]
-const decoded = jwt.verify(token, secret) // [!code --]
+- const token = jwt.sign(payload, secret, { expiresIn: '1h' })
+- const decoded = jwt.verify(token, secret)
 
-const joseSecret = new TextEncoder().encode(secret) // [!code ++]
++ const joseSecret = new TextEncoder().encode(secret)
 
-const token = await new SignJWT(payload) // [!code ++]
-  .setProtectedHeader({ alg: 'HS256' }) // [!code ++]
-  .setExpirationTime('1h') // [!code ++]
-  .sign(joseSecret) // [!code ++]
++ const token = await new SignJWT(payload)
++   .setProtectedHeader({ alg: 'HS256' })
++   .setExpirationTime('1h')
++   .sign(joseSecret)
 
-const { payload: decoded } = await jwtVerify(token, joseSecret) // [!code ++]
++ const { payload: decoded } = await jwtVerify(token, joseSecret)
 ```

@@ -10,9 +10,9 @@ description: Modern alternatives to the readable-stream package for working with
 
 Use the built-in `stream` module ([Node Streams docs](https://nodejs.org/api/stream.html)).
 
-```ts
-import { Duplex, Readable, Transform, Writable } from 'readable-stream' // [!code --]
-import { Duplex, Readable, Transform, Writable } from 'node:stream' // [!code ++]
+```diff
+- import { Duplex, Readable, Transform, Writable } from 'readable-stream'
++ import { Duplex, Readable, Transform, Writable } from 'node:stream'
 ```
 
 ## Web Streams (native, browsers and Node.js 16.5.0+)

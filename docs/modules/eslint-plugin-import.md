@@ -11,54 +11,54 @@ description: Modern alternative to eslint-plugin-import, which helps with lintin
 ### Flat config
 
 <!-- prettier-ignore -->
-```ts
-import importPlugin from 'eslint-plugin-import' // [!code --]
-import { createNodeResolver, importX } from 'eslint-plugin-import-x' // [!code ++]
-import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript' // [!code ++]
-
-export default [
-  importPlugin.flatConfigs.recommended, // [!code --]
-  importX.flatConfigs.recommended, // [!code ++]
-  {
-    settings: {
-      'import/resolver': { typescript: true }, // [!code --]
-      'import-x/resolver-next': [ // [!code ++]
-        createTypeScriptImportResolver(), // [!code ++]
-        createNodeResolver() // [!code ++]
-      ] // [!code ++]
-    },
-    rules: {
-      'import/no-unresolved': 'error', // [!code --]
-      'import-x/no-unresolved': 'error', // [!code ++]
-      'import/no-nodejs-modules': 'warn', // [!code --]
-      'import-x/no-nodejs-modules': 'warn' // [!code ++]
+```diff
+- import importPlugin from 'eslint-plugin-import'
++ import { createNodeResolver, importX } from 'eslint-plugin-import-x'
++ import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript'
+  
+  export default [
+-   importPlugin.flatConfigs.recommended,
++   importX.flatConfigs.recommended,
+    {
+      settings: {
+-       'import/resolver': { typescript: true },
++       'import-x/resolver-next': [
++         createTypeScriptImportResolver(),
++         createNodeResolver()
++       ]
+      },
+      rules: {
+-       'import/no-unresolved': 'error',
++       'import-x/no-unresolved': 'error',
+-       'import/no-nodejs-modules': 'warn',
++       'import-x/no-nodejs-modules': 'warn'
+      }
     }
-  }
-]
+  ]
 ```
 
 ### Legacy config
 
-```ts
-module.exports = {
-  extends: [
-    'eslint:recommended',
-    'plugin:import/recommended', // [!code --]
-    'plugin:import-x/recommended', // [!code ++]
-    'plugin:import/typescript', // [!code --]
-    'plugin:import-x/typescript' // [!code ++]
-  ],
-  plugins: [
-    'import', // [!code --]
-    'import-x' // [!code ++]
-  ],
-  settings: {
-    'import/resolver': { typescript: true }, // [!code --]
-    'import-x/resolver': { typescript: true } // [!code ++]
-  },
-  rules: {
-    'import/no-unresolved': 'error', // [!code --]
-    'import-x/no-unresolved': 'error' // [!code ++]
+```diff
+  module.exports = {
+    extends: [
+      'eslint:recommended',
+-     'plugin:import/recommended',
++     'plugin:import-x/recommended',
+-     'plugin:import/typescript',
++     'plugin:import-x/typescript'
+    ],
+    plugins: [
+-     'import',
++     'import-x'
+    ],
+    settings: {
+-     'import/resolver': { typescript: true },
++     'import-x/resolver': { typescript: true }
+    },
+    rules: {
+-     'import/no-unresolved': 'error',
++     'import-x/no-unresolved': 'error'
+    }
   }
-}
 ```

@@ -10,15 +10,15 @@ Node.js has a builtin function [`isDeepStrictEqual`](https://nodejs.org/api/util
 
 Example:
 
-```ts
-import equal from 'deep-equal' // [!code --]
-import { isDeepStrictEqual } from 'node:util' // [!code ++]
+```diff
+- import equal from 'deep-equal'
++ import { isDeepStrictEqual } from 'node:util'
 
-const a = { foo: 'bar' }
-const b = { foo: 'bar' }
+  const a = { foo: 'bar' }
+  const b = { foo: 'bar' }
 
-equal(a, b) // true [!code --]
-isDeepStrictEqual(a, b) // true [!code ++]
+- equal(a, b) // true
++ isDeepStrictEqual(a, b) // true
 ```
 
 ## `dequal`
@@ -27,13 +27,13 @@ isDeepStrictEqual(a, b) // true [!code ++]
 
 Example:
 
-```ts
-import equal from 'deep-equal' // [!code --]
-import dequal from 'dequal' // [!code ++]
+```diff
+- import equal from 'deep-equal'
++ import dequal from 'dequal'
 
-const a = { foo: 'bar' }
-const b = { foo: 'bar' }
+  const a = { foo: 'bar' }
+  const b = { foo: 'bar' }
 
-equal(a, b) // true [!code --]
-dequal(a, b) // true [!code ++]
+- equal(a, b) // true
++ dequal(a, b) // true
 ```

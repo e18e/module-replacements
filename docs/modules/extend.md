@@ -8,11 +8,11 @@ description: Native alternatives to the extend package for deep cloning and merg
 
 If you only need to deep clone an object, you can use [`structuredClone`](https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone):
 
-```ts
-import extend from 'extend' // [!code --]
+```diff
+- import extend from 'extend'
 
-extend(true, {}, config) // true [!code --]
-structuredClone(config) // true [!code ++]
+- extend(true, {}, config) // true
++ structuredClone(config) // true
 ```
 
 ## Spread syntax

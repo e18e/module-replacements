@@ -30,19 +30,19 @@ function BlogPost({ post }) {
 Example:
 
 <!-- prettier-ignore -->
-```jsx
-import { Helmet } from 'react-helmet' // [!code --]
-import { Helmet, HelmetProvider } from 'react-helmet-async' // [!code ++]
-
-const app = (
-  <HelmetProvider> // [!code ++]
-    <App>
-      <Helmet>
-        <title>Hello World</title>
-        <link rel="canonical" href="https://e18e.dev/" />
-      </Helmet>
-      <h1>Hello World</h1>
-    </App>
-  </HelmetProvider> // [!code ++]
-)
+```diff
+- import { Helmet } from 'react-helmet'
++ import { Helmet, HelmetProvider } from 'react-helmet-async'
+  
+  const app = (
++   <HelmetProvider>
+      <App>
+        <Helmet>
+          <title>Hello World</title>
+          <link rel="canonical" href="https://e18e.dev/" />
+        </Helmet>
+        <h1>Hello World</h1>
+      </App>
++   </HelmetProvider>
+  )
 ```

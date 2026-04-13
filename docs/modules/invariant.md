@@ -10,20 +10,20 @@ description: Modern alternatives to the invariant package for runtime assertions
 
 For example:
 
-```ts
-import invariant from 'invariant' // [!code --]
-import invariant from 'tiny-invariant' // [!code ++]
+```diff
+- import invariant from 'invariant'
++ import invariant from 'tiny-invariant'
 
-invariant(ok, 'Hello %s, code %d', name, code) // [!code --]
-invariant(ok, `Hello ${name}, code ${code}`) // [!code ++]
+- invariant(ok, 'Hello %s, code %d', name, code)
++ invariant(ok, `Hello ${name}, code ${code}`)
 ```
 
 Similarly, you can lazily compute messages to avoid unnecessary work:
 
-```ts
-import invariant from 'invariant' // [!code --]
-import invariant from 'tiny-invariant' // [!code ++]
+```diff
+- import invariant from 'invariant'
++ import invariant from 'tiny-invariant'
 
-invariant(value, getExpensiveMessage()) // [!code --]
-invariant(value, () => getExpensiveMessage()) // [!code ++]
+- invariant(value, getExpensiveMessage())
++ invariant(value, () => getExpensiveMessage())
 ```
