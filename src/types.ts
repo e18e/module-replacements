@@ -20,7 +20,6 @@ interface ModuleReplacementLike {
 
 export interface DocumentedModuleReplacement extends ModuleReplacementLike {
   type: 'documented';
-  url: KnownUrl;
   replacementModule: string;
 }
 
