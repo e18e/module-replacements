@@ -1499,13 +1499,13 @@
         "type": "node",
         "id": "api/fs.html#fsrealpathpath-options-callback"
       },
-      "nodeFeatureId": {"moduleName": "fs"}
+      "nodeFeatureId": {"moduleName": "fs", "exportName": "realpath"}
     },
     "fs.rm": {
       "id": "fs.rm",
       "type": "native",
       "url": {"type": "node", "id": "api/fs.html#fsrmpath-options-callback"},
-      "nodeFeatureId": {"moduleName": "fs"}
+      "nodeFeatureId": {"moduleName": "fs", "exportName": "rm"}
     },
     "fsPromises": {
       "id": "fsPromises",
@@ -1616,7 +1616,19 @@
       "id": "path.parse",
       "type": "native",
       "url": {"type": "node", "id": "api/path.html#pathparsepath"},
-      "nodeFeatureId": {"moduleName": "path"}
+      "nodeFeatureId": {"moduleName": "path", "exportName": "parse"}
+    },
+    "process.allowedNodeEnvironmentFlags": {
+      "id": "process.allowedNodeEnvironmentFlags",
+      "type": "native",
+      "url": {
+        "type": "node",
+        "id": "api/process.html#processallowednodeenvironmentflags"
+      },
+      "nodeFeatureId": {
+        "moduleName": "process",
+        "exportName": "allowedNodeEnvironmentFlags"
+      }
     },
     "queueMicrotask": {
       "id": "queueMicrotask",
@@ -2310,6 +2322,11 @@
       "type": "module",
       "moduleName": "native-promise-only",
       "replacements": ["Promise"]
+    },
+    "node-environment-flags": {
+      "type": "module",
+      "moduleName": "node-environment-flags",
+      "replacements": ["process.allowedNodeEnvironmentFlags"]
     },
     "node-int64": {
       "type": "module",
