@@ -1384,6 +1384,15 @@
       "url": {"type": "mdn", "id": "Web/API/URL"},
       "webFeatureId": {"featureId": "url", "compatKey": "api.URL"}
     },
+    "URL.canParse": {
+      "id": "URL",
+      "type": "native",
+      "url": {"type": "mdn", "id": "Web/API/URL/canParse_static"},
+      "webFeatureId": {
+        "featureId": "url-canparse",
+        "compatKey": "api.URL.canParse_static"
+      }
+    },
     "WeakMap": {
       "id": "WeakMap",
       "type": "native",
@@ -2210,6 +2219,11 @@
       "type": "module",
       "moduleName": "is-nan",
       "replacements": ["Number.isNaN"]
+    },
+    "is-url-superb": {
+      "type": "module",
+      "moduleName": "is-url-superb",
+      "replacements": ["URL.canParse"]
     },
     "isarray": {
       "type": "module",
