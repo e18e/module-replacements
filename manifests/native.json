@@ -75,10 +75,7 @@
     "AbortController": {
       "id": "AbortController",
       "type": "native",
-      "url": {
-        "type": "mdn",
-        "id": "Web/API/AbortController"
-      },
+      "url": {"type": "mdn", "id": "Web/API/AbortController"},
       "webFeatureId": {
         "featureId": "aborting",
         "compatKey": "api.AbortController.AbortController"
@@ -618,6 +615,18 @@
         "compatKey": "javascript.builtins.Date"
       }
     },
+    "Date.now": {
+      "id": "Date.now",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Date/now"
+      },
+      "webFeatureId": {
+        "featureId": "date",
+        "compatKey": "javascript.builtins.Date.now"
+      }
+    },
     "Error.isError": {
       "id": "Error.isError",
       "type": "native",
@@ -642,6 +651,12 @@
         "compatKey": "javascript.builtins.Error.cause"
       }
     },
+    "EventTarget": {
+      "id": "EventTarget",
+      "type": "native",
+      "url": {"type": "mdn", "id": "Web/API/EventTarget"},
+      "webFeatureId": {"featureId": "events", "compatKey": "api.EventTarget"}
+    },
     "Function.prototype.bind": {
       "id": "Function.prototype.bind",
       "type": "native",
@@ -664,6 +679,18 @@
       "webFeatureId": {
         "featureId": "functions",
         "compatKey": "javascript.builtins.Function.name"
+      }
+    },
+    "Intl.DateTimeFormat": {
+      "id": "Intl.DateTimeFormat",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat"
+      },
+      "webFeatureId": {
+        "featureId": "intl",
+        "compatKey": "javascript.builtins.Intl.DateTimeFormat.DateTimeFormat"
       }
     },
     "Iterator.prototype": {
@@ -1354,14 +1381,8 @@
     "URL": {
       "id": "URL",
       "type": "native",
-      "url": {
-        "type": "mdn",
-        "id": "Web/API/URL"
-      },
-      "webFeatureId": {
-        "featureId": "url",
-        "compatKey": "api.URL"
-      }
+      "url": {"type": "mdn", "id": "Web/API/URL"},
+      "webFeatureId": {"featureId": "url", "compatKey": "api.URL"}
     },
     "WeakMap": {
       "id": "WeakMap",
@@ -1383,10 +1404,7 @@
     "atob": {
       "id": "atob",
       "type": "native",
-      "url": {
-        "type": "mdn",
-        "id": "Web/API/Window/atob"
-      },
+      "url": {"type": "mdn", "id": "Web/API/Window/atob"},
       "webFeatureId": {
         "featureId": "base64encodedecode",
         "compatKey": "api.atob"
@@ -1395,14 +1413,26 @@
     "btoa": {
       "id": "btoa",
       "type": "native",
-      "url": {
-        "type": "mdn",
-        "id": "Web/API/Window/btoa"
-      },
+      "url": {"type": "mdn", "id": "Web/API/Window/btoa"},
       "webFeatureId": {
         "featureId": "base64encodedecode",
         "compatKey": "api.btoa"
       }
+    },
+    "crypto.randomBytes": {
+      "id": "crypto.randomBytes",
+      "type": "native",
+      "url": {
+        "type": "node",
+        "id": "api/crypto.html#cryptorandombytessize-callback"
+      },
+      "nodeFeatureId": {"moduleName": "crypto", "exportName": "randomBytes"}
+    },
+    "crypto.timingSafeEqual": {
+      "id": "crypto.timingSafeEqual",
+      "type": "native",
+      "url": {"type": "node", "id": "api/crypto.html#cryptotimingsafeequala-b"},
+      "nodeFeatureId": {"moduleName": "crypto", "exportName": "timingSafeEqual"}
     },
     "es-errors": {
       "id": "es-errors",
@@ -1474,10 +1504,13 @@
     "fs.rm": {
       "id": "fs.rm",
       "type": "native",
-      "url": {
-        "type": "node",
-        "id": "api/fs.html#fsrmpath-options-callback"
-      },
+      "url": {"type": "node", "id": "api/fs.html#fsrmpath-options-callback"},
+      "nodeFeatureId": {"moduleName": "fs"}
+    },
+    "fsPromises": {
+      "id": "fsPromises",
+      "type": "native",
+      "url": {"type": "node", "id": "api/fs.html#promises-api"},
       "nodeFeatureId": {"moduleName": "fs"}
     },
     "globalThis": {
@@ -1505,10 +1538,7 @@
       "id": "has-dynamic-import",
       "type": "removal",
       "description": "Every modern environment has support for dynamic `import()`. You can just remove the check.",
-      "url": {
-        "type": "mdn",
-        "id": "Web/JavaScript/Reference/Operators/import"
-      }
+      "url": {"type": "mdn", "id": "Web/JavaScript/Reference/Operators/import"}
     },
     "has-optional-chaining": {
       "id": "has-optional-chaining",
@@ -1550,10 +1580,7 @@
       "id": "has-template-literals",
       "type": "removal",
       "description": "Every modern environment has support for template literals. You can just remove the check.",
-      "url": {
-        "type": "mdn",
-        "id": "Web/JavaScript/Reference/Template_literals"
-      }
+      "url": {"type": "mdn", "id": "Web/JavaScript/Reference/Template_literals"}
     },
     "has-tostringtag": {
       "id": "has-tostringtag",
@@ -1588,22 +1615,25 @@
     "path.parse": {
       "id": "path.parse",
       "type": "native",
-      "url": {
-        "type": "node",
-        "id": "api/path.html#pathparsepath"
-      },
+      "url": {"type": "node", "id": "api/path.html#pathparsepath"},
       "nodeFeatureId": {"moduleName": "path"}
     },
     "queueMicrotask": {
       "id": "queueMicrotask",
       "type": "native",
-      "url": {
-        "type": "mdn",
-        "id": "Web/API/Window/queueMicrotask"
-      },
+      "url": {"type": "mdn", "id": "Web/API/Window/queueMicrotask"},
       "webFeatureId": {
         "featureId": "queuemicrotask",
         "compatKey": "api.queueMicrotask"
+      }
+    },
+    "requestAnimationFrame": {
+      "id": "requestAnimationFrame",
+      "type": "native",
+      "url": {"type": "mdn", "id": "Web/API/Window/requestAnimationFrame"},
+      "webFeatureId": {
+        "featureId": "request-animation-frame",
+        "compatKey": "api.Window.requestAnimationFrame"
       }
     },
     "safe-buffer": {
@@ -1615,19 +1645,13 @@
     "util.promisify": {
       "id": "util.promisify",
       "type": "native",
-      "url": {
-        "type": "node",
-        "id": "api/util.html#utilpromisifyoriginal"
-      },
+      "url": {"type": "node", "id": "api/util.html#utilpromisifyoriginal"},
       "nodeFeatureId": {"moduleName": "util", "exportName": "promisify"}
     },
     "zlib.crc32": {
       "id": "zlib.crc32",
       "type": "native",
-      "url": {
-        "type": "node",
-        "id": "api/zlib.html#zlibcrc32data-value"
-      },
+      "url": {"type": "node", "id": "api/zlib.html#zlibcrc32data-value"},
       "nodeFeatureId": {"moduleName": "zlib", "exportName": "crc32"}
     }
   },
@@ -1842,21 +1866,23 @@
       "moduleName": "arraybuffer.prototype.slice",
       "replacements": ["ArrayBuffer.prototype.slice"]
     },
+    "arraybuffer.slice": {
+      "type": "module",
+      "moduleName": "arraybuffer.slice",
+      "replacements": ["ArrayBuffer.prototype.slice"]
+    },
     "asynciterator.prototype": {
       "type": "module",
       "moduleName": "asynciterator.prototype",
       "replacements": ["AsyncIterator.prototype"]
     },
-    "atob": {
+    "atob": {"type": "module", "moduleName": "atob", "replacements": ["atob"]},
+    "atob-lite": {
       "type": "module",
-      "moduleName": "atob",
+      "moduleName": "atob-lite",
       "replacements": ["atob"]
     },
-    "btoa": {
-      "type": "module",
-      "moduleName": "btoa",
-      "replacements": ["btoa"]
-    },
+    "btoa": {"type": "module", "moduleName": "btoa", "replacements": ["btoa"]},
     "buffer-crc32": {
       "type": "module",
       "moduleName": "buffer-crc32",
@@ -1899,6 +1925,16 @@
       "replacements": ["DataView.prototype.byteOffset"]
     },
     "date": {"type": "module", "moduleName": "date", "replacements": ["Date"]},
+    "date-now": {
+      "type": "module",
+      "moduleName": "date-now",
+      "replacements": ["Date.now"]
+    },
+    "dateformat": {
+      "type": "module",
+      "moduleName": "dateformat",
+      "replacements": ["Intl.DateTimeFormat"]
+    },
     "defaults": {
       "type": "module",
       "moduleName": "defaults",
@@ -1994,6 +2030,11 @@
       "moduleName": "escape-string-regexp",
       "replacements": ["RegExp.escape"]
     },
+    "event-target-shim": {
+      "type": "module",
+      "moduleName": "event-target-shim",
+      "replacements": ["EventTarget"]
+    },
     "extend-shallow": {
       "type": "module",
       "moduleName": "extend-shallow",
@@ -2023,6 +2064,11 @@
       "type": "module",
       "moduleName": "foreachasync",
       "replacements": ["for...of"]
+    },
+    "fs-then-native": {
+      "type": "module",
+      "moduleName": "fs-then-native",
+      "replacements": ["fsPromises"]
     },
     "fs.realpath": {
       "type": "module",
@@ -2194,6 +2240,11 @@
       "moduleName": "left-pad",
       "replacements": ["String.prototype.padStart"]
     },
+    "long": {
+      "type": "module",
+      "moduleName": "long",
+      "replacements": ["BigInt"]
+    },
     "math-log2": {
       "type": "module",
       "moduleName": "math-log2",
@@ -2248,6 +2299,11 @@
       "type": "module",
       "moduleName": "math.sign",
       "replacements": ["Math.sign"]
+    },
+    "native-promise-only": {
+      "type": "module",
+      "moduleName": "native-promise-only",
+      "replacements": ["Promise"]
     },
     "node-int64": {
       "type": "module",
@@ -2404,6 +2460,21 @@
       "moduleName": "queue-microtask",
       "replacements": ["queueMicrotask"]
     },
+    "queue-tick": {
+      "type": "module",
+      "moduleName": "queue-tick",
+      "replacements": ["queueMicrotask"]
+    },
+    "raf": {
+      "type": "module",
+      "moduleName": "raf",
+      "replacements": ["requestAnimationFrame"]
+    },
+    "random-bytes": {
+      "type": "module",
+      "moduleName": "random-bytes",
+      "replacements": ["crypto.randomBytes"]
+    },
     "reflect.getprototypeof": {
       "type": "module",
       "moduleName": "reflect.getprototypeof",
@@ -2432,6 +2503,11 @@
     "safe-buffer": {
       "type": "module",
       "moduleName": "safe-buffer",
+      "replacements": ["safe-buffer"]
+    },
+    "safer-buffer": {
+      "type": "module",
+      "moduleName": "safer-buffer",
       "replacements": ["safe-buffer"]
     },
     "setprototypeof": {
@@ -2563,6 +2639,11 @@
       "type": "module",
       "moduleName": "typedarray.prototype.slice",
       "replacements": ["%TypedArray%.prototype.slice"]
+    },
+    "url-parse": {
+      "type": "module",
+      "moduleName": "url-parse",
+      "replacements": ["URL"]
     },
     "util.promisify": {
       "type": "module",

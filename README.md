@@ -11,8 +11,7 @@ We provide two things:
 
 ## List of replacements
 
-You can find a list of replacements in the
-[modules readme](./docs/modules/README.md).
+You can find a list of replacements on the [e18e website](https://e18e.dev/docs/replacements/).
 
 ## Tools
 
@@ -21,6 +20,8 @@ Some tools consume the lists of modules in this repository:
 | Name                                                                       | Description                                   |
 | -------------------------------------------------------------------------- | --------------------------------------------- |
 | [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend) | ESLint plugin to detect possible replacements |
+| [@e18e/eslint-plugin](https://github.com/e18e/eslint-plugin)               | Official e18e ESLint plugin                   |
+| [npmx](https://npmx.dev)                                                   | Alternative npm frontend                      |
 
 ## Manifests
 
