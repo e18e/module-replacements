@@ -66,6 +66,12 @@
       "description": "Every modern runtime provides a way to convert byte array to and from base64.",
       "example": "// From base64 to Uint8Array\nconst bytes = Uint8Array.fromBase64(base64)\n// From Uint8Array to base64\nconst base64 = bytes.toBase64()"
     },
+    "snippet::base64-id": {
+      "id": "snippet::base64-id",
+      "type": "simple",
+      "description": "You can use `crypto.randomBytes` with `Buffer.prototype.toString` to generate a random base64 id",
+      "example": "import crypto from 'node:crypto'\nconst id = crypto.randomBytes(15).toString('base64').replaceAll('+', '-').replaceAll('/', '_')"
+    },
     "snippet::call-bind": {
       "id": "snippet::call-bind",
       "type": "simple",
@@ -401,6 +407,11 @@
       "type": "module",
       "moduleName": "base64-js",
       "replacements": ["snippet::base64"]
+    },
+    "base64id": {
+      "type": "module",
+      "moduleName": "base64id",
+      "replacements": ["snippet::base64-id"]
     },
     "call-bind": {
       "type": "module",
