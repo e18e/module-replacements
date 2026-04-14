@@ -222,6 +222,12 @@
       "replacements": ["node:stream"],
       "url": {"type": "e18e", "id": "duplexer"}
     },
+    "duplexer2": {
+      "type": "module",
+      "moduleName": "duplexer2",
+      "replacements": ["node:stream"],
+      "url": {"type": "e18e", "id": "duplexer"}
+    },
     "emoji-regex": {
       "type": "module",
       "moduleName": "emoji-regex",
