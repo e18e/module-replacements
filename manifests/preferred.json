@@ -2796,55 +2796,46 @@
     "@eslint-community/eslint-plugin-eslint-comments": {
       "id": "@eslint-community/eslint-plugin-eslint-comments",
       "type": "documented",
-      "url": {"type": "e18e", "id": "eslint-plugin-eslint-comments"},
       "replacementModule": "@eslint-community/eslint-plugin-eslint-comments"
     },
     "@eslint-react/eslint-plugin": {
       "id": "@eslint-react/eslint-plugin",
       "type": "documented",
-      "url": {"type": "e18e", "id": "eslint-plugin-react"},
       "replacementModule": "@eslint-react/eslint-plugin"
     },
     "@faker-js/faker": {
       "id": "@faker-js/faker",
       "type": "documented",
-      "url": {"type": "e18e", "id": "faker"},
       "replacementModule": "@faker-js/faker"
     },
     "@fastify/deepmerge": {
       "id": "@fastify/deepmerge",
       "type": "documented",
-      "url": {"type": "e18e", "id": "deep-merge"},
       "replacementModule": "@fastify/deepmerge"
     },
     "@material/web": {
       "id": "@material/web",
       "type": "documented",
-      "url": {"type": "e18e", "id": "materialize-css"},
       "replacementModule": "@material/web"
     },
     "@materializecss/materialize": {
       "id": "@materializecss/materialize",
       "type": "documented",
-      "url": {"type": "e18e", "id": "materialize-css"},
       "replacementModule": "@materializecss/materialize"
     },
     "@placemarkio/tokml": {
       "id": "@placemarkio/tokml",
       "type": "documented",
-      "url": {"type": "e18e", "id": "tokml"},
       "replacementModule": "@placemarkio/tokml"
     },
     "@vitest/eslint-plugin": {
       "id": "@vitest/eslint-plugin",
       "type": "documented",
-      "url": {"type": "e18e", "id": "eslint-plugin-vitest"},
       "replacementModule": "@vitest/eslint-plugin"
     },
     "@xmldom/xmldom": {
       "id": "@xmldom/xmldom",
       "type": "documented",
-      "url": {"type": "e18e", "id": "xmldom"},
       "replacementModule": "@xmldom/xmldom"
     },
     "Buffer": {
@@ -2955,7 +2946,6 @@
     "Teleport": {
       "id": "Teleport",
       "type": "documented",
-      "url": {"type": "e18e", "id": "portal-vue"},
       "replacementModule": "Teleport"
     },
     "TextEncoder": {
@@ -2979,22 +2969,15 @@
       "webFeatureId": {"featureId": "url", "compatKey": "api.URLSearchParams"},
       "url": {"type": "mdn", "id": "Web/API/URLSearchParams"}
     },
-    "YAML": {
-      "id": "YAML",
-      "type": "documented",
-      "url": {"type": "e18e", "id": "js-yaml"},
-      "replacementModule": "YAML"
-    },
+    "YAML": {"id": "YAML", "type": "documented", "replacementModule": "YAML"},
     "ansis": {
       "id": "ansis",
       "type": "documented",
-      "url": {"type": "e18e", "id": "chalk"},
       "replacementModule": "ansis"
     },
     "betterknown": {
       "id": "betterknown",
       "type": "documented",
-      "url": {"type": "e18e", "id": "wellknown"},
       "replacementModule": "betterknown"
     },
     "builtinModules": {
@@ -3014,15 +2997,9 @@
     "concurrently": {
       "id": "concurrently",
       "type": "documented",
-      "url": {"type": "e18e", "id": "npm-run-all"},
       "replacementModule": "concurrently"
     },
-    "cpx2": {
-      "id": "cpx2",
-      "type": "documented",
-      "url": {"type": "e18e", "id": "cpx"},
-      "replacementModule": "cpx2"
-    },
+    "cpx2": {"id": "cpx2", "type": "documented", "replacementModule": "cpx2"},
     "crypto": {
       "id": "crypto",
       "type": "native",
@@ -3035,85 +3012,59 @@
     "date-fns": {
       "id": "date-fns",
       "type": "documented",
-      "url": {"type": "e18e", "id": "moment"},
       "replacementModule": "date-fns"
     },
     "day.js": {
       "id": "day.js",
       "type": "documented",
-      "url": {"type": "e18e", "id": "moment"},
       "replacementModule": "day.js"
     },
-    "defu": {
-      "id": "defu",
-      "type": "documented",
-      "url": {"type": "e18e", "id": "deep-merge"},
-      "replacementModule": "defu"
-    },
+    "defu": {"id": "defu", "type": "documented", "replacementModule": "defu"},
     "dequal": {
       "id": "dequal",
       "type": "documented",
-      "url": {"type": "e18e", "id": "deep-equal"},
       "replacementModule": "dequal"
     },
-    "dlv": {
-      "id": "dlv",
-      "type": "documented",
-      "url": {"type": "e18e", "id": "dot-prop"},
-      "replacementModule": "dlv"
-    },
-    "dset": {
-      "id": "dset",
-      "type": "documented",
-      "url": {"type": "e18e", "id": "dot-prop"},
-      "replacementModule": "dset"
-    },
+    "dlv": {"id": "dlv", "type": "documented", "replacementModule": "dlv"},
+    "dset": {"id": "dset", "type": "documented", "replacementModule": "dset"},
     "elysia": {
       "id": "elysia",
       "type": "documented",
-      "url": {"type": "e18e", "id": "express"},
       "replacementModule": "elysia"
     },
     "emoji-regex-xs": {
       "id": "emoji-regex-xs",
       "type": "documented",
-      "url": {"type": "e18e", "id": "emoji-regex"},
       "replacementModule": "emoji-regex-xs"
     },
     "empathic": {
       "id": "empathic",
       "type": "documented",
-      "url": {"type": "e18e", "id": "find-cache-dir"},
       "replacementModule": "empathic"
     },
     "es-toolkit": {
       "id": "es-toolkit",
       "type": "documented",
-      "url": {"type": "e18e", "id": "lodash-underscore"},
       "replacementModule": "es-toolkit"
     },
     "eslint-plugin-es-x": {
       "id": "eslint-plugin-es-x",
       "type": "documented",
-      "url": {"type": "e18e", "id": "eslint-plugin-es"},
       "replacementModule": "eslint-plugin-es-x"
     },
     "eslint-plugin-import-x": {
       "id": "eslint-plugin-import-x",
       "type": "documented",
-      "url": {"type": "e18e", "id": "eslint-plugin-import"},
       "replacementModule": "eslint-plugin-import-x"
     },
     "eslint-plugin-n": {
       "id": "eslint-plugin-n",
       "type": "documented",
-      "url": {"type": "e18e", "id": "eslint-plugin-node"},
       "replacementModule": "eslint-plugin-n"
     },
     "exsolve": {
       "id": "exsolve",
       "type": "documented",
-      "url": {"type": "e18e", "id": "resolve"},
       "replacementModule": "exsolve"
     },
     "extends": {
@@ -3125,27 +3076,19 @@
     "fast-querystring": {
       "id": "fast-querystring",
       "type": "documented",
-      "url": {"type": "e18e", "id": "qs"},
       "replacementModule": "fast-querystring"
     },
     "fast-string-width": {
       "id": "fast-string-width",
       "type": "documented",
-      "url": {"type": "e18e", "id": "string-width"},
       "replacementModule": "fast-string-width"
     },
     "fast-uri": {
       "id": "fast-uri",
       "type": "documented",
-      "url": {"type": "e18e", "id": "uri-js"},
       "replacementModule": "fast-uri"
     },
-    "fdir": {
-      "id": "fdir",
-      "type": "documented",
-      "url": {"type": "e18e", "id": "glob"},
-      "replacementModule": "fdir"
-    },
+    "fdir": {"id": "fdir", "type": "documented", "replacementModule": "fdir"},
     "fetch": {
       "id": "fetch",
       "type": "native",
@@ -3215,27 +3158,15 @@
     "get-port": {
       "id": "get-port",
       "type": "documented",
-      "url": {"type": "e18e", "id": "portfinder"},
       "replacementModule": "get-port"
     },
     "grammy": {
       "id": "grammy",
       "type": "documented",
-      "url": {"type": "e18e", "id": "node-telegram-bot-api"},
       "replacementModule": "grammy"
     },
-    "h3": {
-      "id": "h3",
-      "type": "documented",
-      "url": {"type": "e18e", "id": "express"},
-      "replacementModule": "h3"
-    },
-    "hono": {
-      "id": "hono",
-      "type": "documented",
-      "url": {"type": "e18e", "id": "express"},
-      "replacementModule": "hono"
-    },
+    "h3": {"id": "h3", "type": "documented", "replacementModule": "h3"},
+    "hono": {"id": "hono", "type": "documented", "replacementModule": "hono"},
     "import.meta.resolve": {
       "id": "import.meta.resolve",
       "type": "native",
@@ -3254,12 +3185,7 @@
       "nodeFeatureId": {"moduleName": "node:module", "exportName": "isBuiltin"},
       "url": {"type": "node", "id": "api/module.html#moduleisbuiltinmodulename"}
     },
-    "jose": {
-      "id": "jose",
-      "type": "documented",
-      "url": {"type": "e18e", "id": "jsonwebtoken"},
-      "replacementModule": "jose"
-    },
+    "jose": {"id": "jose", "type": "documented", "replacementModule": "jose"},
     "jquery": {
       "id": "jquery",
       "type": "removal",
@@ -3269,25 +3195,13 @@
     "jsx-ast-utils-x": {
       "id": "jsx-ast-utils-x",
       "type": "documented",
-      "url": {"type": "e18e", "id": "jsx-ast-utils"},
       "replacementModule": "jsx-ast-utils-x"
     },
-    "knip": {
-      "id": "knip",
-      "type": "documented",
-      "url": {"type": "e18e", "id": "depcheck"},
-      "replacementModule": "knip"
-    },
-    "ky": {
-      "id": "ky",
-      "type": "documented",
-      "url": {"type": "e18e", "id": "fetch"},
-      "replacementModule": "ky"
-    },
+    "knip": {"id": "knip", "type": "documented", "replacementModule": "knip"},
+    "ky": {"id": "ky", "type": "documented", "replacementModule": "ky"},
     "lilconfig": {
       "id": "lilconfig",
       "type": "documented",
-      "url": {"type": "e18e", "id": "cosmiconfig"},
       "replacementModule": "lilconfig"
     },
     "lodash-underscore": {
@@ -3299,25 +3213,21 @@
     "lucide": {
       "id": "lucide",
       "type": "documented",
-      "url": {"type": "e18e", "id": "feather"},
       "replacementModule": "lucide"
     },
     "lucide-react": {
       "id": "lucide-react",
       "type": "documented",
-      "url": {"type": "e18e", "id": "feather"},
       "replacementModule": "lucide-react"
     },
     "luxon": {
       "id": "luxon",
       "type": "documented",
-      "url": {"type": "e18e", "id": "moment"},
       "replacementModule": "luxon"
     },
     "milliparsec": {
       "id": "milliparsec",
       "type": "documented",
-      "url": {"type": "e18e", "id": "body-parser"},
       "replacementModule": "milliparsec"
     },
     "mri": {
@@ -3329,43 +3239,36 @@
     "nano-staged": {
       "id": "nano-staged",
       "type": "documented",
-      "url": {"type": "e18e", "id": "lint-staged"},
       "replacementModule": "nano-staged"
     },
     "nanoexec": {
       "id": "nanoexec",
       "type": "documented",
-      "url": {"type": "e18e", "id": "execa"},
       "replacementModule": "nanoexec"
     },
     "nanoid": {
       "id": "nanoid",
       "type": "documented",
-      "url": {"type": "e18e", "id": "shortid"},
       "replacementModule": "nanoid"
     },
     "nanospinner": {
       "id": "nanospinner",
       "type": "documented",
-      "url": {"type": "e18e", "id": "ora"},
       "replacementModule": "nanospinner"
     },
     "nativebird": {
       "id": "nativebird",
       "type": "documented",
-      "url": {"type": "e18e", "id": "bluebird-q"},
       "replacementModule": "nativebird"
     },
     "neoqs": {
       "id": "neoqs",
       "type": "documented",
-      "url": {"type": "e18e", "id": "qs"},
       "replacementModule": "neoqs"
     },
     "neotraverse": {
       "id": "neotraverse",
       "type": "documented",
-      "url": {"type": "e18e", "id": "traverse"},
       "replacementModule": "neotraverse"
     },
     "node:crypto": {
@@ -3377,7 +3280,6 @@
     "node:fs": {
       "id": "node:fs",
       "type": "documented",
-      "url": {"type": "e18e", "id": "read-pkg"},
       "replacementModule": "node:fs"
     },
     "node:stream": {
@@ -3395,79 +3297,62 @@
     "npm-run-all2": {
       "id": "npm-run-all2",
       "type": "documented",
-      "url": {"type": "e18e", "id": "npm-run-all"},
       "replacementModule": "npm-run-all2"
     },
-    "obug": {
-      "id": "obug",
-      "type": "documented",
-      "url": {"type": "e18e", "id": "debug"},
-      "replacementModule": "obug"
-    },
+    "obug": {"id": "obug", "type": "documented", "replacementModule": "obug"},
     "ofetch": {
       "id": "ofetch",
       "type": "documented",
-      "url": {"type": "e18e", "id": "fetch"},
       "replacementModule": "ofetch"
     },
     "ohash": {
       "id": "ohash",
       "type": "documented",
-      "url": {"type": "e18e", "id": "object-hash"},
       "replacementModule": "ohash"
     },
     "oxc-resolver": {
       "id": "oxc-resolver",
       "type": "documented",
-      "url": {"type": "e18e", "id": "resolve"},
       "replacementModule": "oxc-resolver"
     },
     "package-manager-detector": {
       "id": "package-manager-detector",
       "type": "documented",
-      "url": {"type": "e18e", "id": "detect-package-manager"},
       "replacementModule": "package-manager-detector"
     },
     "picocolors": {
       "id": "picocolors",
       "type": "documented",
-      "url": {"type": "e18e", "id": "chalk"},
       "replacementModule": "picocolors"
     },
     "picoquery": {
       "id": "picoquery",
       "type": "documented",
-      "url": {"type": "e18e", "id": "qs"},
       "replacementModule": "picoquery"
     },
     "picospinner": {
       "id": "picospinner",
       "type": "documented",
-      "url": {"type": "e18e", "id": "ora"},
       "replacementModule": "picospinner"
     },
     "pkg-types": {
       "id": "pkg-types",
       "type": "documented",
-      "url": {"type": "e18e", "id": "find-up"},
       "replacementModule": "pkg-types"
     },
     "premove": {
       "id": "premove",
       "type": "documented",
-      "url": {"type": "e18e", "id": "rimraf"},
       "replacementModule": "premove"
     },
     "react-helmet-async": {
       "id": "react-helmet-async",
       "type": "documented",
-      "url": {"type": "e18e", "id": "react-helmet"},
       "replacementModule": "react-helmet-async"
     },
     "react:metadata": {
       "id": "react:metadata",
       "type": "documented",
-      "url": {"type": "e18e", "id": "react-helmet"},
       "replacementModule": "react"
     },
     "readline.createInterface": {
@@ -3485,19 +3370,16 @@
     "rollup-plugin-visualizer": {
       "id": "rollup-plugin-visualizer",
       "type": "documented",
-      "url": {"type": "e18e", "id": "source-map-explorer"},
       "replacementModule": "rollup-plugin-visualizer"
     },
     "smol-toml": {
       "id": "smol-toml",
       "type": "documented",
-      "url": {"type": "e18e", "id": "toml"},
       "replacementModule": "smol-toml"
     },
     "sonda": {
       "id": "sonda",
       "type": "documented",
-      "url": {"type": "e18e", "id": "source-map-explorer"},
       "replacementModule": "sonda"
     },
     "sort-object": {
@@ -3509,13 +3391,11 @@
     "sort-object-keys": {
       "id": "sort-object-keys",
       "type": "documented",
-      "url": {"type": "e18e", "id": "sort-object"},
       "replacementModule": "sort-object-keys"
     },
     "sortobject": {
       "id": "sortobject",
       "type": "documented",
-      "url": {"type": "e18e", "id": "sort-object"},
       "replacementModule": "sortobject"
     },
     "streams": {
@@ -3539,43 +3419,36 @@
     "tiny-invariant": {
       "id": "tiny-invariant",
       "type": "documented",
-      "url": {"type": "e18e", "id": "invariant"},
       "replacementModule": "tiny-invariant"
     },
     "tinyclip": {
       "id": "tinyclip",
       "type": "documented",
-      "url": {"type": "e18e", "id": "clipboardy"},
       "replacementModule": "tinyclip"
     },
     "tinyexec": {
       "id": "tinyexec",
       "type": "documented",
-      "url": {"type": "e18e", "id": "execa"},
       "replacementModule": "tinyexec"
     },
     "tinyglobby": {
       "id": "tinyglobby",
       "type": "documented",
-      "url": {"type": "e18e", "id": "fast-glob"},
       "replacementModule": "tinyglobby"
     },
     "tinyhttp": {
       "id": "tinyhttp",
       "type": "documented",
-      "url": {"type": "e18e", "id": "express"},
       "replacementModule": "@tinyhttp/app"
     },
     "ts-graphviz": {
       "id": "ts-graphviz",
       "type": "documented",
-      "url": {"type": "e18e", "id": "graphviz"},
       "replacementModule": "ts-graphviz"
     },
     "unicode-segmenter": {
       "id": "unicode-segmenter",
       "type": "documented",
-      "url": {"type": "e18e", "id": "graphemer"},
       "replacementModule": "unicode-segmenter"
     },
     "unicodeClassEscape": {
@@ -3589,7 +3462,6 @@
     "uri-js-replace": {
       "id": "uri-js-replace",
       "type": "documented",
-      "url": {"type": "e18e", "id": "uri-js"},
       "replacementModule": "uri-js-replace"
     },
     "util.inherits": {
@@ -3649,33 +3521,24 @@
     "vitest": {
       "id": "vitest",
       "type": "documented",
-      "url": {"type": "e18e", "id": "mockdate"},
       "replacementModule": "vitest"
     },
     "webpack-bundle-analyzer": {
       "id": "webpack-bundle-analyzer",
       "type": "documented",
-      "url": {"type": "e18e", "id": "source-map-explorer"},
       "replacementModule": "webpack-bundle-analyzer"
     },
     "webpack.output.clean": {
       "id": "webpack.output.clean",
       "type": "documented",
-      "url": {"type": "e18e", "id": "clean-webpack-plugin"},
       "replacementModule": "webpack"
     },
     "wireit": {
       "id": "wireit",
       "type": "documented",
-      "url": {"type": "e18e", "id": "npm-run-all"},
       "replacementModule": "wireit"
     },
-    "yaml": {
-      "id": "yaml",
-      "type": "documented",
-      "url": {"type": "e18e", "id": "js-yaml"},
-      "replacementModule": "yaml"
-    },
+    "yaml": {"id": "yaml", "type": "documented", "replacementModule": "yaml"},
     "zlib.gzipSync": {
       "id": "zlib.gzipSync",
       "type": "native",
