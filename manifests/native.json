@@ -1385,7 +1385,7 @@
       "webFeatureId": {"featureId": "url", "compatKey": "api.URL"}
     },
     "URL.canParse": {
-      "id": "URL",
+      "id": "URL.canParse",
       "type": "native",
       "url": {"type": "mdn", "id": "Web/API/URL/canParse_static"},
       "webFeatureId": {
