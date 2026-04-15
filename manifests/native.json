@@ -2212,6 +2212,11 @@
       "moduleName": "index-of",
       "replacements": ["Array.prototype.indexOf"]
     },
+    "indexof": {
+      "type": "module",
+      "moduleName": "indexof",
+      "replacements": ["Array.prototype.indexOf"]
+    },
     "is-buffer": {
       "type": "module",
       "moduleName": "is-buffer",
