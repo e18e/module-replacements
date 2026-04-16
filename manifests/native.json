@@ -2652,6 +2652,11 @@
       "moduleName": "to-buffer",
       "replacements": ["Buffer.from"]
     },
+    "trim": {
+      "type": "module",
+      "moduleName": "trim",
+      "replacements": ["String.prototype.trim"]
+    },
     "typed-array-buffer": {
       "type": "module",
       "moduleName": "typed-array-buffer",
