@@ -44,6 +44,16 @@ interface DocumentedNodeClass {
   classMethods?: Array<DocumentedNodeClassMethod | DocumentedUnknownNode>;
 }
 
+interface DocumentedNodeGlobal {
+  type: 'global';
+  name: string;
+  introduced_in?: string;
+  modules?: Array<DocumentedNodeModule | DocumentedUnknownNode>;
+  classes?: Array<DocumentedNodeClass | DocumentedUnknownNode>;
+  properties?: Array<DocumentedNodeProperty>;
+  methods?: Array<DocumentedNodeMethod | DocumentedUnknownNode>;
+}
+
 interface DocumentedNodeModule {
   type: 'module';
   name: string;
@@ -53,11 +63,13 @@ interface DocumentedNodeModule {
   classes?: Array<DocumentedNodeClass | DocumentedUnknownNode>;
   properties?: Array<DocumentedNodeProperty>;
   methods?: Array<DocumentedNodeMethod | DocumentedUnknownNode>;
+  globals?: Array<DocumentedNodeGlobal | DocumentedUnknownNode>;
 }
 
 interface RootDocumentedNodeModule {
   type: 'module';
-  modules: DocumentedNodeModule[];
+  modules?: DocumentedNodeModule[];
+  globals?: DocumentedNodeGlobal[];
 }
 
 // Maps subpath module names (after stripping node: prefix) to the base module
@@ -115,7 +127,7 @@ function earliestVersion(versions: string[]): string {
 }
 
 function findExportVersion(
-  module: DocumentedNodeModule,
+  module: DocumentedNodeModule | DocumentedNodeGlobal,
   exportName: string,
   lastIntroducedIn?: string
 ): string | null {
@@ -157,14 +169,34 @@ function findExportVersion(
 }
 
 function findSubmodule(
-  module: DocumentedNodeModule,
+  module: DocumentedNodeModule | DocumentedNodeGlobal,
   name: string
-): DocumentedNodeModule | null {
+): DocumentedNodeModule | DocumentedNodeGlobal | null {
   for (const sub of module.modules ?? []) {
     if (sub.type !== 'module') continue;
     if (sub.name === name) return sub;
     const found = findSubmodule(sub, name);
     if (found) return found;
+  }
+  if (module.type === 'module') {
+    for (const global of module.globals ?? []) {
+      if (global.type !== 'global') continue;
+      if (global.name.toLowerCase() === name.toLowerCase()) return global;
+      const found = findSubmodule(global, name);
+      if (found) return found;
+    }
+  }
+  return null;
+}
+
+function findDefaultModuleOrGlobal(
+  mod: RootDocumentedNodeModule
+): DocumentedNodeModule | DocumentedNodeGlobal | null {
+  if (mod.modules && mod.modules.length === 1) {
+    return mod.modules[0];
+  }
+  if (mod.globals && mod.globals.length === 1) {
+    return mod.globals[0];
   }
   return null;
 }
@@ -177,23 +209,26 @@ async function getNodeVersion(
   const data = await fetchNodeModuleData(base);
   if (!data) return null;
 
-  let rootModule = data.modules[0];
-  if (!rootModule) return null;
+  const targetModuleOrGlobal = findDefaultModuleOrGlobal(data);
+
+  if (!targetModuleOrGlobal) return null;
+
+  let root: DocumentedNodeModule | DocumentedNodeGlobal = targetModuleOrGlobal;
 
   if (submodule) {
-    const sub = findSubmodule(rootModule, submodule);
+    const sub = findSubmodule(targetModuleOrGlobal, submodule);
     if (!sub) return null;
-    rootModule = sub;
+    root = sub;
   }
 
   if (!exportName) {
-    if (rootModule.introduced_in) {
-      return rootModule.introduced_in.replace(/^v/, '');
+    if (root.introduced_in) {
+      return root.introduced_in.replace(/^v/, '');
     }
     return null;
   }
 
-  return findExportVersion(rootModule, exportName);
+  return findExportVersion(root, exportName);
 }
 
 async function updateReplacementNodeEngine(
