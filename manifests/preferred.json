@@ -72,6 +72,12 @@
       "replacements": ["Buffer.prototype.equals"],
       "url": {"type": "e18e", "id": "buffer-equal"}
     },
+    "buffer-equal-constant-time": {
+      "type": "module",
+      "moduleName": "buffer-equal-constant-time",
+      "replacements": ["crypto.timingSafeEqual"],
+      "url": {"type": "e18e", "id": "buffer-equal-constant-time"}
+    },
     "buffer-equals": {
       "type": "module",
       "moduleName": "buffer-equals",
@@ -2632,6 +2638,24 @@
       "replacements": ["fs.rm", "fs.rmdir", "premove"],
       "url": {"type": "e18e", "id": "rimraf"}
     },
+    "safe-compare": {
+      "type": "module",
+      "moduleName": "safe-compare",
+      "replacements": ["crypto.timingSafeEqual"],
+      "url": {"type": "e18e", "id": "buffer-equal-constant-time"}
+    },
+    "scmp": {
+      "type": "module",
+      "moduleName": "scmp",
+      "replacements": ["crypto.timingSafeEqual"],
+      "url": {"type": "e18e", "id": "buffer-equal-constant-time"}
+    },
+    "secure-compare": {
+      "type": "module",
+      "moduleName": "secure-compare",
+      "replacements": ["crypto.timingSafeEqual"],
+      "url": {"type": "e18e", "id": "buffer-equal-constant-time"}
+    },
     "set-value": {
       "type": "module",
       "moduleName": "set-value",
@@ -3014,6 +3038,15 @@
         "compatKey": "api.crypto"
       },
       "url": {"type": "mdn", "id": "Web/API/Web_Crypto_API"}
+    },
+    "crypto.timingSafeEqual": {
+      "id": "crypto.timingSafeEqual",
+      "type": "native",
+      "url": {
+        "type": "node",
+        "id": "api/crypto.html#cryptotimingsafeequala-b"
+      },
+      "nodeFeatureId": {"moduleName": "crypto", "exportName": "timingSafeEqual"}
     },
     "date-fns": {
       "id": "date-fns",
