@@ -15,7 +15,7 @@ Example:
 ```js
 import split from 'split' // [!code --]
 import { createInterface } from 'node:readline' // [!code ++]
-import fs from 'node:fs'
+import * as fs from 'node:fs'
 
 const input = fs.createReadStream('file.txt')
 
