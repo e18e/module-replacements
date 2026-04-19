@@ -132,6 +132,12 @@
       "replacements": ["util.styleText", "picocolors", "ansis"],
       "url": {"type": "e18e", "id": "chalk"}
     },
+    "commander": {
+      "type": "module",
+      "moduleName": "commander",
+      "replacements": ["sade"],
+      "url": {"type": "e18e", "id": "commander"}
+    },
     "copy-text-to-clipboard": {
       "type": "module",
       "moduleName": "copy-text-to-clipboard",
@@ -3409,6 +3415,12 @@
       "id": "rollup-plugin-visualizer",
       "type": "documented",
       "replacementModule": "rollup-plugin-visualizer"
+    },
+    "sade": {
+      "id": "sade",
+      "type": "documented",
+      "url": {"type": "e18e", "id": "commander"},
+      "replacementModule": "sade"
     },
     "smol-toml": {
       "id": "smol-toml",
