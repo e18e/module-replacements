@@ -20,7 +20,7 @@ const h = hash(obj) // [!code ++]
 
 ## Web Crypto
 
-Use the standard `SubtleCrypto.digest` available in modern runtimes. Pair it with a stable serializer (e.g., [`safe-stable-stringify`](https://github.com/BridgeAR/safe-stable-stringify)) to ensure deterministic key ordering.
+Use the standard [`SubtleCrypto.digest`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest) available in modern runtimes. Pair it with a stable serializer (e.g., [`safe-stable-stringify`](https://github.com/BridgeAR/safe-stable-stringify)) to ensure deterministic key ordering.
 
 Example:
 

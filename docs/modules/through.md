@@ -6,6 +6,8 @@ description: Modern alternatives to the through package
 
 ## `stream.Writable` (native, Node.js)
 
+The native [`stream.Writable`](https://nodejs.org/api/stream.html#class-streamwritable) class can be used to create writable streams, which can serve the same purpose as the `through` package.
+
 <!-- prettier-ignore -->
 ```ts
 import through from 'through' // [!code --]

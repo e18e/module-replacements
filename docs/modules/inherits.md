@@ -6,7 +6,7 @@ description: Modern alternatives to the inherits package
 
 ## ES6 classes `extends` syntax
 
-ES6 classes `extends` syntax is a native way to implement prototype inheritance.
+ES6 classes [`extends`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends) syntax is a native way to implement prototype inheritance.
 
 Example:
 
