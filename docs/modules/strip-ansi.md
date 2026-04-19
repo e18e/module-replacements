@@ -6,7 +6,7 @@ description: Native Node.js alternatives to the strip-ansi package for removing 
 
 ## `util.stripVTControlCharacters` (native, Node.js)
 
-Added in v16.11.0, [util.stripVTControlCharacters](https://nodejs.org/api/util.html#utilstripvtcontrolcharactersstr) can be used to strip ANSI escape codes from a string.
+Added in v16.11.0, [`util.stripVTControlCharacters`](https://nodejs.org/api/util.html#utilstripvtcontrolcharactersstr) can be used to strip ANSI escape codes from a string.
 
 ```ts
 import stripAnsi from 'strip-ansi' // [!code --]

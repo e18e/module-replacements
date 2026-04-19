@@ -6,7 +6,7 @@ description: Native Node.js alternatives to the buffer-equals package for buffer
 
 ## `Buffer#equals` (native)
 
-Buffers have an `equals` method since Node 0.12.
+Buffers have an [`equals`](https://nodejs.org/api/buffer.html#bufequalsotherbuffer) method since Node v0.12.
 
 Example:
 

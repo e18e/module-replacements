@@ -6,7 +6,7 @@ description: Modern alternatives to the fs-extra package for working with the fi
 
 ## `fs` and `fs/promises` (native, Node.js)
 
-Modern Node.js includes built-in `fs` and `fs/promises` APIs that cover what [`fs-extra`](https://github.com/jprichardson/node-fs-extra) historically provided.
+Modern Node.js includes built-in [`fs`](https://nodejs.org/api/fs.html) and [`fs/promises`](https://nodejs.org/api/fs.html#promises-api) APIs that cover what [`fs-extra`](https://github.com/jprichardson/node-fs-extra) historically provided.
 
 ```js
 import fsExtra from 'fs-extra' // [!code --]

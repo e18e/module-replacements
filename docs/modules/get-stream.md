@@ -20,7 +20,7 @@ async function streamToString(stream) {
 
 ## Converting stream to Array
 
-You can convert a stream to an array using `Array.fromAsync`:
+You can convert a stream to an array using [`Array.fromAsync`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fromAsync) in Node 22+:
 
 ```ts
 await Array.fromAsync(stream)
@@ -38,7 +38,7 @@ async function streamToArray(stream) {
 
 ## Converting stream to Buffer
 
-You can convert a stream to a `Buffer` using `Array.fromAsync` with a mapper:
+You can convert a stream to a `Buffer` using [`Array.fromAsync`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fromAsync) with a mapper:
 
 ```ts
 async function streamToBuffer(stream) {

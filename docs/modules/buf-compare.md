@@ -6,7 +6,7 @@ description: Native Node.js alternatives to the buf-compare package for buffer c
 
 ## `Buffer.compare` (native)
 
-`Buffer.compare` is a native method which achieves the same result as `buf-compare`, available since Node v0.11.13.
+[`Buffer.compare`](https://nodejs.org/api/buffer.html#static-method-buffercomparebuf1-buf2) is a native method which achieves the same result as `buf-compare`, available since Node v0.11.13.
 
 Example:
 
