@@ -1222,6 +1222,18 @@
         "compatKey": "javascript.builtins.String.at"
       }
     },
+    "String.prototype.includes": {
+      "id": "String.prototype.includes",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/String/includes"
+      },
+      "webFeatureId": {
+        "featureId": "string-includes",
+        "compatKey": "javascript.builtins.String.includes"
+      }
+    },
     "String.prototype.lastIndexOf": {
       "id": "String.prototype.lastIndexOf",
       "type": "native",
@@ -2549,6 +2561,11 @@
       "type": "module",
       "moduleName": "string.prototype.at",
       "replacements": ["String.prototype.at"]
+    },
+    "string.prototype.includes": {
+      "type": "module",
+      "moduleName": "string.prototype.includes",
+      "replacements": ["String.prototype.includes"]
     },
     "string.prototype.lastindexof": {
       "type": "module",
