@@ -33,4 +33,4 @@ export default [
 ```
 
 > [!NOTE]
-> `@eslint-react/eslint-plugin` is not a drop‑in replacement. Use [their migration guide](https://eslint-react.xyz/docs/migration) to map rules/options and automate changes where possible.
+> `@eslint-react/eslint-plugin` is not a drop‑in replacement. Use [their migration guide](https://www.eslint-react.xyz/docs/migrating-from-eslint-plugin-react) to map rules/options and automate changes where possible.
