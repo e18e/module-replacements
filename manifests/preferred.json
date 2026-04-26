@@ -130,7 +130,7 @@
       "type": "module",
       "moduleName": "commander",
       "replacements": ["sade"],
-      "url": {"type": "e18e", "id": "commander"}
+      "url": {"type": "e18e", "id": "cli-builders"}
     },
     "copy-text-to-clipboard": {
       "type": "module",
@@ -2430,6 +2430,12 @@
       "replacements": ["node:crypto"],
       "url": {"type": "e18e", "id": "md5"}
     },
+    "meow": {
+      "type": "module",
+      "moduleName": "meow",
+      "replacements": ["sade"],
+      "url": {"type": "e18e", "id": "cli-builders"}
+    },
     "minimist": {
       "type": "module",
       "moduleName": "minimist",
@@ -2785,6 +2791,12 @@
       "moduleName": "xmldom",
       "replacements": ["@xmldom/xmldom"],
       "url": {"type": "e18e", "id": "xmldom"}
+    },
+    "yargs": {
+      "type": "module",
+      "moduleName": "yargs",
+      "replacements": ["sade"],
+      "url": {"type": "e18e", "id": "cli-builders"}
     },
     "yargs-parser": {
       "type": "module",
@@ -3377,12 +3389,7 @@
       "type": "documented",
       "replacementModule": "rollup-plugin-visualizer"
     },
-    "sade": {
-      "id": "sade",
-      "type": "documented",
-      "url": {"type": "e18e", "id": "commander"},
-      "replacementModule": "sade"
-    },
+    "sade": {"id": "sade", "type": "documented", "replacementModule": "sade"},
     "smol-toml": {
       "id": "smol-toml",
       "type": "documented",
