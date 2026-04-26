@@ -2277,6 +2277,46 @@
       "moduleName": "left-pad",
       "replacements": ["String.prototype.padStart"]
     },
+    "lodash.isarray": {
+      "type": "module",
+      "moduleName": "lodash.isarray",
+      "replacements": ["Array.isArray"]
+    },
+    "lodash.isbuffer": {
+      "type": "module",
+      "moduleName": "lodash.isbuffer",
+      "replacements": ["Buffer.isBuffer"]
+    },
+    "lodash.iserror": {
+      "type": "module",
+      "moduleName": "lodash.iserror",
+      "replacements": ["Error.isError"]
+    },
+    "lodash.isfinite": {
+      "type": "module",
+      "moduleName": "lodash.isfinite",
+      "replacements": ["Number.isFinite"]
+    },
+    "lodash.isinteger": {
+      "type": "module",
+      "moduleName": "lodash.isinteger",
+      "replacements": ["Number.isInteger"]
+    },
+    "lodash.isnan": {
+      "type": "module",
+      "moduleName": "lodash.isnan",
+      "replacements": ["Number.isNaN"]
+    },
+    "lodash.join": {
+      "type": "module",
+      "moduleName": "lodash.join",
+      "replacements": ["Array.prototype.join"]
+    },
+    "lodash.lastindexof": {
+      "type": "module",
+      "moduleName": "lodash.lastindexof",
+      "replacements": ["Array.prototype.lastIndexOf"]
+    },
     "long": {
       "type": "module",
       "moduleName": "long",

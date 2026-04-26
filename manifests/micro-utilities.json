@@ -150,6 +150,12 @@
       "description": "You can use the modulo operator to check if a number is even.",
       "example": "(n % 2) === 0"
     },
+    "snippet::is-function": {
+      "id": "snippet::is-function",
+      "type": "simple",
+      "description": "You can use `typeof` to check if a value is a function.",
+      "example": "const isString = (value) => typeof value === \"function\";"
+    },
     "snippet::is-generator-function": {
       "id": "snippet::is-generator-function",
       "type": "simple",
@@ -179,6 +185,12 @@
       "type": "simple",
       "description": "If the current environment is npm the `npm_config_user_agent` environment variable will be set and start with `\"npm\"`.",
       "example": "const isNpm = process.env.npm_config_user_agent?.startsWith(\"npm\")"
+    },
+    "snippet::is-null": {
+      "id": "snippet::is-null",
+      "type": "simple",
+      "description": "You can just check if a value is `null`.",
+      "example": "value === null"
     },
     "snippet::is-number": {
       "id": "snippet::is-number",
@@ -240,6 +252,12 @@
       "description": "You can check if the current environment is Travis CI by checking if the `TRAVIS` environment variable is set.",
       "example": "const isTravis = () => \"TRAVIS\" in process.env;"
     },
+    "snippet::is-undefined": {
+      "id": "snippet::is-undefined",
+      "type": "simple",
+      "description": "You can use `typeof` to check if a value is `undefined`.",
+      "example": "const isSymbol = (value) => typeof value === \"undefined\";"
+    },
     "snippet::is-whitespace": {
       "id": "snippet::is-whitespace",
       "type": "simple",
@@ -263,6 +281,12 @@
       "type": "simple",
       "description": "You can use `Math.random()` or `crypto.getRandomValues` if cryptographic randomness is required.",
       "example": "crypto.getRandomValues(new Uint32Array(1))[0] / (2 ** 32);\n// or\nMath.random();"
+    },
+    "snippet::noop": {
+      "id": "snippet::noop",
+      "type": "simple",
+      "description": "You can use an arrow function `() => {}` for a noop.",
+      "example": "const noop = () => {}"
     },
     "snippet::object-filter": {
       "id": "snippet::object-filter",
@@ -622,6 +646,61 @@
       "type": "module",
       "moduleName": "kind-of",
       "replacements": ["snippet::typeof"]
+    },
+    "lodash.isboolean": {
+      "type": "module",
+      "moduleName": "lodash.isboolean",
+      "replacements": ["snippet::is-boolean"]
+    },
+    "lodash.isfunction": {
+      "type": "module",
+      "moduleName": "lodash.isfunction",
+      "replacements": ["snippet::is-function"]
+    },
+    "lodash.isnull": {
+      "type": "module",
+      "moduleName": "lodash.isnull",
+      "replacements": ["snippet::is-null"]
+    },
+    "lodash.isnumber": {
+      "type": "module",
+      "moduleName": "lodash.isnumber",
+      "replacements": ["snippet::is-number"]
+    },
+    "lodash.isobject": {
+      "type": "module",
+      "moduleName": "lodash.isobject",
+      "replacements": ["snippet::is-object"]
+    },
+    "lodash.isplainobject": {
+      "type": "module",
+      "moduleName": "lodash.isplainobject",
+      "replacements": ["snippet::is-object"]
+    },
+    "lodash.isregexp": {
+      "type": "module",
+      "moduleName": "lodash.isregexp",
+      "replacements": ["snippet::is-regexp"]
+    },
+    "lodash.isstring": {
+      "type": "module",
+      "moduleName": "lodash.isstring",
+      "replacements": ["snippet::is-string"]
+    },
+    "lodash.issymbol": {
+      "type": "module",
+      "moduleName": "lodash.issymbol",
+      "replacements": ["snippet::is-symbol"]
+    },
+    "lodash.isundefined": {
+      "type": "module",
+      "moduleName": "lodash.isundefined",
+      "replacements": ["snippet::is-undefined"]
+    },
+    "lodash.noop": {
+      "type": "module",
+      "moduleName": "lodash.noop",
+      "replacements": ["snippet::noop"]
     },
     "last-char": {
       "type": "module",

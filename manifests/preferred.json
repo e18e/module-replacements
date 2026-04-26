@@ -1170,12 +1170,6 @@
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
-    "lodash.isarray": {
-      "type": "module",
-      "moduleName": "lodash.isarray",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
     "lodash.isarraybuffer": {
       "type": "module",
       "moduleName": "lodash.isarraybuffer",
@@ -1191,18 +1185,6 @@
     "lodash.isarraylikeobject": {
       "type": "module",
       "moduleName": "lodash.isarraylikeobject",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.isboolean": {
-      "type": "module",
-      "moduleName": "lodash.isboolean",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.isbuffer": {
-      "type": "module",
-      "moduleName": "lodash.isbuffer",
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
@@ -1236,30 +1218,6 @@
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
-    "lodash.iserror": {
-      "type": "module",
-      "moduleName": "lodash.iserror",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.isfinite": {
-      "type": "module",
-      "moduleName": "lodash.isfinite",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.isfunction": {
-      "type": "module",
-      "moduleName": "lodash.isfunction",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.isinteger": {
-      "type": "module",
-      "moduleName": "lodash.isinteger",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
     "lodash.islength": {
       "type": "module",
       "moduleName": "lodash.islength",
@@ -1284,12 +1242,6 @@
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
-    "lodash.isnan": {
-      "type": "module",
-      "moduleName": "lodash.isnan",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
     "lodash.isnative": {
       "type": "module",
       "moduleName": "lodash.isnative",
@@ -1302,39 +1254,9 @@
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
-    "lodash.isnull": {
-      "type": "module",
-      "moduleName": "lodash.isnull",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.isnumber": {
-      "type": "module",
-      "moduleName": "lodash.isnumber",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.isobject": {
-      "type": "module",
-      "moduleName": "lodash.isobject",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
     "lodash.isobjectlike": {
       "type": "module",
       "moduleName": "lodash.isobjectlike",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.isplainobject": {
-      "type": "module",
-      "moduleName": "lodash.isplainobject",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.isregexp": {
-      "type": "module",
-      "moduleName": "lodash.isregexp",
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
@@ -1350,27 +1272,9 @@
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
-    "lodash.isstring": {
-      "type": "module",
-      "moduleName": "lodash.isstring",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.issymbol": {
-      "type": "module",
-      "moduleName": "lodash.issymbol",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
     "lodash.istypedarray": {
       "type": "module",
       "moduleName": "lodash.istypedarray",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.isundefined": {
-      "type": "module",
-      "moduleName": "lodash.isundefined",
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
@@ -1389,12 +1293,6 @@
     "lodash.iteratee": {
       "type": "module",
       "moduleName": "lodash.iteratee",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.join": {
-      "type": "module",
-      "moduleName": "lodash.join",
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
@@ -1425,12 +1323,6 @@
     "lodash.last": {
       "type": "module",
       "moduleName": "lodash.last",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.lastindexof": {
-      "type": "module",
-      "moduleName": "lodash.lastindexof",
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
@@ -1575,12 +1467,6 @@
     "lodash.negate": {
       "type": "module",
       "moduleName": "lodash.negate",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.noop": {
-      "type": "module",
-      "moduleName": "lodash.noop",
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
