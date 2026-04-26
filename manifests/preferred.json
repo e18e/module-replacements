@@ -15,7 +15,7 @@
     "@iarna/toml": {
       "type": "module",
       "moduleName": "@iarna/toml",
-      "replacements": ["smol-toml"],
+      "replacements": ["smol-toml", "Bun.TOML"],
       "url": {"type": "e18e", "id": "toml"}
     },
     "@jsdevtools/ez-spawn": {
@@ -183,13 +183,13 @@
     "deep-equal": {
       "type": "module",
       "moduleName": "deep-equal",
-      "replacements": ["dequal", "util.isDeepStrictEqual"],
+      "replacements": ["dequal", "util.isDeepStrictEqual", "Bun.deepEquals"],
       "url": {"type": "e18e", "id": "deep-equal"}
     },
     "deep-equal-json": {
       "type": "module",
       "moduleName": "deep-equal-json",
-      "replacements": ["dequal", "util.isDeepStrictEqual"],
+      "replacements": ["dequal", "util.isDeepStrictEqual", "Bun.deepEquals"],
       "url": {"type": "e18e", "id": "deep-equal"}
     },
     "depcheck": {
@@ -471,7 +471,7 @@
     "js-yaml": {
       "type": "module",
       "moduleName": "js-yaml",
-      "replacements": ["yaml", "YAML"],
+      "replacements": ["yaml", "Bun.YAML"],
       "url": {"type": "e18e", "id": "js-yaml"}
     },
     "jsonwebtoken": {
@@ -2747,7 +2747,7 @@
     "toml": {
       "type": "module",
       "moduleName": "toml",
-      "replacements": ["smol-toml"],
+      "replacements": ["smol-toml", "Bun.TOML"],
       "url": {"type": "e18e", "id": "toml"}
     },
     "traverse": {
@@ -2908,6 +2908,21 @@
       "type": "native",
       "url": "https://bun.com/docs/runtime/shell"
     },
+    "Bun.TOML": {
+      "id": "Bun.TOML",
+      "type": "native",
+      "url": "https://bun.com/docs/runtime/toml"
+    },
+    "Bun.YAML": {
+      "id": "Bun.YAML",
+      "type": "native",
+      "url": "https://bun.com/docs/runtime/yaml"
+    },
+    "Bun.deepEquals": {
+      "id": "Bun.deepEquals",
+      "type": "native",
+      "url": "https://bun.com/docs/runtime/utils#bun-deepequals"
+    },
     "Bun.file": {
       "id": "Bun.file",
       "type": "native",
@@ -2916,12 +2931,12 @@
     "Bun.stringWidth": {
       "id": "Bun.stringWidth",
       "type": "native",
-      "url": "https://bun.com/reference/bun/stringWidth"
+      "url": "https://bun.com/docs/runtime/utils#bun-stringwidth"
     },
     "Bun.stripANSI": {
       "id": "Bun.stripANSI",
       "type": "native",
-      "url": "https://bun.com/reference/bun/stripANSI"
+      "url": "https://bun.com/docs/runtime/utils#bun-stripansi"
     },
     "ClipboardAPI": {
       "id": "ClipboardAPI",
@@ -2999,7 +3014,6 @@
       "webFeatureId": {"featureId": "url", "compatKey": "api.URLSearchParams"},
       "url": {"type": "mdn", "id": "Web/API/URLSearchParams"}
     },
-    "YAML": {"id": "YAML", "type": "documented", "replacementModule": "YAML"},
     "ansis": {
       "id": "ansis",
       "type": "documented",
