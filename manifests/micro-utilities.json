@@ -647,6 +647,11 @@
       "moduleName": "kind-of",
       "replacements": ["snippet::typeof"]
     },
+    "last-char": {
+      "type": "module",
+      "moduleName": "last-char",
+      "replacements": ["snippet::char-last"]
+    },
     "lodash.isboolean": {
       "type": "module",
       "moduleName": "lodash.isboolean",
@@ -701,11 +706,6 @@
       "type": "module",
       "moduleName": "lodash.noop",
       "replacements": ["snippet::noop"]
-    },
-    "last-char": {
-      "type": "module",
-      "moduleName": "last-char",
-      "replacements": ["snippet::char-last"]
     },
     "lower-case": {
       "type": "module",
