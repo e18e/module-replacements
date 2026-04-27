@@ -189,7 +189,7 @@
     "snippet::is-null": {
       "id": "snippet::is-null",
       "type": "simple",
-      "description": "You can just check if a value is `null`.",
+      "description": "You can check if a value is `null` using regular equality checks.",
       "example": "value === null"
     },
     "snippet::is-number": {
@@ -256,7 +256,7 @@
       "id": "snippet::is-undefined",
       "type": "simple",
       "description": "You can use `typeof` to check if a value is `undefined`.",
-      "example": "const isSymbol = (value) => typeof value === \"undefined\";"
+      "example": "typeof value === \"undefined\";"
     },
     "snippet::is-whitespace": {
       "id": "snippet::is-whitespace",
@@ -285,7 +285,7 @@
     "snippet::noop": {
       "id": "snippet::noop",
       "type": "simple",
-      "description": "You can use an arrow function `() => {}` for a noop.",
+      "description": "You can use an arrow function `() => {}` for a noop function.",
       "example": "const noop = () => {}"
     },
     "snippet::object-filter": {
