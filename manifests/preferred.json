@@ -135,7 +135,7 @@
     "commander": {
       "type": "module",
       "moduleName": "commander",
-      "replacements": ["sade"],
+      "replacements": ["sade", "cleye"],
       "url": {"type": "e18e", "id": "cli-builders"}
     },
     "copy-text-to-clipboard": {
