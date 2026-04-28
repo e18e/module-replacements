@@ -2690,6 +2690,12 @@
       "replacements": ["fetch", "ofetch", "ky"],
       "url": {"type": "e18e", "id": "fetch"}
     },
+    "wrap-ansi": {
+      "type": "module",
+      "moduleName": "wrap-ansi",
+      "replacements": ["fast-wrap-ansi"],
+      "url": {"type": "e18e", "id": "wrap-ansi"}
+    },
     "xmldom": {
       "type": "module",
       "moduleName": "xmldom",
@@ -3026,6 +3032,11 @@
       "id": "fast-uri",
       "type": "documented",
       "replacementModule": "fast-uri"
+    },
+    "fast-wrap-ansi": {
+      "id": "fast-wrap-ansi",
+      "type": "documented",
+      "replacementModule": "fast-wrap-ansi"
     },
     "fdir": {"id": "fdir", "type": "documented", "replacementModule": "fdir"},
     "fetch": {
