@@ -34,7 +34,7 @@ prog.parse(process.argv)
 
 ## `cleye`
 
-[`cleye`](https://github.com/privatenumber/cleye) is a bigger, but more powerful tool for building CLI applications for Node.js
+[`cleye`](https://github.com/privatenumber/cleye) is another powerful tool for building CLI applications for Node.js
 
 ```ts
 import { cli } from 'cleye'
