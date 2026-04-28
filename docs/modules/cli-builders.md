@@ -31,3 +31,7 @@ prog
 
 prog.parse(process.argv)
 ```
+
+## Argument parsers
+
+If you only need an argument parser, check the [argument parsers page](https://e18e.dev/docs/replacements/parseargs).
