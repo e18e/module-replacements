@@ -6,7 +6,7 @@ description: Modern replacement for the wrap-ansi package for wrapping terminal 
 
 ## `fast-wrap-ansi`
 
-[`fast-wrap-ansi`](https://www.npmjs.com/package/fast-wrap-ansi) is a focused replacement for `wrap-ansi` that preserves the same usage pattern while reducing dependency overhead.
+[`fast-wrap-ansi`](https://github.com/43081j/fast-wrap-ansi) is a focused replacement for `wrap-ansi` that preserves the same usage pattern while reducing dependency overhead.
 
 For most codebases, this is a direct import swap and works with the same common options:
 
