@@ -2217,6 +2217,11 @@
       "moduleName": "indexof",
       "replacements": ["Array.prototype.indexOf"]
     },
+    "is-arrayish": {
+      "type": "module",
+      "moduleName": "is-arrayish",
+      "replacements": ["Array.isArray"]
+    },
     "is-buffer": {
       "type": "module",
       "moduleName": "is-buffer",
