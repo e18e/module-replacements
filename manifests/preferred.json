@@ -48,6 +48,12 @@
       "replacements": ["fetch", "ofetch", "ky"],
       "url": {"type": "e18e", "id": "fetch"}
     },
+    "bcrypt": {
+      "type": "module",
+      "moduleName": "bcrypt",
+      "replacements": ["bcryptjs", "node:crypto", "crypto", "Bun.CryptoHasher"],
+      "url": {"type": "e18e", "id": "bcrypt"}
+    },
     "bluebird": {
       "type": "module",
       "moduleName": "bluebird",
@@ -2904,6 +2910,11 @@
       "id": "ansis",
       "type": "documented",
       "replacementModule": "ansis"
+    },
+    "bcryptjs": {
+      "id": "bcryptjs",
+      "type": "documented",
+      "replacementModule": "bcryptjs"
     },
     "betterknown": {
       "id": "betterknown",
