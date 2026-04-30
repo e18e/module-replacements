@@ -627,6 +627,18 @@
         "compatKey": "javascript.builtins.Date.now"
       }
     },
+    "Error": {
+      "id": "Error",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Error"
+      },
+      "webFeatureId": {
+        "featureId": "javascript",
+        "compatKey": "javascript.builtins.Error"
+      }
+    },
     "Error.isError": {
       "id": "Error.isError",
       "type": "native",
@@ -2037,10 +2049,25 @@
       "moduleName": "es5-shim",
       "replacements": ["es5-shim"]
     },
+    "es6-error": {
+      "type": "module",
+      "moduleName": "es6-error",
+      "replacements": ["Error"]
+    },
+    "es6-map": {
+      "type": "module",
+      "moduleName": "es6-map",
+      "replacements": ["Map"]
+    },
     "es6-promise": {
       "type": "module",
       "moduleName": "es6-promise",
       "replacements": ["Promise"]
+    },
+    "es6-set": {
+      "type": "module",
+      "moduleName": "es6-set",
+      "replacements": ["Set"]
     },
     "es6-shim": {
       "type": "module",
