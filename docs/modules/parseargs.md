@@ -43,3 +43,7 @@ const options = mri(process.argv.slice(2), {
   boolean: ['force']
 })
 ```
+
+## CLI builders
+
+If you need a CLI builder, check the the [CLI builders page](https://e18e.dev/docs/replacements/cli-builders).

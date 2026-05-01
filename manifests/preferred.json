@@ -138,6 +138,12 @@
       "replacements": ["util.styleText", "picocolors", "ansis"],
       "url": {"type": "e18e", "id": "chalk"}
     },
+    "commander": {
+      "type": "module",
+      "moduleName": "commander",
+      "replacements": ["sade", "cleye"],
+      "url": {"type": "e18e", "id": "cli-builders"}
+    },
     "copy-text-to-clipboard": {
       "type": "module",
       "moduleName": "copy-text-to-clipboard",
@@ -2328,6 +2334,12 @@
       "replacements": ["node:crypto"],
       "url": {"type": "e18e", "id": "md5"}
     },
+    "meow": {
+      "type": "module",
+      "moduleName": "meow",
+      "replacements": ["sade", "cleye"],
+      "url": {"type": "e18e", "id": "cli-builders"}
+    },
     "minimist": {
       "type": "module",
       "moduleName": "minimist",
@@ -2708,6 +2720,12 @@
       "replacements": ["@xmldom/xmldom"],
       "url": {"type": "e18e", "id": "xmldom"}
     },
+    "yargs": {
+      "type": "module",
+      "moduleName": "yargs",
+      "replacements": ["sade", "cleye"],
+      "url": {"type": "e18e", "id": "cli-builders"}
+    },
     "yargs-parser": {
       "type": "module",
       "moduleName": "yargs-parser",
@@ -2940,6 +2958,11 @@
       "id": "bun:test",
       "type": "native",
       "url": "https://bun.com/docs/test"
+    },
+    "cleye": {
+      "id": "cleye",
+      "type": "documented",
+      "replacementModule": "cleye"
     },
     "concurrently": {
       "id": "concurrently",
@@ -3191,11 +3214,7 @@
       "type": "documented",
       "replacementModule": "milliparsec"
     },
-    "mri": {
-      "id": "mri",
-      "type": "documented",
-      "replacementModule": "mri"
-    },
+    "mri": {"id": "mri", "type": "documented", "replacementModule": "mri"},
     "nano-staged": {
       "id": "nano-staged",
       "type": "documented",
@@ -3332,6 +3351,7 @@
       "type": "documented",
       "replacementModule": "rollup-plugin-visualizer"
     },
+    "sade": {"id": "sade", "type": "documented", "replacementModule": "sade"},
     "smol-toml": {
       "id": "smol-toml",
       "type": "documented",
