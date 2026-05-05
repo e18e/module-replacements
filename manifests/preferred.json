@@ -2642,6 +2642,12 @@
       "replacements": ["node:stream"],
       "url": {"type": "e18e", "id": "through"}
     },
+    "through2": {
+      "type": "module",
+      "moduleName": "through2",
+      "replacements": ["node:stream"],
+      "url": {"type": "e18e", "id": "through"}
+    },
     "tokml": {
       "type": "module",
       "moduleName": "tokml",
