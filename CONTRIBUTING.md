@@ -95,7 +95,7 @@ Just like when adding a new module, we will evaluate the replacement based on si
 
 ## Running tests
 
-We currently validate the data through a set of lint scripts which you can run with `npm run lint`. This will check for things like:
+We currently validate the data through a set of lint scripts which you can run with `pnpm lint`. This will check for things like:
 
 - All manifests conform to the JSON schema
 - Valid references (`webFeatureId`, `nodeFeatureId`, docs, etc.)

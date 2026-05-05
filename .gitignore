@@ -1,6 +1,4 @@
 /node_modules
-/.tshy
 /dist
-/main.js
 *.swp
 /.idea

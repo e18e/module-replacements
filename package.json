@@ -4,24 +4,24 @@
   "version": "1.0.0",
   "main": "./dist/main.js",
   "scripts": {
-    "build": "npm run clean && npm run build:types",
+    "build": "pnpm clean && pnpm build:types",
     "build:types": "tsc",
     "build:update-manifest-paths": "node scripts/update-manifests-dist-path.js",
     "clean": "node -e \"fs.rmSync('./dist', {force: true, recursive: true})\"",
     "format": "prettier --write \"./**/*.{js,ts,json,md,yml}\"",
     "generate-schema": "node scripts/generate-schema.js",
     "prepare": "tsc",
-    "lint": "npm run lint:format && npm run lint:manifests",
+    "lint": "pnpm lint:format && pnpm lint:manifests",
     "lint:format": "prettier --check \"./**/*.{js,ts,json,md,yml}\"",
     "lint:manifests": "node --experimental-vm-modules scripts/validate-modules.js",
     "sort-manifests": "node scripts/sort-manifests.js",
-    "update-engines": "npm run update-engines:web && npm run update-engines:bcd && npm run update-engines:runtimes && npm run update-engines:node && npm run update-engines:bun",
+    "update-engines": "pnpm update-engines:web && pnpm update-engines:bcd && pnpm update-engines:runtimes && pnpm update-engines:node && pnpm update-engines:bun",
     "update-engines:web": "node scripts/update-engines-web.ts",
     "update-engines:bcd": "node scripts/update-engines-bcd.ts",
     "update-engines:runtimes": "node scripts/update-engines-runtimes.ts",
     "update-engines:node": "node scripts/update-engines-node.ts",
     "update-engines:bun": "node scripts/update-engines-bun.ts",
-    "prepublishOnly": "npm run update-engines"
+    "prepublishOnly": "pnpm update-engines"
   },
   "files": [
     "dist",
@@ -57,5 +57,6 @@
     "./package.json": "./package.json"
   },
   "types": "./dist/main.d.ts",
-  "type": "module"
+  "type": "module",
+  "packageManager": "pnpm@10.33.3"
 }
