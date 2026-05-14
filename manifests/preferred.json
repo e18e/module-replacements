@@ -2675,7 +2675,7 @@
     "uid-safe": {
       "type": "module",
       "moduleName": "uid-safe",
-      "replacements": ["node:crypto", "crypto"],
+      "replacements": ["crypto.randomUUID"],
       "url": {"type": "e18e", "id": "uuidv4"}
     },
     "underscore": {
@@ -2699,13 +2699,13 @@
     "uuid": {
       "type": "module",
       "moduleName": "uuid",
-      "replacements": ["node:crypto", "crypto"],
+      "replacements": ["crypto.randomUUID"],
       "url": {"type": "e18e", "id": "uuidv4"}
     },
     "uuidv4": {
       "type": "module",
       "moduleName": "uuidv4",
-      "replacements": ["node:crypto", "crypto"],
+      "replacements": ["crypto.randomUUID"],
       "url": {"type": "e18e", "id": "uuidv4"}
     },
     "wellknown": {
@@ -2995,6 +2995,15 @@
         "compatKey": "api.crypto"
       },
       "url": {"type": "mdn", "id": "Web/API/Web_Crypto_API"}
+    },
+    "crypto.randomUUID": {
+      "id": "crypto.randomUUID",
+      "type": "native",
+      "webFeatureId": {
+        "featureId": "web-cryptography",
+        "compatKey": "api.Crypto.randomUUID"
+      },
+      "url": {"type": "mdn", "id": "Web/API/Crypto/randomUUID"}
     },
     "crypto.timingSafeEqual": {
       "id": "crypto.timingSafeEqual",
