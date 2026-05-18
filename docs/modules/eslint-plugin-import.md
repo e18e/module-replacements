@@ -62,3 +62,14 @@ module.exports = {
   }
 }
 ```
+
+## `oxlint`
+
+[`oxlint`](https://oxc.rs/docs/guide/usage/linter.html) is a Rust-based linter for JavaScript and TypeScript that is compatible with ESLint. It has ports of most rules from ESLint and its popular plugins, including `eslint-plugin-import`.
+
+Oxlint is intended to be backwards-compatible with ESLint as much as possible, but not all rules are implemented yet, and some are not planned to be implemented at all. See [the GitHub issue](https://github.com/oxc-project/oxc/issues/1117) for specifics.
+
+The migration process from ESLint is covered in [the Oxlint documentation](https://oxc.rs/docs/guide/usage/linter/migrate-from-eslint.html) and can usually be done automatically from an ESLint flat config using [`@oxlint/migrate`](https://github.com/oxc-project/oxlint-migrate).
+
+> [!NOTE]
+> `oxlint` is not necessarily a full, drop-in replacement. See [the GitHub issue](https://github.com/oxc-project/oxc/issues/1117) for rules from `eslint-plugin-import` that are not yet implemented or not planned to be implemented.

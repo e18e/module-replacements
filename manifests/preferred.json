@@ -267,7 +267,7 @@
     "eslint-plugin-import": {
       "type": "module",
       "moduleName": "eslint-plugin-import",
-      "replacements": ["eslint-plugin-import-x"],
+      "replacements": ["eslint-plugin-import-x", "oxlint"],
       "url": {"type": "e18e", "id": "eslint-plugin-import"}
     },
     "eslint-plugin-node": {
@@ -279,7 +279,7 @@
     "eslint-plugin-react": {
       "type": "module",
       "moduleName": "eslint-plugin-react",
-      "replacements": ["@eslint-react/eslint-plugin"],
+      "replacements": ["@eslint-react/eslint-plugin", "oxlint"],
       "url": {"type": "e18e", "id": "eslint-plugin-react"}
     },
     "eslint-plugin-vitest": {
@@ -3322,6 +3322,11 @@
       "id": "oxc-resolver",
       "type": "documented",
       "replacementModule": "oxc-resolver"
+    },
+    "oxlint": {
+      "id": "oxlint",
+      "type": "documented",
+      "replacementModule": "oxlint"
     },
     "package-manager-detector": {
       "id": "package-manager-detector",
