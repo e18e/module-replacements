@@ -11,7 +11,7 @@ This page contains the common, recommended alternatives and examples for fetch b
 The native [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API is available in Node.js (since v18.x) and all modern browsers. For many use cases it replaces `axios`/`node-fetch`/`cross-fetch` without adding dependencies.
 
 > [!TIP]
-> Node.js provides a codemod which can migrate some of this automatically, see the docs at [@nodejs/axios-to-whatwg](https://app.codemod.com/registry/@nodejs/axios-to-whatwg) for more details.
+> Node.js provides a codemod which can migrate some of this automatically, see the docs at [@nodejs/axios-to-whatwg-fetch](https://app.codemod.com/registry/@nodejs/axios-to-whatwg-fetch) for more details.
 
 
 Example:
