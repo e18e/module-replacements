@@ -13,7 +13,6 @@ The native [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 > [!TIP]
 > Node.js provides a codemod which can migrate some of this automatically, see the docs at [@nodejs/axios-to-whatwg-fetch](https://app.codemod.com/registry/@nodejs/axios-to-whatwg-fetch) for more details.
 
-
 Example:
 
 ```ts
