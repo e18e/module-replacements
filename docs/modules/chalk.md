@@ -8,6 +8,10 @@ description: Modern alternatives to the chalk package for terminal string stylin
 
 Since Node 20.x, you can use the [`styleText`](https://nodejs.org/api/util.html#utilstyletextformat-text-options) function from the `node:util` module to style text in the terminal.
 
+> [!TIP]
+> You can use `npx codemod @nodejs/chalk-to-util-styletext` codemod to help migrate from chalk to `styleText`
+
+
 Example:
 
 ```ts
@@ -27,6 +31,8 @@ console.log(`I am ${styleText(['blue', 'bgRed'], 'blue on red')}!`) // [!code ++
 
 > [!NOTE]
 > `styleText` does not support RGB and hex colors (e.g. `#EFEFEF` or `255, 239, 235`). You can view the available styles in the [Node documentation](https://nodejs.org/api/util.html#modifiers).
+>
+> Since v26.1.0 the `styleText` API support hex colors eg: `styleText('#ff5733', 'Orange text')`.
 
 ## `picocolors`
 
