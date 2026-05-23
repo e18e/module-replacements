@@ -72,6 +72,7 @@ Oxlint is intended to be backwards-compatible with ESLint as much as possible, b
 The migration process from ESLint is covered in [the Oxlint documentation](https://oxc.rs/docs/guide/usage/linter/migrate-from-eslint.html) and can usually be done automatically from an ESLint flat config using [`@oxlint/migrate`](https://github.com/oxc-project/oxlint-migrate).
 
 > [!NOTE]
+
 ## Oxlint
 
 [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) is a high-performance linter for JavaScript and TypeScript, built on the Rust-based `Oxc` compiler stack. It's intended to be fully backwards-compatible with ESLint, having ported most of the ESLint rules, as well as those from popular plugins including `eslint-plugin-import`.
