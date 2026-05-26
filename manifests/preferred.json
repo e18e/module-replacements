@@ -252,6 +252,12 @@
       "replacements": ["emoji-regex-xs", "unicodeClassEscape"],
       "url": {"type": "e18e", "id": "emoji-regex"}
     },
+    "eslint-config-airbnb": {
+      "type": "module",
+      "moduleName": "eslint-config-airbnb",
+      "replacements": ["eslint-config-airbnb-extended"],
+      "url": {"type": "e18e", "id": "eslint-config-airbnb"}
+    },
     "eslint-plugin-es": {
       "type": "module",
       "moduleName": "eslint-plugin-es",
@@ -3048,6 +3054,11 @@
       "id": "es-toolkit",
       "type": "documented",
       "replacementModule": "es-toolkit"
+    },
+    "eslint-config-airbnb-extended": {
+      "id": "eslint-config-airbnb-extended",
+      "type": "documented",
+      "replacementModule": "eslint-config-airbnb-extended"
     },
     "eslint-plugin-es-x": {
       "id": "eslint-plugin-es-x",
