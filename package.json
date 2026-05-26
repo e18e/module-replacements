@@ -53,7 +53,7 @@
         "default": "./dist/main.js"
       }
     },
-    "./dist/util": {
+    "./dist/util.js": {
       "import": {
         "types": "./dist/util.d.ts",
         "default": "./dist/util.js"
