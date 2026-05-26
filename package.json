@@ -53,6 +53,12 @@
         "default": "./dist/main.js"
       }
     },
+    "./dist/util.js": {
+      "import": {
+        "types": "./dist/util.d.ts",
+        "default": "./dist/util.js"
+      }
+    },
     "./manifests/*.json": "./manifests/*.json",
     "./package.json": "./package.json"
   },
