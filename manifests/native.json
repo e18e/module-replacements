@@ -1294,30 +1294,6 @@
         "compatKey": "javascript.builtins.String.matchAll"
       }
     },
-    "String.prototype.toLowerCase": {
-      "id": "String.prototype.toLowerCase",
-      "type": "native",
-      "url": {
-        "type": "mdn",
-        "id": "Web/JavaScript/Reference/Global_Objects/String/toLowerCase"
-      },
-      "webFeatureId": {
-        "featureId": "strings",
-        "compatKey": "javascript.builtins.String.toLowerCase"
-      }
-    },
-    "String.prototype.toUpperCase": {
-      "id": "String.prototype.toUpperCase",
-      "type": "native",
-      "url": {
-        "type": "mdn",
-        "id": "Web/JavaScript/Reference/Global_Objects/String/toUpperCase"
-      },
-      "webFeatureId": {
-        "featureId": "strings",
-        "compatKey": "javascript.builtins.String.toUpperCase"
-      }
-    },
     "String.prototype.padEnd": {
       "id": "String.prototype.padEnd",
       "type": "native",
@@ -1388,6 +1364,30 @@
       "webFeatureId": {
         "featureId": "html-wrapper-methods",
         "compatKey": "javascript.builtins.String.substr"
+      }
+    },
+    "String.prototype.toLowerCase": {
+      "id": "String.prototype.toLowerCase",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/String/toLowerCase"
+      },
+      "webFeatureId": {
+        "featureId": "strings",
+        "compatKey": "javascript.builtins.String.toLowerCase"
+      }
+    },
+    "String.prototype.toUpperCase": {
+      "id": "String.prototype.toUpperCase",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/String/toUpperCase"
+      },
+      "webFeatureId": {
+        "featureId": "strings",
+        "compatKey": "javascript.builtins.String.toUpperCase"
       }
     },
     "String.prototype.trim": {
@@ -2471,16 +2471,6 @@
     "lodash.trimend": {
       "type": "module",
       "moduleName": "lodash.trimend",
-      "replacements": ["String.prototype.trimEnd"]
-    },
-    "lodash.trimleft": {
-      "type": "module",
-      "moduleName": "lodash.trimleft",
-      "replacements": ["String.prototype.trimStart"]
-    },
-    "lodash.trimright": {
-      "type": "module",
-      "moduleName": "lodash.trimright",
       "replacements": ["String.prototype.trimEnd"]
     },
     "lodash.trimstart": {
