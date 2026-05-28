@@ -150,17 +150,17 @@
       "description": "You can use `instanceof Date`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object Date]\"`",
       "example": "const isDate = v instanceof Date;\n// for cross-realm\nconst isDateCrossRealm = Object.prototype.toString.call(v) === \"[object Date]\""
     },
-    "snippet::is-even": {
-      "id": "snippet::is-even",
-      "type": "simple",
-      "description": "You can use the modulo operator to check if a number is even.",
-      "example": "(n % 2) === 0"
-    },
     "snippet::is-equal": {
       "id": "snippet::is-equal",
       "type": "simple",
       "description": "You can check if two values are equal using regular equality sign.",
       "example": "a === b"
+    },
+    "snippet::is-even": {
+      "id": "snippet::is-even",
+      "type": "simple",
+      "description": "You can use the modulo operator to check if a number is even.",
+      "example": "(n % 2) === 0"
     },
     "snippet::is-function": {
       "id": "snippet::is-function",
