@@ -189,6 +189,18 @@
         "compatKey": "javascript.builtins.Array.every"
       }
     },
+    "Array.prototype.fill": {
+      "id": "Array.prototype.fill",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Array/fill"
+      },
+      "webFeatureId": {
+        "featureId": "array-fill",
+        "compatKey": "javascript.builtins.Array.fill"
+      }
+    },
     "Array.prototype.filter": {
       "id": "Array.prototype.filter",
       "type": "native",
@@ -861,6 +873,18 @@
         "compatKey": "javascript.builtins.Math.sign"
       }
     },
+    "Math.trunc": {
+      "id": "Math.trunc",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Math/trunc"
+      },
+      "webFeatureId": {
+        "featureId": "number",
+        "compatKey": "javascript.builtins.Math.trunc"
+      }
+    },
     "Number.isFinite": {
       "id": "Number.isFinite",
       "type": "native",
@@ -1270,6 +1294,30 @@
         "compatKey": "javascript.builtins.String.matchAll"
       }
     },
+    "String.prototype.toLowerCase": {
+      "id": "String.prototype.toLowerCase",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/String/toLowerCase"
+      },
+      "webFeatureId": {
+        "featureId": "strings",
+        "compatKey": "javascript.builtins.String.toLowerCase"
+      }
+    },
+    "String.prototype.toUpperCase": {
+      "id": "String.prototype.toUpperCase",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/String/toUpperCase"
+      },
+      "webFeatureId": {
+        "featureId": "strings",
+        "compatKey": "javascript.builtins.String.toUpperCase"
+      }
+    },
     "String.prototype.padEnd": {
       "id": "String.prototype.padEnd",
       "type": "native",
@@ -1627,6 +1675,18 @@
         "id": "Web/JavaScript/Reference/Global_Objects/TypedArray"
       }
     },
+    "optional_chaining": {
+      "id": "optional_chaining",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Operators/Optional_chaining"
+      },
+      "webFeatureId": {
+        "featureId": "object-object",
+        "compatKey": "javascript.operators.optional_chaining"
+      }
+    },
     "parseInt": {
       "id": "parseInt",
       "type": "native",
@@ -1673,6 +1733,15 @@
       "webFeatureId": {
         "featureId": "request-animation-frame",
         "compatKey": "api.Window.requestAnimationFrame"
+      }
+    },
+    "structuredClone": {
+      "id": "structuredClone",
+      "type": "native",
+      "url": {"type": "mdn", "id": "Web/API/Window/structuredClone"},
+      "webFeatureId": {
+        "featureId": "structured-clone",
+        "compatKey": "api.structuredClone"
       }
     },
     "safe-buffer": {
@@ -2309,6 +2378,31 @@
       "moduleName": "left-pad",
       "replacements": ["String.prototype.padStart"]
     },
+    "lodash.at": {
+      "type": "module",
+      "moduleName": "lodash.at",
+      "replacements": ["Array.prototype.at"]
+    },
+    "lodash.clone": {
+      "type": "module",
+      "moduleName": "lodash.clone",
+      "replacements": ["structuredClone"]
+    },
+    "lodash.escaperegexp": {
+      "type": "module",
+      "moduleName": "lodash.escaperegexp",
+      "replacements": ["RegExp.escape"]
+    },
+    "lodash.fill": {
+      "type": "module",
+      "moduleName": "lodash.fill",
+      "replacements": ["Array.prototype.fill"]
+    },
+    "lodash.get": {
+      "type": "module",
+      "moduleName": "lodash.get",
+      "replacements": ["optional_chaining"]
+    },
     "lodash.isarray": {
       "type": "module",
       "moduleName": "lodash.isarray",
@@ -2348,6 +2442,51 @@
       "type": "module",
       "moduleName": "lodash.lastindexof",
       "replacements": ["Array.prototype.lastIndexOf"]
+    },
+    "lodash.toarray": {
+      "type": "module",
+      "moduleName": "lodash.toarray",
+      "replacements": ["Array.from"]
+    },
+    "lodash.tointeger": {
+      "type": "module",
+      "moduleName": "lodash.tointeger",
+      "replacements": ["Math.trunc"]
+    },
+    "lodash.tolower": {
+      "type": "module",
+      "moduleName": "lodash.tolower",
+      "replacements": ["String.prototype.toLowerCase"]
+    },
+    "lodash.toupper": {
+      "type": "module",
+      "moduleName": "lodash.toupper",
+      "replacements": ["String.prototype.toUpperCase"]
+    },
+    "lodash.trim": {
+      "type": "module",
+      "moduleName": "lodash.trim",
+      "replacements": ["String.prototype.trim"]
+    },
+    "lodash.trimend": {
+      "type": "module",
+      "moduleName": "lodash.trimend",
+      "replacements": ["String.prototype.trimEnd"]
+    },
+    "lodash.trimleft": {
+      "type": "module",
+      "moduleName": "lodash.trimleft",
+      "replacements": ["String.prototype.trimStart"]
+    },
+    "lodash.trimright": {
+      "type": "module",
+      "moduleName": "lodash.trimright",
+      "replacements": ["String.prototype.trimEnd"]
+    },
+    "lodash.trimstart": {
+      "type": "module",
+      "moduleName": "lodash.trimstart",
+      "replacements": ["String.prototype.trimStart"]
     },
     "long": {
       "type": "module",

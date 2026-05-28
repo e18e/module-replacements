@@ -588,12 +588,6 @@
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
-    "lodash.at": {
-      "type": "module",
-      "moduleName": "lodash.at",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
     "lodash.attempt": {
       "type": "module",
       "moduleName": "lodash.attempt",
@@ -642,12 +636,6 @@
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
-    "lodash.castarray": {
-      "type": "module",
-      "moduleName": "lodash.castarray",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
     "lodash.ceil": {
       "type": "module",
       "moduleName": "lodash.ceil",
@@ -663,12 +651,6 @@
     "lodash.clamp": {
       "type": "module",
       "moduleName": "lodash.clamp",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.clone": {
-      "type": "module",
-      "moduleName": "lodash.clone",
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
@@ -864,33 +846,15 @@
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
-    "lodash.eq": {
-      "type": "module",
-      "moduleName": "lodash.eq",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
     "lodash.escape": {
       "type": "module",
       "moduleName": "lodash.escape",
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
-    "lodash.escaperegexp": {
-      "type": "module",
-      "moduleName": "lodash.escaperegexp",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
     "lodash.every": {
       "type": "module",
       "moduleName": "lodash.every",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.fill": {
-      "type": "module",
-      "moduleName": "lodash.fill",
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
@@ -1062,12 +1026,6 @@
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
-    "lodash.get": {
-      "type": "module",
-      "moduleName": "lodash.get",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
     "lodash.groupby": {
       "type": "module",
       "moduleName": "lodash.groupby",
@@ -1227,8 +1185,8 @@
     "lodash.isequal": {
       "type": "module",
       "moduleName": "lodash.isequal",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
+      "replacements": ["util.isDeepStrictEqual", "dequal", "Bun.deepEquals"],
+      "url": {"type": "e18e", "id": "deep-equal"}
     },
     "lodash.isequalwith": {
       "type": "module",
@@ -2028,33 +1986,15 @@
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
-    "lodash.toarray": {
-      "type": "module",
-      "moduleName": "lodash.toarray",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
     "lodash.tofinite": {
       "type": "module",
       "moduleName": "lodash.tofinite",
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
-    "lodash.tointeger": {
-      "type": "module",
-      "moduleName": "lodash.tointeger",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
     "lodash.tolength": {
       "type": "module",
       "moduleName": "lodash.tolength",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.tolower": {
-      "type": "module",
-      "moduleName": "lodash.tolower",
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
@@ -2100,45 +2040,9 @@
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
-    "lodash.toupper": {
-      "type": "module",
-      "moduleName": "lodash.toupper",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
     "lodash.transform": {
       "type": "module",
       "moduleName": "lodash.transform",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.trim": {
-      "type": "module",
-      "moduleName": "lodash.trim",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.trimend": {
-      "type": "module",
-      "moduleName": "lodash.trimend",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.trimleft": {
-      "type": "module",
-      "moduleName": "lodash.trimleft",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.trimright": {
-      "type": "module",
-      "moduleName": "lodash.trimright",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
-    "lodash.trimstart": {
-      "type": "module",
-      "moduleName": "lodash.trimstart",
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },

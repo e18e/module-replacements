@@ -156,6 +156,12 @@
       "description": "You can use the modulo operator to check if a number is even.",
       "example": "(n % 2) === 0"
     },
+    "snippet::is-equal": {
+      "id": "snippet::is-equal",
+      "type": "simple",
+      "description": "You can check if two values are equal using regular equality sign.",
+      "example": "a === b"
+    },
     "snippet::is-function": {
       "id": "snippet::is-function",
       "type": "simple",
@@ -662,6 +668,16 @@
       "type": "module",
       "moduleName": "last-char",
       "replacements": ["snippet::char-last"]
+    },
+    "lodash.castarray": {
+      "type": "module",
+      "moduleName": "lodash.castarray",
+      "replacements": ["snippet::array-coerce"]
+    },
+    "lodash.eq": {
+      "type": "module",
+      "moduleName": "lodash.eq",
+      "replacements": ["snippet::is-equal"]
     },
     "lodash.isboolean": {
       "type": "module",
