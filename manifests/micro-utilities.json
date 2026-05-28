@@ -153,7 +153,7 @@
     "snippet::is-equal": {
       "id": "snippet::is-equal",
       "type": "simple",
-      "description": "You can check if two values are equal using regular equality sign.",
+      "description": "You can determine if two values are equal using regular equality checks.",
       "example": "a === b"
     },
     "snippet::is-even": {
