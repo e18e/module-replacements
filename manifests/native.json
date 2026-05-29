@@ -1579,8 +1579,8 @@
     "fs.rm": {
       "id": "fs.rm",
       "type": "native",
-      "url": {"type": "node", "id": "api/fs.html#fsrmpath-options-callback"},
-      "nodeFeatureId": {"moduleName": "fs", "exportName": "rm"}
+      "url": {"type": "node", "id": "api/fs.html#fspromisesrmpath-options"},
+      "nodeFeatureId": {"moduleName": "node:fs/promises", "exportName": "rm"}
     },
     "fsPromises": {
       "id": "fsPromises",
