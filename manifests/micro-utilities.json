@@ -342,6 +342,12 @@
       "description": "You can split a string into lines using a regular expression.",
       "example": "const splitLines = (str) => str.split(/\\r?\\n/);"
     },
+    "snippet::strip-bom": {
+      "id": "snippet::strip-bom",
+      "type": "simple",
+      "description": "You can check the start of a string for the BOM character and use `String.prototype.slice` if it is present.",
+      "example": "str.startsWith('\\ufeff') ? str.slice(1) : str;"
+    },
     "snippet::to-lower": {
       "id": "snippet::to-lower",
       "type": "simple",
@@ -773,6 +779,16 @@
       "type": "module",
       "moduleName": "split-lines",
       "replacements": ["snippet::split-lines"]
+    },
+    "strip-bom": {
+      "type": "module",
+      "moduleName": "strip-bom",
+      "replacements": ["snippet::strip-bom"]
+    },
+    "strip-bom-string": {
+      "type": "module",
+      "moduleName": "strip-bom-string",
+      "replacements": ["snippet::strip-bom"]
     },
     "toarray": {
       "type": "module",
