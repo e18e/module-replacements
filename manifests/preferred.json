@@ -2612,6 +2612,12 @@
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
+    "universal-deep-strict-equal": {
+      "type": "module",
+      "moduleName": "universal-deep-strict-equal",
+      "replacements": ["dequal", "util.isDeepStrictEqual", "Bun.deepEquals"],
+      "url": {"type": "e18e", "id": "deep-equal"}
+    },
     "uri-js": {
       "type": "module",
       "moduleName": "uri-js",
