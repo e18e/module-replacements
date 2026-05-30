@@ -4,9 +4,9 @@ description: Modern alternatives to the path-exists package for checking if a pa
 
 # Replacements for `path-exists`
 
-## Async `fs.access` (native, Node.js)
+## `fs.access` and `fs.promises.access` (native, Node.js)
 
-Use [`fs/promises.access`](https://nodejs.org/docs/latest/api/fs.html#fspromisesaccesspath-mode) and return a boolean.
+Use [`fs.promises.access`](https://nodejs.org/docs/latest/api/fs.html#fspromisesaccesspath-mode) and return a boolean.
 
 <!-- prettier-ignore -->
 ```ts

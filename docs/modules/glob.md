@@ -19,9 +19,9 @@ const files = await glob('**/*.ts')
 
 Most options available to `glob` are available in `tinyglobby`, read more at the [tinyglobby documentation](https://superchupu.dev/tinyglobby/documentation).
 
-## `fs.glob` (native, since Node 22.x)
+## `fs.glob` and `fs.promises.glob` (native, Node.js)
 
-[`fs.glob`](https://nodejs.org/api/fs.html#fspromisesglobpattern-options) is built into modern versions of Node.
+Since Node 22 [`fs.glob`](https://nodejs.org/api/fs.html#fsglobpattern-options-callback) and [`fs.promises.glob`](https://nodejs.org/api/fs.html#fspromisesglobpattern-options) are built-in.
 
 Example:
 

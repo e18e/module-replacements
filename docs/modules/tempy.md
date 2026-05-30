@@ -4,9 +4,9 @@ description: Modern alternatives to the temp and tempy packages for creating tem
 
 # Replacements for `temp` / `tempy`
 
-## `fs.mkdtemp` (native, since Node.js v14.x)
+## `fs.mkdtemp` and `fs.promises.mkdtemp` (native, since Node.js v14.x)
 
-Node.js has the [`fs.mkdtemp`](https://nodejs.org/api/fs.html#fsmkdtempprefix-options-callback) function for creating a unique temporary directory. Directory cleanup can be done by passing `{recursive: true}` to [`fs.rm`](https://nodejs.org/api/fs.html#fsrmpath-options-callback).
+Node.js has the [`fs.mkdtemp`](https://nodejs.org/api/fs.html#fsmkdtempprefix-options-callback) and [`fs.promises.mkdtemp`](https://nodejs.org/api/fs.html#fspromisesmkdtempprefix-options) functions for creating a unique temporary directory. Directory cleanup can be done by passing `{recursive: true}` to [`fs.rm`](https://nodejs.org/api/fs.html#fsrmpath-options-callback).
 
 Example:
 
@@ -20,9 +20,9 @@ const tempDirPath = temp.mkdirSync('foo') // [!code --]
 const tempDirPath = await mkdtemp(join(await realpath(tmpdir()), 'foo-')) // [!code ++]
 ```
 
-## `fs.mkdtempDisposable` (native, since Node.js v20.4.0)
+## `fs.promises.mkdtempDisposable` (native, since Node.js v20.4.0)
 
-Node.js now provides [`fs.mkdtempDisposable`](https://nodejs.org/api/fs.html#fspromisesmkdtempdisposableprefix-options) which leverages the `using` keyword for automatic cleanup. This eliminates the need for `temp.track()` or manual cleanup logic.
+Node.js now provides [`fs.promises.mkdtempDisposable`](https://nodejs.org/api/fs.html#fspromisesmkdtempdisposableprefix-options) which leverages the `using` keyword for automatic cleanup. This eliminates the need for `temp.track()` or manual cleanup logic.
 
 Example:
 
