@@ -390,6 +390,12 @@
       "replacements": ["empathic", "pkg-types"],
       "url": {"type": "e18e", "id": "find-up"}
     },
+    "findup": {
+      "type": "module",
+      "moduleName": "findup",
+      "replacements": ["empathic", "pkg-types"],
+      "url": {"type": "e18e", "id": "find-up"}
+    },
     "fs-extra": {
       "type": "module",
       "moduleName": "fs-extra",
