@@ -150,6 +150,12 @@
       "description": "You can use `instanceof Date`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object Date]\"`",
       "example": "const isDate = v instanceof Date;\n// for cross-realm\nconst isDateCrossRealm = Object.prototype.toString.call(v) === \"[object Date]\""
     },
+    "snippet::is-deflate-buffer": {
+      "id": "snippet::is-deflate-buffer",
+      "type": "simple",
+      "description": "You can check the first two bytes of a buffer to detect if it's compressed using deflate.",
+      "example": "function isDeflate(buf) {\n  if (buf.length < 2 || buf[0] !== 0x78) return false;\n  const b = buf[1];\n  return b === 1 || b === 0x9c || b === 0xda;\n}"
+    },
     "snippet::is-equal": {
       "id": "snippet::is-equal",
       "type": "simple",
@@ -173,6 +179,12 @@
       "type": "simple",
       "description": "You can use `typeof` and `Object.prototype.toString.call` to check if a value is a generator function",
       "example": "const isGeneratorFunction = (obj) => typeof obj === \"function\" && Object.prototype.toString.call(obj) === \"[object GeneratorFunction]\""
+    },
+    "snippet::is-gzip-buffer": {
+      "id": "snippet::is-gzip-buffer",
+      "type": "simple",
+      "description": "You can check first three bytes of a buffer to detect if it is a gzip file.",
+      "example": "function isGzip(buf) {\n  if (buf.length < 3) return false;\n  return buf[0] === 31 && buf[1] === 139 && buf[2] === 8;\n}"
     },
     "snippet::is-in-ssh": {
       "id": "snippet::is-in-ssh",
@@ -529,6 +541,11 @@
       "moduleName": "is-date-object",
       "replacements": ["snippet::is-date"]
     },
+    "is-deflate": {
+      "type": "module",
+      "moduleName": "is-deflate",
+      "replacements": ["snippet::is-deflate-buffer"]
+    },
     "is-even": {
       "type": "module",
       "moduleName": "is-even",
@@ -538,6 +555,11 @@
       "type": "module",
       "moduleName": "is-generator-function",
       "replacements": ["snippet::is-generator-function"]
+    },
+    "is-gzip": {
+      "type": "module",
+      "moduleName": "is-gzip",
+      "replacements": ["snippet::is-gzip-buffer"]
     },
     "is-in-ci": {
       "type": "module",
