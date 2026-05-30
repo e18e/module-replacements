@@ -177,7 +177,7 @@
     "snippet::is-gzip-buffer": {
       "id": "snippet::is-gzip-buffer",
       "type": "simple",
-      "description": "You can check first bytes of a buffer to detect if it is a GZIP file.",
+      "description": "You can check first three bytes of a buffer to detect if it is a gzip file.",
       "example": "function isGzip(buf) {\n  if (buf.length < 3) return false;\n  return buf[0] === 31 && buf[1] === 139 && buf[2] === 8;\n}"
     },
     "snippet::is-in-ssh": {
