@@ -312,6 +312,12 @@
       "description": "You can use an arrow function `() => {}` for a noop function.",
       "example": "const noop = () => {}"
     },
+    "snippet::object-exclude": {
+      "id": "snippet::object-exclude",
+      "type": "simple",
+      "description": "You can use `Object.fromEntries` with `Object.entries` and `Array.prototype.filter` to exclude specific keys from an object.",
+      "example": "const objectExclude = (obj, keys) => Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));"
+    },
     "snippet::object-filter": {
       "id": "snippet::object-filter",
       "type": "simple",
@@ -480,6 +486,11 @@
       "type": "module",
       "moduleName": "es-set-tostringtag",
       "replacements": ["snippet::set-tostringtag"]
+    },
+    "except": {
+      "type": "module",
+      "moduleName": "except",
+      "replacements": ["snippet::object-exclude"]
     },
     "filter-obj": {
       "type": "module",
