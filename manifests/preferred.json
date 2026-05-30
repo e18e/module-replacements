@@ -2596,7 +2596,7 @@
     },
     "universal-deep-strict-equal": {
       "type": "module",
-      "moduleName": "deep-equal",
+      "moduleName": "universal-deep-strict-equal",
       "replacements": ["dequal", "util.isDeepStrictEqual", "Bun.deepEquals"],
       "url": {"type": "e18e", "id": "deep-equal"}
     },
