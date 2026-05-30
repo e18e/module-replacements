@@ -1567,6 +1567,18 @@
         "compatKey": "javascript.statements.for_of"
       }
     },
+    "fs.promises": {
+      "id": "fs.promises",
+      "type": "native",
+      "url": {"type": "node", "id": "api/fs.html#promises-api"},
+      "nodeFeatureId": {"moduleName": "fs"}
+    },
+    "fs.promises.rm": {
+      "id": "fs.promises.rm",
+      "type": "native",
+      "url": {"type": "node", "id": "api/fs.html#fspromisesrmpath-options"},
+      "nodeFeatureId": {"moduleName": "node:fs/promises", "exportName": "rm"}
+    },
     "fs.realpath": {
       "id": "fs.realpath",
       "type": "native",
@@ -1575,18 +1587,6 @@
         "id": "api/fs.html#fsrealpathpath-options-callback"
       },
       "nodeFeatureId": {"moduleName": "fs", "exportName": "realpath"}
-    },
-    "fs.promises.rm": {
-      "id": "fs.promises.rm",
-      "type": "native",
-      "url": {"type": "node", "id": "api/fs.html#fspromisesrmpath-options"},
-      "nodeFeatureId": {"moduleName": "node:fs/promises", "exportName": "rm"}
-    },
-    "fs.promises": {
-      "id": "fs.promises",
-      "type": "native",
-      "url": {"type": "node", "id": "api/fs.html#promises-api"},
-      "nodeFeatureId": {"moduleName": "fs"}
     },
     "globalThis": {
       "id": "globalThis",

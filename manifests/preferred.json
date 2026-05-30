@@ -3023,6 +3023,12 @@
       "nodeFeatureId": {"moduleName": "node:fs"},
       "url": {"type": "node", "id": "api/fs.html"}
     },
+    "fs.existsSync": {
+      "id": "fs.existsSync",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:fs", "exportName": "existsSync"},
+      "url": {"type": "node", "id": "api/fs.html#fsexistssyncpath"}
+    },
     "fs.promises.access": {
       "id": "fs.promises.access",
       "type": "native",
@@ -3031,12 +3037,6 @@
         "exportName": "access"
       },
       "url": {"type": "node", "id": "api/fs.html#fspromisesaccesspath-mode"}
-    },
-    "fs.existsSync": {
-      "id": "fs.existsSync",
-      "type": "native",
-      "nodeFeatureId": {"moduleName": "node:fs", "exportName": "existsSync"},
-      "url": {"type": "node", "id": "api/fs.html#fsexistssyncpath"}
     },
     "fs.promises.glob": {
       "id": "fs.promises.glob",
