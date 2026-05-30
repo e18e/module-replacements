@@ -561,6 +561,11 @@
       "moduleName": "is-gzip",
       "replacements": ["snippet::is-gzip-buffer"]
     },
+    "is-in-ci": {
+      "type": "module",
+      "moduleName": "is-in-ci",
+      "replacements": ["snippet::is-ci"]
+    },
     "is-in-ssh": {
       "type": "module",
       "moduleName": "is-in-ssh",
