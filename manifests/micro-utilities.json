@@ -174,6 +174,12 @@
       "description": "You can use `typeof` and `Object.prototype.toString.call` to check if a value is a generator function",
       "example": "const isGeneratorFunction = (obj) => typeof obj === \"function\" && Object.prototype.toString.call(obj) === \"[object GeneratorFunction]\""
     },
+    "snippet::is-gzip-buffer": {
+      "id": "snippet::is-gzip-buffer",
+      "type": "simple",
+      "description": "You can check first three bytes of a buffer to detect if it is a gzip file.",
+      "example": "function isGzip(buf) {\n  if (buf.length < 3) return false;\n  return buf[0] === 31 && buf[1] === 139 && buf[2] === 8;\n}"
+    },
     "snippet::is-in-ssh": {
       "id": "snippet::is-in-ssh",
       "type": "simple",
@@ -538,6 +544,11 @@
       "type": "module",
       "moduleName": "is-generator-function",
       "replacements": ["snippet::is-generator-function"]
+    },
+    "is-gzip": {
+      "type": "module",
+      "moduleName": "is-gzip",
+      "replacements": ["snippet::is-gzip-buffer"]
     },
     "is-in-ssh": {
       "type": "module",
