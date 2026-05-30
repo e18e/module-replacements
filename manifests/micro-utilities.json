@@ -153,7 +153,7 @@
     "snippet::is-deflate-buffer": {
       "id": "snippet::is-deflate-buffer",
       "type": "simple",
-      "description": "You can check first bytes of a buffer to detect if it is compressed using deflate.",
+      "description": "You can check the first two bytes of a buffer to detect if it's compressed using deflate.",
       "example": "function isDeflate(buf) {\n  if (buf.length < 2 || buf[0] !== 0x78) return false;\n  const b = buf[1];\n  return b === 1 || b === 0x9c || b === 0xda;\n}"
     },
     "snippet::is-equal": {
