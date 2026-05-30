@@ -1576,14 +1576,14 @@
       },
       "nodeFeatureId": {"moduleName": "fs", "exportName": "realpath"}
     },
-    "fs.rm": {
-      "id": "fs.rm",
+    "fs.promises.rm": {
+      "id": "fs.promises.rm",
       "type": "native",
       "url": {"type": "node", "id": "api/fs.html#fspromisesrmpath-options"},
       "nodeFeatureId": {"moduleName": "node:fs/promises", "exportName": "rm"}
     },
-    "fsPromises": {
-      "id": "fsPromises",
+    "fs.promises": {
+      "id": "fs.promises",
       "type": "native",
       "url": {"type": "node", "id": "api/fs.html#promises-api"},
       "nodeFeatureId": {"moduleName": "fs"}
@@ -2191,7 +2191,7 @@
     "fs-then-native": {
       "type": "module",
       "moduleName": "fs-then-native",
-      "replacements": ["fsPromises"]
+      "replacements": ["fs.promises"]
     },
     "fs.realpath": {
       "type": "module",
@@ -2736,7 +2736,7 @@
     "remove": {
       "type": "module",
       "moduleName": "remove",
-      "replacements": ["fs.rm"]
+      "replacements": ["fs.promises.rm"]
     },
     "repeat-string": {
       "type": "module",
