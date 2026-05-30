@@ -150,6 +150,12 @@
       "description": "You can use `instanceof Date`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object Date]\"`",
       "example": "const isDate = v instanceof Date;\n// for cross-realm\nconst isDateCrossRealm = Object.prototype.toString.call(v) === \"[object Date]\""
     },
+    "snippet::is-deflate-buffer": {
+      "id": "snippet::is-deflate-buffer",
+      "type": "simple",
+      "description": "You can check first bytes of a buffer to detect if it is compressed using deflate",
+      "example": "function isDeflate(buf) {\n  if (buf.length < 2 || buf[0] !== 0x78) return false;\n  const b = buf[1];\n  return b === 1 || b === 0x9c || b === 0xda;\n}"
+    },
     "snippet::is-equal": {
       "id": "snippet::is-equal",
       "type": "simple",
@@ -528,6 +534,11 @@
       "type": "module",
       "moduleName": "is-date-object",
       "replacements": ["snippet::is-date"]
+    },
+    "is-deflate": {
+      "type": "module",
+      "moduleName": "is-deflate",
+      "replacements": ["snippet::is-deflate-buffer"]
     },
     "is-even": {
       "type": "module",
