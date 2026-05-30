@@ -539,6 +539,11 @@
       "moduleName": "is-generator-function",
       "replacements": ["snippet::is-generator-function"]
     },
+    "is-in-ci": {
+      "type": "module",
+      "moduleName": "is-in-ci",
+      "replacements": ["snippet::is-ci"]
+    },
     "is-in-ssh": {
       "type": "module",
       "moduleName": "is-in-ssh",
