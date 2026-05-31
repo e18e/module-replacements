@@ -345,8 +345,8 @@
     "snippet::strip-bom": {
       "id": "snippet::strip-bom",
       "type": "simple",
-      "description": "You can check the start of a string for the BOM character and use `String.prototype.slice` if it is present.",
-      "example": "str.startsWith('\\ufeff') ? str.slice(1) : str;"
+      "description": "You can check if the first character of the string is the BOM and strip it using `String.prototype.slice` if it is.",
+      "example": "str.charCodeAt(0) === 0xFEFF ? str.slice(1) : str;"
     },
     "snippet::to-lower": {
       "id": "snippet::to-lower",
