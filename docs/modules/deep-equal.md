@@ -21,6 +21,23 @@ equal(a, b) // true [!code --]
 isDeepStrictEqual(a, b) // true [!code ++]
 ```
 
+## `dequal`
+
+[`dequal`](https://github.com/lukeed/dequal) has the same simple API as `deep-equal`.
+
+Example:
+
+```ts
+import equal from 'deep-equal' // [!code --]
+import dequal from 'dequal' // [!code ++]
+
+const a = { foo: 'bar' }
+const b = { foo: 'bar' }
+
+equal(a, b) // true [!code --]
+dequal(a, b) // true [!code ++]
+```
+
 ## `Bun.deepEquals` (native, Bun)
 
 Bun exposes [`Bun.deepEquals`](https://bun.com/docs/runtime/utils#bun-deepequals) globally on the Bun runtime. It accepts two values to compare and an optional `strict` flag (default `false`).
@@ -41,21 +58,4 @@ For behavior equivalent to `deep-equal`'s strict mode, pass `true` as the third 
 
 ```ts
 Bun.deepEquals(a, b, true)
-```
-
-## `dequal`
-
-[`dequal`](https://github.com/lukeed/dequal) has the same simple API as `deep-equal`.
-
-Example:
-
-```ts
-import equal from 'deep-equal' // [!code --]
-import dequal from 'dequal' // [!code ++]
-
-const a = { foo: 'bar' }
-const b = { foo: 'bar' }
-
-equal(a, b) // true [!code --]
-dequal(a, b) // true [!code ++]
 ```
