@@ -1066,6 +1066,18 @@
         "compatKey": "javascript.builtins.Object.getPrototypeOf"
       }
     },
+    "Object.groupBy": {
+      "id": "Object.groupBy",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Object/groupBy"
+      },
+      "webFeatureId": {
+        "featureId": "object-object",
+        "compatKey": "javascript.builtins.Object.groupBy"
+      }
+    },
     "Object.hasOwn": {
       "id": "Object.hasOwn",
       "type": "native",
@@ -2642,6 +2654,11 @@
       "type": "module",
       "moduleName": "object.getprototypeof",
       "replacements": ["Object.getPrototypeOf"]
+    },
+    "object.groupby": {
+      "type": "module",
+      "moduleName": "object.groupby",
+      "replacements": ["Object.groupBy"]
     },
     "object.hasown": {
       "type": "module",
