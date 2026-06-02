@@ -729,6 +729,18 @@
         "compatKey": "javascript.builtins.Iterator.Iterator"
       }
     },
+    "JSON": {
+      "id": "JSON",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/JSON"
+      },
+      "webFeatureId": {
+        "featureId": "json",
+        "compatKey": "javascript.builtins.JSON"
+      }
+    },
     "Map": {
       "id": "Map",
       "type": "native",
@@ -2379,6 +2391,11 @@
       "type": "module",
       "moduleName": "iterator.prototype",
       "replacements": ["Iterator.prototype"]
+    },
+    "jsonify": {
+      "type": "module",
+      "moduleName": "jsonify",
+      "replacements": ["JSON"]
     },
     "last-index-of": {
       "type": "module",
