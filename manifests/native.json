@@ -1074,7 +1074,7 @@
         "id": "Web/JavaScript/Reference/Global_Objects/Object/groupBy"
       },
       "webFeatureId": {
-        "featureId": "object-object",
+        "featureId": "array-group",
         "compatKey": "javascript.builtins.Object.groupBy"
       }
     },
