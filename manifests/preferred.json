@@ -2540,12 +2540,6 @@
       "replacements": ["fast-string-width", "Bun.stringWidth"],
       "url": {"type": "e18e", "id": "string-width"}
     },
-    "string_decoder": {
-      "type": "module",
-      "moduleName": "string_decoder",
-      "replacements": ["node:string_decoder"],
-      "url": {"type": "node", "id": "api/string_decoder.html"}
-    },
     "strip-ansi": {
       "type": "module",
       "moduleName": "strip-ansi",
@@ -3241,12 +3235,6 @@
       "type": "native",
       "nodeFeatureId": {"moduleName": "node:stream"},
       "url": {"type": "node", "id": "api/stream.html"}
-    },
-    "node:string_decoder": {
-      "id": "node:string_decoder",
-      "type": "native",
-      "nodeFeatureId": {"moduleName": "node:string_decoder"},
-      "url": {"type": "node", "id": "api/string_decoder.html"}
     },
     "node:test": {
       "id": "node:test",

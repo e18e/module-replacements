@@ -1753,6 +1753,12 @@
       "description": "All modern versions of Node have `Buffer.from` for safely creating buffers from arbitrary types.",
       "url": {"type": "node", "id": "api/buffer.html"}
     },
+    "string_decoder": {
+      "id": "string_decoder",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:string_decoder"},
+      "url": {"type": "node", "id": "api/string_decoder.html"}
+    },
     "structuredClone": {
       "id": "structuredClone",
       "type": "native",
@@ -2864,6 +2870,11 @@
       "type": "module",
       "moduleName": "string.raw",
       "replacements": ["String.raw"]
+    },
+    "string_decoder": {
+      "type": "module",
+      "moduleName": "string_decoder",
+      "replacements": ["string_decoder"]
     },
     "symbol.prototype.description": {
       "type": "module",
