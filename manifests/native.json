@@ -639,6 +639,12 @@
         "compatKey": "javascript.builtins.Date.now"
       }
     },
+    "DOMException": {
+      "id": "DOMException",
+      "type": "native",
+      "url": {"type": "mdn", "id": "Web/API/DOMException"},
+      "webFeatureId": {"featureId": "dom", "compatKey": "api.DOMException"}
+    },
     "Error": {
       "id": "Error",
       "type": "native",
@@ -2577,6 +2583,11 @@
       "type": "module",
       "moduleName": "native-promise-only",
       "replacements": ["Promise"]
+    },
+    "node-domexception": {
+      "type": "module",
+      "moduleName": "node-domexception",
+      "replacements": ["DOMException"]
     },
     "node-environment-flags": {
       "type": "module",
