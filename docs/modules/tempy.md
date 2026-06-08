@@ -20,7 +20,7 @@ const tempDirPath = temp.mkdirSync('foo') // [!code --]
 const tempDirPath = await mkdtemp(join(await realpath(tmpdir()), 'foo-')) // [!code ++]
 ```
 
-## `fs.mkdtempDisposable` (native, since Node.js v20.4.0)
+## `fs.mkdtempDisposable` (native, since Node.js v24.4.0)
 
 Node.js now provides [`fs.mkdtempDisposable`](https://nodejs.org/api/fs.html#fspromisesmkdtempdisposableprefix-options) which leverages the `using` keyword for automatic cleanup. This eliminates the need for `temp.track()` or manual cleanup logic.
 
