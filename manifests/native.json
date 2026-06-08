@@ -567,6 +567,12 @@
       },
       "nodeFeatureId": {"moduleName": "buffer"}
     },
+    "DOMException": {
+      "id": "DOMException",
+      "type": "native",
+      "url": {"type": "mdn", "id": "Web/API/DOMException"},
+      "webFeatureId": {"featureId": "dom", "compatKey": "api.DOMException"}
+    },
     "DataView": {
       "id": "DataView",
       "type": "native",
@@ -638,12 +644,6 @@
         "featureId": "date",
         "compatKey": "javascript.builtins.Date.now"
       }
-    },
-    "DOMException": {
-      "id": "DOMException",
-      "type": "native",
-      "url": {"type": "mdn", "id": "Web/API/DOMException"},
-      "webFeatureId": {"featureId": "dom", "compatKey": "api.DOMException"}
     },
     "Error": {
       "id": "Error",
