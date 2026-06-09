@@ -2600,6 +2600,12 @@
       "replacements": ["neotraverse"],
       "url": {"type": "e18e", "id": "traverse"}
     },
+    "tsup": {
+      "type": "module",
+      "moduleName": "tsup",
+      "replacements": ["tsdown"],
+      "url": {"type": "e18e", "id": "tsup"}
+    },
     "uid-safe": {
       "type": "module",
       "moduleName": "uid-safe",
@@ -3405,6 +3411,11 @@
       "id": "ts-graphviz",
       "type": "documented",
       "replacementModule": "ts-graphviz"
+    },
+    "tsdown": {
+      "id": "tsdown",
+      "type": "documented",
+      "replacementModule": "tsdown"
     },
     "unicode-segmenter": {
       "id": "unicode-segmenter",
