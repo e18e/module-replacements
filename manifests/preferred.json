@@ -2274,6 +2274,12 @@
       "replacements": ["util.parseArgs", "mri"],
       "url": {"type": "e18e", "id": "parseargs"}
     },
+    "mississippi": {
+      "type": "module",
+      "moduleName": "mississippi",
+      "replacements": ["node:stream"],
+      "url": {"type": "e18e", "id": "mississippi"}
+    },
     "mkdirp": {
       "type": "module",
       "moduleName": "mkdirp",
