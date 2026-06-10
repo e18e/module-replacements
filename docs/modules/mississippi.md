@@ -183,4 +183,4 @@ stream.map((data) => fn(data), { concurrency: 10 }) // [!code ++]
 
 Like `parallel-transform`, `map` preserves the order of the input stream.
 
-Requires Node.js ≥ 17.4.0 for `Readable.prototype.map`.
+Requires Node.js >= 17.4.0 for `Readable.prototype.map`.
