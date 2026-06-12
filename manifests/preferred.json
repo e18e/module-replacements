@@ -468,6 +468,12 @@
       "replacements": ["zlib.gzipSync"],
       "url": {"type": "e18e", "id": "gzip-size"}
     },
+    "html-minifier": {
+      "type": "module",
+      "moduleName": "html-minifier",
+      "replacements": ["html-minifier-next"],
+      "url": {"type": "e18e", "id": "html-minifier"}
+    },
     "inherits": {
       "type": "module",
       "moduleName": "inherits",
@@ -3113,6 +3119,11 @@
     },
     "h3": {"id": "h3", "type": "documented", "replacementModule": "h3"},
     "hono": {"id": "hono", "type": "documented", "replacementModule": "hono"},
+    "html-minifier-next": {
+      "id": "html-minifier-next",
+      "type": "documented",
+      "replacementModule": "html-minifier-next"
+    },
     "import.meta.resolve": {
       "id": "import.meta.resolve",
       "type": "native",
