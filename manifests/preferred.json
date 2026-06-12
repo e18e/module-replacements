@@ -2500,6 +2500,12 @@
       "replacements": ["nanoid"],
       "url": {"type": "e18e", "id": "shortid"}
     },
+    "slice-ansi": {
+      "type": "module",
+      "moduleName": "slice-ansi",
+      "replacements": ["fast-slice-ansi"],
+      "url": {"type": "e18e", "id": "slice-ansi"}
+    },
     "sort-object": {
       "type": "module",
       "moduleName": "sort-object",
@@ -3024,6 +3030,11 @@
       "id": "fast-querystring",
       "type": "documented",
       "replacementModule": "fast-querystring"
+    },
+    "fast-slice-ansi": {
+      "id": "fast-slice-ansi",
+      "type": "documented",
+      "replacementModule": "fast-slice-ansi"
     },
     "fast-string-width": {
       "id": "fast-string-width",
