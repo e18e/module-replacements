@@ -58,7 +58,6 @@ import miss from 'mississippi' // [!code --]
 import { Duplex } from 'node:stream' // [!code ++]
  
 miss.duplex(writableStream, readableStream) // [!code --]
- 
 Duplex.from({ // [!code ++]
   writable: writableStream, // [!code ++]
   readable: readableStream // [!code ++]
@@ -79,7 +78,6 @@ import { Transform } from 'node:stream' // [!code ++]
 miss.through((chunk, enc, cb) => { // [!code --]
   cb(null, fn(chunk)) // [!code --]
 }) // [!code --]
- 
 new Transform({ // [!code ++]
   transform(chunk, encoding, callback) { // [!code ++]
     callback(null, fn(chunk)) // [!code ++]
@@ -124,7 +122,6 @@ import miss from 'mississippi' // [!code --]
 import { Readable } from 'node:stream' // [!code ++]
  
 miss.from((size, cb) => cb(null, chunk)) // [!code --]
- 
 Readable.from( // [!code ++]
   (async function* () { // [!code ++]
     yield chunk // [!code ++]
@@ -143,7 +140,6 @@ miss.to( // [!code --]
   (chunk, enc, cb) => cb(), // [!code --]
   (cb) => cb() // [!code --]
 ) // [!code --]
- 
 new Writable({ // [!code ++]
   write(chunk, encoding, callback) { // [!code ++]
     callback() // [!code ++]
@@ -163,7 +159,6 @@ import miss from 'mississippi' // [!code --]
 stream.pipe( // [!code --]
   miss.parallel(10, (data, cb) => cb(null, fn(data))) // [!code --]
 ) // [!code --]
- 
 stream.map((data) => fn(data), { concurrency: 10 }) // [!code ++]
 ```
 
