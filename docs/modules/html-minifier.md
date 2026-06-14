@@ -17,17 +17,3 @@ const html = '<p title="example">foo</p>'
 const result = minify(html, { collapseWhitespace: true }) // [!code --]
 const result = await minify(html, { collapseWhitespace: true }) // [!code ++]
 ```
-
-CommonJS:
-
-```ts
-const minify = require('html-minifier').minify // [!code --]
-const { minify } = require('html-minifier-next') // [!code ++]
-
-const html = '<p title="example">foo</p>'
-
-;(async () => {
-  const result = minify(html, { collapseWhitespace: true }) // [!code --]
-  const result = await minify(html, { collapseWhitespace: true }) // [!code ++]
-})()
-```
