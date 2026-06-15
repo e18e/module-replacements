@@ -186,6 +186,12 @@
       "replacements": ["node:crypto", "crypto", "Bun.CryptoHasher"],
       "url": {"type": "e18e", "id": "crypto-js"}
     },
+    "cwd": {
+      "type": "module",
+      "moduleName": "cwd",
+      "replacements": ["empathic"],
+      "url": {"type": "e18e", "id": "cwd"}
+    },
     "debug": {
       "type": "module",
       "moduleName": "debug",
