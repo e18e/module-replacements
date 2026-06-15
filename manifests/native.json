@@ -1603,6 +1603,18 @@
       "url": {"type": "node", "id": "api/fs.html#promises-api"},
       "nodeFeatureId": {"moduleName": "fs"}
     },
+    "fs.promises.mkdtemp": {
+      "id": "fs.promises.mkdtemp",
+      "type": "native",
+      "nodeFeatureId": {
+        "moduleName": "node:fs/promises",
+        "exportName": "mkdtemp"
+      },
+      "url": {
+        "type": "node",
+        "id": "api/fs.html#fspromisesmkdtempprefix-options"
+      }
+    },
     "fs.promises.rm": {
       "id": "fs.promises.rm",
       "type": "native",
@@ -2908,6 +2920,11 @@
       "type": "module",
       "moduleName": "symbol.prototype.description",
       "replacements": ["Symbol.prototype.description"]
+    },
+    "tmp": {
+      "type": "module",
+      "moduleName": "tmp",
+      "replacements": ["fs.promises.mkdtemp"]
     },
     "to-buffer": {
       "type": "module",
