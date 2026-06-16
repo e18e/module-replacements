@@ -1597,6 +1597,12 @@
         "compatKey": "javascript.statements.for_of"
       }
     },
+    "fs.existsSync": {
+      "id": "fs.existsSync",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:fs", "exportName": "existsSync"},
+      "url": {"type": "node", "id": "api/fs.html#fsexistssyncpath"}
+    },
     "fs.promises": {
       "id": "fs.promises",
       "type": "native",
@@ -2235,6 +2241,11 @@
       "type": "module",
       "moduleName": "foreachasync",
       "replacements": ["for...of"]
+    },
+    "fs-exists-sync": {
+      "type": "module",
+      "moduleName": "fs-exists-sync",
+      "replacements": ["fs.existsSync"]
     },
     "fs-then-native": {
       "type": "module",
