@@ -1747,11 +1747,25 @@
         "compatKey": "javascript.builtins.parseInt"
       }
     },
+    "path.matchesGlob": {
+      "id": "path.matchesGlob",
+      "type": "native",
+      "url": {
+        "type": "node",
+        "id": "api/path.html#pathmatchesglobpath-pattern-options"
+      },
+      "nodeFeatureId": {"moduleName": "path", "exportName": "matchesGlob"}
+    },
     "path.parse": {
       "id": "path.parse",
       "type": "native",
       "url": {"type": "node", "id": "api/path.html#pathparsepath"},
       "nodeFeatureId": {"moduleName": "path", "exportName": "parse"}
+    },
+    "picomatch": {
+      "id": "picomatch",
+      "type": "documented",
+      "replacementModule": "picomatch"
     },
     "process.allowedNodeEnvironmentFlags": {
       "id": "process.allowedNodeEnvironmentFlags",
@@ -1809,6 +1823,11 @@
       "type": "native",
       "url": {"type": "node", "id": "api/util.html#utilpromisifyoriginal"},
       "nodeFeatureId": {"moduleName": "util", "exportName": "promisify"}
+    },
+    "zeptomatch": {
+      "id": "zeptomatch",
+      "type": "documented",
+      "replacementModule": "zeptomatch"
     },
     "zlib.crc32": {
       "id": "zlib.crc32",
@@ -2601,6 +2620,12 @@
       "type": "module",
       "moduleName": "math.sign",
       "replacements": ["Math.sign"]
+    },
+    "micromatch": {
+      "type": "module",
+      "moduleName": "micromatch",
+      "replacements": ["path.matchesGlob", "picomatch", "zeptomatch"],
+      "url": {"type": "e18e", "id": "micromatch"}
     },
     "native-promise-only": {
       "type": "module",
