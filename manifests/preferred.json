@@ -474,6 +474,12 @@
       "replacements": ["ts-graphviz"],
       "url": {"type": "e18e", "id": "graphviz"}
     },
+    "gray-matter": {
+      "type": "module",
+      "moduleName": "gray-matter",
+      "replacements": ["@11ty/gray-matter"],
+      "url": {"type": "e18e", "id": "gray-matter"}
+    },
     "gzip-size": {
       "type": "module",
       "moduleName": "gzip-size",
@@ -2720,6 +2726,11 @@
       "id": "--env-file",
       "type": "native",
       "url": {"type": "node", "id": "api/cli.html#--env-filefile"}
+    },
+    "@11ty/gray-matter": {
+      "id": "@11ty/gray-matter",
+      "type": "documented",
+      "replacementModule": "@11ty/gray-matter"
     },
     "@eslint-community/eslint-plugin-eslint-comments": {
       "id": "@eslint-community/eslint-plugin-eslint-comments",
