@@ -492,6 +492,12 @@
       "replacements": ["html-minifier-next"],
       "url": {"type": "e18e", "id": "html-minifier"}
     },
+    "http-proxy": {
+      "type": "module",
+      "moduleName": "http-proxy",
+      "replacements": ["httpxy", "http-proxy-3"],
+      "url": {"type": "e18e", "id": "http-proxy"}
+    },
     "inherits": {
       "type": "module",
       "moduleName": "inherits",
@@ -3174,6 +3180,16 @@
       "id": "html-minifier-next",
       "type": "documented",
       "replacementModule": "html-minifier-next"
+    },
+    "http-proxy-3": {
+      "id": "http-proxy-3",
+      "type": "documented",
+      "replacementModule": "http-proxy-3"
+    },
+    "httpxy": {
+      "id": "httpxy",
+      "type": "documented",
+      "replacementModule": "httpxy"
     },
     "import.meta.resolve": {
       "id": "import.meta.resolve",
