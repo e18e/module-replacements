@@ -4,11 +4,11 @@ description: Modern alternatives to the tsc package for the TypeScript compiler
 
 # Replacements for `tsc`
 
-The npm package [`tsc`](https://www.npmjs.com/package/tsc) is **not** the TypeScript compiler — it is a [deprecated](https://www.npmjs.com/package/tsc) stub that prints _"This is not the tsc command you are looking for"_ when run.
+The npm package [`tsc`](https://github.com/basarat/tsc) is **not** the TypeScript compiler — it is a deprecated stub that prints _"This is not the tsc command you are looking for"_ when run.
 
 ## `typescript`
 
-The [`typescript`](https://www.npmjs.com/package/typescript) package is the official compiler and provides the real `tsc` binary via `node_modules/.bin`. Replace `tsc` in your dependencies:
+The [`typescript`](https://github.com/microsoft/TypeScript) package is the official compiler and provides the real `tsc` binary via `node_modules/.bin`. Replace `tsc` in your dependencies:
 
 ```json
 {

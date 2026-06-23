@@ -2643,7 +2643,7 @@
       "url": {"type": "e18e", "id": "traverse"}
     },
     "tsc": {
-      "type": "module",
+      "type": "removal",
       "moduleName": "tsc",
       "replacements": ["typescript"],
       "url": {"type": "e18e", "id": "tsc"}
