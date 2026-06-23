@@ -1,5 +1,5 @@
 ---
-description: Modern alternatives to the `crypto-js` package for cryptographic operations
+description: Modern alternatives to the `create-hmac` package for HMAC
 ---
 
 # Replacements for `create-hmac`
@@ -22,15 +22,15 @@ const hash = createHmac('sha256', secret).update(data).digest('hex')
 const encoder = new TextEncoder()
 
 async function generateHMAC(secret, data) {
-   const key = await crypto.subtle.importKey(
-    "raw",
+  const key = await crypto.subtle.importKey(
+    'raw',
     encoder.encode(secret),
-    { name: "HMAC", hash: "SHA-256" },
+    { name: 'HMAC', hash: 'SHA-256' },
     false,
-    ["sign"]
+    ['sign']
   )
 
-  const signature = await crypto.subtle.sign("HMAC", key, encoder.encode(data))
+  const signature = await crypto.subtle.sign('HMAC', key, encoder.encode(data))
 
   return new Uint8Array(signature).toHex()
 }
