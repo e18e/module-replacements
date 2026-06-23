@@ -174,6 +174,16 @@
       "replacements": ["cpx2"],
       "url": {"type": "e18e", "id": "cpx"}
     },
+    "create-hmac": {
+      "type": "module",
+      "moduleName": "create-hmac",
+      "replacements": [
+        "crypto.createHmac",
+        "crypto.subtle.sign",
+        "@noble/hashes"
+      ],
+      "url": {"type": "e18e", "id": "create-hmac"}
+    },
     "cross-fetch": {
       "type": "module",
       "moduleName": "cross-fetch",
@@ -2774,6 +2784,11 @@
       "type": "documented",
       "replacementModule": "@materializecss/materialize"
     },
+    "@noble/hashes": {
+      "id": "@noble/hashes",
+      "type": "documented",
+      "replacementModule": "@noble/hashes"
+    },
     "@placemarkio/tokml": {
       "id": "@placemarkio/tokml",
       "type": "documented",
@@ -2989,6 +3004,12 @@
       },
       "url": {"type": "mdn", "id": "Web/API/Web_Crypto_API"}
     },
+    "crypto.createHmac": {
+      "id": "crypto.createHmac",
+      "type": "native",
+      "url": {"type": "node", "id": "api/crypto.html#cryptocreatehmacalgorithm-key-options"},
+      "nodeFeatureId": {"moduleName": "crypto", "exportName": "createHmac"}
+    },
     "crypto.randomUUID": {
       "id": "crypto.randomUUID",
       "type": "native",
@@ -2997,6 +3018,15 @@
         "compatKey": "api.Crypto.randomUUID"
       },
       "url": {"type": "mdn", "id": "Web/API/Crypto/randomUUID"}
+    },
+    "crypto.subtle.sign": {
+      "id": "crypto.subtle.sign",
+      "type": "native",
+      "webFeatureId": {
+        "featureId": "web-cryptography",
+        "compatKey": "api.SubtleCrypto.sign"
+      },
+      "url": {"type": "mdn", "id": "Web/API/SubtleCrypto/sign"}
     },
     "crypto.timingSafeEqual": {
       "id": "crypto.timingSafeEqual",
