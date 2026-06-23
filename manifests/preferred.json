@@ -2643,9 +2643,9 @@
       "url": {"type": "e18e", "id": "traverse"}
     },
     "tsc": {
-      "type": "removal",
+      "type": "module",
       "moduleName": "tsc",
-      "replacements": ["typescript"],
+      "replacements": ["tsc"],
       "url": {"type": "e18e", "id": "tsc"}
     },
     "tsup": {
@@ -3490,15 +3490,16 @@
       "type": "documented",
       "replacementModule": "ts-graphviz"
     },
+    "tsc": {
+      "id": "tsc",
+      "type": "removal",
+      "url": {"type": "e18e", "id": "tsc"},
+      "description": "The `tsc` npm package is not the TypeScript compiler. Remove it and install `typescript` instead."
+    },
     "tsdown": {
       "id": "tsdown",
       "type": "documented",
       "replacementModule": "tsdown"
-    },
-    "typescript": {
-      "id": "typescript",
-      "type": "documented",
-      "replacementModule": "typescript"
     },
     "unicode-segmenter": {
       "id": "unicode-segmenter",
