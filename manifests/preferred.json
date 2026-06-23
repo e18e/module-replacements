@@ -2714,6 +2714,12 @@
       "replacements": ["@xmldom/xmldom"],
       "url": {"type": "e18e", "id": "xmldom"}
     },
+    "yamljs": {
+      "type": "module",
+      "moduleName": "yamljs",
+      "replacements": ["yaml", "Bun.YAML"],
+      "url": {"type": "e18e", "id": "js-yaml"}
+    },
     "yargs": {
       "type": "module",
       "moduleName": "yargs",
