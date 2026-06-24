@@ -2359,7 +2359,12 @@
     "object-hash": {
       "type": "module",
       "moduleName": "object-hash",
-      "replacements": ["ohash", "crypto", "Bun.CryptoHasher"],
+      "replacements": [
+        "object-identity",
+        "ohash",
+        "crypto",
+        "Bun.CryptoHasher"
+      ],
       "url": {"type": "e18e", "id": "object-hash"}
     },
     "object-path": {
@@ -3369,6 +3374,11 @@
       "id": "npm-run-all2",
       "type": "documented",
       "replacementModule": "npm-run-all2"
+    },
+    "object-identity": {
+      "id": "object-identity",
+      "type": "documented",
+      "replacementModule": "object-identity"
     },
     "obug": {"id": "obug", "type": "documented", "replacementModule": "obug"},
     "ofetch": {
