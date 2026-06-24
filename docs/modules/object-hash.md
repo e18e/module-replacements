@@ -18,6 +18,22 @@ const h = objectHash(obj) // [!code --]
 const h = hash(obj) // [!code ++]
 ```
 
+## `object-identity`
+
+[`object-identity`](https://github.com/maraisr/object-identity) canonicalizes any value into a stable identity string. It's deep, cycle-safe, and dependency-free, and it's a great fit for deriving a deterministic key or comparing structural equality. For most uses of `object-hash`, it should serve you well.
+
+It returns a stable identity rather than a cryptographic hash. If you specifically need a hash digest, follow one of the examples below.
+
+Example:
+
+```ts
+import objectHash from 'object-hash' // [!code --]
+import { identify } from 'object-identity' // [!code ++]
+
+const id = objectHash(obj) // [!code --]
+const id = identify(obj) // [!code ++]
+```
+
 ## Web Crypto
 
 Use the standard [`SubtleCrypto.digest`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest) available in modern runtimes. Pair it with a stable serializer (e.g., [`safe-stable-stringify`](https://github.com/BridgeAR/safe-stable-stringify), [`object-identity`](https://github.com/maraisr/object-identity)) to ensure deterministic key ordering.
