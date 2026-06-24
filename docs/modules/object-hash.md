@@ -20,16 +20,16 @@ const h = hash(obj) // [!code ++]
 
 ## Web Crypto
 
-Use the standard [`SubtleCrypto.digest`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest) available in modern runtimes. Pair it with a stable serializer (e.g., [`safe-stable-stringify`](https://github.com/BridgeAR/safe-stable-stringify)) to ensure deterministic key ordering.
+Use the standard [`SubtleCrypto.digest`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest) available in modern runtimes. Pair it with a stable serializer (e.g., [`safe-stable-stringify`](https://github.com/BridgeAR/safe-stable-stringify), [`object-identity`](https://github.com/maraisr/object-identity)) to ensure deterministic key ordering.
 
 Example:
 
 ```ts
 import objectHash from 'object-hash' // [!code --]
-import stringify from 'safe-stable-stringify' // [!code ++]
+import { identify } from 'object-identity' // [!code ++]
 
 const h = objectHash(obj, { algorithm: 'sha256' }) // [!code --]
-const data = new TextEncoder().encode(stringify(obj)) // [!code ++]
+const data = new TextEncoder().encode(identify(obj)) // [!code ++]
 const buf = await crypto.subtle.digest('SHA-256', data) // [!code ++]
 const h = Array.from(new Uint8Array(buf)) // [!code ++]
   .map((b) => b.toString(16).padStart(2, '0')) // [!code ++]
@@ -46,10 +46,10 @@ Example:
 
 ```ts
 import objectHash from 'object-hash' // [!code --]
-import stringify from 'safe-stable-stringify' // [!code ++]
+import { identify } from 'object-identity' // [!code ++]
 
 const h = objectHash(obj, { algorithm: 'sha256' }) // [!code --]
 const hasher = new CryptoHasher('sha256') // [!code ++]
-hasher.update(stringify(obj)) // [!code ++]
+hasher.update(identify(obj)) // [!code ++]
 const h = hasher.digest('hex') // [!code ++]
 ```
