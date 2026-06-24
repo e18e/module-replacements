@@ -36,7 +36,7 @@ const id = identify(obj) // [!code ++]
 
 ## Web Crypto
 
-Use the standard [`SubtleCrypto.digest`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest) available in modern runtimes. Pair it with a stable serializer (e.g., [`safe-stable-stringify`](https://github.com/BridgeAR/safe-stable-stringify), [`object-identity`](https://github.com/maraisr/object-identity)) to ensure deterministic key ordering.
+Use the standard [`SubtleCrypto.digest`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest) available in modern runtimes. Pair it with a stable serializer (e.g., [`object-identity`](https://github.com/maraisr/object-identity)) to ensure deterministic key ordering.
 
 Example:
 
