@@ -3,6 +3,7 @@
   "description": "This package provides a set of manifests which each define a mapping of JS modules to their suggested replacements.",
   "version": "1.0.0",
   "main": "./dist/main.js",
+  "sideEffects": false,
   "scripts": {
     "build": "pnpm clean && pnpm build:types",
     "build:types": "tsc",
