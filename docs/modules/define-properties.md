@@ -11,22 +11,20 @@ description: Native alternatives to the define-properties package for defining m
 Example:
 
 ```ts
-import defineProperties from 'define-properties'
+import defineProperties from 'define-properties' // [!code --]
 
 const obj = {}
-
-defineProperties(obj, {
-  enabled: true
-})
-
-Object.defineProperties(obj, {
+const descriptors = {
   enabled: {
     configurable: true,
     enumerable: false,
     value: true,
     writable: false
   }
-})
+}
+
+defineProperties(obj, { enabled: true }) // [!code --]
+Object.defineProperties(obj, descriptors) // [!code ++]
 ```
 
 `define-properties` also skips existing properties unless a matching predicate returns `true`. If your code relies on that behavior, keep the condition outside the descriptor map when migrating:
