@@ -223,7 +223,8 @@
     "define-properties": {
       "type": "module",
       "moduleName": "define-properties",
-      "replacements": ["Object.defineProperties"]
+      "replacements": ["Object.defineProperties"],
+      "url": {"type": "e18e", "id": "define-properties"}
     },
     "depcheck": {
       "type": "module",
