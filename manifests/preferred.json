@@ -220,6 +220,11 @@
       "replacements": ["dequal", "util.isDeepStrictEqual", "Bun.deepEquals"],
       "url": {"type": "e18e", "id": "deep-equal"}
     },
+    "define-properties": {
+      "type": "module",
+      "moduleName": "define-properties",
+      "replacements": ["Object.defineProperties"]
+    },
     "depcheck": {
       "type": "module",
       "moduleName": "depcheck",
@@ -2916,6 +2921,18 @@
       "url": {
         "type": "mdn",
         "id": "Web/JavaScript/Reference/Global_Objects/Intl/Segmenter"
+      }
+    },
+    "Object.defineProperties": {
+      "id": "Object.defineProperties",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Object/defineProperties"
+      },
+      "webFeatureId": {
+        "featureId": "object-object",
+        "compatKey": "javascript.builtins.Object.defineProperties"
       }
     },
     "Promise": {

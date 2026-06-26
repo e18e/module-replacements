@@ -2131,11 +2131,6 @@
       "moduleName": "define-data-property",
       "replacements": ["Object.defineProperty"]
     },
-    "define-properties": {
-      "type": "module",
-      "moduleName": "define-properties",
-      "replacements": ["Object.defineProperties"]
-    },
     "define-property": {
       "type": "module",
       "moduleName": "define-property",
