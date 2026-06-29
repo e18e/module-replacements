@@ -1887,6 +1887,11 @@
       "moduleName": "array-map",
       "replacements": ["Array.prototype.map"]
     },
+    "array-reduce": {
+      "type": "module",
+      "moduleName": "array-reduce",
+      "replacements": ["Array.prototype.reduce"]
+    },
     "array-slice": {
       "type": "module",
       "moduleName": "array-slice",
