@@ -1480,6 +1480,15 @@
         "compatKey": "javascript.builtins.Symbol.description"
       }
     },
+    "TextEncoder": {
+      "id": "TextEncoder",
+      "type": "native",
+      "webFeatureId": {
+        "featureId": "text-encoding",
+        "compatKey": "api.TextEncoder"
+      },
+      "url": {"type": "mdn", "id": "Web/API/TextEncoder"}
+    },
     "URL": {
       "id": "URL",
       "type": "native",
@@ -2145,6 +2154,11 @@
       "type": "module",
       "moduleName": "define-property",
       "replacements": ["Object.defineProperty"]
+    },
+    "encode-utf8": {
+      "type": "module",
+      "moduleName": "encode-utf8",
+      "replacements": ["TextEncoder"]
     },
     "error-cause": {
       "type": "module",
