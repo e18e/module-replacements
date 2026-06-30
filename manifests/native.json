@@ -2983,6 +2983,11 @@
       "moduleName": "to-buffer",
       "replacements": ["Buffer.from"]
     },
+    "to-data-view": {
+      "type": "module",
+      "moduleName": "to-data-view",
+      "replacements": ["DataView"]
+    },
     "trim": {
       "type": "module",
       "moduleName": "trim",
