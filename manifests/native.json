@@ -1216,6 +1216,12 @@
         "compatKey": "javascript.builtins.Promise.finally"
       }
     },
+    "Readable.map": {
+      "id": "Readable.map",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:stream", "exportName": "Readable"},
+      "url": {"type": "node", "id": "api/stream.html#readablemapfn-options"}
+    },
     "Reflect.getPrototypeOf": {
       "id": "Reflect.getPrototypeOf",
       "type": "native",
@@ -2961,6 +2967,11 @@
       "type": "module",
       "moduleName": "symbol.prototype.description",
       "replacements": ["Symbol.prototype.description"]
+    },
+    "through2-map": {
+      "type": "module",
+      "moduleName": "through2-map",
+      "replacements": ["Readable.map"]
     },
     "tmp": {
       "type": "module",
