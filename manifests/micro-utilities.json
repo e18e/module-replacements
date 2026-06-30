@@ -366,6 +366,12 @@
       "description": "You can check if the first character of the string is the BOM and strip it using `String.prototype.slice` if it is.",
       "example": "str.charCodeAt(0) === 0xFEFF ? str.slice(1) : str;"
     },
+    "snippet::to-data-view": {
+      "id": "snippet::to-data-view",
+      "type": "simple",
+      "description": "Create a DataView from an ArrayBuffer or 8-bit typed array using the native DataView constructor. Node.js Buffer is supported because it extends Uint8Array.",
+      "example": "function toDataView(data) {\n  if (data instanceof ArrayBuffer) {\n    return new DataView(data);\n  }\n  if (\n    data instanceof Int8Array ||\n    data instanceof Uint8Array ||\n    data instanceof Uint8ClampedArray\n  ) {\n    return new DataView(data.buffer, data.byteOffset, data.byteLength);\n  }\n  throw new TypeError(\n    'Expected `data` to be an ArrayBuffer, Buffer, Int8Array, Uint8Array or Uint8ClampedArray'\n  );\n}"
+    },
     "snippet::to-lower": {
       "id": "snippet::to-lower",
       "type": "simple",
@@ -827,6 +833,11 @@
       "type": "module",
       "moduleName": "strip-bom-string",
       "replacements": ["snippet::strip-bom"]
+    },
+    "to-data-view": {
+      "type": "module",
+      "moduleName": "to-data-view",
+      "replacements": ["snippet::to-data-view"]
     },
     "toarray": {
       "type": "module",
