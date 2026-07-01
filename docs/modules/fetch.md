@@ -4,25 +4,16 @@ description: Shared alternatives and examples for fetch based HTTP clients used 
 
 # Fetch-based HTTP clients (shared)
 
-This page contains the common, recommended alternatives and examples for fetch based HTTP clients used by `axios`, `node-fetch`, `cross-fetch`, `@whatwg-node/fetch`, and `@whatwg-node/node-fetch` replacement docs.
+This page contains the common, recommended alternatives and examples for fetch based HTTP clients used by `axios`, `node-fetch`, and `cross-fetch` replacement docs.
 
 ## `fetch` API (native)
 
-The native [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API is available in Node.js (since v18.x) and all modern browsers. For many use cases it replaces `axios`/`node-fetch`/`cross-fetch`/`@whatwg-node/fetch`/`@whatwg-node/node-fetch` without adding dependencies.
+The native [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API is available in Node.js (since v18.x) and all modern browsers. For many use cases it replaces `axios`/`node-fetch`/`cross-fetch` without adding dependencies.
 
 > [!TIP]
 > Node.js provides a codemod which can migrate some of this automatically, see the docs at [@nodejs/axios-to-whatwg-fetch](https://app.codemod.com/registry/@nodejs/axios-to-whatwg-fetch) for more details.
 
 Example:
-
-```ts
-// Before (@whatwg-node/fetch named imports)
-import { fetch, Request, Headers, Response } from '@whatwg-node/fetch'
-
-// After — globals, no import needed
-const res = await fetch('https://api.example.com')
-const req = new Request(url, { headers: new Headers() })
-```
 
 ```ts
 // GET
