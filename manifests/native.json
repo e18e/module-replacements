@@ -1587,6 +1587,12 @@
       "type": "removal",
       "description": "Every modern environment has support for ES7/ES2016 apis."
     },
+    "fetch": {
+      "id": "fetch",
+      "type": "native",
+      "webFeatureId": {"featureId": "fetch", "compatKey": "api.fetch"},
+      "url": {"type": "mdn", "id": "Web/API/Fetch_API"}
+    },
     "for...in": {
       "id": "for...in",
       "type": "native",
@@ -1852,6 +1858,11 @@
     }
   },
   "mappings": {
+    "@whatwg-node/node-fetch": {
+      "type": "module",
+      "moduleName": "@whatwg-node/node-fetch",
+      "replacements": ["fetch"]
+    },
     "abort-controller": {
       "type": "module",
       "moduleName": "abort-controller",
