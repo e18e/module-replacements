@@ -36,6 +36,18 @@
       "replacements": ["fetch", "ofetch", "ky"],
       "url": {"type": "e18e", "id": "fetch"}
     },
+    "@whatwg-node/fetch": {
+      "type": "module",
+      "moduleName": "@whatwg-node/fetch",
+      "replacements": ["fetch"],
+      "url": {"type": "e18e", "id": "fetch"}
+    },
+    "@whatwg-node/node-fetch": {
+      "type": "module",
+      "moduleName": "@whatwg-node/node-fetch",
+      "replacements": ["fetch"],
+      "url": {"type": "e18e", "id": "fetch"}
+    },
     "arg": {
       "type": "module",
       "moduleName": "arg",
