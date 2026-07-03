@@ -44,6 +44,16 @@ interface DocumentedNodeClass {
   classMethods?: Array<DocumentedNodeClassMethod | DocumentedUnknownNode>;
 }
 
+interface DocumentedNodeMisc {
+  type: 'misc';
+  name: string;
+  modules?: Array<DocumentedNodeModule | DocumentedUnknownNode>;
+  classes?: Array<DocumentedNodeClass | DocumentedUnknownNode>;
+  properties?: Array<DocumentedNodeProperty>;
+  methods?: Array<DocumentedNodeMethod | DocumentedUnknownNode>;
+  miscs?: Array<DocumentedNodeMisc | DocumentedUnknownNode>;
+}
+
 interface DocumentedNodeGlobal {
   type: 'global';
   name: string;
@@ -52,6 +62,7 @@ interface DocumentedNodeGlobal {
   classes?: Array<DocumentedNodeClass | DocumentedUnknownNode>;
   properties?: Array<DocumentedNodeProperty>;
   methods?: Array<DocumentedNodeMethod | DocumentedUnknownNode>;
+  miscs?: Array<DocumentedNodeMisc | DocumentedUnknownNode>;
 }
 
 interface DocumentedNodeModule {
@@ -63,6 +74,7 @@ interface DocumentedNodeModule {
   classes?: Array<DocumentedNodeClass | DocumentedUnknownNode>;
   properties?: Array<DocumentedNodeProperty>;
   methods?: Array<DocumentedNodeMethod | DocumentedUnknownNode>;
+  miscs?: Array<DocumentedNodeMisc | DocumentedUnknownNode>;
   globals?: Array<DocumentedNodeGlobal | DocumentedUnknownNode>;
 }
 
@@ -127,40 +139,46 @@ function earliestVersion(versions: string[]): string {
 }
 
 function findExportVersion(
-  module: DocumentedNodeModule | DocumentedNodeGlobal,
+  module: DocumentedNodeModule | DocumentedNodeGlobal | DocumentedNodeMisc,
   exportName: string,
-  lastIntroducedIn?: string
+  lastIntroducedIn: string | null
 ): string | null {
-  const introducedIn =
-    module.introduced_in?.replace(/^v/, '') ?? lastIntroducedIn;
+  let introducedIn: string | null = lastIntroducedIn;
+  if (module.type !== 'misc' && module.introduced_in) {
+    introducedIn = module.introduced_in.replace(/^v/, '');
+  }
 
   for (const item of module.methods ?? []) {
     if (item.type === 'method' && item.name === exportName) {
-      return item.meta?.added
-        ? earliestVersion(item.meta.added)
-        : (introducedIn ?? null);
+      return item.meta?.added ? earliestVersion(item.meta.added) : introducedIn;
     }
   }
 
   for (const item of module.properties ?? []) {
     if (item.name === exportName) {
-      return item.meta?.added
-        ? earliestVersion(item.meta.added)
-        : (introducedIn ?? null);
+      return item.meta?.added ? earliestVersion(item.meta.added) : introducedIn;
     }
   }
 
   for (const item of module.classes ?? []) {
-    if (item.type === 'class' && item.name === exportName) {
-      return item.meta?.added
-        ? earliestVersion(item.meta.added)
-        : (introducedIn ?? null);
+    if (
+      item.type === 'class' &&
+      (item.name === exportName || item.name.endsWith(`.${exportName}`))
+    ) {
+      return item.meta?.added ? earliestVersion(item.meta.added) : introducedIn;
     }
   }
 
   for (const sub of module.modules ?? []) {
     if (sub.type === 'module') {
       const found = findExportVersion(sub, exportName, introducedIn);
+      if (found) return found;
+    }
+  }
+
+  for (const misc of module.miscs ?? []) {
+    if (misc.type === 'misc') {
+      const found = findExportVersion(misc, exportName, introducedIn);
       if (found) return found;
     }
   }
@@ -228,7 +246,7 @@ async function getNodeVersion(
     return null;
   }
 
-  return findExportVersion(root, exportName);
+  return findExportVersion(root, exportName, null);
 }
 
 async function updateReplacementNodeEngine(
