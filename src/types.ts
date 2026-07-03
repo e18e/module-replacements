@@ -14,7 +14,6 @@ export type KnownUrl = KnownUrlDescriptor | string;
 interface ModuleReplacementLike {
   id: string;
   engines?: EngineConstraint[];
-  preferred?: boolean;
   url?: KnownUrl;
 }
 
