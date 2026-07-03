@@ -2610,6 +2610,12 @@
       "replacements": ["util.stripVTControlCharacters", "Bun.stripANSI"],
       "url": {"type": "e18e", "id": "strip-ansi"}
     },
+    "tar-fs": {
+      "type": "module",
+      "moduleName": "tar-fs",
+      "replacements": ["modern-tar"],
+      "url": {"type": "e18e", "id": "tar-fs"}
+    },
     "teeny-request": {
       "type": "module",
       "moduleName": "teeny-request",
@@ -3310,6 +3316,11 @@
       "id": "milliparsec",
       "type": "documented",
       "replacementModule": "milliparsec"
+    },
+    "modern-tar": {
+      "id": "modern-tar",
+      "type": "documented",
+      "replacementModule": "modern-tar"
     },
     "mri": {"id": "mri", "type": "documented", "replacementModule": "mri"},
     "nano-staged": {
