@@ -156,6 +156,12 @@
       "description": "You can check the first two bytes of a buffer to detect if it's compressed using deflate.",
       "example": "function isDeflate(buf) {\n  if (buf.length < 2 || buf[0] !== 0x78) return false;\n  const b = buf[1];\n  return b === 1 || b === 0x9c || b === 0xda;\n}"
     },
+    "snippet::is-electron": {
+      "id": "snippet::is-electron",
+      "type": "simple",
+      "description": "You can detect Electron by checking the renderer process type, `process.versions.electron`, or the user agent.",
+      "example": "function isElectron() {\n  return Boolean(\n    globalThis.window?.process?.type === \"renderer\" ||\n      globalThis.process?.versions?.electron ||\n      globalThis.navigator?.userAgent?.includes(\"Electron\")\n  );\n}"
+    },
     "snippet::is-equal": {
       "id": "snippet::is-equal",
       "type": "simple",
@@ -562,6 +568,11 @@
       "type": "module",
       "moduleName": "is-deflate",
       "replacements": ["snippet::is-deflate-buffer"]
+    },
+    "is-electron": {
+      "type": "module",
+      "moduleName": "is-electron",
+      "replacements": ["snippet::is-electron"]
     },
     "is-even": {
       "type": "module",
