@@ -2320,6 +2320,12 @@
       "replacements": ["sade", "cleye"],
       "url": {"type": "e18e", "id": "cli-builders"}
     },
+    "mime": {
+      "type": "module",
+      "moduleName": "mime",
+      "replacements": ["mrmime"],
+      "url": {"type": "e18e", "id": "mime"}
+    },
     "minimist": {
       "type": "module",
       "moduleName": "minimist",
@@ -3323,6 +3329,11 @@
       "replacementModule": "modern-tar"
     },
     "mri": {"id": "mri", "type": "documented", "replacementModule": "mri"},
+    "mrmime": {
+      "id": "mrmime",
+      "type": "documented",
+      "replacementModule": "mrmime"
+    },
     "nano-staged": {
       "id": "nano-staged",
       "type": "documented",
