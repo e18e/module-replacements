@@ -3375,11 +3375,6 @@
       "type": "documented",
       "replacementModule": "neosanitize"
     },
-    "neosanitize/legacy": {
-      "id": "neosanitize/legacy",
-      "type": "documented",
-      "replacementModule": "neosanitize/legacy"
-    },
     "neotraverse": {
       "id": "neotraverse",
       "type": "documented",
