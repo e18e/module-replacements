@@ -31,26 +31,40 @@ All `sanitize-html` options (`allowedTags`, `allowedAttributes`, `allowedSchemes
 
 ## `neosanitize` (recommended)
 
-For new code, the root module is recommended. It is built on a fast, browser-faithful WHATWG parser (100% html5lib tokenizer conformance) and follows a deny-by-default policy, so only what you explicitly allow gets through:
+For new code, the root module is recommended. It is built on a fast, browser-faithful WHATWG parser (100% html5lib tokenizer conformance) and follows a deny-by-default policy, so only what you explicitly allow gets through.
+
+Unlike `sanitize-html`, the root engine uses a builder pattern: you compile a policy once with `Sanitizer.builder(...)`, then reuse the resulting sanitizer everywhere.
 
 ```ts
-import sanitizeHtml from 'sanitize-html' // [!code --]
-import { sanitize } from 'neosanitize' // [!code ++]
+import { Sanitizer } from 'neosanitize'
+import * as presets from 'neosanitize/presets'
 
-const clean = sanitize(dirty, {
-  allowedTags: ['b', 'i', 'em', 'strong', 'a'],
-  allowedAttributes: {
-    a: ['href']
-  }
+// Build once (compiles the policy), reuse everywhere.
+const sanitizer = Sanitizer.builder(presets.ugc)
+  .allow('img', ['src', 'alt'])
+  .build()
+
+sanitizer.sanitize(
+  '<p>hi <img src=x onerror=alert(1)> <script>bad()</script></p>'
+)
+// → '<p>hi <img src="x"> </p>'
+```
+
+You can also build a policy from scratch instead of starting from a preset, and chain `.allow()` / `.deny()` to refine it:
+
+```ts
+const sanitizer = Sanitizer.builder({
+  tags: ['a', 'b', 'p'],
+  attrs: { a: ['href'] }
 })
+  .allow('img', ['src', 'alt'])
+  .deny('span')
+  .build()
+
+sanitizer.sanitize(
+  '<p>see <a href="/docs" onclick="x()">docs</a><iframe></iframe></p>'
+)
+// → '<p>see <a href="/docs">docs</a></p>'
 ```
 
-Because it has no dependencies and runs anywhere, it works unchanged in browsers and edge runtimes:
-
-```ts
-import { sanitize } from 'neosanitize/browser'
-
-const clean = sanitize(userInput)
-```
-
-Preset configurations are available under `neosanitize/presets`, and the underlying parser can be used directly via `neosanitize/whatwg-parser`.
+Because it has no dependencies, the same code runs in browsers and edge runtimes unchanged (bundlers resolve `neosanitize` to the browser build automatically). The underlying parser can also be used directly via `neosanitize/whatwg-parser`.
