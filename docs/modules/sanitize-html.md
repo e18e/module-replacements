@@ -68,3 +68,22 @@ sanitizer.sanitize(
 ```
 
 Because it has no dependencies, the same code runs in browsers and edge runtimes unchanged (bundlers resolve `neosanitize` to the browser build automatically). The underlying parser can also be used directly via `neosanitize/whatwg-parser`.
+
+### Swapping the parser
+
+The default parser is the fastest option and is browser-faithful with 100% html5lib tokenizer conformance. If you need different trade-offs, the parser is pluggable via `.parser(...)` on the builder — the policy engine and sanitization logic stay identical, only the HTML-to-tree step changes. Adapters for [`parse5`](https://github.com/inikulin/parse5) and [`htmlparser2`](https://github.com/fb55/htmlparser2) ship as separate exports (their libraries are peer dependencies, loaded only when imported):
+
+```ts
+import { Sanitizer } from 'neosanitize'
+import { parse5Adapter } from 'neosanitize/parse5'
+import { htmlparser2Adapter } from 'neosanitize/htmlparser2'
+import * as presets from 'neosanitize/presets'
+
+// Full WHATWG spec conformance on adversarial markup (~50% throughput)
+const strict = Sanitizer.builder(presets.ugc).parser(parse5Adapter).build()
+
+// Fast, lenient parsing (no full WHATWG tree builder — e.g. no foster-parenting)
+const lenient = Sanitizer.builder(presets.ugc)
+  .parser(htmlparser2Adapter)
+  .build()
+```
