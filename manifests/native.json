@@ -1501,6 +1501,18 @@
         "compatKey": "javascript.builtins.String.raw"
       }
     },
+    "Symbol": {
+      "id": "Symbol",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Symbol"
+      },
+      "webFeatureId": {
+        "featureId": "symbol",
+        "compatKey": "javascript.builtins.Symbol"
+      }
+    },
     "Symbol.prototype.description": {
       "id": "Symbol.prototype.description",
       "type": "native",
@@ -2282,6 +2294,11 @@
       "type": "module",
       "moduleName": "es6-shim",
       "replacements": ["es6-shim"]
+    },
+    "es6-symbol": {
+      "type": "module",
+      "moduleName": "es6-symbol",
+      "replacements": ["Symbol"]
     },
     "es7-shim": {
       "type": "module",
