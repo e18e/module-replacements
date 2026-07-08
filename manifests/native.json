@@ -567,6 +567,15 @@
       },
       "nodeFeatureId": {"moduleName": "buffer"}
     },
+    "Buffer.prototype.fill": {
+      "id": "Buffer.prototype.fill",
+      "type": "native",
+      "url": {
+        "type": "node",
+        "id": "api/buffer.html#buffillvalue-offset-end-encoding"
+      },
+      "nodeFeatureId": {"moduleName": "buffer"}
+    },
     "DOMException": {
       "id": "DOMException",
       "type": "native",
@@ -2088,6 +2097,11 @@
       "type": "module",
       "moduleName": "buffer-crc32",
       "replacements": ["zlib.crc32"]
+    },
+    "buffer-fill": {
+      "type": "module",
+      "moduleName": "buffer-fill",
+      "replacements": ["Buffer.prototype.fill"]
     },
     "buffer-from": {
       "type": "module",
