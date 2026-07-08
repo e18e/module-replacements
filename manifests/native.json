@@ -2844,6 +2844,11 @@
       "moduleName": "pinkie-promise",
       "replacements": ["Promise"]
     },
+    "promise-polyfill": {
+      "type": "module",
+      "moduleName": "promise-polyfill",
+      "replacements": ["Promise"]
+    },
     "promise.allsettled": {
       "type": "module",
       "moduleName": "promise.allsettled",
