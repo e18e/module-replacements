@@ -2628,16 +2628,44 @@
       "replacements": ["fetch", "ofetch", "ky"],
       "url": {"type": "e18e", "id": "fetch"}
     },
+    "tmp": {
+      "type": "module",
+      "moduleName": "tmp",
+      "replacements": [
+        "fs.promises.mkdtempDisposable",
+        "fs.promises.mkdtemp",
+        "Deno.makeTempDir"
+      ],
+      "url": {"type": "e18e", "id": "tempy"}
+    },
+    "tmp-promise": {
+      "type": "module",
+      "moduleName": "tmp-promise",
+      "replacements": [
+        "fs.promises.mkdtempDisposable",
+        "fs.promises.mkdtemp",
+        "Deno.makeTempDir"
+      ],
+      "url": {"type": "e18e", "id": "tempy"}
+    },
     "temp": {
       "type": "module",
       "moduleName": "temp",
-      "replacements": ["fs.promises.mkdtemp", "Deno.makeTempDir"],
+      "replacements": [
+        "fs.promises.mkdtempDisposable",
+        "fs.promises.mkdtemp",
+        "Deno.makeTempDir"
+      ],
       "url": {"type": "e18e", "id": "tempy"}
     },
     "tempy": {
       "type": "module",
       "moduleName": "tempy",
-      "replacements": ["fs.promises.mkdtemp", "Deno.makeTempDir"],
+      "replacements": [
+        "fs.promises.mkdtempDisposable",
+        "fs.promises.mkdtemp",
+        "Deno.makeTempDir"
+      ],
       "url": {"type": "e18e", "id": "tempy"}
     },
     "then-request": {
@@ -3216,6 +3244,18 @@
       "url": {
         "type": "node",
         "id": "api/fs.html#fspromisesmkdtempprefix-options"
+      }
+    },
+    "fs.promises.mkdtempDisposable": {
+      "id": "fs.promises.mkdtempDisposable",
+      "type": "native",
+      "nodeFeatureId": {
+        "moduleName": "node:fs/promises",
+        "exportName": "mkdtempDisposable"
+      },
+      "url": {
+        "type": "node",
+        "id": "api/fs.html#fspromisesmkdtempdisposableprefix-options"
       }
     },
     "fs.promises.rm": {
