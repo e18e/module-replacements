@@ -759,18 +759,6 @@
       },
       "webFeatureId": {
         "featureId": "iterator-methods",
-        "compatKey": "javascript.builtins.Iterator"
-      }
-    },
-    "Iterator.prototype": {
-      "id": "Iterator.prototype",
-      "type": "native",
-      "url": {
-        "type": "mdn",
-        "id": "Web/JavaScript/Reference/Global_Objects/Iterator"
-      },
-      "webFeatureId": {
-        "featureId": "iterator-methods",
         "compatKey": "javascript.builtins.Iterator.Iterator"
       }
     },
@@ -2528,7 +2516,7 @@
     "iterator.prototype": {
       "type": "module",
       "moduleName": "iterator.prototype",
-      "replacements": ["Iterator.prototype"]
+      "replacements": ["Iterator"]
     },
     "jsonify": {
       "type": "module",
