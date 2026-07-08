@@ -436,6 +436,16 @@
       "replacements": ["fs"],
       "url": {"type": "e18e", "id": "fs-extra"}
     },
+    "fs-temp": {
+      "type": "module",
+      "moduleName": "fs-temp",
+      "replacements": [
+        "fs.promises.mkdtempDisposable",
+        "fs.promises.mkdtemp",
+        "Deno.makeTempDir"
+      ],
+      "url": {"type": "e18e", "id": "tempy"}
+    },
     "fs.extra": {
       "type": "module",
       "moduleName": "fs.extra",
@@ -2628,26 +2638,6 @@
       "replacements": ["fetch", "ofetch", "ky"],
       "url": {"type": "e18e", "id": "fetch"}
     },
-    "tmp": {
-      "type": "module",
-      "moduleName": "tmp",
-      "replacements": [
-        "fs.promises.mkdtempDisposable",
-        "fs.promises.mkdtemp",
-        "Deno.makeTempDir"
-      ],
-      "url": {"type": "e18e", "id": "tempy"}
-    },
-    "tmp-promise": {
-      "type": "module",
-      "moduleName": "tmp-promise",
-      "replacements": [
-        "fs.promises.mkdtempDisposable",
-        "fs.promises.mkdtemp",
-        "Deno.makeTempDir"
-      ],
-      "url": {"type": "e18e", "id": "tempy"}
-    },
     "temp": {
       "type": "module",
       "moduleName": "temp",
@@ -2697,6 +2687,26 @@
       "moduleName": "toml",
       "replacements": ["smol-toml", "Bun.TOML"],
       "url": {"type": "e18e", "id": "toml"}
+    },
+    "tmp": {
+      "type": "module",
+      "moduleName": "tmp",
+      "replacements": [
+        "fs.promises.mkdtempDisposable",
+        "fs.promises.mkdtemp",
+        "Deno.makeTempDir"
+      ],
+      "url": {"type": "e18e", "id": "tempy"}
+    },
+    "tmp-promise": {
+      "type": "module",
+      "moduleName": "tmp-promise",
+      "replacements": [
+        "fs.promises.mkdtempDisposable",
+        "fs.promises.mkdtemp",
+        "Deno.makeTempDir"
+      ],
+      "url": {"type": "e18e", "id": "tempy"}
     },
     "traverse": {
       "type": "module",
