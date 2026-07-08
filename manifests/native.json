@@ -1599,11 +1599,6 @@
         "id": "Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods"
       }
     },
-    "es5-ext": {
-      "id": "es5-ext",
-      "type": "removal",
-      "description": "Every modern environment has support for ES6/ES2015 APIs."
-    },
     "es5-shim": {
       "id": "es5-shim",
       "type": "removal",
@@ -2257,6 +2252,11 @@
       "type": "module",
       "moduleName": "es-string-html-methods",
       "replacements": ["es-string-html-methods"]
+    },
+    "es5-ext": {
+      "type": "module",
+      "moduleName": "es5-ext",
+      "replacements": ["es6-shim"]
     },
     "es5-shim": {
       "type": "module",
