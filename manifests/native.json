@@ -549,6 +549,15 @@
         "compatKey": "javascript.builtins.BigInt"
       }
     },
+    "Buffer.allocUnsafe": {
+      "id": "Buffer.allocUnsafe",
+      "type": "native",
+      "url": {
+        "type": "node",
+        "id": "api/buffer.html#static-method-bufferallocunsafesize"
+      },
+      "nodeFeatureId": {"moduleName": "buffer"}
+    },
     "Buffer.from": {
       "id": "Buffer.from",
       "type": "native",
@@ -2084,6 +2093,11 @@
       "replacements": ["atob"]
     },
     "btoa": {"type": "module", "moduleName": "btoa", "replacements": ["btoa"]},
+    "buffer-alloc-unsafe": {
+      "type": "module",
+      "moduleName": "buffer-alloc-unsafe",
+      "replacements": ["Buffer.allocUnsafe"]
+    },
     "buffer-crc32": {
       "type": "module",
       "moduleName": "buffer-crc32",
