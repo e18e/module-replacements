@@ -750,6 +750,18 @@
         "compatKey": "javascript.builtins.Intl.DateTimeFormat.DateTimeFormat"
       }
     },
+    "Iterator": {
+      "id": "Iterator",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Iterator"
+      },
+      "webFeatureId": {
+        "featureId": "iterator-methods",
+        "compatKey": "javascript.builtins.Iterator"
+      }
+    },
     "Iterator.prototype": {
       "id": "Iterator.prototype",
       "type": "native",
@@ -2262,6 +2274,11 @@
       "type": "module",
       "moduleName": "es6-error",
       "replacements": ["Error"]
+    },
+    "es6-iterator": {
+      "type": "module",
+      "moduleName": "es6-iterator",
+      "replacements": ["Iterator"]
     },
     "es6-map": {
       "type": "module",
