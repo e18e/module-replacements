@@ -300,6 +300,12 @@
       "description": "You can check if the current environment is Windows by checking if `process.platform` is equal to \"win32\".",
       "example": "const isWindows = () => process.platform === \"win32\";"
     },
+    "snippet::is-wsl": {
+      "id": "snippet::is-wsl",
+      "type": "simple",
+      "description": "You can check if the current environment is WSL by checking if the `WSL_DISTRO_NAME` environment variable is set.",
+      "example": "const isWsl = Boolean(process.env.WSL_DISTRO_NAME);"
+    },
     "snippet::json-file": {
       "id": "snippet::json-file",
       "type": "simple",
@@ -693,6 +699,11 @@
       "type": "module",
       "moduleName": "is-windows",
       "replacements": ["snippet::is-windows"]
+    },
+    "is-wsl": {
+      "type": "module",
+      "moduleName": "is-wsl",
+      "replacements": ["snippet::is-wsl"]
     },
     "isobject": {
       "type": "module",
