@@ -1517,7 +1517,7 @@
       "id": "TextDecoder",
       "type": "native",
       "webFeatureId": {
-        "featureId": "text-decoding",
+        "featureId": "text-encoding",
         "compatKey": "api.TextDecoder"
       },
       "url": {"type": "mdn", "id": "Web/API/TextDecoder"}
