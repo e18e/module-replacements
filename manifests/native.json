@@ -555,6 +555,12 @@
       "url": {
         "type": "node",
         "id": "api/buffer.html#static-method-bufferallocsize-fill-encoding"
+    "Buffer.allocUnsafe": {
+      "id": "Buffer.allocUnsafe",
+      "type": "native",
+      "url": {
+        "type": "node",
+        "id": "api/buffer.html#static-method-bufferallocunsafesize"
       },
       "nodeFeatureId": {"moduleName": "buffer"}
     },
@@ -2106,6 +2112,10 @@
       "type": "module",
       "moduleName": "buffer-alloc",
       "replacements": ["Buffer.alloc"]
+    "buffer-alloc-unsafe": {
+      "type": "module",
+      "moduleName": "buffer-alloc-unsafe",
+      "replacements": ["Buffer.allocUnsafe"]
     },
     "buffer-crc32": {
       "type": "module",
