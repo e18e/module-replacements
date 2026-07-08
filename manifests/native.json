@@ -2147,6 +2147,11 @@
       "moduleName": "concat-map",
       "replacements": ["Array.prototype.flatMap"]
     },
+    "crc": {
+      "type": "module",
+      "moduleName": "crc",
+      "replacements": ["zlib.crc32"]
+    },
     "crc-32": {
       "type": "module",
       "moduleName": "crc-32",
