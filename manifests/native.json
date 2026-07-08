@@ -555,6 +555,9 @@
       "url": {
         "type": "node",
         "id": "api/buffer.html#static-method-bufferallocsize-fill-encoding"
+      },
+      "nodeFeatureId": {"moduleName": "buffer"}
+    },
     "Buffer.allocUnsafe": {
       "id": "Buffer.allocUnsafe",
       "type": "native",
@@ -2112,6 +2115,7 @@
       "type": "module",
       "moduleName": "buffer-alloc",
       "replacements": ["Buffer.alloc"]
+    },
     "buffer-alloc-unsafe": {
       "type": "module",
       "moduleName": "buffer-alloc-unsafe",
