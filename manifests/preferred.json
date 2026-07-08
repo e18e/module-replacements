@@ -2676,18 +2676,6 @@
       "replacements": ["node:stream"],
       "url": {"type": "e18e", "id": "through"}
     },
-    "tokml": {
-      "type": "module",
-      "moduleName": "tokml",
-      "replacements": ["@placemarkio/tokml"],
-      "url": {"type": "e18e", "id": "tokml"}
-    },
-    "toml": {
-      "type": "module",
-      "moduleName": "toml",
-      "replacements": ["smol-toml", "Bun.TOML"],
-      "url": {"type": "e18e", "id": "toml"}
-    },
     "tmp": {
       "type": "module",
       "moduleName": "tmp",
@@ -2707,6 +2695,18 @@
         "Deno.makeTempDir"
       ],
       "url": {"type": "e18e", "id": "tempy"}
+    },
+    "tokml": {
+      "type": "module",
+      "moduleName": "tokml",
+      "replacements": ["@placemarkio/tokml"],
+      "url": {"type": "e18e", "id": "tokml"}
+    },
+    "toml": {
+      "type": "module",
+      "moduleName": "toml",
+      "replacements": ["smol-toml", "Bun.TOML"],
+      "url": {"type": "e18e", "id": "toml"}
     },
     "traverse": {
       "type": "module",
