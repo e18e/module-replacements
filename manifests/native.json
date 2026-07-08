@@ -1513,6 +1513,15 @@
         "compatKey": "javascript.builtins.Symbol.description"
       }
     },
+    "TextDecoder": {
+      "id": "TextDecoder",
+      "type": "native",
+      "webFeatureId": {
+        "featureId": "text-decoding",
+        "compatKey": "api.TextDecoder"
+      },
+      "url": {"type": "mdn", "id": "Web/API/TextDecoder"}
+    },
     "TextEncoder.encode": {
       "id": "TextEncoder.encode",
       "type": "native",
@@ -3023,6 +3032,11 @@
       "type": "module",
       "moduleName": "symbol.prototype.description",
       "replacements": ["Symbol.prototype.description"]
+    },
+    "text-decoding": {
+      "type": "module",
+      "moduleName": "text-decoding",
+      "replacements": ["TextDecoder"]
     },
     "through2-map": {
       "type": "module",
