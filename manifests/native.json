@@ -786,6 +786,18 @@
         "compatKey": "javascript.builtins.Map"
       }
     },
+    "Math": {
+      "id": "Math",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Math"
+      },
+      "webFeatureId": {
+        "featureId": "number",
+        "compatKey": "javascript.builtins.Math"
+      }
+    },
     "Math.acosh": {
       "id": "Math.acosh",
       "type": "native",
@@ -2673,6 +2685,11 @@
       "type": "module",
       "moduleName": "long",
       "replacements": ["BigInt"]
+    },
+    "math-intrinsics": {
+      "type": "module",
+      "moduleName": "math-intrinsics",
+      "replacements": ["Math"]
     },
     "math-log2": {
       "type": "module",
