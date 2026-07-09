@@ -436,6 +436,16 @@
       "replacements": ["fs"],
       "url": {"type": "e18e", "id": "fs-extra"}
     },
+    "fs-temp": {
+      "type": "module",
+      "moduleName": "fs-temp",
+      "replacements": [
+        "fs.promises.mkdtempDisposable",
+        "fs.promises.mkdtemp",
+        "Deno.makeTempDir"
+      ],
+      "url": {"type": "e18e", "id": "tempy"}
+    },
     "fs.extra": {
       "type": "module",
       "moduleName": "fs.extra",
@@ -2631,13 +2641,21 @@
     "temp": {
       "type": "module",
       "moduleName": "temp",
-      "replacements": ["fs.promises.mkdtemp", "Deno.makeTempDir"],
+      "replacements": [
+        "fs.promises.mkdtempDisposable",
+        "fs.promises.mkdtemp",
+        "Deno.makeTempDir"
+      ],
       "url": {"type": "e18e", "id": "tempy"}
     },
     "tempy": {
       "type": "module",
       "moduleName": "tempy",
-      "replacements": ["fs.promises.mkdtemp", "Deno.makeTempDir"],
+      "replacements": [
+        "fs.promises.mkdtempDisposable",
+        "fs.promises.mkdtemp",
+        "Deno.makeTempDir"
+      ],
       "url": {"type": "e18e", "id": "tempy"}
     },
     "then-request": {
@@ -2657,6 +2675,26 @@
       "moduleName": "through2",
       "replacements": ["node:stream"],
       "url": {"type": "e18e", "id": "through"}
+    },
+    "tmp": {
+      "type": "module",
+      "moduleName": "tmp",
+      "replacements": [
+        "fs.promises.mkdtempDisposable",
+        "fs.promises.mkdtemp",
+        "Deno.makeTempDir"
+      ],
+      "url": {"type": "e18e", "id": "tempy"}
+    },
+    "tmp-promise": {
+      "type": "module",
+      "moduleName": "tmp-promise",
+      "replacements": [
+        "fs.promises.mkdtempDisposable",
+        "fs.promises.mkdtemp",
+        "Deno.makeTempDir"
+      ],
+      "url": {"type": "e18e", "id": "tempy"}
     },
     "tokml": {
       "type": "module",
@@ -3216,6 +3254,18 @@
       "url": {
         "type": "node",
         "id": "api/fs.html#fspromisesmkdtempprefix-options"
+      }
+    },
+    "fs.promises.mkdtempDisposable": {
+      "id": "fs.promises.mkdtempDisposable",
+      "type": "native",
+      "nodeFeatureId": {
+        "moduleName": "node:fs/promises",
+        "exportName": "mkdtempDisposable"
+      },
+      "url": {
+        "type": "node",
+        "id": "api/fs.html#fspromisesmkdtempdisposableprefix-options"
       }
     },
     "fs.promises.rm": {
