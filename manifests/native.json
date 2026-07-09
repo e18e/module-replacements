@@ -2265,6 +2265,11 @@
       "moduleName": "es-string-html-methods",
       "replacements": ["es-string-html-methods"]
     },
+    "es5-ext": {
+      "type": "module",
+      "moduleName": "es5-ext",
+      "replacements": ["es6-shim"]
+    },
     "es5-shim": {
       "type": "module",
       "moduleName": "es5-shim",
