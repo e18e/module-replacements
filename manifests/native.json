@@ -750,8 +750,8 @@
         "compatKey": "javascript.builtins.Intl.DateTimeFormat.DateTimeFormat"
       }
     },
-    "Iterator.prototype": {
-      "id": "Iterator.prototype",
+    "Iterator": {
+      "id": "Iterator",
       "type": "native",
       "url": {
         "type": "mdn",
@@ -2263,6 +2263,11 @@
       "moduleName": "es6-error",
       "replacements": ["Error"]
     },
+    "es6-iterator": {
+      "type": "module",
+      "moduleName": "es6-iterator",
+      "replacements": ["Iterator"]
+    },
     "es6-map": {
       "type": "module",
       "moduleName": "es6-map",
@@ -2511,7 +2516,7 @@
     "iterator.prototype": {
       "type": "module",
       "moduleName": "iterator.prototype",
-      "replacements": ["Iterator.prototype"]
+      "replacements": ["Iterator"]
     },
     "jsonify": {
       "type": "module",
