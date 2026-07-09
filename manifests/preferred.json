@@ -12,12 +12,6 @@
       "replacements": ["fetch", "ofetch", "ky"],
       "url": {"type": "e18e", "id": "fetch"}
     },
-    "@iarna/toml": {
-      "type": "module",
-      "moduleName": "@iarna/toml",
-      "replacements": ["smol-toml", "Bun.TOML"],
-      "url": {"type": "e18e", "id": "toml"}
-    },
     "@jsdevtools/ez-spawn": {
       "type": "module",
       "moduleName": "@jsdevtools/ez-spawn",
@@ -2702,12 +2696,6 @@
       "replacements": ["@placemarkio/tokml"],
       "url": {"type": "e18e", "id": "tokml"}
     },
-    "toml": {
-      "type": "module",
-      "moduleName": "toml",
-      "replacements": ["smol-toml", "Bun.TOML"],
-      "url": {"type": "e18e", "id": "toml"}
-    },
     "traverse": {
       "type": "module",
       "moduleName": "traverse",
@@ -2911,11 +2899,6 @@
       "id": "Bun.Shell",
       "type": "native",
       "url": "https://bun.com/docs/runtime/shell"
-    },
-    "Bun.TOML": {
-      "id": "Bun.TOML",
-      "type": "native",
-      "url": "https://bun.com/docs/runtime/toml"
     },
     "Bun.YAML": {
       "id": "Bun.YAML",
@@ -3533,11 +3516,6 @@
       "replacementModule": "rollup-plugin-visualizer"
     },
     "sade": {"id": "sade", "type": "documented", "replacementModule": "sade"},
-    "smol-toml": {
-      "id": "smol-toml",
-      "type": "documented",
-      "replacementModule": "smol-toml"
-    },
     "sonda": {
       "id": "sonda",
       "type": "documented",
