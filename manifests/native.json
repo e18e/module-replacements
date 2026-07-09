@@ -2940,6 +2940,11 @@
       "moduleName": "random-bytes",
       "replacements": ["crypto.randomBytes"]
     },
+    "randombytes": {
+      "type": "module",
+      "moduleName": "randombytes",
+      "replacements": ["crypto.randomBytes"]
+    },
     "reflect.getprototypeof": {
       "type": "module",
       "moduleName": "reflect.getprototypeof",
