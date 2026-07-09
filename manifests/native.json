@@ -2330,6 +2330,11 @@
       "moduleName": "extend-shallow",
       "replacements": ["Object.assign"]
     },
+    "fast-json-parse": {
+      "type": "module",
+      "moduleName": "fast-json-parse",
+      "replacements": ["JSON"]
+    },
     "filter-array": {
       "type": "module",
       "moduleName": "filter-array",
