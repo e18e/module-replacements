@@ -3150,6 +3150,11 @@
       "moduleName": "util.promisify",
       "replacements": ["util.promisify"]
     },
+    "validate.io-array": {
+      "type": "module",
+      "moduleName": "validate.io-array",
+      "replacements": ["Array.isArray"]
+    },
     "weak-map": {
       "type": "module",
       "moduleName": "weak-map",
