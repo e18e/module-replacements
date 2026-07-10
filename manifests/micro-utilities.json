@@ -396,6 +396,12 @@
       "description": "You can use `typeof` to get the type of a value, or `Object.prototype.toString.call` to get the internal [[Class]] of an object.",
       "example": "const typeOf = (value) => typeof value;\n// for more specific types\nconst classOf = (value) => Object.prototype.toString.call(value);"
     },
+    "snippet::typeof-is-function": {
+      "id": "snippet::typeof-is-function",
+      "type": "simple",
+      "description": "You can use `typeof` to check if a value is a function.",
+      "example": "typeof x === \"function\";"
+    },
     "snippet::unix-paths": {
       "id": "snippet::unix-paths",
       "type": "simple",
@@ -864,6 +870,11 @@
       "type": "module",
       "moduleName": "upper-case",
       "replacements": ["snippet::to-uppercase"]
+    },
+    "validate.io-function": {
+      "type": "module",
+      "moduleName": "validate.io-function",
+      "replacements": ["snippet::typeof-is-function"]
     },
     "year": {
       "type": "module",
