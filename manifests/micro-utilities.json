@@ -258,6 +258,12 @@
       "description": "You can use `instanceof RegExp` to check if a value is a regular expression, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object RegExp]\"`.",
       "example": "const isRegExp = (v) => v instanceof RegExp;\n// for cross-realm\nconst isRegExpCrossRealm = Object.prototype.toString.call(v) === \"[object RegExp]\";"
     },
+    "snippet::is-set": {
+      "id": "snippet::is-set",
+      "type": "simple",
+      "description": "You can use `instanceof Set`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object Set]\"`",
+      "example": "const isSet = v instanceof Set;\n// for cross-realm\nconst isSetCrossRealm = Object.prototype.toString.call(v) === \"[object Set]\""
+    },
     "snippet::is-stream": {
       "id": "snippet::is-stream",
       "type": "simple",
@@ -669,6 +675,11 @@
       "type": "module",
       "moduleName": "is-regexp",
       "replacements": ["snippet::is-regexp"]
+    },
+    "is-set": {
+      "type": "module",
+      "moduleName": "is-set",
+      "replacements": ["snippet::is-set"]
     },
     "is-stream": {
       "type": "module",
