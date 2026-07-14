@@ -261,7 +261,7 @@
     "snippet::is-set": {
       "id": "snippet::is-set",
       "type": "simple",
-      "description": "You can use `instanceof Set`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object Set]\"`",
+      "description": "You can use `instanceof Set` to check if a value is a `Set`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object Set]\"`",
       "example": "const isSet = v instanceof Set;\n// for cross-realm\nconst isSetCrossRealm = Object.prototype.toString.call(v) === \"[object Set]\""
     },
     "snippet::is-stream": {
