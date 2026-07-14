@@ -2372,6 +2372,12 @@
       "replacements": ["grammy"],
       "url": {"type": "e18e", "id": "node-telegram-bot-api"}
     },
+    "node-uuid": {
+      "type": "module",
+      "moduleName": "node-uuid",
+      "replacements": ["crypto.randomUUID"],
+      "url": {"type": "e18e", "id": "uuidv4"}
+    },
     "npm-run-all": {
       "type": "module",
       "moduleName": "npm-run-all",
