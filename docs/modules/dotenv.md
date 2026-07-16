@@ -4,9 +4,9 @@ description: Native Node.js alternatives to the dotenv package for loading and m
 
 # Replacements for `dotenv`
 
-## Node.js `process.loadEnvFile`
+## `process.loadEnvFile` (native, since Node.js v20.12.0)
 
-[`process.loadEnvFile`](https://nodejs.org/docs/latest-v20.x/api/process.html#processloadenvfilepath) (Node.js v20.12.0+) loads a `.env` file into `process.env` at runtime. It is the closest drop-in replacement for `dotenv.config()` when you need to load environment variables programmatically instead of via the `--env-file` flag.
+[`process.loadEnvFile`](https://nodejs.org/api/process.html#processloadenvfilepath) (Node.js v20.12.0+) loads a `.env` file into `process.env` at runtime.
 
 It throws if the file is missing. Defaults to `.env` in the current working directory when called without a path.
 
