@@ -247,7 +247,7 @@
     "dotenv": {
       "type": "module",
       "moduleName": "dotenv",
-      "replacements": ["--env-file"],
+      "replacements": ["process.loadEnvFile", "--env-file"],
       "url": {"type": "e18e", "id": "dotenv"}
     },
     "dottie": {
@@ -3493,6 +3493,11 @@
       "id": "premove",
       "type": "documented",
       "replacementModule": "premove"
+    },
+    "process.loadEnvFile": {
+      "id": "process.loadEnvFile",
+      "type": "native",
+      "url": {"type": "node", "id": "api/process.html#processloadenvfilepath"}
     },
     "react-helmet-async": {
       "id": "react-helmet-async",
