@@ -4,7 +4,7 @@ description: Modern alternatives to js-yaml for YAML parsing and stringifying
 
 # Replacements for `js-yaml`
 
-`js-yaml` appears to be unmaintained and has known spec-compliance issues.
+`js-yaml` is actively maintained. Alternatives below may still be preferable for comment/AST support, zero dependencies, or Bun-native usage.
 
 ## `yaml`
 
