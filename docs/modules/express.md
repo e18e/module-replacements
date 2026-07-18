@@ -83,3 +83,23 @@ app.get('/', () => 'Hello world') // [!code ++]
 
 app.listen(3000)
 ```
+
+## `fastify`
+
+[`fastify`](https://fastify.dev/) is a fast, low-overhead web framework for Node.js with a powerful plugin architecture and schema-based validation and serialization.
+
+Example:
+
+```ts
+import express from 'express' // [!code --]
+import Fastify from 'fastify' // [!code ++]
+
+const app = express() // [!code --]
+const app = Fastify() // [!code ++]
+
+app.get('/', (req, res) => res.send('Hello world')) // [!code --]
+app.get('/', async () => 'Hello world') // [!code ++]
+
+app.listen(3000) // [!code --]
+await app.listen({ port: 3000 }) // [!code ++]
+```

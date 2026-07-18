@@ -349,7 +349,7 @@
     "express": {
       "type": "module",
       "moduleName": "express",
-      "replacements": ["h3", "tinyhttp", "hono", "elysia"],
+      "replacements": ["h3", "tinyhttp", "hono", "elysia", "fastify"],
       "url": {"type": "e18e", "id": "express"}
     },
     "extend": {
@@ -3192,6 +3192,11 @@
       "id": "fast-wrap-ansi",
       "type": "documented",
       "replacementModule": "fast-wrap-ansi"
+    },
+    "fastify": {
+      "id": "fastify",
+      "type": "documented",
+      "replacementModule": "fastify"
     },
     "fdir": {"id": "fdir", "type": "documented", "replacementModule": "fdir"},
     "fetch": {
