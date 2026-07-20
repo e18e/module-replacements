@@ -578,6 +578,12 @@
       "replacements": ["jsx-ast-utils-x"],
       "url": {"type": "e18e", "id": "jsx-ast-utils"}
     },
+    "kafkajs": {
+      "type": "module",
+      "moduleName": "kafkajs",
+      "replacements": ["@platformatic/kafka", "@confluentinc/kafka-javascript"],
+      "url": {"type": "e18e", "id": "kafkajs"}
+    },
     "lodash": {
       "type": "module",
       "moduleName": "lodash",
@@ -2810,6 +2816,11 @@
       "type": "documented",
       "replacementModule": "@11ty/gray-matter"
     },
+    "@confluentinc/kafka-javascript": {
+      "id": "@confluentinc/kafka-javascript",
+      "type": "documented",
+      "replacementModule": "@confluentinc/kafka-javascript"
+    },
     "@eslint-community/eslint-plugin-eslint-comments": {
       "id": "@eslint-community/eslint-plugin-eslint-comments",
       "type": "documented",
@@ -2849,6 +2860,11 @@
       "id": "@placemarkio/tokml",
       "type": "documented",
       "replacementModule": "@placemarkio/tokml"
+    },
+    "@platformatic/kafka": {
+      "id": "@platformatic/kafka",
+      "type": "documented",
+      "replacementModule": "@platformatic/kafka"
     },
     "@vitest/eslint-plugin": {
       "id": "@vitest/eslint-plugin",
