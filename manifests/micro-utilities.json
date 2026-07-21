@@ -354,6 +354,12 @@
       "description": "You can use `Object.entries` and `Array.prototype.reduce`.",
       "example": "const objectReduce = (obj, fn, initial) => Object.entries(obj).reduce((acc, [k, v]) => fn(acc, k, v), initial);"
     },
+    "snippet::path-key": {
+      "id": "snippet::path-key",
+      "type": "simple",
+      "description": "You can use `Object.keys` with `Array.prototype.findLast` to find the case-insensitive `PATH` environment variable key.",
+      "example": "const pathKey = (env = process.env) => Object.keys(env).findLast((k) => k.toUpperCase() === 'PATH') ?? 'PATH';"
+    },
     "snippet::regexp-copy": {
       "id": "snippet::regexp-copy",
       "type": "simple",
@@ -835,6 +841,11 @@
       "type": "module",
       "moduleName": "object.reduce",
       "replacements": ["snippet::object-reduce"]
+    },
+    "path-key": {
+      "type": "module",
+      "moduleName": "path-key",
+      "replacements": ["snippet::path-key"]
     },
     "shebang-regex": {
       "type": "module",
