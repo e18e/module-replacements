@@ -358,7 +358,7 @@
       "id": "snippet::path-key",
       "type": "simple",
       "description": "You can use `Object.keys` with `Array.prototype.findLast` to find the case-insensitive `PATH` environment variable key.",
-      "example": "const pathKey = (env = process.env) => Object.keys(env).findLast((k) => k.toUpperCase() === 'PATH') ?? 'PATH';"
+      "example": "const pathKey = Object.keys(process.env).findLast((k) => k.toUpperCase() === 'PATH') ?? 'PATH';"
     },
     "snippet::regexp-copy": {
       "id": "snippet::regexp-copy",
