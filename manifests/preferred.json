@@ -144,12 +144,6 @@
       "replacements": ["util.styleText", "picocolors", "ansis"],
       "url": {"type": "e18e", "id": "chalk"}
     },
-    "commander": {
-      "type": "module",
-      "moduleName": "commander",
-      "replacements": ["sade", "cleye"],
-      "url": {"type": "e18e", "id": "cli-builders"}
-    },
     "copy-text-to-clipboard": {
       "type": "module",
       "moduleName": "copy-text-to-clipboard",
