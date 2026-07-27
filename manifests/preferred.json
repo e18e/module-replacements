@@ -30,6 +30,12 @@
       "replacements": ["fetch", "ofetch", "ky"],
       "url": {"type": "e18e", "id": "fetch"}
     },
+    "@typescript/native-preview": {
+      "type": "module",
+      "moduleName": "@typescript/native-preview",
+      "replacements": ["typescript"],
+      "url": {"type": "e18e", "id": "typescript-native-preview"}
+    },
     "@whatwg-node/fetch": {
       "type": "module",
       "moduleName": "@whatwg-node/fetch",
@@ -3595,6 +3601,11 @@
       "id": "tsdown",
       "type": "documented",
       "replacementModule": "tsdown"
+    },
+    "typescript": {
+      "id": "typescript",
+      "type": "documented",
+      "replacementModule": "typescript"
     },
     "unicode-segmenter": {
       "id": "unicode-segmenter",
