@@ -2593,7 +2593,7 @@
     "sqlite3": {
       "type": "module",
       "moduleName": "sqlite3",
-      "replacements": ["node:sqlite", "better-sqlite3"],
+      "replacements": ["node:sqlite", "better-sqlite3", "@libsql/client"],
       "url": {"type": "e18e", "id": "sqlite3"}
     },
     "stream-buffers": {
@@ -2823,6 +2823,11 @@
       "id": "@fastify/deepmerge",
       "type": "documented",
       "replacementModule": "@fastify/deepmerge"
+    },
+    "@libsql/client": {
+      "id": "@libsql/client",
+      "type": "documented",
+      "replacementModule": "@libsql/client"
     },
     "@material/web": {
       "id": "@material/web",

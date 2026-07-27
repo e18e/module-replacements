@@ -37,3 +37,20 @@ const db = new Database('app.db') // [!code ++]
 db.all('SELECT * FROM users', (err, rows) => {}) // [!code --]
 const rows = db.prepare('SELECT * FROM users').all() // [!code ++]
 ```
+
+## `@libsql/client`
+
+[`@libsql/client`](https://github.com/tursodatabase/libsql-client-ts) is a modern, promise-based client that is fully compatible with SQLite. It supports local SQLite files, remote LibSQL servers, and Turso databases, making it easy to transition to the edge in the future.
+
+Example:
+
+```ts
+import sqlite3 from 'sqlite3' // [!code --]
+import { createClient } from '@libsql/client' // [!code ++]
+
+const db = new sqlite3.Database('app.db') // [!code --]
+const db = createClient({ url: 'file:app.db' }) // [!code ++]
+
+db.all('SELECT * FROM users', (err, rows) => {}) // [!code --]
+const { rows } = await db.execute('SELECT * FROM users') // [!code ++]
+```
