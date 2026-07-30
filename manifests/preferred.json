@@ -2802,7 +2802,7 @@
       "type": "module",
       "moduleName": "yup",
       "replacements": ["valibot", "zod/mini"],
-      "url": {"type": "e18e", "id": "yup"}
+      "url": {"type": "e18e", "id": "schema-validation"}
     }
   },
   "replacements": {
