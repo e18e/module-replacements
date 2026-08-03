@@ -2762,6 +2762,12 @@
       "replacements": ["fetch", "ofetch", "ky"],
       "url": {"type": "e18e", "id": "fetch"}
     },
+    "which-pm": {
+      "type": "module",
+      "moduleName": "which-pm",
+      "replacements": ["package-manager-detector"],
+      "url": {"type": "e18e", "id": "detect-package-manager"}
+    },
     "wrap-ansi": {
       "type": "module",
       "moduleName": "wrap-ansi",
