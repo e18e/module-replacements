@@ -1659,6 +1659,16 @@
       "type": "removal",
       "description": "Every modern environment has support for ES7/ES2016 apis."
     },
+    "extends": {
+      "id": "extends",
+      "type": "native",
+      "description": "ES6 classes `extends` syntax for prototype inheritance",
+      "url": {"type": "mdn", "id": "Web/JavaScript/Reference/Classes/extends"},
+      "webFeatureId": {
+        "featureId": "class-syntax",
+        "compatKey": "javascript.classes.extends"
+      }
+    },
     "for...in": {
       "id": "for...in",
       "type": "native",
@@ -1903,6 +1913,15 @@
       "webFeatureId": {
         "featureId": "structured-clone",
         "compatKey": "api.structuredClone"
+      }
+    },
+    "util.inherits": {
+      "id": "util.inherits",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:util", "exportName": "inherits"},
+      "url": {
+        "type": "node",
+        "id": "api/util.html#utilinheritsconstructor-superconstructor"
       }
     },
     "util.promisify": {
@@ -2542,6 +2561,12 @@
       "type": "module",
       "moduleName": "indexof",
       "replacements": ["Array.prototype.indexOf"]
+    },
+    "inherits": {
+      "type": "module",
+      "moduleName": "inherits",
+      "replacements": ["extends", "util.inherits"],
+      "url": {"type": "e18e", "id": "inherits"}
     },
     "is-arrayish": {
       "type": "module",

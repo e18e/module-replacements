@@ -518,12 +518,6 @@
       "replacements": ["httpxy", "http-proxy-3"],
       "url": {"type": "e18e", "id": "http-proxy"}
     },
-    "inherits": {
-      "type": "module",
-      "moduleName": "inherits",
-      "replacements": ["extends", "util.inherits"],
-      "url": {"type": "e18e", "id": "inherits"}
-    },
     "invariant": {
       "type": "module",
       "moduleName": "invariant",
@@ -3156,12 +3150,6 @@
       "type": "documented",
       "replacementModule": "exsolve"
     },
-    "extends": {
-      "id": "extends",
-      "type": "native",
-      "description": "You can use ES6 classes `extends` syntax for prototype inheritance.",
-      "url": {"type": "mdn", "id": "Web/JavaScript/Reference/Classes/extends"}
-    },
     "fast-querystring": {
       "id": "fast-querystring",
       "type": "documented",
@@ -3624,15 +3612,6 @@
       "id": "uri-js-replace",
       "type": "documented",
       "replacementModule": "uri-js-replace"
-    },
-    "util.inherits": {
-      "id": "util.inherits",
-      "type": "native",
-      "nodeFeatureId": {"moduleName": "node:util", "exportName": "inherits"},
-      "url": {
-        "type": "node",
-        "id": "api/util.html#utilinheritsconstructor-superconstructor"
-      }
     },
     "util.isDeepStrictEqual": {
       "id": "util.isDeepStrictEqual",
