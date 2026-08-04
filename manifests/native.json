@@ -1255,6 +1255,18 @@
         "compatKey": "javascript.builtins.Promise.finally"
       }
     },
+    "Promise.try": {
+      "id": "Promise.try",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Promise/try"
+      },
+      "webFeatureId": {
+        "featureId": "promise-try",
+        "compatKey": "javascript.builtins.Promise.try"
+      }
+    },
     "Readable.map": {
       "id": "Readable.map",
       "type": "native",
@@ -2874,6 +2886,11 @@
       "type": "module",
       "moduleName": "object.values",
       "replacements": ["Object.values"]
+    },
+    "p-try": {
+      "type": "module",
+      "moduleName": "p-try",
+      "replacements": ["Promise.try"]
     },
     "pad-left": {
       "type": "module",
