@@ -72,33 +72,6 @@
         "compatKey": "javascript.builtins.TypedArray.slice"
       }
     },
-    "@babel/plugin-proposal-object-rest-spread": {
-      "id": "@babel/plugin-proposal-object-rest-spread",
-      "type": "removal",
-      "description": "Object rest/spread syntax is supported in all modern environments, so this Babel plugin is no longer needed.",
-      "url": {
-        "type": "mdn",
-        "id": "Web/JavaScript/Reference/Operators/Spread_syntax"
-      }
-    },
-    "@babel/plugin-syntax-object-rest-spread": {
-      "id": "@babel/plugin-syntax-object-rest-spread",
-      "type": "removal",
-      "description": "Object rest/spread syntax is supported in all modern environments, so this Babel plugin is no longer needed.",
-      "url": {
-        "type": "mdn",
-        "id": "Web/JavaScript/Reference/Operators/Spread_syntax"
-      }
-    },
-    "@babel/plugin-transform-object-rest-spread": {
-      "id": "@babel/plugin-transform-object-rest-spread",
-      "type": "removal",
-      "description": "Object rest/spread syntax is supported in all modern environments, so this Babel plugin is no longer needed.",
-      "url": {
-        "type": "mdn",
-        "id": "Web/JavaScript/Reference/Operators/Spread_syntax"
-      }
-    },
     "AbortController": {
       "id": "AbortController",
       "type": "native",
@@ -1893,6 +1866,18 @@
       "description": "All modern versions of Node have `Buffer.from` for safely creating buffers from arbitrary types.",
       "url": {"type": "node", "id": "api/buffer.html"}
     },
+    "spread_syntax": {
+      "id": "spread_syntax",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Operators/Spread_syntax"
+      },
+      "webFeatureId": {
+        "featureId": "object-object",
+        "compatKey": "javascript.operators.object_initializer.spread_properties"
+      }
+    },
     "string_decoder": {
       "id": "string_decoder",
       "type": "native",
@@ -1930,17 +1915,17 @@
     "@babel/plugin-proposal-object-rest-spread": {
       "type": "module",
       "moduleName": "@babel/plugin-proposal-object-rest-spread",
-      "replacements": ["@babel/plugin-proposal-object-rest-spread"]
+      "replacements": ["spread_syntax"]
     },
     "@babel/plugin-syntax-object-rest-spread": {
       "type": "module",
       "moduleName": "@babel/plugin-syntax-object-rest-spread",
-      "replacements": ["@babel/plugin-syntax-object-rest-spread"]
+      "replacements": ["spread_syntax"]
     },
     "@babel/plugin-transform-object-rest-spread": {
       "type": "module",
       "moduleName": "@babel/plugin-transform-object-rest-spread",
-      "replacements": ["@babel/plugin-transform-object-rest-spread"]
+      "replacements": ["spread_syntax"]
     },
     "abort-controller": {
       "type": "module",
