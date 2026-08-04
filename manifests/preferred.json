@@ -1088,12 +1088,6 @@
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
-    "lodash.groupby": {
-      "type": "module",
-      "moduleName": "lodash.groupby",
-      "replacements": ["lodash-underscore", "es-toolkit"],
-      "url": {"type": "e18e", "id": "lodash-underscore"}
-    },
     "lodash.gt": {
       "type": "module",
       "moduleName": "lodash.gt",

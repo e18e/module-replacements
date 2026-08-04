@@ -2599,6 +2599,11 @@
       "moduleName": "lodash.get",
       "replacements": ["optional_chaining"]
     },
+    "lodash.groupby": {
+      "type": "module",
+      "moduleName": "lodash.groupby",
+      "replacements": ["Object.groupBy"]
+    },
     "lodash.isarray": {
       "type": "module",
       "moduleName": "lodash.isarray",
