@@ -2574,6 +2574,11 @@
       "moduleName": "left-pad",
       "replacements": ["String.prototype.padStart"]
     },
+    "lie": {
+      "type": "module",
+      "moduleName": "lie",
+      "replacements": ["Promise"]
+    },
     "lodash.at": {
       "type": "module",
       "moduleName": "lodash.at",
