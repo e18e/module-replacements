@@ -1255,6 +1255,18 @@
         "compatKey": "javascript.builtins.Promise.finally"
       }
     },
+    "Promise.withResolvers": {
+      "id": "Promise.withResolvers",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Promise/withResolvers"
+      },
+      "webFeatureId": {
+        "featureId": "promise-withresolvers",
+        "compatKey": "javascript.builtins.Promise.withResolvers"
+      }
+    },
     "Readable.map": {
       "id": "Readable.map",
       "type": "native",
@@ -2874,6 +2886,11 @@
       "type": "module",
       "moduleName": "object.values",
       "replacements": ["Object.values"]
+    },
+    "p-defer": {
+      "type": "module",
+      "moduleName": "p-defer",
+      "replacements": ["Promise.withResolvers"]
     },
     "pad-left": {
       "type": "module",
