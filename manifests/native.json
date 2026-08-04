@@ -1255,6 +1255,18 @@
         "compatKey": "javascript.builtins.Promise.finally"
       }
     },
+    "Promise.try": {
+      "id": "Promise.try",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Promise/try"
+      },
+      "webFeatureId": {
+        "featureId": "promise-try",
+        "compatKey": "javascript.builtins.Promise.try"
+      }
+    },
     "Promise.withResolvers": {
       "id": "Promise.withResolvers",
       "type": "native",
@@ -1878,6 +1890,18 @@
       "description": "All modern versions of Node have `Buffer.from` for safely creating buffers from arbitrary types.",
       "url": {"type": "node", "id": "api/buffer.html"}
     },
+    "spread_syntax": {
+      "id": "spread_syntax",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Operators/Spread_syntax"
+      },
+      "webFeatureId": {
+        "featureId": "object-object",
+        "compatKey": "javascript.operators.object_initializer.spread_properties"
+      }
+    },
     "string_decoder": {
       "id": "string_decoder",
       "type": "native",
@@ -1912,6 +1936,21 @@
     }
   },
   "mappings": {
+    "@babel/plugin-proposal-object-rest-spread": {
+      "type": "module",
+      "moduleName": "@babel/plugin-proposal-object-rest-spread",
+      "replacements": ["spread_syntax"]
+    },
+    "@babel/plugin-syntax-object-rest-spread": {
+      "type": "module",
+      "moduleName": "@babel/plugin-syntax-object-rest-spread",
+      "replacements": ["spread_syntax"]
+    },
+    "@babel/plugin-transform-object-rest-spread": {
+      "type": "module",
+      "moduleName": "@babel/plugin-transform-object-rest-spread",
+      "replacements": ["spread_syntax"]
+    },
     "abort-controller": {
       "type": "module",
       "moduleName": "abort-controller",
@@ -2586,6 +2625,11 @@
       "moduleName": "left-pad",
       "replacements": ["String.prototype.padStart"]
     },
+    "lie": {
+      "type": "module",
+      "moduleName": "lie",
+      "replacements": ["Promise"]
+    },
     "lodash.at": {
       "type": "module",
       "moduleName": "lodash.at",
@@ -2891,6 +2935,11 @@
       "type": "module",
       "moduleName": "p-defer",
       "replacements": ["Promise.withResolvers"]
+    },
+    "p-try": {
+      "type": "module",
+      "moduleName": "p-try",
+      "replacements": ["Promise.try"]
     },
     "pad-left": {
       "type": "module",
