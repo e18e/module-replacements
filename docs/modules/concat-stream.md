@@ -8,6 +8,7 @@ description: Modern alternatives to the concat-stream package
 
 ### Consuming as a string
 
+<!-- prettier-ignore -->
 ```js
 import concat from 'concat-stream' // [!code --]
 import { text } from 'node:stream/consumers' // [!code ++]
@@ -23,6 +24,7 @@ console.log(str) // [!code ++]
 
 ### Consuming as Buffer
 
+<!-- prettier-ignore -->
 ```js
 import concat from 'concat-stream' // [!code --]
 import { buffer } from 'node:stream/consumers' // [!code ++]
@@ -37,6 +39,7 @@ console.log(data.length) // [!code ++]
 
 ### Consuming as an Array
 
+<!-- prettier-ignore -->
 ```js
 import concat from 'concat-stream' // [!code --]
 import { toArray } from 'node:stream/consumers' // [!code ++]
