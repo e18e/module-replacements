@@ -522,6 +522,11 @@
       "moduleName": "except",
       "replacements": ["snippet::object-exclude"]
     },
+    "fast-base64-decode": {
+      "type": "module",
+      "moduleName": "fast-base64-decode",
+      "replacements": ["snippet::base64"]
+    },
     "filter-obj": {
       "type": "module",
       "moduleName": "filter-obj",
