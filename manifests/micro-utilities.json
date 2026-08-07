@@ -832,6 +832,11 @@
       "moduleName": "math-random",
       "replacements": ["snippet::math-random"]
     },
+    "object-filter": {
+      "type": "module",
+      "moduleName": "object-filter",
+      "replacements": ["snippet::object-filter"]
+    },
     "object.map": {
       "type": "module",
       "moduleName": "object.map",
