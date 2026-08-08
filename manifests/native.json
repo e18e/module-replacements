@@ -1638,6 +1638,15 @@
       },
       "nodeFeatureId": {"moduleName": "crypto", "exportName": "randomBytes"}
     },
+    "crypto.randomFill": {
+      "id": "crypto.randomFill",
+      "type": "native",
+      "url": {
+        "type": "node",
+        "id": "api/crypto.html#cryptorandomfillbuffer-offset-size-callback"
+      },
+      "nodeFeatureId": {"moduleName": "crypto", "exportName": "randomFill"}
+    },
     "es-errors": {
       "id": "es-errors",
       "type": "removal",
@@ -3050,6 +3059,11 @@
       "type": "module",
       "moduleName": "randombytes",
       "replacements": ["crypto.randomBytes"]
+    },
+    "randomfill": {
+      "type": "module",
+      "moduleName": "randomfill",
+      "replacements": ["crypto.randomFill"]
     },
     "reflect.getprototypeof": {
       "type": "module",
