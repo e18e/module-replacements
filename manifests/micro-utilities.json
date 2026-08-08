@@ -12,6 +12,12 @@
       "description": "You can use a combination of `filter` and `includes` to calculate the difference between two arrays.",
       "example": "const difference = (a, b) => a.filter((item) => !b.includes(item))"
     },
+    "snippet::array-filled-with": {
+      "id": "snippet::array-filled-with",
+      "type": "simple",
+      "description": "You can use `new Array` with `Array.prototype.fill` to create an array filled with identical elements",
+      "example": "new Array(length).fill(item);"
+    },
     "snippet::array-flatten": {
       "id": "snippet::array-flatten",
       "type": "simple",
@@ -856,6 +862,11 @@
       "type": "module",
       "moduleName": "path-key",
       "replacements": ["snippet::path-key"]
+    },
+    "repeat-element": {
+      "type": "module",
+      "moduleName": "repeat-element",
+      "replacements": ["snippet::array-filled-with"]
     },
     "shebang-regex": {
       "type": "module",
