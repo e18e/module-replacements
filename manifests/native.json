@@ -1820,6 +1820,12 @@
         "id": "Web/JavaScript/Reference/Global_Objects/TypedArray"
       }
     },
+    "http.STATUS_CODES": {
+      "id": "http.STATUS_CODES",
+      "type": "native",
+      "url": {"type": "node", "id": "api/http.html#httpstatus_codes"},
+      "nodeFeatureId": {"moduleName": "node:http", "exportName": "STATUS_CODES"}
+    },
     "optional_chaining": {
       "id": "optional_chaining",
       "type": "native",
@@ -2231,6 +2237,11 @@
       "type": "module",
       "moduleName": "buffer-from",
       "replacements": ["Buffer.from"]
+    },
+    "builtin-status-codes": {
+      "type": "module",
+      "moduleName": "builtin-status-codes",
+      "replacements": ["http.STATUS_CODES"]
     },
     "clone-deep": {
       "type": "module",
