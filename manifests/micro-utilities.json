@@ -863,6 +863,11 @@
       "moduleName": "path-key",
       "replacements": ["snippet::path-key"]
     },
+    "reduce-object": {
+      "type": "module",
+      "moduleName": "reduce-object",
+      "replacements": ["snippet::object-reduce"]
+    },
     "repeat-element": {
       "type": "module",
       "moduleName": "repeat-element",

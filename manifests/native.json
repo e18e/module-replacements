@@ -1620,6 +1620,18 @@
         "compatKey": "api.atob"
       }
     },
+    "await": {
+      "id": "await",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Operators/await"
+      },
+      "webFeatureId": {
+        "featureId": "async-await",
+        "compatKey": "javascript.operators.await"
+      }
+    },
     "btoa": {
       "id": "btoa",
       "type": "native",
@@ -1637,6 +1649,15 @@
         "id": "api/crypto.html#cryptorandombytessize-callback"
       },
       "nodeFeatureId": {"moduleName": "crypto", "exportName": "randomBytes"}
+    },
+    "crypto.randomFill": {
+      "id": "crypto.randomFill",
+      "type": "native",
+      "url": {
+        "type": "node",
+        "id": "api/crypto.html#cryptorandomfillbuffer-offset-size-callback"
+      },
+      "nodeFeatureId": {"moduleName": "crypto", "exportName": "randomFill"}
     },
     "es-errors": {
       "id": "es-errors",
@@ -1820,6 +1841,12 @@
         "id": "Web/JavaScript/Reference/Global_Objects/TypedArray"
       }
     },
+    "http.STATUS_CODES": {
+      "id": "http.STATUS_CODES",
+      "type": "native",
+      "url": {"type": "node", "id": "api/http.html#httpstatus_codes"},
+      "nodeFeatureId": {"moduleName": "node:http", "exportName": "STATUS_CODES"}
+    },
     "optional_chaining": {
       "id": "optional_chaining",
       "type": "native",
@@ -1969,6 +1996,11 @@
       "type": "module",
       "moduleName": "@babel/plugin-transform-object-rest-spread",
       "replacements": ["spread_syntax"]
+    },
+    "a-sync-waterfall": {
+      "type": "module",
+      "moduleName": "a-sync-waterfall",
+      "replacements": ["await"]
     },
     "abort-controller": {
       "type": "module",
@@ -2190,6 +2222,11 @@
       "moduleName": "arraybuffer.slice",
       "replacements": ["ArrayBuffer.prototype.slice"]
     },
+    "asap": {
+      "type": "module",
+      "moduleName": "asap",
+      "replacements": ["queueMicrotask"]
+    },
     "asynciterator.prototype": {
       "type": "module",
       "moduleName": "asynciterator.prototype",
@@ -2231,6 +2268,11 @@
       "type": "module",
       "moduleName": "buffer-from",
       "replacements": ["Buffer.from"]
+    },
+    "builtin-status-codes": {
+      "type": "module",
+      "moduleName": "builtin-status-codes",
+      "replacements": ["http.STATUS_CODES"]
     },
     "clone-deep": {
       "type": "module",
@@ -3001,6 +3043,11 @@
       "moduleName": "pinkie-promise",
       "replacements": ["Promise"]
     },
+    "promise": {
+      "type": "module",
+      "moduleName": "promise",
+      "replacements": ["Promise"]
+    },
     "promise-polyfill": {
       "type": "module",
       "moduleName": "promise-polyfill",
@@ -3050,6 +3097,11 @@
       "type": "module",
       "moduleName": "randombytes",
       "replacements": ["crypto.randomBytes"]
+    },
+    "randomfill": {
+      "type": "module",
+      "moduleName": "randomfill",
+      "replacements": ["crypto.randomFill"]
     },
     "reflect.getprototypeof": {
       "type": "module",
