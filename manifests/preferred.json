@@ -244,6 +244,12 @@
       "replacements": ["package-manager-detector"],
       "url": {"type": "e18e", "id": "detect-package-manager"}
     },
+    "dev-null": {
+      "type": "module",
+      "moduleName": "dev-null",
+      "replacements": ["node:stream"],
+      "url": {"type": "e18e", "id": "dev-null"}
+    },
     "dot-prop": {
       "type": "module",
       "moduleName": "dot-prop",
