@@ -857,6 +857,11 @@
       "moduleName": "path-key",
       "replacements": ["snippet::path-key"]
     },
+    "reduce-object": {
+      "type": "module",
+      "moduleName": "reduce-object",
+      "replacements": ["snippet::object-reduce"]
+    },
     "shebang-regex": {
       "type": "module",
       "moduleName": "shebang-regex",
