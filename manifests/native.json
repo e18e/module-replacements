@@ -1623,7 +1623,10 @@
     "await": {
       "id": "await",
       "type": "native",
-      "url": {"type": "mdn", "id": "Web/JavaScript/Reference/Operators/await"},
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Operators/await"
+      },
       "webFeatureId": {
         "featureId": "async-await", 
         "compatKey": "javascript.operators.await"
