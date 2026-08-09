@@ -199,7 +199,8 @@
     "cross-spawn": {
       "type": "module",
       "moduleName": "cross-spawn",
-      "replacements": ["tinyexec"]
+      "replacements": ["tinyexec"],
+      "url": {"type": "e18e", "id": "cross-spawn"}
     },
     "crypto-js": {
       "type": "module",
