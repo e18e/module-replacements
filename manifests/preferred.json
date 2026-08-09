@@ -196,6 +196,11 @@
       "replacements": ["fetch", "ofetch", "ky"],
       "url": {"type": "e18e", "id": "fetch"}
     },
+    "cross-spawn": {
+      "type": "module",
+      "moduleName": "cross-spawn",
+      "replacements": ["tinyexec"]
+    },
     "crypto-js": {
       "type": "module",
       "moduleName": "crypto-js",
