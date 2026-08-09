@@ -58,7 +58,7 @@
       "id": "snippet::assert",
       "type": "simple",
       "description": "You can use a simple function to assert a value or an expression.",
-      "example": "function assert(val: unknown, msg: string): asserts val {\n  if (!val) throw new Error(msg)\n}"
+      "example": "function assert(val, msg) {\n  if (!val) throw new Error(msg)\n}"
     },
     "snippet::async-function-constructor": {
       "id": "snippet::async-function-constructor",
