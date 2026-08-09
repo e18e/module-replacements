@@ -54,6 +54,12 @@
       "description": "You can convert to and from a `Set` to remove duplicates from an array.",
       "example": "const unique = (arr) => [...new Set(arr)]"
     },
+    "snippet::assert": {
+      "id": "snippet::assert",
+      "type": "simple",
+      "description": "You can use a simple function to assert a value or an expression.",
+      "example": "function assert(val: unknown, msg: string): asserts val {\n  if (!val) throw new Error(msg)\n}"
+    },
     "snippet::async-function-constructor": {
       "id": "snippet::async-function-constructor",
       "type": "simple",
@@ -836,6 +842,11 @@
       "type": "module",
       "moduleName": "math-random",
       "replacements": ["snippet::math-random"]
+    },
+    "minimalistic-assert": {
+      "type": "module",
+      "moduleName": "minimalistic-assert",
+      "replacements": ["snippet::assert"]
     },
     "object-filter": {
       "type": "module",
