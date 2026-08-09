@@ -3021,6 +3021,11 @@
       "moduleName": "promise.prototype.finally",
       "replacements": ["Promise.prototype.finally"]
     },
+    "promise": {
+      "type": "module",
+      "moduleName": "promise",
+      "replacements": ["Promise"]
+    },
     "promish": {
       "type": "module",
       "moduleName": "promish",
