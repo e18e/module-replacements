@@ -3001,6 +3001,11 @@
       "moduleName": "pinkie-promise",
       "replacements": ["Promise"]
     },
+    "promise": {
+      "type": "module",
+      "moduleName": "promise",
+      "replacements": ["Promise"]
+    },
     "promise-polyfill": {
       "type": "module",
       "moduleName": "promise-polyfill",
@@ -3020,11 +3025,6 @@
       "type": "module",
       "moduleName": "promise.prototype.finally",
       "replacements": ["Promise.prototype.finally"]
-    },
-    "promise": {
-      "type": "module",
-      "moduleName": "promise",
-      "replacements": ["Promise"]
     },
     "promish": {
       "type": "module",
