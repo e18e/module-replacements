@@ -1620,6 +1620,15 @@
         "compatKey": "api.atob"
       }
     },
+    "await": {
+      "id": "await",
+      "type": "native",
+      "url": {"type": "mdn", "id": "Web/JavaScript/Reference/Operators/await"},
+      "webFeatureId": {
+        "featureId": "async-await", 
+        "compatKey": "javascript.operators.await"
+      }
+    },
     "btoa": {
       "id": "btoa",
       "type": "native",
@@ -1969,6 +1978,11 @@
       "type": "module",
       "moduleName": "@babel/plugin-transform-object-rest-spread",
       "replacements": ["spread_syntax"]
+    },
+    "a-sync-waterfall": {
+      "type": "module",
+      "moduleName": "a-sync-waterfall",
+      "replacements": ["await"]
     },
     "abort-controller": {
       "type": "module",
