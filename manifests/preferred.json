@@ -72,6 +72,12 @@
       "replacements": ["Promise", "nativebird"],
       "url": {"type": "e18e", "id": "bluebird-q"}
     },
+    "bluebird-lst": {
+      "type": "module",
+      "moduleName": "bluebird-lst",
+      "replacements": ["Promise", "nativebird"],
+      "url": {"type": "e18e", "id": "bluebird-q"}
+    },
     "body-parser": {
       "type": "module",
       "moduleName": "body-parser",
