@@ -2783,7 +2783,8 @@
     "yaml-ast-parser": {
       "type": "module",
       "moduleName": "yaml-ast-parser",
-      "replacements": ["yaml"]
+      "replacements": ["yaml"],
+      "url": {"type": "e18e", "id": "yaml-ast-parser"}
     },
     "yamljs": {
       "type": "module",
