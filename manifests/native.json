@@ -1628,7 +1628,7 @@
         "id": "Web/JavaScript/Reference/Operators/await"
       },
       "webFeatureId": {
-        "featureId": "async-await", 
+        "featureId": "async-await",
         "compatKey": "javascript.operators.await"
       }
     },
