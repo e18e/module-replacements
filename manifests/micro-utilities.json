@@ -12,6 +12,12 @@
       "description": "You can use a combination of `filter` and `includes` to calculate the difference between two arrays.",
       "example": "const difference = (a, b) => a.filter((item) => !b.includes(item))"
     },
+    "snippet::array-filled-with": {
+      "id": "snippet::array-filled-with",
+      "type": "simple",
+      "description": "You can use `new Array` with `Array.prototype.fill` to create an array filled with identical elements",
+      "example": "new Array(length).fill(item);"
+    },
     "snippet::array-flatten": {
       "id": "snippet::array-flatten",
       "type": "simple",
@@ -53,6 +59,12 @@
       "type": "simple",
       "description": "You can convert to and from a `Set` to remove duplicates from an array.",
       "example": "const unique = (arr) => [...new Set(arr)]"
+    },
+    "snippet::assert": {
+      "id": "snippet::assert",
+      "type": "simple",
+      "description": "You can use a simple function to assert a value or an expression.",
+      "example": "function assert(val, msg) {\n  if (!val) throw new Error(msg)\n}"
     },
     "snippet::async-function-constructor": {
       "id": "snippet::async-function-constructor",
@@ -843,6 +855,11 @@
       "moduleName": "math-random",
       "replacements": ["snippet::math-random"]
     },
+    "minimalistic-assert": {
+      "type": "module",
+      "moduleName": "minimalistic-assert",
+      "replacements": ["snippet::assert"]
+    },
     "object-filter": {
       "type": "module",
       "moduleName": "object-filter",
@@ -862,6 +879,16 @@
       "type": "module",
       "moduleName": "path-key",
       "replacements": ["snippet::path-key"]
+    },
+    "reduce-object": {
+      "type": "module",
+      "moduleName": "reduce-object",
+      "replacements": ["snippet::object-reduce"]
+    },
+    "repeat-element": {
+      "type": "module",
+      "moduleName": "repeat-element",
+      "replacements": ["snippet::array-filled-with"]
     },
     "set-function-length": {
       "type": "module",

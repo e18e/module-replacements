@@ -72,6 +72,12 @@
       "replacements": ["Promise", "nativebird"],
       "url": {"type": "e18e", "id": "bluebird-q"}
     },
+    "bluebird-lst": {
+      "type": "module",
+      "moduleName": "bluebird-lst",
+      "replacements": ["Promise", "nativebird"],
+      "url": {"type": "e18e", "id": "bluebird-q"}
+    },
     "body-parser": {
       "type": "module",
       "moduleName": "body-parser",
@@ -202,6 +208,12 @@
       "replacements": ["fetch", "ofetch", "ky"],
       "url": {"type": "e18e", "id": "fetch"}
     },
+    "cross-spawn": {
+      "type": "module",
+      "moduleName": "cross-spawn",
+      "replacements": ["tinyexec"],
+      "url": {"type": "e18e", "id": "cross-spawn"}
+    },
     "crypto-js": {
       "type": "module",
       "moduleName": "crypto-js",
@@ -243,6 +255,12 @@
       "moduleName": "detect-package-manager",
       "replacements": ["package-manager-detector"],
       "url": {"type": "e18e", "id": "detect-package-manager"}
+    },
+    "dev-null": {
+      "type": "module",
+      "moduleName": "dev-null",
+      "replacements": ["node:stream"],
+      "url": {"type": "e18e", "id": "dev-null"}
     },
     "dot-prop": {
       "type": "module",
