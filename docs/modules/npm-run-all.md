@@ -87,7 +87,6 @@ If you are using bun you can use [`bun run --parallel`](https://bun.com/docs/run
 }
 ```
 
-
 ## `pnpm run "/<regex>/"`
 
 If you are using pnpm you can use [regex script matching](https://pnpm.io/cli/run#running-multiple-scripts) to run multiple scripts at once. Wrap the regex in quotes so the shell does not mangle it.
