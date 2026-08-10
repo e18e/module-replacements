@@ -86,3 +86,27 @@ If you are using bun you can use [`bun run --parallel`](https://bun.com/docs/run
   }
 }
 ```
+
+
+## `pnpm run "/<regex>/"`
+
+If you are using pnpm you can use [regex script matching](https://pnpm.io/cli/run#running-multiple-scripts) to run multiple scripts at once. Wrap the regex in quotes so the shell does not mangle it.
+
+```json
+{
+  "scripts": {
+    "dev": "npm-run-all --parallel \"dev:*\"", // [!code --]
+    "dev": "pnpm run \"/^dev:.*/\"" // [!code ++]
+  }
+}
+```
+
+To run them sequentially instead of in parallel, add [`--sequential`](https://pnpm.io/cli/run#--sequential--s):
+
+```json
+{
+  "scripts": {
+    "build": "pnpm run --sequential \"/^build:.*/\""
+  }
+}
+```
