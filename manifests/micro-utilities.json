@@ -382,7 +382,7 @@
       "id": "snippet::set-function-length",
       "type": "simple",
       "description": "You can set `length` of a function using `Object.defineProperty`.",
-      "example": "Object.defineProperty(fn, 'length', { value: newLength, configurable: true });"
+      "example": "const setFunctionLength = (fn, length) => Object.defineProperty(fn, 'length', { value: length, configurable: true });"
     },
     "snippet::set-tostringtag": {
       "id": "snippet::set-tostringtag",
