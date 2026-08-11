@@ -880,6 +880,11 @@
       "moduleName": "path-key",
       "replacements": ["snippet::path-key"]
     },
+    "path-name": {
+      "type": "module",
+      "moduleName": "path-name",
+      "replacements": ["snippet::path-key"]
+    },
     "reduce-object": {
       "type": "module",
       "moduleName": "reduce-object",
