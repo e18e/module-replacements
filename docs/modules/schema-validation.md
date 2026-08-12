@@ -2,9 +2,9 @@
 description: Modern alternatives for TypeScript schema validation
 ---
 
-# TypeScript schema validation
+# TypeScript schema validation (shared)
 
-This page contains common, recommended alternatives for TypeScript schema validation.
+This page contains the common, recommended alternatives and examples for TypeScript schema validation libraries.
 
 See [Schema Benchmarks](https://schemabenchmarks.dev/download) to explore other schema validation libraries and compare their bundle sizes and runtime behavior.
 
@@ -12,7 +12,9 @@ When migrating between schema libraries, verify optionality, empty-string handli
 
 ## `valibot`
 
-Valibot uses a functional API with tree-shakable schema and validation actions.
+[`valibot`](https://valibot.dev/) is a modular schema validation library with a functional, tree-shakable API.
+
+Example:
 
 ```ts
 import * as v from 'valibot'
@@ -31,7 +33,9 @@ Valibot makes transformations explicit (for example, `v.toNumber()`), and `v.obj
 
 ## `zod/mini`
 
-Zod Mini is the tree-shakable, functional API included with Zod 4. Install `zod@^4.0.0` and import the `zod/mini` subpath:
+[`zod/mini`](https://zod.dev/packages/mini) is the tree-shakable, functional API included with Zod 4. Install `zod@^4.0.0` and import the `zod/mini` subpath.
+
+Example:
 
 ```ts
 import * as z from 'zod/mini'
