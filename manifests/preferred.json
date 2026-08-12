@@ -310,6 +310,12 @@
       "replacements": ["emoji-regex-xs", "unicodeClassEscape"],
       "url": {"type": "e18e", "id": "emoji-regex"}
     },
+    "error-stack-parser": {
+      "type": "module",
+      "moduleName": "error-stack-parser",
+      "replacements": ["error-stack-parser-es"],
+      "url": {"type": "e18e", "id": "error-stack-parser"}
+    },
     "eslint-config-airbnb": {
       "type": "module",
       "moduleName": "eslint-config-airbnb",
@@ -3143,6 +3149,11 @@
       "id": "empathic",
       "type": "documented",
       "replacementModule": "empathic"
+    },
+    "error-stack-parser-es": {
+      "id": "error-stack-parser-es",
+      "type": "documented",
+      "replacementModule": "error-stack-parser-es"
     },
     "es-toolkit": {
       "id": "es-toolkit",
