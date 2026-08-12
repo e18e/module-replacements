@@ -4,7 +4,7 @@ description: Modern alternatives for TypeScript schema validation
 
 # TypeScript schema validation
 
-This page contains common, recommended alternatives for TypeScript schema validation. [`valibot`](https://valibot.dev/) and [`zod/mini`](https://zod.dev/packages/mini) are modular, tree-shakable options that both support [Standard Schema](https://standardschema.dev/), allowing them to work with schema-agnostic integrations.
+This page contains common, recommended alternatives for TypeScript schema validation.
 
 See [Schema Benchmarks](https://schemabenchmarks.dev/download) to explore other schema validation libraries and compare their bundle sizes and runtime behavior.
 
