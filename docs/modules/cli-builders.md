@@ -75,6 +75,7 @@ if (argv.flags.time === 'morning') {
 
 ```ts
 import cac from 'cac'
+
 const cli = cac()
 
 cli
