@@ -69,6 +69,31 @@ if (argv.flags.time === 'morning') {
 }
 ```
 
+## `cac`
+
+[`cac`](https://github.com/cacjs/cac) is a simple yet powerful framework for building CLI applications for Node.js
+
+```ts
+import cac from 'cac'
+const cli = cac()
+
+cli
+  .command('deploy <folder>', 'Deploy a folder to AWS')
+  .option('--scale [level]', 'Scaling level')
+  .action((folder, options) => {
+    // ...
+  })
+
+cli
+  .command('build [project]', 'Build a project')
+  .option('--out <dir>', 'Output directory')
+  .action((folder, options) => {
+    // ...
+  })
+
+cli.parse()
+```
+
 ## Argument parsers
 
 If you only need an argument parser, check the [argument parsers page](https://e18e.dev/docs/replacements/parseargs).

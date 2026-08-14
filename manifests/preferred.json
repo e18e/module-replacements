@@ -150,6 +150,12 @@
       "replacements": ["tinyclip", "ClipboardAPI"],
       "url": {"type": "e18e", "id": "clipboardy"}
     },
+    "coa": {
+      "type": "module",
+      "moduleName": "coa",
+      "replacements": ["sade", "cleye", "cac"],
+      "url": {"type": "e18e", "id": "cli-builders"}
+    },
     "colors": {
       "type": "module",
       "moduleName": "colors",
