@@ -3076,11 +3076,7 @@
       "type": "native",
       "url": "https://bun.com/docs/test"
     },
-    "cac": {
-      "id": "cac",
-      "type": "documented",
-      "replacementModule": "cac"
-    },
+    "cac": {"id": "cac", "type": "documented", "replacementModule": "cac"},
     "cleye": {
       "id": "cleye",
       "type": "documented",
