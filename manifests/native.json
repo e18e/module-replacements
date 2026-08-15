@@ -3253,6 +3253,11 @@
       "moduleName": "through2-map",
       "replacements": ["Readable.map"]
     },
+    "time-stamp": {
+      "type": "module",
+      "moduleName": "time-stamp",
+      "replacements": ["Intl.DateTimeFormat"]
+    },
     "to-buffer": {
       "type": "module",
       "moduleName": "to-buffer",
