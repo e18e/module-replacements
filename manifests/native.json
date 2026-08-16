@@ -1871,6 +1871,12 @@
         "compatKey": "javascript.builtins.parseInt"
       }
     },
+    "path.isAbsolute": {
+      "id": "path.isAbsolute",
+      "type": "native",
+      "url": {"type": "node", "id": "api/path.html#pathisabsolutepath"},
+      "nodeFeatureId": {"moduleName": "path", "exportName": "isAbsolute"}
+    },
     "path.matchesGlob": {
       "id": "path.matchesGlob",
       "type": "native",
@@ -3032,6 +3038,11 @@
       "type": "module",
       "moduleName": "parseint",
       "replacements": ["parseInt"]
+    },
+    "path-is-absolute": {
+      "type": "module",
+      "moduleName": "path-is-absolute",
+      "replacements": ["path.isAbsolute"]
     },
     "path-parse": {
       "type": "module",
