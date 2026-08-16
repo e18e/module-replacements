@@ -620,6 +620,11 @@
       "moduleName": "is-even",
       "replacements": ["snippet::is-even"]
     },
+    "is-function": {
+      "type": "module",
+      "moduleName": "is-function",
+      "replacements": ["snippet::is-function"]
+    },
     "is-generator-function": {
       "type": "module",
       "moduleName": "is-generator-function",
