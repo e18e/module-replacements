@@ -942,6 +942,18 @@
         "compatKey": "javascript.builtins.Math.trunc"
       }
     },
+    "Number.MAX_SAFE_INTEGER": {
+      "id": "Number.MAX_SAFE_INTEGER",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER"
+      },
+      "webFeatureId": {
+        "featureId": "number",
+        "compatKey": "javascript.builtins.Number.MAX_SAFE_INTEGER"
+      }
+    },
     "Number.isFinite": {
       "id": "Number.isFinite",
       "type": "native",
@@ -2876,6 +2888,11 @@
       "type": "module",
       "moduleName": "math.sign",
       "replacements": ["Math.sign"]
+    },
+    "max-safe-int": {
+      "type": "module",
+      "moduleName": "max-safe-int",
+      "replacements": ["Number.MAX_SAFE_INTEGER"]
     },
     "micromatch": {
       "type": "module",
