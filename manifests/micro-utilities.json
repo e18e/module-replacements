@@ -222,6 +222,12 @@
       "description": "You can use `Object.is` to check if a value is negative zero.",
       "example": "Object.is(n, -0)"
     },
+    "snippet::is-nil": {
+      "id": "snippet::is-nil",
+      "type": "simple",
+      "description": "You can check if a value is `null` or `undefined` using loose equality with `null`.",
+      "example": "value == null"
+    },
     "snippet::is-npm": {
       "id": "snippet::is-npm",
       "type": "simple",
@@ -649,6 +655,11 @@
       "type": "module",
       "moduleName": "is-negative-zero",
       "replacements": ["snippet::is-negative-zero"]
+    },
+    "is-nil": {
+      "type": "module",
+      "moduleName": "is-nil",
+      "replacements": ["snippet::is-nil"]
     },
     "is-npm": {
       "type": "module",
