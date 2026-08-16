@@ -1859,6 +1859,12 @@
         "compatKey": "javascript.operators.optional_chaining"
       }
     },
+    "os.tmpdir": {
+      "id": "os.tmpdir",
+      "type": "native",
+      "url": {"type": "node", "id": "api/os.html#ostmpdir"},
+      "nodeFeatureId": {"moduleName": "os", "exportName": "tmpdir"}
+    },
     "parseInt": {
       "id": "parseInt",
       "type": "native",
@@ -3012,6 +3018,11 @@
       "type": "module",
       "moduleName": "object.values",
       "replacements": ["Object.values"]
+    },
+    "os-tmpdir": {
+      "type": "module",
+      "moduleName": "os-tmpdir",
+      "replacements": ["os.tmpdir"]
     },
     "p-defer": {
       "type": "module",
