@@ -3047,6 +3047,11 @@
       "moduleName": "os-tmpdir",
       "replacements": ["os.tmpdir"]
     },
+    "own-keys": {
+      "type": "module",
+      "moduleName": "own-keys",
+      "replacements": ["Reflect.ownKeys"]
+    },
     "p-defer": {
       "type": "module",
       "moduleName": "p-defer",
