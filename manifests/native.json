@@ -3082,6 +3082,11 @@
       "moduleName": "pinkie-promise",
       "replacements": ["Promise"]
     },
+    "pn": {
+      "type": "module",
+      "moduleName": "pn",
+      "replacements": ["util.promisify"]
+    },
     "promise": {
       "type": "module",
       "moduleName": "promise",
