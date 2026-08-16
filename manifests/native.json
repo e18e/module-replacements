@@ -708,6 +708,15 @@
         "compatKey": "javascript.builtins.Error.cause"
       }
     },
+    "EventEmitter": {
+      "id": "EventEmitter",
+      "type": "native",
+      "nodeFeatureId": {
+        "moduleName": "node:events",
+        "exportName": "EventEmitter"
+      },
+      "url": {"type": "node", "id": "api/events.html#class-eventemitter"}
+    },
     "EventTarget": {
       "id": "EventTarget",
       "type": "native",
@@ -3331,6 +3340,11 @@
       "type": "module",
       "moduleName": "typed-array-length",
       "replacements": ["%TypedArray%.prototype.length"]
+    },
+    "typed-emitter": {
+      "type": "module",
+      "moduleName": "typed-emitter",
+      "replacements": ["EventEmitter"]
     },
     "typedarray": {
       "type": "module",
