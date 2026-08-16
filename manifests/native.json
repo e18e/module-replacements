@@ -1641,15 +1641,6 @@
         "compatKey": "api.btoa"
       }
     },
-    "crypto.getRandomValues": {
-      "id": "crypto.getRandomValues",
-      "type": "native",
-      "url": {"type": "mdn", "id": "Web/API/Crypto/getRandomValues"},
-      "webFeatureId": {
-        "featureId": "web-cryptography",
-        "compatKey": "api.Crypto.getRandomValues"
-      }
-    },
     "crypto.randomBytes": {
       "id": "crypto.randomBytes",
       "type": "native",
@@ -1668,40 +1659,13 @@
       },
       "nodeFeatureId": {"moduleName": "crypto", "exportName": "randomFill"}
     },
-    "crypto.subtle.deriveBits": {
-      "id": "crypto.subtle.deriveBits",
+    "crypto.subtle": {
+      "id": "crypto.subtle",
       "type": "native",
-      "url": {"type": "mdn", "id": "Web/API/SubtleCrypto/deriveBits"},
+      "url": {"type": "mdn", "id": "Web/API/SubtleCrypto"},
       "webFeatureId": {
         "featureId": "web-cryptography",
-        "compatKey": "api.SubtleCrypto.deriveBits.x25519"
-      }
-    },
-    "crypto.subtle.digest": {
-      "id": "crypto.subtle.digest",
-      "type": "native",
-      "url": {"type": "mdn", "id": "Web/API/SubtleCrypto/digest"},
-      "webFeatureId": {
-        "featureId": "web-cryptography",
-        "compatKey": "api.SubtleCrypto.digest"
-      }
-    },
-    "crypto.subtle.sign": {
-      "id": "crypto.subtle.sign",
-      "type": "native",
-      "url": {"type": "mdn", "id": "Web/API/SubtleCrypto/sign"},
-      "webFeatureId": {
-        "featureId": "web-cryptography",
-        "compatKey": "api.SubtleCrypto.sign.ed25519"
-      }
-    },
-    "crypto.subtle.verify": {
-      "id": "crypto.subtle.verify",
-      "type": "native",
-      "url": {"type": "mdn", "id": "Web/API/SubtleCrypto/verify"},
-      "webFeatureId": {
-        "featureId": "web-cryptography",
-        "compatKey": "api.SubtleCrypto.verify.ed25519"
+        "compatKey": "api.SubtleCrypto"
       }
     },
     "es-errors": {
@@ -3316,13 +3280,7 @@
     "tweetnacl": {
       "type": "module",
       "moduleName": "tweetnacl",
-      "replacements": [
-        "crypto.getRandomValues",
-        "crypto.subtle.digest",
-        "crypto.subtle.sign",
-        "crypto.subtle.verify",
-        "crypto.subtle.deriveBits"
-      ],
+      "replacements": ["crypto.subtle"],
       "url": {"type": "e18e", "id": "tweetnacl"}
     },
     "typed-array-buffer": {
