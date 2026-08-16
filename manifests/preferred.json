@@ -168,6 +168,12 @@
       "replacements": ["node:stream"],
       "url": {"type": "e18e", "id": "concat-stream"}
     },
+    "copy-paste": {
+      "type": "module",
+      "moduleName": "copy-paste",
+      "replacements": ["tinyclip", "ClipboardAPI"],
+      "url": {"type": "e18e", "id": "clipboardy"}
+    },
     "copy-text-to-clipboard": {
       "type": "module",
       "moduleName": "copy-text-to-clipboard",
