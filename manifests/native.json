@@ -2041,6 +2041,11 @@
       "moduleName": "airbnb-js-shims",
       "replacements": ["airbnb-js-shims"]
     },
+    "any-promise": {
+      "type": "module",
+      "moduleName": "any-promise",
+      "replacements": ["Promise"]
+    },
     "arr-filter": {
       "type": "module",
       "moduleName": "arr-filter",
