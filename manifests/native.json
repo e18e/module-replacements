@@ -2470,6 +2470,11 @@
       "moduleName": "es6-symbol",
       "replacements": ["Symbol"]
     },
+    "es6-weak-map": {
+      "type": "module",
+      "moduleName": "es6-weak-map",
+      "replacements": ["WeakMap"]
+    },
     "es7-shim": {
       "type": "module",
       "moduleName": "es7-shim",
