@@ -1,11 +1,11 @@
-# {moduleName}
+---
+description: Modern alternatives to the {moduleName} package for {description}
+---
 
-{Optional description}
+# Replacements for {moduleName}
 
-## Alternatives
-
-### {Alternative package name}
+## {Alternative package name}
 
 {Description of alternative package}
 
-[Project Page](https://github.com)
+{Example replacement}
