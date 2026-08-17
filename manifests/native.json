@@ -2387,15 +2387,15 @@
       "moduleName": "define-property",
       "replacements": ["Object.defineProperty"]
     },
-    "ends-with": {
-      "type": "module",
-      "moduleName": "ends-with",
-      "replacements": ["String.prototype.endsWith"]
-    },
     "encode-utf8": {
       "type": "module",
       "moduleName": "encode-utf8",
       "replacements": ["TextEncoder.encode"]
+    },
+    "ends-with": {
+      "type": "module",
+      "moduleName": "ends-with",
+      "replacements": ["String.prototype.endsWith"]
     },
     "error-cause": {
       "type": "module",
