@@ -1369,6 +1369,18 @@
         "compatKey": "javascript.builtins.String.at"
       }
     },
+    "String.prototype.endsWith": {
+      "id": "String.prototype.endsWith",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/String/endsWith"
+      },
+      "webFeatureId": {
+        "featureId": "string-startsends-with",
+        "compatKey": "javascript.builtins.String.endsWith"
+      }
+    },
     "String.prototype.includes": {
       "id": "String.prototype.includes",
       "type": "native",
@@ -2374,6 +2386,11 @@
       "type": "module",
       "moduleName": "define-property",
       "replacements": ["Object.defineProperty"]
+    },
+    "ends-with": {
+      "type": "module",
+      "moduleName": "ends-with",
+      "replacements": ["String.prototype.endsWith"]
     },
     "encode-utf8": {
       "type": "module",
