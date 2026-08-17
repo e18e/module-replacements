@@ -1291,6 +1291,12 @@
         "compatKey": "javascript.builtins.Promise.withResolvers"
       }
     },
+    "Readable.from": {
+      "id": "Readable.from",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:stream", "exportName": "Readable"},
+      "url": {"type": "node", "id": "api/stream.html#streamreadablefromiterable-options"}
+    },
     "Readable.map": {
       "id": "Readable.map",
       "type": "native",
@@ -2519,6 +2525,26 @@
       "type": "module",
       "moduleName": "foreachasync",
       "replacements": ["for...of"]
+    },
+    "from": {
+      "type": "module",
+      "moduleName": "from",
+      "replacements": ["Readable.from"]
+    },
+    "from2": {
+      "type": "module",
+      "moduleName": "from2",
+      "replacements": ["Readable.from"]
+    },
+    "from2-array": {
+      "type": "module",
+      "moduleName": "from2-array",
+      "replacements": ["Readable.from"]
+    },
+    "from2-string": {
+      "type": "module",
+      "moduleName": "from2-string",
+      "replacements": ["Readable.from"]
     },
     "fs-exists-sync": {
       "type": "module",
