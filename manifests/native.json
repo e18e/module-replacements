@@ -1859,6 +1859,18 @@
       "url": {"type": "node", "id": "api/http.html#httpstatus_codes"},
       "nodeFeatureId": {"moduleName": "node:http", "exportName": "STATUS_CODES"}
     },
+    "import.meta": {
+      "id": "import.meta",
+      "type": "native",
+      "webFeatureId": {
+        "featureId": "js-modules",
+        "compatKey": "javascript.operators.import_meta"
+      },
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Operators/import.meta"
+      }
+    },
     "optional_chaining": {
       "id": "optional_chaining",
       "type": "native",
@@ -2374,6 +2386,12 @@
       "type": "module",
       "moduleName": "define-property",
       "replacements": ["Object.defineProperty"]
+    },
+    "desm": {
+      "type": "module",
+      "moduleName": "desm",
+      "replacements": ["import.meta"],
+      "url": {"type": "e18e", "id": "desm"}
     },
     "encode-utf8": {
       "type": "module",
