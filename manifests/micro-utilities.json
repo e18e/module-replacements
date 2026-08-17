@@ -210,6 +210,12 @@
       "description": "You can check if the current environment is SSH by checking if the `SSH_CONNECTION` environment variable is set.",
       "example": "const isInSsh = Boolean(process.env.SSH_CONNECTION);"
     },
+    "snippet::is-map": {
+      "id": "snippet::is-map",
+      "type": "simple",
+      "description": "You can use `instanceof Map` to check if a value is a `Map`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object Map]\"`",
+      "example": "const isMap = v instanceof Map;\n// for cross-realm\nconst isMapCrossRealm = Object.prototype.toString.call(v) === \"[object Map]\""
+    },
     "snippet::is-negative": {
       "id": "snippet::is-negative",
       "type": "simple",
@@ -650,6 +656,11 @@
       "type": "module",
       "moduleName": "is-in-ssh",
       "replacements": ["snippet::is-in-ssh"]
+    },
+    "is-map": {
+      "type": "module",
+      "moduleName": "is-map",
+      "replacements": ["snippet::is-map"]
     },
     "is-negative": {
       "type": "module",
