@@ -2574,6 +2574,18 @@
       "replacements": ["crypto.timingSafeEqual"],
       "url": {"type": "e18e", "id": "buffer-equal-constant-time"}
     },
+    "semver": {
+      "type": "module",
+      "moduleName": "semver",
+      "replacements": ["verkit"],
+      "url": {"type": "e18e", "id": "semver"}
+    },
+    "semver-diff": {
+      "type": "module",
+      "moduleName": "semver-diff",
+      "replacements": ["verkit"],
+      "url": {"type": "e18e", "id": "semver"}
+    },
     "set-value": {
       "type": "module",
       "moduleName": "set-value",
@@ -3710,6 +3722,11 @@
       "id": "valibot",
       "type": "documented",
       "replacementModule": "valibot"
+    },
+    "verkit": {
+      "id": "verkit",
+      "type": "documented",
+      "replacementModule": "verkit"
     },
     "vitest": {
       "id": "vitest",
