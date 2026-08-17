@@ -1295,7 +1295,10 @@
       "id": "Readable.from",
       "type": "native",
       "nodeFeatureId": {"moduleName": "node:stream", "exportName": "Readable"},
-      "url": {"type": "node", "id": "api/stream.html#streamreadablefromiterable-options"}
+      "url": {
+        "type": "node",
+        "id": "api/stream.html#streamreadablefromiterable-options"
+      }
     },
     "Readable.map": {
       "id": "Readable.map",
