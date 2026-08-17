@@ -1465,6 +1465,18 @@
         "compatKey": "javascript.builtins.String.split"
       }
     },
+    "String.prototype.startsWith": {
+      "id": "String.prototype.startsWith",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/String/startsWith"
+      },
+      "webFeatureId": {
+        "featureId": "string-startsends-with",
+        "compatKey": "javascript.builtins.String.startsWith"
+      }
+    },
     "String.prototype.substr": {
       "id": "String.prototype.substr",
       "type": "native",
@@ -3181,6 +3193,11 @@
       "type": "module",
       "moduleName": "setprototypeof",
       "replacements": ["Object.setPrototypeOf"]
+    },
+    "starts-with": {
+      "type": "module",
+      "moduleName": "starts-with",
+      "replacements": ["String.prototype.startsWith"]
     },
     "string.prototype.at": {
       "type": "module",
