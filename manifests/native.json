@@ -759,6 +759,18 @@
         "compatKey": "javascript.builtins.Intl.DateTimeFormat.DateTimeFormat"
       }
     },
+    "Intl.supportedValuesOf": {
+      "id": "Intl.supportedValuesOf",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf"
+      },
+      "webFeatureId": {
+        "featureId": "intl",
+        "compatKey": "javascript.builtins.Intl.supportedValuesOf"
+      }
+    },
     "Iterator": {
       "id": "Iterator",
       "type": "native",
@@ -1613,6 +1625,18 @@
       "webFeatureId": {
         "featureId": "symbol",
         "compatKey": "javascript.builtins.Symbol.description"
+      }
+    },
+    "Temporal": {
+      "id": "Temporal",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Temporal"
+      },
+      "webFeatureId": {
+        "featureId": "temporal",
+        "compatKey": "javascript.builtins.Temporal"
       }
     },
     "TextDecoder": {
@@ -3415,6 +3439,12 @@
       "type": "module",
       "moduleName": "time-stamp",
       "replacements": ["Intl.DateTimeFormat"]
+    },
+    "timezone-support": {
+      "type": "module",
+      "moduleName": "timezone-support",
+      "replacements": ["Temporal", "Intl.supportedValuesOf"],
+      "url": {"type": "e18e", "id": "timezone-support"}
     },
     "to-buffer": {
       "type": "module",
