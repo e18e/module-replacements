@@ -12,6 +12,12 @@
       "replacements": ["fetch", "ofetch", "ky"],
       "url": {"type": "e18e", "id": "fetch"}
     },
+    "@img/colour": {
+      "type": "module",
+      "moduleName": "@img/colour",
+      "replacements": ["color"],
+      "url": {"type": "e18e", "id": "img-colour"}
+    },
     "@jsdevtools/ez-spawn": {
       "type": "module",
       "moduleName": "@jsdevtools/ez-spawn",
@@ -3099,6 +3105,11 @@
       "id": "cleye",
       "type": "documented",
       "replacementModule": "cleye"
+    },
+    "color": {
+      "id": "color",
+      "type": "documented",
+      "replacementModule": "color"
     },
     "concurrently": {
       "id": "concurrently",
