@@ -2684,6 +2684,26 @@
       ],
       "url": {"type": "e18e", "id": "tempy"}
     },
+    "temp-dir": {
+      "type": "module",
+      "moduleName": "temp-dir",
+      "replacements": [
+        "fs.promises.mkdtempDisposable",
+        "fs.promises.mkdtemp",
+        "Deno.makeTempDir"
+      ],
+      "url": {"type": "e18e", "id": "tempy"}
+    },
+    "tempfile": {
+      "type": "module",
+      "moduleName": "tempfile",
+      "replacements": [
+        "fs.promises.mkdtempDisposable",
+        "fs.promises.mkdtemp",
+        "Deno.makeTempDir"
+      ],
+      "url": {"type": "e18e", "id": "tempy"}
+    },
     "tempy": {
       "type": "module",
       "moduleName": "tempy",
