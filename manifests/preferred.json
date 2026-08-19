@@ -2668,6 +2668,12 @@
       "replacements": ["modern-tar"],
       "url": {"type": "e18e", "id": "tar-fs"}
     },
+    "tar-stream": {
+      "type": "module",
+      "moduleName": "tar-stream",
+      "replacements": ["modern-tar"],
+      "url": {"type": "e18e", "id": "tar-fs"}
+    },
     "teeny-request": {
       "type": "module",
       "moduleName": "teeny-request",
