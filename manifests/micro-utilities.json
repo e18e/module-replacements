@@ -96,6 +96,12 @@
       "description": "You can use `str.at(-1)` if supported or `str[str.length - 1]` to get the last character of a string.",
       "example": "const last = (str) => str.at(-1);\n// or in older environments\nconst lastLegacy = (str) => str[str.length - 1]"
     },
+    "snippet::comver-to-semver": {
+      "id": "snippet::comver-to-semver",
+      "type": "simple",
+      "description": "You can use a ternary operator and string concatenation to add a trailing `.0`.",
+      "example": "const comverToSemver(comver) = comver.includes('.') ? `${comver}.0` : `${comver}.0.0`"
+    },
     "snippet::for-own": {
       "id": "snippet::for-own",
       "type": "simple",
@@ -536,6 +542,11 @@
       "type": "module",
       "moduleName": "clone-regexp",
       "replacements": ["snippet::regexp-copy"]
+    },
+    "comver-to-semver": {
+      "type": "module",
+      "moduleName": "comver-to-semver",
+      "replacements": ["snippet::comver-to-semver"]
     },
     "es-get-iterator": {
       "type": "module",
