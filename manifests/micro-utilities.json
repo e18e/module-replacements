@@ -632,6 +632,11 @@
       "moduleName": "is-even",
       "replacements": ["snippet::is-even"]
     },
+    "is-extendable": {
+      "type": "module",
+      "moduleName": "is-extendable",
+      "replacements": ["snippet::is-object-or-function"]
+    },
     "is-function": {
       "type": "module",
       "moduleName": "is-function",
