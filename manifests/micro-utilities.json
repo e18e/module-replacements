@@ -306,6 +306,12 @@
       "description": "You can use `typeof` to check if a value is a symbol.",
       "example": "const isSymbol = (value) => typeof value === \"symbol\";"
     },
+    "snippet::is-touch-device": {
+      "id": "snippet::is-touch-device",
+      "type": "simple",
+      "description": "You can check if the current device is a touch device by checking the `'ontouchstart'` propery of the `window` object and `maxTouchPoints` of the `navigator` object.",
+      "example": "const isTouchDevice = window && ('ontouchstart' in window || navigator.maxTouchPoints)"
+    },
     "snippet::is-travis": {
       "id": "snippet::is-travis",
       "type": "simple",
@@ -751,6 +757,11 @@
       "type": "module",
       "moduleName": "is-symbol",
       "replacements": ["snippet::is-symbol"]
+    },
+    "is-touch-device": {
+      "type": "module",
+      "moduleName": "is-touch-device",
+      "replacements": ["snippet::is-touch-device"]
     },
     "is-travis": {
       "type": "module",
