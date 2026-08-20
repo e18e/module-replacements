@@ -802,6 +802,11 @@
       "moduleName": "last-char",
       "replacements": ["snippet::char-last"]
     },
+    "load-json-file": {
+      "type": "module",
+      "moduleName": "load-json-file",
+      "replacements": ["snippet::json-file"]
+    },
     "lodash.castarray": {
       "type": "module",
       "moduleName": "lodash.castarray",
