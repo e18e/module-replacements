@@ -1,5 +1,10 @@
 {
   "replacements": {
+    "empathic": {
+      "id": "empathic",
+      "type": "documented",
+      "replacementModule": "empathic"
+    },
     "snippet::array-coerce": {
       "id": "snippet::array-coerce",
       "type": "simple",
@@ -119,6 +124,12 @@
       "type": "simple",
       "description": "You can use the `includes` method on the `process.argv` array to check if a flag is present.",
       "example": "process.argv.includes('--flag')"
+    },
+    "snippet::has-yarn": {
+      "id": "snippet::has-yarn",
+      "type": "simple",
+      "description": "You can use `fs.existsSync` from `node:fs` to check whether a `yarn.lock` file exists.",
+      "example": "import fs from 'node:fs'\nimport path from 'node:path'\nconst hasYarn = (cwd = process.cwd()) => fs.existsSync(path.resolve(cwd, 'yarn.lock'))"
     },
     "snippet::is-arguments": {
       "id": "snippet::is-arguments",
@@ -576,6 +587,11 @@
       "type": "module",
       "moduleName": "has-flag",
       "replacements": ["snippet::has-argv"]
+    },
+    "has-yarn": {
+      "type": "module",
+      "moduleName": "has-yarn",
+      "replacements": ["empathic", "snippet::has-yarn"]
     },
     "iota-array": {
       "type": "module",
