@@ -2414,6 +2414,12 @@
       "replacements": ["dlv", "dset"],
       "url": {"type": "e18e", "id": "dot-prop"}
     },
+    "open": {
+      "type": "module",
+      "moduleName": "open",
+      "replacements": ["tiny-open"],
+      "url": {"type": "e18e", "id": "open"}
+    },
     "ora": {
       "type": "module",
       "moduleName": "ora",
@@ -3619,6 +3625,11 @@
       "id": "tiny-invariant",
       "type": "documented",
       "replacementModule": "tiny-invariant"
+    },
+    "tiny-open": {
+      "id": "tiny-open",
+      "type": "documented",
+      "replacementModule": "tiny-open"
     },
     "tinyclip": {
       "id": "tinyclip",
