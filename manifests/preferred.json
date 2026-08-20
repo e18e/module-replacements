@@ -2402,6 +2402,12 @@
       "replacements": ["crypto.randomUUID"],
       "url": {"type": "e18e", "id": "uuidv4"}
     },
+    "npm-check": {
+      "type": "module",
+      "moduleName": "npm-check",
+      "replacements": ["npm-check", "taze"],
+      "url": {"type": "e18e", "id": "npm-check"}
+    },
     "npm-run-all": {
       "type": "module",
       "moduleName": "npm-run-all",
@@ -3524,6 +3530,12 @@
       "nodeFeatureId": {"moduleName": "test"},
       "url": {"type": "node", "id": "api/test.html"}
     },
+    "npm-check": {
+      "id": "npm-check",
+      "type": "removal",
+      "url": {"type": "e18e", "id": "npm-check"},
+      "description": "npm-check can be replaced with your package manager's built-in commands, such as `npm outdated` and `npm update`."
+    },
     "npm-run-all2": {
       "id": "npm-run-all2",
       "type": "documented",
@@ -3657,6 +3669,11 @@
         "compatKey": "api.structuredClone"
       },
       "url": {"type": "mdn", "id": "Web/API/Window/structuredClone"}
+    },
+    "taze": {
+      "id": "taze",
+      "type": "documented",
+      "replacementModule": "taze"
     },
     "tiny-invariant": {
       "id": "tiny-invariant",
