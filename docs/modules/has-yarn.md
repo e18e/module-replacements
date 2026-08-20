@@ -18,12 +18,8 @@ hasYarn() // [!code --]
 Boolean(find.up('yarn.lock')) // [!code ++]
 ```
 
-Note that `has-yarn` only checks the given directory (defaulting to `process.cwd()`), while `find.up` walks up parent directories. To match the original behavior exactly, a one-liner with `node:fs` suffices:
+Like `has-yarn`, `find.up` walks up parent directories and accepts a starting directory:
 
 ```ts
-import fs from 'node:fs'
-import path from 'node:path'
-
-const hasYarn = (cwd = process.cwd()) =>
-  fs.existsSync(path.resolve(cwd, 'yarn.lock'))
+Boolean(find.up('yarn.lock', { cwd }))
 ```
