@@ -35,6 +35,13 @@ bun outdated
 bun update --interactive
 ```
 
+In monorepos, use `--recursive` to cover all workspaces, or `--filter` to target specific ones:
+
+```sh
+bun outdated --recursive
+bun update --interactive --filter '@myorg/*'
+```
+
 ## `taze`
 
 If you want more than the built-ins offer (e.g. monorepo-wide updates, grouped output, update modes), [`taze`](https://github.com/antfu-collective/taze) is a modern, smaller alternative to `npm-check`.
@@ -50,4 +57,5 @@ npx taze -w
 npx taze major -w
 ```
 
-Note that `npm-check`'s unused-dependency detection is not covered by these commands — a dedicated tool such as [`knip`](https://knip.dev) handles that use case.
+> [!NOTE]
+> `npm-check`'s unused-dependency detection is not covered by these commands. You can use [`knip`](https://knip.dev) for that instead.
