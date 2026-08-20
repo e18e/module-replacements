@@ -20,5 +20,5 @@ await open('/path/to/file.txt')
 // with a specific app
 await open('https://example.com', 'Google Chrome')
 ```
-
-Note that `open`'s advanced options (`wait`, `app.arguments`, the `openApp` export) have no direct equivalent in `tiny-open`.
+[!NOTE]
+Advanced options (`wait`, `app.arguments`, the `openApp` export) have no direct equivalent in `tiny-open`.
