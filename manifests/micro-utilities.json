@@ -100,7 +100,7 @@
       "id": "snippet::comver-to-semver",
       "type": "simple",
       "description": "You can use a ternary operator and string concatenation to add a trailing `.0`.",
-      "example": "const comverToSemver(comver) = comver.includes('.') ? `${comver}.0` : `${comver}.0.0`"
+      "example": "const comverToSemver = (comver) => comver.includes('.') ? `${comver}.0` : `${comver}.0.0`"
     },
     "snippet::for-own": {
       "id": "snippet::for-own",
