@@ -2546,6 +2546,11 @@
       "moduleName": "es6-promise",
       "replacements": ["Promise"]
     },
+    "es6-promisify": {
+      "type": "module",
+      "moduleName": "es6-promisify",
+      "replacements": ["util.promisify"]
+    },
     "es6-set": {
       "type": "module",
       "moduleName": "es6-set",
