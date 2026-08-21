@@ -16,7 +16,7 @@
     "lint:format": "prettier --check \"./**/*.{js,ts,json,md,yml}\"",
     "lint:manifests": "node --experimental-vm-modules scripts/validate-modules.js",
     "sort-manifests": "node scripts/sort-manifests.js",
-    "update-engines": "pnpm run \"/^update-engines:/\"",
+    "update-engines": "pnpm run --sequential \"/^update-engines:/\"",
     "update-engines:web": "node scripts/update-engines-web.ts",
     "update-engines:bcd": "node scripts/update-engines-bcd.ts",
     "update-engines:runtimes": "node scripts/update-engines-runtimes.ts",
