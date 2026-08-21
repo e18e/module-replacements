@@ -312,6 +312,12 @@
       "description": "You can use `typeof` to check if a value is a symbol.",
       "example": "const isSymbol = (value) => typeof value === \"symbol\";"
     },
+    "snippet::is-symlink": {
+      "id": "snippet::is-symlink",
+      "type": "simple",
+      "description": "You can use `lstat` from `node:fs/promises` with `stats.isSymbolicLink()` to check if a path is a symbolic link.",
+      "example": "import { lstat } from 'node:fs/promises'\n\nconst isSymlink = async (filepath) => {\n  try {\n    return (await lstat(filepath)).isSymbolicLink()\n  } catch (err) {\n    if (err.code === 'ENOENT') return false\n    throw err\n  }\n}"
+    },
     "snippet::is-touch-device": {
       "id": "snippet::is-touch-device",
       "type": "simple",
@@ -773,6 +779,11 @@
       "type": "module",
       "moduleName": "is-symbol",
       "replacements": ["snippet::is-symbol"]
+    },
+    "is-symlink": {
+      "type": "module",
+      "moduleName": "is-symlink",
+      "replacements": ["snippet::is-symlink"]
     },
     "is-touch-device": {
       "type": "module",
