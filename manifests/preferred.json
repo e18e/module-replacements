@@ -2372,6 +2372,16 @@
       "replacements": ["fs.promises.mkdir"],
       "url": {"type": "e18e", "id": "mkdirp"}
     },
+    "mktemp": {
+      "type": "module",
+      "moduleName": "mktemp",
+      "replacements": [
+        "fs.promises.mkdtempDisposable",
+        "fs.promises.mkdtemp",
+        "Deno.makeTempDir"
+      ],
+      "url": {"type": "e18e", "id": "tempy"}
+    },
     "mockdate": {
       "type": "module",
       "moduleName": "mockdate",
