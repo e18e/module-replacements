@@ -1315,6 +1315,12 @@
       "nodeFeatureId": {"moduleName": "node:stream", "exportName": "Readable"},
       "url": {"type": "node", "id": "api/stream.html#readablemapfn-options"}
     },
+    "Readable.read": {
+      "id": "Readable.read",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:stream", "exportName": "Readable"},
+      "url": {"type": "node", "id": "api/stream.html#readablereadsize"}
+    },
     "Reflect.getPrototypeOf": {
       "id": "Reflect.getPrototypeOf",
       "type": "native",
@@ -3317,6 +3323,11 @@
       "type": "module",
       "moduleName": "starts-with",
       "replacements": ["String.prototype.startsWith"]
+    },
+    "stream-shift": {
+      "type": "module",
+      "moduleName": "stream-shift",
+      "replacements": ["Readable.read"]
     },
     "string.prototype.at": {
       "type": "module",
