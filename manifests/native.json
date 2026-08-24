@@ -2038,6 +2038,12 @@
         "compatKey": "javascript.operators.object_initializer.spread_properties"
       }
     },
+    "stream.compose": {
+      "id": "stream.compose",
+      "type": "native",
+      "url": {"type": "node", "id": "api/stream.html#streamcomposestreams"},
+      "nodeFeatureId": {"moduleName": "node:stream", "exportName": "compose"}
+    },
     "string_decoder": {
       "id": "string_decoder",
       "type": "native",
@@ -3317,6 +3323,11 @@
       "type": "module",
       "moduleName": "starts-with",
       "replacements": ["String.prototype.startsWith"]
+    },
+    "stream-combiner2": {
+      "type": "module",
+      "moduleName": "stream-combiner2",
+      "replacements": ["stream.compose"]
     },
     "string.prototype.at": {
       "type": "module",
