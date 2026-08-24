@@ -1,5 +1,5 @@
 ---
-description: Replacements for the npm-check package using package manager built-in commands or taze
+description: Replacements for the npm-check package, for checking unused and outdated dependencies.
 ---
 
 # Replacements for `npm-check`
