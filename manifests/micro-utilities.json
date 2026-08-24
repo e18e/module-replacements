@@ -324,6 +324,12 @@
       "description": "You can check if the current environment is Travis CI by checking if the `TRAVIS` environment variable is set.",
       "example": "const isTravis = () => \"TRAVIS\" in process.env;"
     },
+    "snippet::is-typed-array": {
+      "id": "snippet::is-typed-array",
+      "type": "simple",
+      "description": "You can check if a value is a Typed Array using `ArrayBuffer.isView` and checking if it is not a `DataView`.",
+      "example": "const isTypedArray = (v) => ArrayBuffer.isView(v) && !(v instanceof DataView);"
+    },
     "snippet::is-undefined": {
       "id": "snippet::is-undefined",
       "type": "simple",
@@ -783,6 +789,11 @@
       "type": "module",
       "moduleName": "is-travis",
       "replacements": ["snippet::is-travis"]
+    },
+    "is-typedarray": {
+      "type": "module",
+      "moduleName": "is-typedarray",
+      "replacements": ["snippet::is-typed-array"]
     },
     "is-whitespace": {
       "type": "module",
