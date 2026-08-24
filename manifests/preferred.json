@@ -298,30 +298,6 @@
       "replacements": ["dlv", "dset"],
       "url": {"type": "e18e", "id": "dot-prop"}
     },
-    "duplexer": {
-      "type": "module",
-      "moduleName": "duplexer",
-      "replacements": ["stream.Duplex"],
-      "url": {"type": "e18e", "id": "duplexer"}
-    },
-    "duplexer2": {
-      "type": "module",
-      "moduleName": "duplexer2",
-      "replacements": ["stream.Duplex"],
-      "url": {"type": "e18e", "id": "duplexer"}
-    },
-    "duplexer3": {
-      "type": "module",
-      "moduleName": "duplexer3",
-      "replacements": ["stream.Duplex"],
-      "url": {"type": "e18e", "id": "duplexer"}
-    },
-    "duplexify": {
-      "type": "module",
-      "moduleName": "duplexify",
-      "replacements": ["stream.Duplex"],
-      "url": {"type": "e18e", "id": "duplexer"}
-    },
     "emoji-regex": {
       "type": "module",
       "moduleName": "emoji-regex",
@@ -3667,12 +3643,6 @@
       "id": "sortobject",
       "type": "documented",
       "replacementModule": "sortobject"
-    },
-    "stream.Duplex": {
-      "id": "stream.Duplex",
-      "type": "native",
-      "url": {"type": "node", "id": "api/stream.html#class-streamduplex"},
-      "nodeFeatureId": {"moduleName": "node:stream", "exportName": "Duplex"}
     },
     "streams": {
       "id": "streams",
