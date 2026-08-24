@@ -444,6 +444,12 @@
       "description": "You can convert a string to uppercase using `toLocaleUpperCase` or `toUpperCase`.",
       "example": "const toUpper = (str) => str.toLocaleUpperCase();"
     },
+    "snippet::typed-array-to-buffer": {
+      "id": "snippet::typed-array-to-buffer",
+      "type": "simple",
+      "description": "You can use `Buffer.from` to convert a Typed Array to `Buffer` and `ArrayBuffer.isView` to avoid a copy.",
+      "example": "ArrayBuffer.isView(arr)\n  ? Buffer.from(arr.buffer, arr.byteOffset, arr.byteLength)\n  : Buffer.from(arr)"
+    },
     "snippet::typeof": {
       "id": "snippet::typeof",
       "type": "simple",
@@ -989,6 +995,11 @@
       "moduleName": "toarray",
       "replacements": ["snippet::array-coerce"]
     },
+    "typedarray-to-buffer": {
+      "type": "module",
+      "moduleName": "typedarray-to-buffer",
+      "replacements": ["snippet::typed-array-to-buffer"]
+    },  
     "uniq": {
       "type": "module",
       "moduleName": "uniq",
