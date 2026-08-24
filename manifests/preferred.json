@@ -2397,7 +2397,7 @@
     "moment": {
       "type": "module",
       "moduleName": "moment",
-      "replacements": ["day.js", "date-fns", "luxon", "Date"],
+      "replacements": ["day.js", "date-fns", "luxon", "Date", "Temporal"],
       "url": {"type": "e18e", "id": "moment"}
     },
     "node-fetch": {
@@ -3104,6 +3104,18 @@
       "id": "Teleport",
       "type": "documented",
       "replacementModule": "Teleport"
+    },
+    "Temporal": {
+      "id": "Temporal",
+      "type": "native",
+      "webFeatureId": {
+        "featureId": "temporal",
+        "compatKey": "javascript.builtins.Temporal"
+      },
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Temporal"
+      }
     },
     "TextEncoder": {
       "id": "TextEncoder",
