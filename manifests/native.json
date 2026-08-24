@@ -1946,6 +1946,12 @@
         "compatKey": "javascript.operators.optional_chaining"
       }
     },
+    "os.homedir": {
+      "id": "os.homedir",
+      "type": "native",
+      "url": {"type": "node", "id": "api/os.html#oshomedir"},
+      "nodeFeatureId": {"moduleName": "os", "exportName": "homedir"}
+    },
     "os.tmpdir": {
       "id": "os.tmpdir",
       "type": "native",
@@ -2756,6 +2762,11 @@
       "moduleName": "hasown",
       "replacements": ["Object.prototype.hasOwnProperty"]
     },
+    "homedir-polyfill": {
+      "type": "module",
+      "moduleName": "homedir-polyfill",
+      "replacements": ["os.homedir"]
+    },
     "ieee754": {
       "type": "module",
       "moduleName": "ieee754",
@@ -3162,6 +3173,11 @@
       "type": "module",
       "moduleName": "object.values",
       "replacements": ["Object.values"]
+    },
+    "os-homedir": {
+      "type": "module",
+      "moduleName": "os-homedir",
+      "replacements": ["os.homedir"]
     },
     "os-tmpdir": {
       "type": "module",
