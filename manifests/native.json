@@ -2002,6 +2002,18 @@
         "exportName": "allowedNodeEnvironmentFlags"
       }
     },
+    "process.nextTick": {
+      "id": "process.nextTick",
+      "type": "native",
+      "url": {
+        "type": "node",
+        "id": "api/process.html#processnexttickcallback-args"
+      },
+      "nodeFeatureId": {
+        "moduleName": "process",
+        "exportName": "nextTick"
+      }
+    },
     "queueMicrotask": {
       "id": "queueMicrotask",
       "type": "native",
@@ -3212,6 +3224,11 @@
       "type": "module",
       "moduleName": "pn",
       "replacements": ["util.promisify"]
+    },
+    "process-nextick-args": {
+      "type": "module",
+      "moduleName": "process-nextick-args",
+      "replacements": ["process.nextTick"]
     },
     "promise": {
       "type": "module",
