@@ -79,3 +79,22 @@ const localized = new Intl.DateTimeFormat('en-US', { // [!code ++]
   day: 'numeric' // [!code ++]
 }).format(new Date()) // [!code ++]
 ```
+
+## `Temporal` (native)
+
+The [`Temporal`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) API is a modern, native JavaScript specification that replaces the legacy `Date` object and removes the need for external libraries like Moment.js by providing immutable date-time objects and built-in timezone handling.
+
+Example:
+
+```ts
+import moment from 'moment' // [!code --]
+
+const now = moment() // [!code --]
+const now = Temporal.Now.instant() // [!code ++]
+
+const formatted = moment().format('YYYY-MM-DD') // [!code --]
+const formatted = Temporal.Now.plainDateISO().toString() // [!code ++]
+
+const tomorrow = moment().add(1, 'day') // [!code --]
+const tomorrow = Temporal.Now.plainDateISO().add({ days: 1 }) // [!code ++]
+```

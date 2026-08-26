@@ -298,30 +298,6 @@
       "replacements": ["dlv", "dset"],
       "url": {"type": "e18e", "id": "dot-prop"}
     },
-    "duplexer": {
-      "type": "module",
-      "moduleName": "duplexer",
-      "replacements": ["stream.Duplex"],
-      "url": {"type": "e18e", "id": "duplexer"}
-    },
-    "duplexer2": {
-      "type": "module",
-      "moduleName": "duplexer2",
-      "replacements": ["stream.Duplex"],
-      "url": {"type": "e18e", "id": "duplexer"}
-    },
-    "duplexer3": {
-      "type": "module",
-      "moduleName": "duplexer3",
-      "replacements": ["stream.Duplex"],
-      "url": {"type": "e18e", "id": "duplexer"}
-    },
-    "duplexify": {
-      "type": "module",
-      "moduleName": "duplexify",
-      "replacements": ["stream.Duplex"],
-      "url": {"type": "e18e", "id": "duplexer"}
-    },
     "emoji-regex": {
       "type": "module",
       "moduleName": "emoji-regex",
@@ -2397,7 +2373,7 @@
     "moment": {
       "type": "module",
       "moduleName": "moment",
-      "replacements": ["day.js", "date-fns", "luxon", "Date"],
+      "replacements": ["day.js", "date-fns", "luxon", "Date", "Temporal"],
       "url": {"type": "e18e", "id": "moment"}
     },
     "node-fetch": {
@@ -3105,6 +3081,18 @@
       "type": "documented",
       "replacementModule": "Teleport"
     },
+    "Temporal": {
+      "id": "Temporal",
+      "type": "native",
+      "webFeatureId": {
+        "featureId": "temporal",
+        "compatKey": "javascript.builtins.Temporal"
+      },
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Temporal"
+      }
+    },
     "TextEncoder": {
       "id": "TextEncoder",
       "type": "native",
@@ -3667,12 +3655,6 @@
       "id": "sortobject",
       "type": "documented",
       "replacementModule": "sortobject"
-    },
-    "stream.Duplex": {
-      "id": "stream.Duplex",
-      "type": "native",
-      "url": {"type": "node", "id": "api/stream.html#class-streamduplex"},
-      "nodeFeatureId": {"moduleName": "node:stream", "exportName": "Duplex"}
     },
     "streams": {
       "id": "streams",
