@@ -288,6 +288,12 @@
       "description": "You can use `instanceof RegExp` to check if a value is a regular expression, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object RegExp]\"`.",
       "example": "const isRegExp = (v) => v instanceof RegExp;\n// for cross-realm\nconst isRegExpCrossRealm = Object.prototype.toString.call(v) === \"[object RegExp]\";"
     },
+    "snippet::is-root-user": {
+      "id": "snippet::is-root-user",
+      "type": "simple",
+      "description": "You can use `process.getuid?.()` to check if a user is a root user.",
+      "example": "const isRootUser = process.getuid?.() === 0"
+    },
     "snippet::is-set": {
       "id": "snippet::is-set",
       "type": "simple",
@@ -753,6 +759,11 @@
       "type": "module",
       "moduleName": "is-regexp",
       "replacements": ["snippet::is-regexp"]
+    },
+    "is-root": {
+      "type": "module",
+      "moduleName": "is-root",
+      "replacements": ["snippet::is-root-user"]
     },
     "is-set": {
       "type": "module",
