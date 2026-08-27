@@ -572,6 +572,12 @@
       "replacements": ["fetch", "ofetch", "ky"],
       "url": {"type": "e18e", "id": "fetch"}
     },
+    "istanbul-lib-coverage": {
+      "type": "module",
+      "moduleName": "istanbul-lib-coverage",
+      "replacements": ["@vitest/istanbul-lib-coverage"],
+      "url": {"type": "e18e", "id": "istanbul-lib-coverage"}
+    },
     "jquery": {
       "type": "module",
       "moduleName": "jquery",
@@ -2955,6 +2961,11 @@
       "id": "@vitest/eslint-plugin",
       "type": "documented",
       "replacementModule": "@vitest/eslint-plugin"
+    },
+    "@vitest/istanbul-lib-coverage": {
+      "id": "@vitest/istanbul-lib-coverage",
+      "type": "documented",
+      "replacementModule": "@vitest/istanbul-lib-coverage"
     },
     "@xmldom/xmldom": {
       "id": "@xmldom/xmldom",
