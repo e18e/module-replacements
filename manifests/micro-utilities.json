@@ -282,6 +282,12 @@
       "description": "You can use the modulo operator to check if a number is odd.",
       "example": "(n % 2) === 1"
     },
+    "snippet::is-path-equal-cwd": {
+      "id": "snippet::is-path-equal-cwd",
+      "type": "simple",
+      "description": "You can check if a path equals the current working directory using `path.relative`.",
+      "example": "import { relative } from 'node:path'\n\nconst isPathCwd = (p) => !relative(p, process.cwd())"
+    },
     "snippet::is-primitve": {
       "id": "snippet::is-primitve",
       "type": "simple",
@@ -757,6 +763,11 @@
       "type": "module",
       "moduleName": "is-odd",
       "replacements": ["snippet::is-odd"]
+    },
+    "is-path-cwd": {
+      "type": "module",
+      "moduleName": "is-path-cwd",
+      "replacements": ["snippet::is-path-equal-cwd"]
     },
     "is-plain-obj": {
       "type": "module",
