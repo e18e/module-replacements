@@ -3378,6 +3378,11 @@
       "moduleName": "repeat-string",
       "replacements": ["String.prototype.repeat"]
     },
+    "repeating": {
+      "type": "module",
+      "moduleName": "repeating",
+      "replacements": ["String.prototype.repeat"]
+    },
     "safe-buffer": {
       "type": "module",
       "moduleName": "safe-buffer",
