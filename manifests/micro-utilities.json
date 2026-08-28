@@ -480,6 +480,12 @@
       "description": "You can check the start of a path for the Windows extended-length path prefix and if it's not present, replace backslashes with forward slashes.",
       "example": "path.startsWith('\\\\\\\\?\\\\') ? path : path.replace(/\\\\/g, '/')"
     },
+    "snippet::uppercase-first-character": {
+      "id": "snippet::uppercase-first-character",
+      "type": "simple",
+      "description": "You can uppercase the first character.",
+      "example": "string.charAt(0).toUpperCase() + string.slice(1)"
+    },
     "snippet::year": {
       "id": "snippet::year",
       "type": "simple",
@@ -1042,6 +1048,11 @@
       "type": "module",
       "moduleName": "upper-case",
       "replacements": ["snippet::to-uppercase"]
+    },
+    "upper-case-first": {
+      "type": "module",
+      "moduleName": "upper-case-first",
+      "replacements": ["snippet::uppercase-first-character"]
     },
     "validate.io-function": {
       "type": "module",
