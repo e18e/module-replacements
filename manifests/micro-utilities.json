@@ -222,6 +222,12 @@
       "description": "You can check if the current environment is SSH by checking if the `SSH_CONNECTION` environment variable is set.",
       "example": "const isInSsh = Boolean(process.env.SSH_CONNECTION);"
     },
+    "snippet::is-interactive": {
+      "id": "snippet::is-interactive",
+      "type": "simple",
+      "description": "You can check if the current environment is interactive using `process.stdout.isTTY` and checking that it is not running in CI.",
+      "example": "Boolean(stream?.isTTY && !process.env.CI)"
+    },
     "snippet::is-map": {
       "id": "snippet::is-map",
       "type": "simple",
@@ -707,6 +713,11 @@
       "type": "module",
       "moduleName": "is-in-ssh",
       "replacements": ["snippet::is-in-ssh"]
+    },
+    "is-interactive": {
+      "type": "module",
+      "moduleName": "is-interactive",
+      "replacements": ["snippet::is-interactive"]
     },
     "is-map": {
       "type": "module",
