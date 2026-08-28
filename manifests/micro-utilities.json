@@ -456,6 +456,12 @@
       "description": "You can convert a string to uppercase using `toLocaleUpperCase` or `toUpperCase`.",
       "example": "const toUpper = (str) => str.toLocaleUpperCase();"
     },
+    "snippet::trim-repeated-characters": {
+      "id": "snippet::trim-repeated-characters",
+      "type": "simple",
+      "description": "You can trim repeated sequences of characters using `String.prototype.replace`.",
+      "example": "// Normal character\nstring.replace(/-{2,}/g, '-')\n\n// Special character\nstring.replace(/\\.{2,}/g, '.')\n\n// Multi-character sequence\nstring.replace(/(?:abc){2,}/g, 'abc')"
+    },
     "snippet::typed-array-to-buffer": {
       "id": "snippet::typed-array-to-buffer",
       "type": "simple",
@@ -1016,6 +1022,11 @@
       "type": "module",
       "moduleName": "toarray",
       "replacements": ["snippet::array-coerce"]
+    },
+    "trim-repeated": {
+      "type": "module",
+      "moduleName": "trim-repeated",
+      "replacements": ["snippet::trim-repeated-characters"]
     },
     "typedarray-to-buffer": {
       "type": "module",
