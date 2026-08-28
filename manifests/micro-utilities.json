@@ -324,6 +324,12 @@
       "description": "You can check if the current environment is Travis CI by checking if the `TRAVIS` environment variable is set.",
       "example": "const isTravis = () => \"TRAVIS\" in process.env;"
     },
+    "snippet::is-typed-array": {
+      "id": "snippet::is-typed-array",
+      "type": "simple",
+      "description": "You can check if a value is a Typed Array using `ArrayBuffer.isView` and checking if it is not a `DataView`.",
+      "example": "const isTypedArray = (v) => ArrayBuffer.isView(v) && !(v instanceof DataView);"
+    },
     "snippet::is-undefined": {
       "id": "snippet::is-undefined",
       "type": "simple",
@@ -443,6 +449,12 @@
       "type": "simple",
       "description": "You can convert a string to uppercase using `toLocaleUpperCase` or `toUpperCase`.",
       "example": "const toUpper = (str) => str.toLocaleUpperCase();"
+    },
+    "snippet::typed-array-to-buffer": {
+      "id": "snippet::typed-array-to-buffer",
+      "type": "simple",
+      "description": "You can use `Buffer.from` to convert a Typed Array to `Buffer` and `ArrayBuffer.isView` to avoid a copy.",
+      "example": "ArrayBuffer.isView(arr)\n  ? Buffer.from(arr.buffer, arr.byteOffset, arr.byteLength)\n  : Buffer.from(arr)"
     },
     "snippet::typeof": {
       "id": "snippet::typeof",
@@ -784,6 +796,11 @@
       "moduleName": "is-travis",
       "replacements": ["snippet::is-travis"]
     },
+    "is-typedarray": {
+      "type": "module",
+      "moduleName": "is-typedarray",
+      "replacements": ["snippet::is-typed-array"]
+    },
     "is-whitespace": {
       "type": "module",
       "moduleName": "is-whitespace",
@@ -988,6 +1005,11 @@
       "type": "module",
       "moduleName": "toarray",
       "replacements": ["snippet::array-coerce"]
+    },
+    "typedarray-to-buffer": {
+      "type": "module",
+      "moduleName": "typedarray-to-buffer",
+      "replacements": ["snippet::typed-array-to-buffer"]
     },
     "uniq": {
       "type": "module",

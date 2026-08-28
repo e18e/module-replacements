@@ -1315,6 +1315,12 @@
       "nodeFeatureId": {"moduleName": "node:stream", "exportName": "Readable"},
       "url": {"type": "node", "id": "api/stream.html#readablemapfn-options"}
     },
+    "Readable.read": {
+      "id": "Readable.read",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:stream", "exportName": "Readable"},
+      "url": {"type": "node", "id": "api/stream.html#readablereadsize"}
+    },
     "Reflect.getPrototypeOf": {
       "id": "Reflect.getPrototypeOf",
       "type": "native",
@@ -1946,6 +1952,12 @@
         "compatKey": "javascript.operators.optional_chaining"
       }
     },
+    "os.homedir": {
+      "id": "os.homedir",
+      "type": "native",
+      "url": {"type": "node", "id": "api/os.html#oshomedir"},
+      "nodeFeatureId": {"moduleName": "os", "exportName": "homedir"}
+    },
     "os.tmpdir": {
       "id": "os.tmpdir",
       "type": "native",
@@ -2000,6 +2012,18 @@
       "nodeFeatureId": {
         "moduleName": "process",
         "exportName": "allowedNodeEnvironmentFlags"
+      }
+    },
+    "process.nextTick": {
+      "id": "process.nextTick",
+      "type": "native",
+      "url": {
+        "type": "node",
+        "id": "api/process.html#processnexttickcallback-args"
+      },
+      "nodeFeatureId": {
+        "moduleName": "process",
+        "exportName": "nextTick"
       }
     },
     "queueMicrotask": {
@@ -2792,6 +2816,11 @@
       "moduleName": "hasown",
       "replacements": ["Object.prototype.hasOwnProperty"]
     },
+    "homedir-polyfill": {
+      "type": "module",
+      "moduleName": "homedir-polyfill",
+      "replacements": ["os.homedir"]
+    },
     "ieee754": {
       "type": "module",
       "moduleName": "ieee754",
@@ -3199,6 +3228,11 @@
       "moduleName": "object.values",
       "replacements": ["Object.values"]
     },
+    "os-homedir": {
+      "type": "module",
+      "moduleName": "os-homedir",
+      "replacements": ["os.homedir"]
+    },
     "os-tmpdir": {
       "type": "module",
       "moduleName": "os-tmpdir",
@@ -3239,6 +3273,11 @@
       "moduleName": "path-parse",
       "replacements": ["path.parse"]
     },
+    "pify": {
+      "type": "module",
+      "moduleName": "pify",
+      "replacements": ["util.promisify"]
+    },
     "pinkie-promise": {
       "type": "module",
       "moduleName": "pinkie-promise",
@@ -3248,6 +3287,11 @@
       "type": "module",
       "moduleName": "pn",
       "replacements": ["util.promisify"]
+    },
+    "process-nextick-args": {
+      "type": "module",
+      "moduleName": "process-nextick-args",
+      "replacements": ["process.nextTick"]
     },
     "promise": {
       "type": "module",
@@ -3358,6 +3402,11 @@
       "type": "module",
       "moduleName": "stream-combiner2",
       "replacements": ["stream.compose"]
+    },
+    "stream-shift": {
+      "type": "module",
+      "moduleName": "stream-shift",
+      "replacements": ["Readable.read"]
     },
     "string.prototype.at": {
       "type": "module",

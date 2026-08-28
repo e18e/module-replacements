@@ -2506,6 +2506,16 @@
       ],
       "url": {"type": "e18e", "id": "qs"}
     },
+    "quick-temp": {
+      "type": "module",
+      "moduleName": "quick-temp",
+      "replacements": [
+        "fs.promises.mkdtempDisposable",
+        "fs.promises.mkdtemp",
+        "Deno.makeTempDir"
+      ],
+      "url": {"type": "e18e", "id": "tempy"}
+    },
     "randomatic": {
       "type": "module",
       "moduleName": "randomatic",
