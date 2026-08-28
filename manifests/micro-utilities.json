@@ -148,7 +148,7 @@
       "id": "snippet::is-bigint",
       "type": "simple",
       "description": "You can use `typeof` to check if a value is a bigint.",
-      "example": "const isString = (value) => typeof value === \"bigint\";"
+      "example": "const isBigInt = (value) => typeof value === \"bigint\";"
     },
     "snippet::is-boolean": {
       "id": "snippet::is-boolean",
