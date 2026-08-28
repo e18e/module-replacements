@@ -144,6 +144,12 @@
       "description": "You can use `typeof` and `Object.prototype.toString.call` to check if it's an async function",
       "example": "const isAsyncFunction = (obj) => typeof obj === \"function\" && Object.prototype.toString.call(obj) === \"[object AsyncFunction]\""
     },
+    "snippet::is-aws-lambda": {
+      "id": "snippet::is-aws-lambda",
+      "type": "simple",
+      "description": "You can check if the current environment is an AWS Lambda by checking if the `LAMBDA_TASK_ROOT` and `AWS_EXECUTION_ENV` environment variables are set.",
+      "example": "const isAwsLambda = Boolean(process.env.LAMBDA_TASK_ROOT && process.env.AWS_EXECUTION_ENV);"
+    },
     "snippet::is-bigint": {
       "id": "snippet::is-bigint",
       "type": "simple",
@@ -696,6 +702,11 @@
       "type": "module",
       "moduleName": "is-in-ssh",
       "replacements": ["snippet::is-in-ssh"]
+    },
+    "is-lambda": {
+      "type": "module",
+      "moduleName": "is-lambda",
+      "replacements": ["snippet::is-aws-lambda"]
     },
     "is-map": {
       "type": "module",
