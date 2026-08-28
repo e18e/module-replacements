@@ -66,6 +66,12 @@
       "description": "You can use a simple function to assert a value or an expression.",
       "example": "function assert(val, msg) {\n  if (!val) throw new Error(msg)\n}"
     },
+    "snippet::async-each": {
+      "id": "snippet::async-each",
+      "type": "simple",
+      "description": "You can use `Promise.all` with `Array.prototype.map` to do an async action with an array of items.",
+      "example": "Promise.all(items.map(asyncFn))"
+    },
     "snippet::async-function-constructor": {
       "id": "snippet::async-function-constructor",
       "type": "simple",
@@ -535,6 +541,11 @@
       "type": "module",
       "moduleName": "as-array",
       "replacements": ["snippet::array-coerce"]
+    },
+    "async-each": {
+      "type": "module",
+      "moduleName": "async-each",
+      "replacements": ["snippet::async-each"]
     },
     "async-function": {
       "type": "module",
