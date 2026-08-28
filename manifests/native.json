@@ -3544,6 +3544,11 @@
       "moduleName": "trim",
       "replacements": ["String.prototype.trim"]
     },
+    "trim-right": {
+      "type": "module",
+      "moduleName": "trim-right",
+      "replacements": ["String.prototype.trimEnd"]
+    },
     "tweetnacl": {
       "type": "module",
       "moduleName": "tweetnacl",
