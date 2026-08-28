@@ -2666,6 +2666,11 @@
       "moduleName": "find-index",
       "replacements": ["Array.prototype.findIndex"]
     },
+    "fn-name": {
+      "type": "module",
+      "moduleName": "fn-name",
+      "replacements": ["Function.prototype.name"]
+    },
     "for-each": {
       "type": "module",
       "moduleName": "for-each",
