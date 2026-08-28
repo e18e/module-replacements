@@ -148,7 +148,7 @@
       "id": "snippet::is-bigint",
       "type": "simple",
       "description": "You can use `typeof` to check if a value is a bigint.",
-      "example": "const isBigInt = (value) => typeof value === \"bigint\";"
+      "example": "typeof value === \"bigint\";"
     },
     "snippet::is-boolean": {
       "id": "snippet::is-boolean",
@@ -310,13 +310,13 @@
       "id": "snippet::is-string",
       "type": "simple",
       "description": "You can use `typeof` to check if a value is a string.",
-      "example": "const isString = (value) => typeof value === \"string\";"
+      "example": "typeof value === \"string\";"
     },
     "snippet::is-symbol": {
       "id": "snippet::is-symbol",
       "type": "simple",
       "description": "You can use `typeof` to check if a value is a symbol.",
-      "example": "const isSymbol = (value) => typeof value === \"symbol\";"
+      "example": "typeof value === \"symbol\";"
     },
     "snippet::is-touch-device": {
       "id": "snippet::is-touch-device",
