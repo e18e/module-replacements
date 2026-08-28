@@ -414,6 +414,12 @@
       "description": "You can set `length` of a function using `Object.defineProperty`.",
       "example": "const setFunctionLength = (fn, length) => Object.defineProperty(fn, 'length', { value: length, configurable: true });"
     },
+    "snippet::set-function-name": {
+      "id": "snippet::set-function-name",
+      "type": "simple",
+      "description": "You can set `name` of a function using `Object.defineProperty`.",
+      "example": "const setFunctionName = (fn, name) => Object.defineProperty(fn, 'name', { value: name, configurable: true });"
+    },
     "snippet::set-tostringtag": {
       "id": "snippet::set-tostringtag",
       "type": "simple",
@@ -975,6 +981,11 @@
       "type": "module",
       "moduleName": "set-function-length",
       "replacements": ["snippet::set-function-length"]
+    },
+    "set-function-name": {
+      "type": "module",
+      "moduleName": "set-function-name",
+      "replacements": ["snippet::set-function-name"]
     },
     "shebang-regex": {
       "type": "module",
