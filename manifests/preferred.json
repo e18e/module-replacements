@@ -2306,12 +2306,6 @@
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
-    "make-dir": {
-      "type": "module",
-      "moduleName": "make-dir",
-      "replacements": ["fs.promises.mkdir"],
-      "url": {"type": "e18e", "id": "mkdirp"}
-    },
     "materialize-css": {
       "type": "module",
       "moduleName": "materialize-css",
@@ -2347,12 +2341,6 @@
       "moduleName": "mississippi",
       "replacements": ["node:stream"],
       "url": {"type": "e18e", "id": "mississippi"}
-    },
-    "mkdirp": {
-      "type": "module",
-      "moduleName": "mkdirp",
-      "replacements": ["fs.promises.mkdir"],
-      "url": {"type": "e18e", "id": "mkdirp"}
     },
     "mktemp": {
       "type": "module",
@@ -3343,12 +3331,6 @@
       "type": "native",
       "nodeFeatureId": {"moduleName": "node:fs", "exportName": "glob"},
       "url": {"type": "node", "id": "api/fs.html#fspromisesglobpattern-options"}
-    },
-    "fs.promises.mkdir": {
-      "id": "fs.promises.mkdir",
-      "type": "native",
-      "nodeFeatureId": {"moduleName": "node:fs", "exportName": "mkdir"},
-      "url": {"type": "node", "id": "api/fs.html#fspromisesmkdirpath-options"}
     },
     "fs.promises.mkdtemp": {
       "id": "fs.promises.mkdtemp",

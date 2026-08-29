@@ -66,6 +66,12 @@
       "description": "You can use a simple function to assert a value or an expression.",
       "example": "function assert(val, msg) {\n  if (!val) throw new Error(msg)\n}"
     },
+    "snippet::async-each": {
+      "id": "snippet::async-each",
+      "type": "simple",
+      "description": "You can use `Promise.all` with `Array.prototype.map` to do an async action with an array of items.",
+      "example": "Promise.all(items.map(asyncFn))"
+    },
     "snippet::async-function-constructor": {
       "id": "snippet::async-function-constructor",
       "type": "simple",
@@ -101,6 +107,12 @@
       "type": "simple",
       "description": "You can use a ternary operator and string concatenation to add a trailing `.0`.",
       "example": "const comverToSemver = (comver) => comver.includes('.') ? `${comver}.0` : `${comver}.0.0`"
+    },
+    "snippet::find-first-defined": {
+      "id": "snippet::find-first-defined",
+      "type": "simple",
+      "description": "You can use `Array.prototype.find` to find a first defined item.",
+      "example": "const defined = (...args) => args.find((v) => v !== undefined)"
     },
     "snippet::for-own": {
       "id": "snippet::for-own",
@@ -147,14 +159,14 @@
     "snippet::is-aws-lambda": {
       "id": "snippet::is-aws-lambda",
       "type": "simple",
-      "description": "You can check if the current environment is an AWS Lambda by checking if the `LAMBDA_TASK_ROOT` and `AWS_EXECUTION_ENV` environment variables are set.",
-      "example": "const isAwsLambda = Boolean(process.env.LAMBDA_TASK_ROOT && process.env.AWS_EXECUTION_ENV);"
+      "description": "You can check if the current environment is an AWS Lambda by checking if the `LAMBDA_TASK_ROOT` environment variables are set.",
+      "example": "const isAwsLambda = Boolean(process.env.LAMBDA_TASK_ROOT)"
     },
     "snippet::is-bigint": {
       "id": "snippet::is-bigint",
       "type": "simple",
       "description": "You can use `typeof` to check if a value is a bigint.",
-      "example": "const isString = (value) => typeof value === \"bigint\";"
+      "example": "typeof value === \"bigint\";"
     },
     "snippet::is-boolean": {
       "id": "snippet::is-boolean",
@@ -222,6 +234,12 @@
       "description": "You can check if the current environment is SSH by checking if the `SSH_CONNECTION` environment variable is set.",
       "example": "const isInSsh = Boolean(process.env.SSH_CONNECTION);"
     },
+    "snippet::is-interactive": {
+      "id": "snippet::is-interactive",
+      "type": "simple",
+      "description": "You can check if the current environment is interactive using `process.stdout.isTTY` and checking that it is not running in CI.",
+      "example": "Boolean(stream?.isTTY && !process.env.CI)"
+    },
     "snippet::is-map": {
       "id": "snippet::is-map",
       "type": "simple",
@@ -282,6 +300,12 @@
       "description": "You can use the modulo operator to check if a number is odd.",
       "example": "(n % 2) === 1"
     },
+    "snippet::is-path-equal-cwd": {
+      "id": "snippet::is-path-equal-cwd",
+      "type": "simple",
+      "description": "You can check if a path equals the current working directory using `path.relative`.",
+      "example": "import { relative } from 'node:path'\n\nconst isPathCwd = (p) => !relative(p, process.cwd())"
+    },
     "snippet::is-primitve": {
       "id": "snippet::is-primitve",
       "type": "simple",
@@ -316,13 +340,13 @@
       "id": "snippet::is-string",
       "type": "simple",
       "description": "You can use `typeof` to check if a value is a string.",
-      "example": "const isString = (value) => typeof value === \"string\";"
+      "example": "typeof value === \"string\";"
     },
     "snippet::is-symbol": {
       "id": "snippet::is-symbol",
       "type": "simple",
       "description": "You can use `typeof` to check if a value is a symbol.",
-      "example": "const isSymbol = (value) => typeof value === \"symbol\";"
+      "example": "typeof value === \"symbol\";"
     },
     "snippet::is-touch-device": {
       "id": "snippet::is-touch-device",
@@ -351,7 +375,7 @@
     "snippet::is-whitespace": {
       "id": "snippet::is-whitespace",
       "type": "simple",
-      "description": "You can check if a string contains only whitespace with RegExp or by trimming it and comparing it to an empty string.",
+      "description": "You can check if a string contains only whitespace with `RegExp` or by trimming it and comparing it to an empty string.",
       "example": "const isWhitespace = (str) => /^\\s*$/.test(str);"
     },
     "snippet::is-windows": {
@@ -359,6 +383,12 @@
       "type": "simple",
       "description": "You can check if the current environment is Windows by checking if `process.platform` is equal to \"win32\".",
       "example": "const isWindows = () => process.platform === \"win32\";"
+    },
+    "snippet::is-word-character": {
+      "id": "snippet::is-word-character",
+      "type": "simple",
+      "description": "You can check if a character is a word character with a `RegExp`.",
+      "example": "const isWordChar = (c) => /\\w/.test(c);"
     },
     "snippet::is-wsl": {
       "id": "snippet::is-wsl",
@@ -426,6 +456,12 @@
       "description": "You can set `length` of a function using `Object.defineProperty`.",
       "example": "const setFunctionLength = (fn, length) => Object.defineProperty(fn, 'length', { value: length, configurable: true });"
     },
+    "snippet::set-function-name": {
+      "id": "snippet::set-function-name",
+      "type": "simple",
+      "description": "You can set `name` of a function using `Object.defineProperty`.",
+      "example": "const setFunctionName = (fn, name) => Object.defineProperty(fn, 'name', { value: name, configurable: true });"
+    },
     "snippet::set-tostringtag": {
       "id": "snippet::set-tostringtag",
       "type": "simple",
@@ -462,6 +498,12 @@
       "description": "You can convert a string to uppercase using `toLocaleUpperCase` or `toUpperCase`.",
       "example": "const toUpper = (str) => str.toLocaleUpperCase();"
     },
+    "snippet::trim-repeated-characters": {
+      "id": "snippet::trim-repeated-characters",
+      "type": "simple",
+      "description": "You can trim repeated sequences of characters using `String.prototype.replace`.",
+      "example": "// Normal character\nstring.replace(/-{2,}/g, '-')\n\n// Special character\nstring.replace(/\\.{2,}/g, '.')\n\n// Multi-character sequence\nstring.replace(/(?:abc){2,}/g, 'abc')"
+    },
     "snippet::typed-array-to-buffer": {
       "id": "snippet::typed-array-to-buffer",
       "type": "simple",
@@ -479,6 +521,12 @@
       "type": "simple",
       "description": "You can check the start of a path for the Windows extended-length path prefix and if it's not present, replace backslashes with forward slashes.",
       "example": "path.startsWith('\\\\\\\\?\\\\') ? path : path.replace(/\\\\/g, '/')"
+    },
+    "snippet::uppercase-first-character": {
+      "id": "snippet::uppercase-first-character",
+      "type": "simple",
+      "description": "You can uppercase the first character.",
+      "example": "string.charAt(0).toUpperCase() + string.slice(1)"
     },
     "snippet::year": {
       "id": "snippet::year",
@@ -548,6 +596,11 @@
       "moduleName": "as-array",
       "replacements": ["snippet::array-coerce"]
     },
+    "async-each": {
+      "type": "module",
+      "moduleName": "async-each",
+      "replacements": ["snippet::async-each"]
+    },
     "async-function": {
       "type": "module",
       "moduleName": "async-function",
@@ -577,6 +630,11 @@
       "type": "module",
       "moduleName": "comver-to-semver",
       "replacements": ["snippet::comver-to-semver"]
+    },
+    "defined": {
+      "type": "module",
+      "moduleName": "defined",
+      "replacements": ["snippet::find-first-defined"]
     },
     "es-get-iterator": {
       "type": "module",
@@ -703,6 +761,11 @@
       "moduleName": "is-in-ssh",
       "replacements": ["snippet::is-in-ssh"]
     },
+    "is-interactive": {
+      "type": "module",
+      "moduleName": "is-interactive",
+      "replacements": ["snippet::is-interactive"]
+    },
     "is-lambda": {
       "type": "module",
       "moduleName": "is-lambda",
@@ -757,6 +820,11 @@
       "type": "module",
       "moduleName": "is-odd",
       "replacements": ["snippet::is-odd"]
+    },
+    "is-path-cwd": {
+      "type": "module",
+      "moduleName": "is-path-cwd",
+      "replacements": ["snippet::is-path-equal-cwd"]
     },
     "is-plain-obj": {
       "type": "module",
@@ -828,10 +896,20 @@
       "moduleName": "is-whitespace",
       "replacements": ["snippet::is-whitespace"]
     },
+    "is-whitespace-character": {
+      "type": "module",
+      "moduleName": "is-whitespace-character",
+      "replacements": ["snippet::is-whitespace"]
+    },
     "is-windows": {
       "type": "module",
       "moduleName": "is-windows",
       "replacements": ["snippet::is-windows"]
+    },
+    "is-word-character": {
+      "type": "module",
+      "moduleName": "is-word-character",
+      "replacements": ["snippet::is-word-character"]
     },
     "is-wsl": {
       "type": "module",
@@ -998,6 +1076,11 @@
       "moduleName": "set-function-length",
       "replacements": ["snippet::set-function-length"]
     },
+    "set-function-name": {
+      "type": "module",
+      "moduleName": "set-function-name",
+      "replacements": ["snippet::set-function-name"]
+    },
     "shebang-regex": {
       "type": "module",
       "moduleName": "shebang-regex",
@@ -1028,6 +1111,11 @@
       "moduleName": "toarray",
       "replacements": ["snippet::array-coerce"]
     },
+    "trim-repeated": {
+      "type": "module",
+      "moduleName": "trim-repeated",
+      "replacements": ["snippet::trim-repeated-characters"]
+    },
     "typedarray-to-buffer": {
       "type": "module",
       "moduleName": "typedarray-to-buffer",
@@ -1042,6 +1130,11 @@
       "type": "module",
       "moduleName": "upper-case",
       "replacements": ["snippet::to-uppercase"]
+    },
+    "upper-case-first": {
+      "type": "module",
+      "moduleName": "upper-case-first",
+      "replacements": ["snippet::uppercase-first-character"]
     },
     "validate.io-function": {
       "type": "module",

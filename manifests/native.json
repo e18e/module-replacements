@@ -1321,6 +1321,12 @@
       "nodeFeatureId": {"moduleName": "node:stream", "exportName": "Readable"},
       "url": {"type": "node", "id": "api/stream.html#readablereadsize"}
     },
+    "Readable.unpipe": {
+      "id": "Readable.unpipe",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:stream", "exportName": "Readable"},
+      "url": {"type": "node", "id": "api/stream.html#readableunpipedestination"}
+    },
     "Reflect.getPrototypeOf": {
       "id": "Reflect.getPrototypeOf",
       "type": "native",
@@ -1819,6 +1825,12 @@
       "type": "native",
       "url": {"type": "node", "id": "api/fs.html#promises-api"},
       "nodeFeatureId": {"moduleName": "fs"}
+    },
+    "fs.promises.mkdir": {
+      "id": "fs.promises.mkdir",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:fs", "exportName": "mkdir"},
+      "url": {"type": "node", "id": "api/fs.html#fspromisesmkdirpath-options"}
     },
     "fs.promises.rm": {
       "id": "fs.promises.rm",
@@ -2666,6 +2678,11 @@
       "moduleName": "find-index",
       "replacements": ["Array.prototype.findIndex"]
     },
+    "fn-name": {
+      "type": "module",
+      "moduleName": "fn-name",
+      "replacements": ["Function.prototype.name"]
+    },
     "for-each": {
       "type": "module",
       "moduleName": "for-each",
@@ -3027,6 +3044,12 @@
       "moduleName": "long",
       "replacements": ["BigInt"]
     },
+    "make-dir": {
+      "type": "module",
+      "moduleName": "make-dir",
+      "replacements": ["fs.promises.mkdir"],
+      "url": {"type": "e18e", "id": "mkdirp"}
+    },
     "math-intrinsics": {
       "type": "module",
       "moduleName": "math-intrinsics",
@@ -3097,6 +3120,18 @@
       "moduleName": "micromatch",
       "replacements": ["path.matchesGlob", "picomatch", "zeptomatch"],
       "url": {"type": "e18e", "id": "micromatch"}
+    },
+    "mkdirp": {
+      "type": "module",
+      "moduleName": "mkdirp",
+      "replacements": ["fs.promises.mkdir"],
+      "url": {"type": "e18e", "id": "mkdirp"}
+    },
+    "mkdirp-classic": {
+      "type": "module",
+      "moduleName": "mkdirp-classic",
+      "replacements": ["fs.promises.mkdir"],
+      "url": {"type": "e18e", "id": "mkdirp"}
     },
     "native-promise-only": {
       "type": "module",
@@ -3378,6 +3413,11 @@
       "moduleName": "repeat-string",
       "replacements": ["String.prototype.repeat"]
     },
+    "repeating": {
+      "type": "module",
+      "moduleName": "repeating",
+      "replacements": ["String.prototype.repeat"]
+    },
     "safe-buffer": {
       "type": "module",
       "moduleName": "safe-buffer",
@@ -3529,6 +3569,11 @@
       "replacements": ["Temporal"],
       "url": {"type": "e18e", "id": "timezone-support"}
     },
+    "to-array": {
+      "type": "module",
+      "moduleName": "to-array",
+      "replacements": ["Array.from"]
+    },
     "to-buffer": {
       "type": "module",
       "moduleName": "to-buffer",
@@ -3543,6 +3588,11 @@
       "type": "module",
       "moduleName": "trim",
       "replacements": ["String.prototype.trim"]
+    },
+    "trim-right": {
+      "type": "module",
+      "moduleName": "trim-right",
+      "replacements": ["String.prototype.trimEnd"]
     },
     "tweetnacl": {
       "type": "module",
@@ -3584,6 +3634,11 @@
       "type": "module",
       "moduleName": "typedarray.prototype.slice",
       "replacements": ["%TypedArray%.prototype.slice"]
+    },
+    "unpipe": {
+      "type": "module",
+      "moduleName": "unpipe",
+      "replacements": ["Readable.unpipe"]
     },
     "url-parse": {
       "type": "module",
