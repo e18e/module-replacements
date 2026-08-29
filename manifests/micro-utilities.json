@@ -430,7 +430,7 @@
       "id": "snippet::object-invert-key-value",
       "type": "simple",
       "description": "You can use `Object.fromEntries` with `Object.entries` to invert keys and values.",
-      "example": "Object.fromEntries(Object.entries(object).map(([key, value]) => [value, key])"
+      "example": "Object.fromEntries(Object.entries(object).map(([k, v]) => [v, k]))"
     },
     "snippet::object-map": {
       "id": "snippet::object-map",
