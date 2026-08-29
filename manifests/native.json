@@ -2074,6 +2074,12 @@
       "url": {"type": "node", "id": "api/stream.html#streamcomposestreams"},
       "nodeFeatureId": {"moduleName": "node:stream", "exportName": "compose"}
     },
+    "streamConsumers": {
+      "id": "streamConsumers",
+      "type": "native",
+      "url": {"type": "node", "id": "api/webstreams.html#utility-consumers"},
+      "nodeFeatureId": {"moduleName": "node:stream/consumers"}
+    },
     "string_decoder": {
       "id": "string_decoder",
       "type": "native",
@@ -2433,7 +2439,7 @@
     "concat-stream": {
       "type": "module",
       "moduleName": "concat-stream",
-      "replacements": ["node:stream"],
+      "replacements": ["streamConsumers"],
       "url": {"type": "e18e", "id": "concat-stream"}
     },
     "crc": {
@@ -3412,7 +3418,7 @@
     "simple-concat": {
       "type": "module",
       "moduleName": "simple-concat",
-      "replacements": ["node:stream"],
+      "replacements": ["streamConsumers"],
       "url": {"type": "e18e", "id": "concat-stream"}
     },
     "starts-with": {
