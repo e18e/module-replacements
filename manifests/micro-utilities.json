@@ -166,13 +166,13 @@
       "id": "snippet::is-bigint",
       "type": "simple",
       "description": "You can use `typeof` to check if a value is a bigint.",
-      "example": "typeof value === \"bigint\";"
+      "example": "typeof value === \"bigint\""
     },
     "snippet::is-boolean": {
       "id": "snippet::is-boolean",
       "type": "simple",
-      "description": "You can use `typeof` to check if a value is a boolean primitive, and `Object.prototype.toString.call` to check if it's a `Boolean` object.",
-      "example": "Object.prototype.toString.call(v) === \"[object Boolean]\""
+      "description": "You can use `typeof` to check if a value is a boolean.",
+      "example": "typeof value === \"boolean\""
     },
     "snippet::is-ci": {
       "id": "snippet::is-ci",
@@ -279,8 +279,8 @@
     "snippet::is-number": {
       "id": "snippet::is-number",
       "type": "simple",
-      "description": "You can check if a value is a number by using `typeof` or coercing it to a number and using `Number.isFinite`.",
-      "example": "const isNumber = (v) => typeof v === \"number\" || (typeof v === \"string\" && Number.isFinite(+v));"
+      "description": "You can use `typeof` to check if a value is a number.",
+      "example": "typeof value === \"number\""
     },
     "snippet::is-object": {
       "id": "snippet::is-object",
@@ -340,13 +340,13 @@
       "id": "snippet::is-string",
       "type": "simple",
       "description": "You can use `typeof` to check if a value is a string.",
-      "example": "typeof value === \"string\";"
+      "example": "typeof value === \"string\""
     },
     "snippet::is-symbol": {
       "id": "snippet::is-symbol",
       "type": "simple",
       "description": "You can use `typeof` to check if a value is a symbol.",
-      "example": "typeof value === \"symbol\";"
+      "example": "typeof value === \"symbol\""
     },
     "snippet::is-touch-device": {
       "id": "snippet::is-touch-device",
@@ -370,7 +370,7 @@
       "id": "snippet::is-undefined",
       "type": "simple",
       "description": "You can use `typeof` to check if a value is `undefined`.",
-      "example": "typeof value === \"undefined\";"
+      "example": "typeof value === \"undefined\""
     },
     "snippet::is-whitespace": {
       "id": "snippet::is-whitespace",
