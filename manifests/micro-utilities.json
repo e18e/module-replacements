@@ -426,6 +426,12 @@
       "description": "You can use `Object.fromEntries` with `Object.entries` and `Array.prototype.filter` to filter an object's properties.",
       "example": "const objectFilter = (obj, fn) => Object.fromEntries(Object.entries(obj).filter(fn));"
     },
+    "snippet::object-invert-key-value": {
+      "id": "snippet::object-invert-key-value",
+      "type": "simple",
+      "description": "You can use `Object.fromEntries` with `Object.entries` to invert keys and values.",
+      "example": "Object.fromEntries(Object.entries(object).map(([key, value]) => [value, key])"
+    },
     "snippet::object-map": {
       "id": "snippet::object-map",
       "type": "simple",
@@ -675,6 +681,11 @@
       "type": "module",
       "moduleName": "has-flag",
       "replacements": ["snippet::has-argv"]
+    },
+    "invert-kv": {
+      "type": "module",
+      "moduleName": "invert-kv",
+      "replacements": ["snippet::object-invert-key-value"]
     },
     "iota-array": {
       "type": "module",
