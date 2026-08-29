@@ -1321,6 +1321,12 @@
       "nodeFeatureId": {"moduleName": "node:stream", "exportName": "Readable"},
       "url": {"type": "node", "id": "api/stream.html#readablereadsize"}
     },
+    "Readable.unpipe": {
+      "id": "Readable.unpipe",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:stream", "exportName": "Readable"},
+      "url": {"type": "node", "id": "api/stream.html#readableunpipedestination"}
+    },
     "Reflect.getPrototypeOf": {
       "id": "Reflect.getPrototypeOf",
       "type": "native",
@@ -3594,6 +3600,11 @@
       "type": "module",
       "moduleName": "typedarray.prototype.slice",
       "replacements": ["%TypedArray%.prototype.slice"]
+    },
+    "unpipe": {
+      "type": "module",
+      "moduleName": "unpipe",
+      "replacements": ["Readable.unpipe"]
     },
     "url-parse": {
       "type": "module",
