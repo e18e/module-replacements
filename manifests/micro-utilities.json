@@ -108,6 +108,12 @@
       "description": "You can use a ternary operator and string concatenation to add a trailing `.0`.",
       "example": "const comverToSemver = (comver) => comver.includes('.') ? `${comver}.0` : `${comver}.0.0`"
     },
+    "snippet::escape-html": {
+      "id": "snippet::escape-html",
+      "type": "simple",
+      "description": "You can use `String.prototype.replace` to escape HTML characters.",
+      "example": "const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '\"': '&quot;', \"'\": '&#39;' }\n\nconst escapeHtml = (str) => str.replace(/[&<>\"']/g, c => map[c])"
+    },
     "snippet::for-own": {
       "id": "snippet::for-own",
       "type": "simple",
@@ -617,6 +623,11 @@
       "moduleName": "es-set-tostringtag",
       "replacements": ["snippet::set-tostringtag"]
     },
+    "escape-html": {
+      "type": "module",
+      "moduleName": "escape-html",
+      "replacements": ["snippet::escape-html"]
+    },
     "except": {
       "type": "module",
       "moduleName": "except",
@@ -646,6 +657,11 @@
       "type": "module",
       "moduleName": "has-flag",
       "replacements": ["snippet::has-argv"]
+    },
+    "html-escaper": {
+      "type": "module",
+      "moduleName": "html-escaper",
+      "replacements": ["snippet::escape-html"]
     },
     "iota-array": {
       "type": "module",
