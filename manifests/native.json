@@ -3539,6 +3539,11 @@
       "replacements": ["Temporal"],
       "url": {"type": "e18e", "id": "timezone-support"}
     },
+    "to-array": {
+      "type": "module",
+      "moduleName": "to-array",
+      "replacements": ["Array.from"]
+    },
     "to-buffer": {
       "type": "module",
       "moduleName": "to-buffer",
