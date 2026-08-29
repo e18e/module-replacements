@@ -372,6 +372,18 @@
       "description": "You can use `typeof` to check if a value is `undefined`.",
       "example": "typeof value === \"undefined\";"
     },
+    "snippet::is-weakmap": {
+      "id": "snippet::is-weakmap",
+      "type": "simple",
+      "description": "You can use `instanceof WeakMap` to check if a value is a `WeakMap`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object WeakMap]\"`",
+      "example": "const isWeakMap = v instanceof WeakMap;\n// for cross-realm\nconst isWeakMapCrossRealm = Object.prototype.toString.call(v) === \"[object WeakMap]\""
+    },
+    "snippet::is-weakset": {
+      "id": "snippet::is-weakset",
+      "type": "simple",
+      "description": "You can use `instanceof WeakSet` to check if a value is a `WeakSet`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object WeakSet]\"`",
+      "example": "const isWeakSet = v instanceof WeakSet;\n// for cross-realm\nconst isWeakSetCrossRealm = Object.prototype.toString.call(v) === \"[object WeakSet]\""
+    },
     "snippet::is-whitespace": {
       "id": "snippet::is-whitespace",
       "type": "simple",
@@ -961,15 +973,35 @@
       "moduleName": "lodash.eq",
       "replacements": ["snippet::is-equal"]
     },
+    "lodash.isarraybuffer": {
+      "type": "module",
+      "moduleName": "lodash.isarraybuffer",
+      "replacements": ["snippet::is-arraybuffer"]
+    },
     "lodash.isboolean": {
       "type": "module",
       "moduleName": "lodash.isboolean",
       "replacements": ["snippet::is-boolean"]
     },
+    "lodash.isdate": {
+      "type": "module",
+      "moduleName": "lodash.isdate",
+      "replacements": ["snippet::is-date"]
+    },
     "lodash.isfunction": {
       "type": "module",
       "moduleName": "lodash.isfunction",
       "replacements": ["snippet::is-function"]
+    },
+    "lodash.ismap": {
+      "type": "module",
+      "moduleName": "lodash.ismap",
+      "replacements": ["snippet::is-map"]
+    },
+    "lodash.isnil": {
+      "type": "module",
+      "moduleName": "lodash.isnil",
+      "replacements": ["snippet::is-nil"]
     },
     "lodash.isnull": {
       "type": "module",
@@ -996,6 +1028,11 @@
       "moduleName": "lodash.isregexp",
       "replacements": ["snippet::is-regexp"]
     },
+    "lodash.isset": {
+      "type": "module",
+      "moduleName": "lodash.isset",
+      "replacements": ["snippet::is-set"]
+    },
     "lodash.isstring": {
       "type": "module",
       "moduleName": "lodash.isstring",
@@ -1006,10 +1043,25 @@
       "moduleName": "lodash.issymbol",
       "replacements": ["snippet::is-symbol"]
     },
+    "lodash.istypedarray": {
+      "type": "module",
+      "moduleName": "lodash.istypedarray",
+      "replacements": ["snippet::is-typed-array"]
+    },
     "lodash.isundefined": {
       "type": "module",
       "moduleName": "lodash.isundefined",
       "replacements": ["snippet::is-undefined"]
+    },
+    "lodash.isweakmap": {
+      "type": "module",
+      "moduleName": "lodash.isweakmap",
+      "replacements": ["snippet::is-weakmap"]
+    },
+    "lodash.isweakset": {
+      "type": "module",
+      "moduleName": "lodash.isweakset",
+      "replacements": ["snippet::is-weakset"]
     },
     "lodash.noop": {
       "type": "module",

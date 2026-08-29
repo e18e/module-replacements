@@ -3006,6 +3006,11 @@
       "moduleName": "lodash.isnan",
       "replacements": ["Number.isNaN"]
     },
+    "lodash.issafeinteger": {
+      "type": "module",
+      "moduleName": "lodash.issafeinteger",
+      "replacements": ["Number.isSafeInteger"]
+    },
     "lodash.join": {
       "type": "module",
       "moduleName": "lodash.join",
