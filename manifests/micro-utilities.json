@@ -160,7 +160,7 @@
       "id": "snippet::is-aws-lambda",
       "type": "simple",
       "description": "You can check if the current environment is an AWS Lambda by checking if the `LAMBDA_TASK_ROOT` environment variables are set.",
-      "example": "const isAwsLambda = Boolean(process.env.LAMBDA_TASK_ROOT)"
+      "example": "Boolean(process.env.LAMBDA_TASK_ROOT)"
     },
     "snippet::is-bigint": {
       "id": "snippet::is-bigint",
@@ -232,7 +232,7 @@
       "id": "snippet::is-in-ssh",
       "type": "simple",
       "description": "You can check if the current environment is SSH by checking if the `SSH_CONNECTION` environment variable is set.",
-      "example": "const isInSsh = Boolean(process.env.SSH_CONNECTION);"
+      "example": "Boolean(process.env.SSH_CONNECTION)"
     },
     "snippet::is-interactive": {
       "id": "snippet::is-interactive",
@@ -358,7 +358,7 @@
       "id": "snippet::is-travis",
       "type": "simple",
       "description": "You can check if the current environment is Travis CI by checking if the `TRAVIS` environment variable is set.",
-      "example": "const isTravis = () => \"TRAVIS\" in process.env;"
+      "example": "Boolean(process.env.TRAVIS)"
     },
     "snippet::is-typed-array": {
       "id": "snippet::is-typed-array",
@@ -394,7 +394,7 @@
       "id": "snippet::is-wsl",
       "type": "simple",
       "description": "You can check if the current environment is WSL by checking if the `WSL_DISTRO_NAME` environment variable is set.",
-      "example": "const isWsl = Boolean(process.env.WSL_DISTRO_NAME);"
+      "example": "Boolean(process.env.WSL_DISTRO_NAME)"
     },
     "snippet::json-file": {
       "id": "snippet::json-file",
