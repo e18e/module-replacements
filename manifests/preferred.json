@@ -168,12 +168,6 @@
       "replacements": ["util.styleText", "picocolors", "ansis"],
       "url": {"type": "e18e", "id": "chalk"}
     },
-    "concat-stream": {
-      "type": "module",
-      "moduleName": "concat-stream",
-      "replacements": ["node:stream"],
-      "url": {"type": "e18e", "id": "concat-stream"}
-    },
     "copy-paste": {
       "type": "module",
       "moduleName": "copy-paste",

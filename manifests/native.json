@@ -2430,6 +2430,12 @@
       "moduleName": "concat-map",
       "replacements": ["Array.prototype.flatMap"]
     },
+    "concat-stream": {
+      "type": "module",
+      "moduleName": "concat-stream",
+      "replacements": ["node:stream"],
+      "url": {"type": "e18e", "id": "concat-stream"}
+    },
     "crc": {
       "type": "module",
       "moduleName": "crc",
@@ -3402,6 +3408,12 @@
       "type": "module",
       "moduleName": "setprototypeof",
       "replacements": ["Object.setPrototypeOf"]
+    },
+    "simple-concat": {
+      "type": "module",
+      "moduleName": "simple-concat",
+      "replacements": ["node:stream"],
+      "url": {"type": "e18e", "id": "concat-stream"}
     },
     "starts-with": {
       "type": "module",
