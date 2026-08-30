@@ -1027,6 +1027,11 @@
       "moduleName": "lodash.noop",
       "replacements": ["snippet::noop"]
     },
+    "lodash.uniq": {
+      "type": "module",
+      "moduleName": "lodash.uniq",
+      "replacements": ["snippet::array-unique"]
+    },
     "lower-case": {
       "type": "module",
       "moduleName": "lower-case",
