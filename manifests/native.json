@@ -3061,6 +3061,11 @@
       "moduleName": "long",
       "replacements": ["BigInt"]
     },
+    "lower-case": {
+      "type": "module",
+      "moduleName": "lower-case",
+      "replacements": ["String.prototype.toLowerCase"]
+    },
     "make-dir": {
       "type": "module",
       "moduleName": "make-dir",
@@ -3662,6 +3667,11 @@
       "type": "module",
       "moduleName": "unpipe",
       "replacements": ["Readable.unpipe"]
+    },
+    "upper-case": {
+      "type": "module",
+      "moduleName": "upper-case",
+      "replacements": ["String.prototype.toUpperCase"]
     },
     "url-parse": {
       "type": "module",

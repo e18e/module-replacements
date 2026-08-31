@@ -504,18 +504,6 @@
       "description": "You can check if the first character of the string is the BOM and strip it using `String.prototype.slice` if it is.",
       "example": "str.charCodeAt(0) === 0xFEFF ? str.slice(1) : str;"
     },
-    "snippet::to-lower": {
-      "id": "snippet::to-lower",
-      "type": "simple",
-      "description": "You can convert a string to lowercase using `toLocaleLowerCase` or `toLowerCase`.",
-      "example": "const toLower = (str) => str.toLocaleLowerCase();"
-    },
-    "snippet::to-uppercase": {
-      "id": "snippet::to-uppercase",
-      "type": "simple",
-      "description": "You can convert a string to uppercase using `toLocaleUpperCase` or `toUpperCase`.",
-      "example": "const toUpper = (str) => str.toLocaleUpperCase();"
-    },
     "snippet::trim-repeated-characters": {
       "id": "snippet::trim-repeated-characters",
       "type": "simple",
@@ -1084,11 +1072,6 @@
       "moduleName": "lodash.uniq",
       "replacements": ["snippet::array-unique"]
     },
-    "lower-case": {
-      "type": "module",
-      "moduleName": "lower-case",
-      "replacements": ["snippet::to-lower"]
-    },
     "map-obj": {
       "type": "module",
       "moduleName": "map-obj",
@@ -1193,11 +1176,6 @@
       "type": "module",
       "moduleName": "uniq",
       "replacements": ["snippet::array-unique"]
-    },
-    "upper-case": {
-      "type": "module",
-      "moduleName": "upper-case",
-      "replacements": ["snippet::to-uppercase"]
     },
     "upper-case-first": {
       "type": "module",
