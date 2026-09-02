@@ -256,6 +256,12 @@
       "replacements": ["dequal", "util.isDeepStrictEqual", "Bun.deepEquals"],
       "url": {"type": "e18e", "id": "deep-equal"}
     },
+    "deepmerge": {
+      "type": "module",
+      "moduleName": "deepmerge",
+      "replacements": ["defu", "@fastify/deepmerge"],
+      "url": {"type": "e18e", "id": "deep-merge"}
+    },
     "depcheck": {
       "type": "module",
       "moduleName": "depcheck",
