@@ -1719,6 +1719,19 @@
         "compatKey": "api.btoa"
       }
     },
+    "class_field_arrow_functions": {
+      "id": "class_field_arrow_functions",
+      "type": "native",
+      "description": "Class fields with arrow functions bind a method to its instance without any constructor work, at the cost of the method no longer living on the prototype",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Functions/Arrow_functions"
+      },
+      "webFeatureId": {
+        "featureId": "class-syntax",
+        "compatKey": "javascript.classes.public_class_fields"
+      }
+    },
     "crypto.randomBytes": {
       "id": "crypto.randomBytes",
       "type": "native",
@@ -2395,6 +2408,11 @@
       "type": "module",
       "moduleName": "atob-lite",
       "replacements": ["atob"]
+    },
+    "auto-bind": {
+      "type": "module",
+      "moduleName": "auto-bind",
+      "replacements": ["class_field_arrow_functions"]
     },
     "big-integer": {
       "type": "module",
