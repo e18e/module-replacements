@@ -552,6 +552,11 @@
       "moduleName": "arr-flatten",
       "replacements": ["snippet::array-flatten"]
     },
+    "arr-union": {
+      "type": "module",
+      "moduleName": "arr-union",
+      "replacements": ["snippet::array-union"]
+    },
     "array-back": {
       "type": "module",
       "moduleName": "array-back",
