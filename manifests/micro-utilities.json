@@ -444,6 +444,12 @@
       "description": "You can use `Object.fromEntries` with `Object.entries` to invert keys and values.",
       "example": "Object.fromEntries(Object.entries(object).map(([k, v]) => [v, k]))"
     },
+    "snippet::object-iterate": {
+      "id": "snippet::object-iterate",
+      "type": "simple",
+      "description": "You can use a `for...of` loop over `Object.entries` to iterate an object's own enumerable properties, and `break` to stop early.",
+      "example": "for (const [key, value] of Object.entries(obj)) {\n  if (key === 'stop') break\n  // do something\n}\n// Or for arrays\nfor (const [index, value] of arr.entries()) {\n  // do something\n}"
+    },
     "snippet::object-map": {
       "id": "snippet::object-map",
       "type": "simple",
@@ -936,6 +942,11 @@
       "type": "module",
       "moduleName": "isstream",
       "replacements": ["snippet::is-stream"]
+    },
+    "iterate-object": {
+      "type": "module",
+      "moduleName": "iterate-object",
+      "replacements": ["snippet::object-iterate"]
     },
     "js-base64": {
       "type": "module",
