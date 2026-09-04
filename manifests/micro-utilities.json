@@ -228,6 +228,12 @@
       "description": "You can check first three bytes of a buffer to detect if it is a gzip file.",
       "example": "function isGzip(buf) {\n  if (buf.length < 3) return false;\n  return buf[0] === 31 && buf[1] === 139 && buf[2] === 8;\n}"
     },
+    "snippet::is-identifier-name": {
+      "id": "snippet::is-identifier-name",
+      "type": "simple",
+      "description": "You can test a string against the `ID_Start` and `ID_Continue` Unicode properties to check whether it is a valid identifier name, and so usable as an unquoted property.",
+      "example": "const identifierNameRE = /^[$_\\p{ID_Start}][$\\u200c\\u200d\\p{ID_Continue}]*$/u;\n\nconst isProperty = (str) => identifierNameRE.test(str);"
+    },
     "snippet::is-in-ssh": {
       "id": "snippet::is-in-ssh",
       "type": "simple",
@@ -890,6 +896,11 @@
       "type": "module",
       "moduleName": "is-primitive",
       "replacements": ["snippet::is-primitve"]
+    },
+    "is-property": {
+      "type": "module",
+      "moduleName": "is-property",
+      "replacements": ["snippet::is-identifier-name"]
     },
     "is-regex": {
       "type": "module",
