@@ -1719,6 +1719,13 @@
         "compatKey": "api.btoa"
       }
     },
+    "buffer.isUtf8": {
+      "id": "buffer.isUtf8",
+      "type": "native",
+      "description": "Checks whether a buffer, typed array or array buffer contains valid UTF-8, including control characters such as NUL and ESC.",
+      "url": {"type": "node", "id": "api/buffer.html#bufferisutf8input"},
+      "nodeFeatureId": {"moduleName": "node:buffer", "exportName": "isUtf8"}
+    },
     "class_field_arrow_functions": {
       "id": "class_field_arrow_functions",
       "type": "native",
@@ -2918,6 +2925,12 @@
       "type": "module",
       "moduleName": "is-url-superb",
       "replacements": ["URL.canParse"]
+    },
+    "is-utf8": {
+      "type": "module",
+      "moduleName": "is-utf8",
+      "replacements": ["buffer.isUtf8", "TextDecoder"],
+      "url": {"type": "e18e", "id": "is-utf8"}
     },
     "isarray": {
       "type": "module",
