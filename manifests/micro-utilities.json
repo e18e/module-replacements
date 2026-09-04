@@ -240,6 +240,12 @@
       "description": "You can check if the current environment is interactive using `process.stdout.isTTY` and checking that it is not running in CI.",
       "example": "Boolean(stream?.isTTY && !process.env.CI)"
     },
+    "snippet::is-jpg-buffer": {
+      "id": "snippet::is-jpg-buffer",
+      "type": "simple",
+      "description": "You can check the first three bytes of a buffer against the JPEG file signature to detect if it is a JPEG image.",
+      "example": "function isJpg(buf) {\n  if (!buf || buf.length < 3) return false;\n  return buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff;\n}"
+    },
     "snippet::is-map": {
       "id": "snippet::is-map",
       "type": "simple",
@@ -776,6 +782,11 @@
       "type": "module",
       "moduleName": "is-interactive",
       "replacements": ["snippet::is-interactive"]
+    },
+    "is-jpg": {
+      "type": "module",
+      "moduleName": "is-jpg",
+      "replacements": ["snippet::is-jpg-buffer"]
     },
     "is-lambda": {
       "type": "module",
