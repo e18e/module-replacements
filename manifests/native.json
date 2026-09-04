@@ -72,6 +72,17 @@
         "compatKey": "javascript.builtins.TypedArray.slice"
       }
     },
+    "--enable-source-maps": {
+      "id": "--enable-source-maps",
+      "type": "native",
+      "description": "Maps stack traces back to the original sources for the whole process, including files in `node_modules` and generated code.",
+      "url": {"type": "node", "id": "api/cli.html#--enable-source-maps"}
+    },
+    "@cspotcode/source-map-support": {
+      "id": "@cspotcode/source-map-support",
+      "type": "removal",
+      "description": "Ships as a dependency of `ts-node` and goes away when `ts-node` does, rather than being replaced directly."
+    },
     "AbortController": {
       "id": "AbortController",
       "type": "native",
@@ -1965,6 +1976,29 @@
         "id": "Web/JavaScript/Reference/Operators/import.meta"
       }
     },
+    "module.findSourceMap": {
+      "id": "module.findSourceMap",
+      "type": "native",
+      "description": "Returns the parsed source map for a file, which is a different job from enabling support as it never touches stack traces.",
+      "url": {"type": "node", "id": "api/module.html#modulefindsourcemappath"},
+      "nodeFeatureId": {
+        "moduleName": "node:module",
+        "exportName": "findSourceMap"
+      }
+    },
+    "module.setSourceMapsSupport": {
+      "id": "module.setSourceMapsSupport",
+      "type": "native",
+      "description": "Enables Source Map v3 support for stack traces at runtime, with explicit control over whether `node_modules` and generated code are covered.",
+      "url": {
+        "type": "node",
+        "id": "api/module.html#modulesetsourcemapssupportenabled-options"
+      },
+      "nodeFeatureId": {
+        "moduleName": "node:module",
+        "exportName": "setSourceMapsSupport"
+      }
+    },
     "optional_chaining": {
       "id": "optional_chaining",
       "type": "native",
@@ -2049,6 +2083,19 @@
       "nodeFeatureId": {
         "moduleName": "process",
         "exportName": "nextTick"
+      }
+    },
+    "process.setSourceMapsEnabled": {
+      "id": "process.setSourceMapsEnabled",
+      "type": "native",
+      "description": "Enables source map support for stack traces in a single call, currently covering `node_modules` and generated code though Node plans to narrow that.",
+      "url": {
+        "type": "node",
+        "id": "api/process.html#processsetsourcemapsenabledval"
+      },
+      "nodeFeatureId": {
+        "moduleName": "node:process",
+        "exportName": "setSourceMapsEnabled"
       }
     },
     "queueMicrotask": {
@@ -2162,6 +2209,15 @@
       "type": "module",
       "moduleName": "@babel/plugin-transform-object-rest-spread",
       "replacements": ["spread_syntax"]
+    },
+    "@cspotcode/source-map-support": {
+      "type": "module",
+      "moduleName": "@cspotcode/source-map-support",
+      "replacements": [
+        "@cspotcode/source-map-support",
+        "module.setSourceMapsSupport"
+      ],
+      "url": {"type": "e18e", "id": "source-map-support"}
     },
     "a-sync-waterfall": {
       "type": "module",
@@ -3478,6 +3534,17 @@
       "moduleName": "simple-concat",
       "replacements": ["streamConsumers"],
       "url": {"type": "e18e", "id": "concat-stream"}
+    },
+    "source-map-support": {
+      "type": "module",
+      "moduleName": "source-map-support",
+      "replacements": [
+        "module.setSourceMapsSupport",
+        "--enable-source-maps",
+        "process.setSourceMapsEnabled",
+        "module.findSourceMap"
+      ],
+      "url": {"type": "e18e", "id": "source-map-support"}
     },
     "starts-with": {
       "type": "module",
