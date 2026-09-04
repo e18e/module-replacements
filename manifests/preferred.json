@@ -232,6 +232,12 @@
       "replacements": ["node:crypto", "crypto", "Bun.CryptoHasher"],
       "url": {"type": "e18e", "id": "crypto-js"}
     },
+    "css-loader": {
+      "type": "module",
+      "moduleName": "css-loader",
+      "replacements": ["webpack.experiments.css"],
+      "url": {"type": "e18e", "id": "css-loader"}
+    },
     "cwd": {
       "type": "module",
       "moduleName": "cwd",
@@ -3766,6 +3772,11 @@
       "id": "webpack-bundle-analyzer",
       "type": "documented",
       "replacementModule": "webpack-bundle-analyzer"
+    },
+    "webpack.experiments.css": {
+      "id": "webpack.experiments.css",
+      "type": "documented",
+      "replacementModule": "webpack"
     },
     "webpack.output.clean": {
       "id": "webpack.output.clean",
