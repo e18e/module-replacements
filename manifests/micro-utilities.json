@@ -318,6 +318,12 @@
       "description": "You can check the first eight bytes of a buffer against the PNG file signature to detect if it is a PNG image.",
       "example": "function isPng(buf) {\n  if (!buf || buf.length < 8) return false;\n  return buf[0] === 0x89 && buf[1] === 0x50\n    && buf[2] === 0x4e && buf[3] === 0x47\n    && buf[4] === 0x0d && buf[5] === 0x0a\n    && buf[6] === 0x1a && buf[7] === 0x0a;\n}"
     },
+    "snippet::is-posix-bracket": {
+      "id": "snippet::is-posix-bracket",
+      "type": "simple",
+      "description": "You can test for a POSIX bracket expression such as `[:alpha:]` using a regular expression.",
+      "example": "const isPosixBracket = (str) =>\n  typeof str === 'string' && /\\[([:.=+])(?:[^\\[\\]]|)+\\1\\]/.test(str);"
+    },
     "snippet::is-primitve": {
       "id": "snippet::is-primitve",
       "type": "simple",
@@ -885,6 +891,11 @@
       "type": "module",
       "moduleName": "is-png",
       "replacements": ["snippet::is-png-buffer"]
+    },
+    "is-posix-bracket": {
+      "type": "module",
+      "moduleName": "is-posix-bracket",
+      "replacements": ["snippet::is-posix-bracket"]
     },
     "is-primitive": {
       "type": "module",
