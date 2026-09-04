@@ -354,6 +354,12 @@
       "description": "You can use `typeof` to check if a value is a string.",
       "example": "typeof value === \"string\""
     },
+    "snippet::is-supported-regexp-flag": {
+      "id": "snippet::is-supported-regexp-flag",
+      "type": "simple",
+      "description": "The `RegExp` constructor throws on an unsupported or invalid flag, so you can check support with a `try`/`catch`.",
+      "example": "const isSupportedRegexpFlag = (flag) => {\n  try {\n    RegExp(\"\", flag);\n    return true;\n  } catch {\n    return false;\n  }\n};"
+    },
     "snippet::is-symbol": {
       "id": "snippet::is-symbol",
       "type": "simple",
@@ -920,6 +926,11 @@
       "type": "module",
       "moduleName": "is-string",
       "replacements": ["snippet::is-string"]
+    },
+    "is-supported-regexp-flag": {
+      "type": "module",
+      "moduleName": "is-supported-regexp-flag",
+      "replacements": ["snippet::is-supported-regexp-flag"]
     },
     "is-symbol": {
       "type": "module",
