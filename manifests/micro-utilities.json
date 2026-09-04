@@ -306,6 +306,12 @@
       "description": "You can check if a path equals the current working directory using `path.relative`.",
       "example": "import { relative } from 'node:path'\n\nconst isPathCwd = (p) => !relative(p, process.cwd())"
     },
+    "snippet::is-png-buffer": {
+      "id": "snippet::is-png-buffer",
+      "type": "simple",
+      "description": "You can check the first eight bytes of a buffer against the PNG file signature to detect if it is a PNG image.",
+      "example": "function isPng(buf) {\n  if (!buf || buf.length < 8) return false;\n  return buf[0] === 0x89 && buf[1] === 0x50\n    && buf[2] === 0x4e && buf[3] === 0x47\n    && buf[4] === 0x0d && buf[5] === 0x0a\n    && buf[6] === 0x1a && buf[7] === 0x0a;\n}"
+    },
     "snippet::is-primitve": {
       "id": "snippet::is-primitve",
       "type": "simple",
@@ -846,6 +852,11 @@
       "type": "module",
       "moduleName": "is-plain-object",
       "replacements": ["snippet::is-object"]
+    },
+    "is-png": {
+      "type": "module",
+      "moduleName": "is-png",
+      "replacements": ["snippet::is-png-buffer"]
     },
     "is-primitive": {
       "type": "module",
