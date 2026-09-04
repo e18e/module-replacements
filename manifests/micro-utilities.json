@@ -420,6 +420,12 @@
       "description": "You can use `Math.random()` or `crypto.getRandomValues` if cryptographic randomness is required.",
       "example": "crypto.getRandomValues(new Uint32Array(1))[0] / (2 ** 32);\n// or\nMath.random();"
     },
+    "snippet::min-indent": {
+      "id": "snippet::min-indent",
+      "type": "simple",
+      "description": "You can use a regular expression with `Array.prototype.reduce` to find the shortest leading whitespace across the lines of a string.",
+      "example": "const minIndent = (string) => (string.match(/^[ \\t]*(?=\\S)/gm) ?? ['']).reduce((r, a) => Math.min(r, a.length), Infinity)"
+    },
     "snippet::noop": {
       "id": "snippet::noop",
       "type": "simple",
@@ -1081,6 +1087,11 @@
       "type": "module",
       "moduleName": "math-random",
       "replacements": ["snippet::math-random"]
+    },
+    "min-indent": {
+      "type": "module",
+      "moduleName": "min-indent",
+      "replacements": ["snippet::min-indent"]
     },
     "minimalistic-assert": {
       "type": "module",
