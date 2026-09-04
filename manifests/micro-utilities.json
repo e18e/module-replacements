@@ -322,7 +322,7 @@
       "id": "snippet::is-posix-bracket",
       "type": "simple",
       "description": "You can test for a POSIX bracket expression such as `[:alpha:]` using a regular expression.",
-      "example": "const isPosixBracket = (str) =>\n  typeof str === 'string' && /\\[([:.=+])(?:[^\\[\\]]|)+\\1\\]/.test(str);"
+      "example": "const isPosixBracket = (str) => /\\[([:.=+])(?:[^\\[\\]]|)+\\1\\]/.test(str);"
     },
     "snippet::is-primitve": {
       "id": "snippet::is-primitve",
