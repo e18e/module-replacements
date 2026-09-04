@@ -138,6 +138,12 @@
       "description": "You can use the `includes` method on the `process.argv` array to check if a flag is present.",
       "example": "process.argv.includes('--flag')"
     },
+    "snippet::indent-string": {
+      "id": "snippet::indent-string",
+      "type": "simple",
+      "description": "You can indent every non-empty line with `String.prototype.replace`, or use `/^/gm` to also indent empty lines, matching the package's `includeEmptyLines` option.",
+      "example": "const indentString = (string, count = 1, indent = ' ') =>\n  string.replace(/^(?!\\s*$)/gm, indent.repeat(count));"
+    },
     "snippet::is-arguments": {
       "id": "snippet::is-arguments",
       "type": "simple",
@@ -710,6 +716,11 @@
       "type": "module",
       "moduleName": "has-flag",
       "replacements": ["snippet::has-argv"]
+    },
+    "indent-string": {
+      "type": "module",
+      "moduleName": "indent-string",
+      "replacements": ["snippet::indent-string"]
     },
     "invert-kv": {
       "type": "module",
