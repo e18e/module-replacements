@@ -192,6 +192,12 @@
       "description": "You can check the first two bytes of a buffer to detect if it's compressed using deflate.",
       "example": "function isDeflate(buf) {\n  if (buf.length < 2 || buf[0] !== 0x78) return false;\n  const b = buf[1];\n  return b === 1 || b === 0x9c || b === 0xda;\n}"
     },
+    "snippet::is-directory": {
+      "id": "snippet::is-directory",
+      "type": "simple",
+      "description": "You can call `isDirectory()` on the result of `stat` from `node:fs/promises`, or of `statSync` from `node:fs`, treating an `ENOENT` error as `false`.",
+      "example": "import { stat } from 'node:fs/promises'\n\nconst isDirectory = async (filepath) => {\n  try {\n    return (await stat(filepath)).isDirectory()\n  } catch (err) {\n    if (err.code === 'ENOENT') return false\n    throw err\n  }\n}"
+    },
     "snippet::is-electron": {
       "id": "snippet::is-electron",
       "type": "simple",
@@ -760,6 +766,11 @@
       "type": "module",
       "moduleName": "is-deflate",
       "replacements": ["snippet::is-deflate-buffer"]
+    },
+    "is-directory": {
+      "type": "module",
+      "moduleName": "is-directory",
+      "replacements": ["snippet::is-directory"]
     },
     "is-electron": {
       "type": "module",
