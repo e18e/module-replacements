@@ -2022,6 +2022,12 @@
       "url": {"type": "node", "id": "api/path.html#pathparsepath"},
       "nodeFeatureId": {"moduleName": "path", "exportName": "parse"}
     },
+    "path.relative": {
+      "id": "path.relative",
+      "type": "native",
+      "url": {"type": "node", "id": "api/path.html#pathrelativefrom-to"},
+      "nodeFeatureId": {"moduleName": "path", "exportName": "relative"}
+    },
     "picomatch": {
       "id": "picomatch",
       "type": "documented",
@@ -2913,6 +2919,18 @@
       "type": "module",
       "moduleName": "is-nan",
       "replacements": ["Number.isNaN"]
+    },
+    "is-path-in-cwd": {
+      "type": "module",
+      "moduleName": "is-path-in-cwd",
+      "replacements": ["path.relative"],
+      "url": {"type": "e18e", "id": "is-path-in-cwd"}
+    },
+    "is-path-inside": {
+      "type": "module",
+      "moduleName": "is-path-inside",
+      "replacements": ["path.relative"],
+      "url": {"type": "e18e", "id": "is-path-inside"}
     },
     "is-url-superb": {
       "type": "module",
