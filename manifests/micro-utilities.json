@@ -486,6 +486,12 @@
       "description": "You can use `Object.keys` with `Array.prototype.findLast` to find the case-insensitive `PATH` environment variable key.",
       "example": "const pathKey = Object.keys(process.env).findLast((k) => k.toUpperCase() === 'PATH') ?? 'PATH';"
     },
+    "snippet::path-root": {
+      "id": "snippet::path-root",
+      "type": "simple",
+      "description": "You can use `parse` from `node:path` and read its `root` property to get the root of a path.",
+      "example": "import { parse } from 'node:path'\n\nconst pathRoot = (filepath) => parse(filepath).root"
+    },
     "snippet::regexp-copy": {
       "id": "snippet::regexp-copy",
       "type": "simple",
@@ -1165,6 +1171,18 @@
       "type": "module",
       "moduleName": "path-name",
       "replacements": ["snippet::path-key"]
+    },
+    "path-root": {
+      "type": "module",
+      "moduleName": "path-root",
+      "replacements": ["snippet::path-root"],
+      "url": {"type": "e18e", "id": "path-root"}
+    },
+    "path-root-regex": {
+      "type": "module",
+      "moduleName": "path-root-regex",
+      "replacements": ["snippet::path-root"],
+      "url": {"type": "e18e", "id": "path-root"}
     },
     "reduce-object": {
       "type": "module",
