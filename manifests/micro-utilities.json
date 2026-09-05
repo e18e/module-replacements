@@ -306,6 +306,12 @@
       "description": "You can use `typeof` to check if a value is an object and `Object.getPrototypeOf` to ensure it's a plain object.",
       "example": "const isObject = (obj) => obj && typeof obj === \"object\" && (Object.getPrototypeOf(obj) === null || Object.getPrototypeOf(obj) === Object.prototype);"
     },
+    "snippet::is-object-and-not-regexp": {
+      "id": "snippet::is-object-and-not-regexp",
+      "type": "simple",
+      "description": "You can use `typeof` to check if a value is an object and is not a `RegExp`.",
+      "example": "const isObjectAndNotRegExp = (v) => v != null && typeof v === \"object\" && v.constructor !== RegExp"
+    },
     "snippet::is-object-or-function": {
       "id": "snippet::is-object-or-function",
       "type": "simple",
@@ -1205,6 +1211,11 @@
       "type": "module",
       "moduleName": "object.reduce",
       "replacements": ["snippet::object-reduce"]
+    },
+    "objectorarray": {
+      "type": "module",
+      "moduleName": "objectorarray",
+      "replacements": ["snippet::is-object-and-not-regexp"]
     },
     "path-key": {
       "type": "module",
