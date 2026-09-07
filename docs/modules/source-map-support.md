@@ -22,7 +22,7 @@ import { setSourceMapsSupport } from 'node:module' // [!code ++]
 setSourceMapsSupport(true, { nodeModules: true, generatedCode: true }) // [!code ++]
 ```
 
-The register import maps the same way:
+Then register import maps the same way:
 
 ```ts
 import 'source-map-support/register' // [!code --]
@@ -60,17 +60,6 @@ process.setSourceMapsEnabled(true) // [!code ++]
 ```
 
 It currently covers `node_modules` and generated code, matching the flag. Node has said in the source that it intends to stop doing so in a future major, so prefer `module.setSourceMapsSupport` with explicit options where the version allows.
-
-## `module.findSourceMap` (native, since Node.js v13.7.0 / v12.17.0)
-
-[`module.findSourceMap`](https://nodejs.org/api/module.html#modulefindsourcemappath) does a different job from everything above. It hands back the parsed source map for a file so you can look positions up yourself, and it never touches a stack trace. Reach for it when you were using `source-map-support` to resolve positions rather than to fix traces.
-
-```ts
-import { findSourceMap } from 'node:module'
-
-const sourceMap = findSourceMap('/path/to/file.js')
-const entry = sourceMap?.findEntry(lineNumber, columnNumber)
-```
 
 ## What native support does not cover
 

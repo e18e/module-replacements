@@ -1976,16 +1976,6 @@
         "id": "Web/JavaScript/Reference/Operators/import.meta"
       }
     },
-    "module.findSourceMap": {
-      "id": "module.findSourceMap",
-      "type": "native",
-      "description": "Returns the parsed source map for a file, which is a different job from enabling support as it never touches stack traces.",
-      "url": {"type": "node", "id": "api/module.html#modulefindsourcemappath"},
-      "nodeFeatureId": {
-        "moduleName": "node:module",
-        "exportName": "findSourceMap"
-      }
-    },
     "module.setSourceMapsSupport": {
       "id": "module.setSourceMapsSupport",
       "type": "native",
@@ -3541,8 +3531,7 @@
       "replacements": [
         "module.setSourceMapsSupport",
         "--enable-source-maps",
-        "process.setSourceMapsEnabled",
-        "module.findSourceMap"
+        "process.setSourceMapsEnabled"
       ],
       "url": {"type": "e18e", "id": "source-map-support"}
     },
