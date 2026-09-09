@@ -2878,8 +2878,7 @@
     "http-status-codes": {
       "type": "module",
       "moduleName": "http-status-codes",
-      "replacements": ["http.STATUS_CODES"],
-      "url": {"type": "e18e", "id": "http-status-codes"}
+      "replacements": ["http.STATUS_CODES"]
     },
     "ieee754": {
       "type": "module",
