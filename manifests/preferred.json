@@ -2796,6 +2796,12 @@
       "replacements": ["vue-markdown-render"],
       "url": {"type": "e18e", "id": "vue3-markdown-it"}
     },
+    "wait-for-expect": {
+      "type": "module",
+      "moduleName": "wait-for-expect",
+      "replacements": ["node:test", "vitest"],
+      "url": {"type": "e18e", "id": "wait-for-expect"}
+    },
     "wellknown": {
       "type": "module",
       "moduleName": "wellknown",
