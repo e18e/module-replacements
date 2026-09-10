@@ -2875,6 +2875,11 @@
       "moduleName": "homedir-polyfill",
       "replacements": ["os.homedir"]
     },
+    "http-status-codes": {
+      "type": "module",
+      "moduleName": "http-status-codes",
+      "replacements": ["http.STATUS_CODES"]
+    },
     "ieee754": {
       "type": "module",
       "moduleName": "ieee754",
