@@ -408,6 +408,12 @@
       "description": "You can check if a value is a Typed Array using `ArrayBuffer.isView` and checking if it is not a `DataView`.",
       "example": "const isTypedArray = (v) => ArrayBuffer.isView(v) && !(v instanceof DataView);"
     },
+    "snippet::is-unc-path": {
+      "id": "snippet::is-unc-path",
+      "type": "simple",
+      "description": "You can test for a Windows UNC path such as `\\\\server\\share` using a regular expression.",
+      "example": "const isUncPath = (filepath) => /^[\\\\\\/]{2,}[^\\\\\\/]+[\\\\\\/]+[^\\\\\\/]+/.test(filepath)"
+    },
     "snippet::is-undefined": {
       "id": "snippet::is-undefined",
       "type": "simple",
@@ -1002,6 +1008,11 @@
       "moduleName": "is-typedarray",
       "replacements": ["snippet::is-typed-array"]
     },
+    "is-unc-path": {
+      "type": "module",
+      "moduleName": "is-unc-path",
+      "replacements": ["snippet::is-unc-path"]
+    },
     "is-whitespace": {
       "type": "module",
       "moduleName": "is-whitespace",
@@ -1298,6 +1309,11 @@
       "type": "module",
       "moduleName": "typedarray-to-buffer",
       "replacements": ["snippet::typed-array-to-buffer"]
+    },
+    "unc-path-regex": {
+      "type": "module",
+      "moduleName": "unc-path-regex",
+      "replacements": ["snippet::is-unc-path"]
     },
     "uniq": {
       "type": "module",
