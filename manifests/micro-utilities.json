@@ -264,6 +264,12 @@
       "description": "You can check the first three bytes of a buffer against the JPEG file signature to detect if it is a JPEG image.",
       "example": "function isJpg(buf) {\n  if (!buf || buf.length < 3) return false;\n  return buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff;\n}"
     },
+    "snippet::is-lower-case": {
+      "id": "snippet::is-lower-case",
+      "type": "simple",
+      "description": "You can compare the string against its lower-cased form, and check it differs from its upper-cased form so that strings with no cased characters return `false`.",
+      "example": "const isLowerCase = (input, locale) =>\n  input.toLocaleLowerCase(locale) === input &&\n  input !== input.toLocaleUpperCase(locale)"
+    },
     "snippet::is-map": {
       "id": "snippet::is-map",
       "type": "simple",
@@ -867,6 +873,11 @@
       "type": "module",
       "moduleName": "is-lambda",
       "replacements": ["snippet::is-aws-lambda"]
+    },
+    "is-lower-case": {
+      "type": "module",
+      "moduleName": "is-lower-case",
+      "replacements": ["snippet::is-lower-case"]
     },
     "is-map": {
       "type": "module",
