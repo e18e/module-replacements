@@ -204,6 +204,12 @@
       "description": "You can call `isDirectory()` on the result of `stat` from `node:fs/promises`, or of `statSync` from `node:fs`, treating an `ENOENT` error as `false`.",
       "example": "import { stat } from 'node:fs/promises'\n\nconst isDirectory = async (filepath) => {\n  try {\n    return (await stat(filepath)).isDirectory()\n  } catch (err) {\n    if (err.code === 'ENOENT') return false\n    throw err\n  }\n}"
     },
+    "snippet::is-dotfile": {
+      "id": "snippet::is-dotfile",
+      "type": "simple",
+      "description": "You can test whether a path ends in a dotfile such as `.gitignore` using a regular expression.",
+      "example": "const isDotfile = (str) => /(?:\\/|^)\\.[^/.][^/]*$/.test(str)"
+    },
     "snippet::is-electron": {
       "id": "snippet::is-electron",
       "type": "simple",
@@ -812,6 +818,11 @@
       "type": "module",
       "moduleName": "is-directory",
       "replacements": ["snippet::is-directory"]
+    },
+    "is-dotfile": {
+      "type": "module",
+      "moduleName": "is-dotfile",
+      "replacements": ["snippet::is-dotfile"]
     },
     "is-electron": {
       "type": "module",
