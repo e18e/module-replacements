@@ -707,11 +707,6 @@
       "moduleName": "defined",
       "replacements": ["snippet::find-first-defined"]
     },
-    "dotfile-regex": {
-      "type": "module",
-      "moduleName": "dotfile-regex",
-      "replacements": ["snippet::is-dotfile"]
-    },
     "es-get-iterator": {
       "type": "module",
       "moduleName": "es-get-iterator",
