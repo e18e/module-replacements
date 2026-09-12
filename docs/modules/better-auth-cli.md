@@ -17,11 +17,7 @@ The Better Auth CLI is now published under the `auth` name, and `@better-auth/cl
 }
 ```
 
-The commands are unchanged:
-
 ```bash
 npx @better-auth/cli generate # [!code --]
 npx auth generate # [!code ++]
 ```
-
-`auth` still ships the `better-auth` bin alongside `auth`, so package scripts that call `better-auth ...` keep working after the swap.
