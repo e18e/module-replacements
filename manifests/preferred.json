@@ -584,6 +584,12 @@
       "replacements": ["@vitest/istanbul-lib-coverage"],
       "url": {"type": "e18e", "id": "istanbul-lib-coverage"}
     },
+    "istanbul-lib-instrument": {
+      "type": "module",
+      "moduleName": "istanbul-lib-instrument",
+      "replacements": ["@vitest/istanbul-lib-instrument"],
+      "url": {"type": "e18e", "id": "istanbul-lib-instrument"}
+    },
     "jquery": {
       "type": "module",
       "moduleName": "jquery",
@@ -2922,6 +2928,11 @@
       "id": "@vitest/istanbul-lib-coverage",
       "type": "documented",
       "replacementModule": "@vitest/istanbul-lib-coverage"
+    },
+    "@vitest/istanbul-lib-instrument": {
+      "id": "@vitest/istanbul-lib-instrument",
+      "type": "documented",
+      "replacementModule": "@vitest/istanbul-lib-instrument"
     },
     "@xmldom/xmldom": {
       "id": "@xmldom/xmldom",
