@@ -6,6 +6,12 @@
       "replacements": ["defu", "@fastify/deepmerge"],
       "url": {"type": "e18e", "id": "deep-merge"}
     },
+    "@better-auth/cli": {
+      "type": "module",
+      "moduleName": "@better-auth/cli",
+      "replacements": ["auth"],
+      "url": {"type": "e18e", "id": "better-auth-cli"}
+    },
     "@cypress/request": {
       "type": "module",
       "moduleName": "@cypress/request",
@@ -3085,6 +3091,11 @@
       "id": "ansis",
       "type": "documented",
       "replacementModule": "ansis"
+    },
+    "auth": {
+      "id": "auth",
+      "type": "documented",
+      "replacementModule": "auth"
     },
     "bcryptjs": {
       "id": "bcryptjs",
