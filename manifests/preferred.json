@@ -436,6 +436,12 @@
       "replacements": ["empathic"],
       "url": {"type": "e18e", "id": "find-pkg"}
     },
+    "find-process": {
+      "type": "module",
+      "moduleName": "find-process",
+      "replacements": ["find-proc"],
+      "url": {"type": "e18e", "id": "find-process"}
+    },
     "find-up": {
       "type": "module",
       "moduleName": "find-up",
@@ -3273,6 +3279,11 @@
       "type": "native",
       "webFeatureId": {"featureId": "fetch", "compatKey": "api.fetch"},
       "url": {"type": "mdn", "id": "Web/API/Fetch_API"}
+    },
+    "find-proc": {
+      "id": "find-proc",
+      "type": "documented",
+      "replacementModule": "find-proc"
     },
     "fs": {
       "id": "fs",
