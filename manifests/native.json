@@ -2035,6 +2035,15 @@
       "url": {"type": "node", "id": "api/path.html#pathrelativefrom-to"},
       "nodeFeatureId": {"moduleName": "path", "exportName": "relative"}
     },
+    "performance": {
+      "id": "performance",
+      "type": "native",
+      "url": {"type": "mdn", "id": "Web/API/Performance"},
+      "webFeatureId": {
+        "featureId": "performance",
+        "compatKey": "api.Performance"
+      }
+    },
     "picomatch": {
       "id": "picomatch",
       "type": "documented",
@@ -3741,6 +3750,11 @@
       "type": "module",
       "moduleName": "validate.io-array",
       "replacements": ["Array.isArray"]
+    },
+    "w3c-hr-time": {
+      "type": "module",
+      "moduleName": "w3c-hr-time",
+      "replacements": ["performance"]
     },
     "weak-map": {
       "type": "module",
