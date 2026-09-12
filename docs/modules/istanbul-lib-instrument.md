@@ -13,4 +13,10 @@ import { createInstrumenter } from 'istanbul-lib-instrument' // [!code --]
 import { createInstrumenter } from '@vitest/istanbul-lib-instrument' // [!code ++]
 ```
 
-The fork is ESM-only and requires Node 22, so it is a bigger jump than a plain import swap if you are still on CommonJS. It ships its own types, so you can drop `@types/istanbul-lib-instrument` once you migrate.
+> [!NOTE]
+> The fork is ESM-only and sets `engines.node` to `>=22`, so switching is a
+> larger jump than a plain import swap for projects still on CommonJS or an
+> older Node version.
+
+If you also depend on `@types/istanbul-lib-instrument` only for this package, you
+can drop it once you migrate, since the fork ships its own types.
