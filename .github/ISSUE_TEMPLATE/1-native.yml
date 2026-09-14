@@ -1,0 +1,64 @@
+name: Native replacement
+description: Recommend replacing a module with a native API or runtime built-in
+title: '[Replacement]: '
+labels: ['replacement', 'triage']
+type: replacement
+body:
+  - type: input
+    id: package
+    attributes:
+      label: Package to replace
+      description: The npm package name you are recommending a replacement for.
+      placeholder: e.g. array.prototype.flat
+    validations:
+      required: true
+
+  - type: textarea
+    id: replacements
+    attributes:
+      label: Native replacement(s)
+      description: Which native APIs or runtime built-ins replace it? Use "removal" if the module only checks for a feature that is now widely available.
+      placeholder: |
+        e.g. Array.prototype.flat()
+        e.g. node:util styleText()
+    validations:
+      required: true
+
+  - type: textarea
+    id: docs
+    attributes:
+      label: Documentation
+      description: Link to the documentation for each native replacement (e.g. MDN or the Node.js docs).
+      placeholder: e.g. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat
+    validations:
+      required: true
+
+  - type: textarea
+    id: availability
+    attributes:
+      label: Availability
+      description: |
+        How long has the feature been available? Include browser/Node.js version support (e.g. "Node.js v14.14.0+, all modern browsers").
+        Note: very newly available features are unlikely to be added since they are not yet widely used.
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: |
+        Why should this replacement be added? For example:
+        - The package is a pseudo-polyfill for a feature now widely available
+        - The package predates a feature that has since existed in the platform for many years
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Code example (optional)
+      description: A before/after snippet showing how to migrate.
+      render: js
+    validations:
+      required: false

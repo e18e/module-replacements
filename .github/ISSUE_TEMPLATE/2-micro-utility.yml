@@ -1,0 +1,53 @@
+name: Micro utility replacement
+description: Recommend inlining or removing a very small utility module
+title: '[Replacement]: '
+labels: ['replacement', 'triage']
+type: replacement
+body:
+  - type: input
+    id: package
+    attributes:
+      label: Package to replace
+      description: The npm package name you are recommending a replacement for.
+      placeholder: e.g. is-odd
+    validations:
+      required: true
+
+  - type: textarea
+    id: replacements
+    attributes:
+      label: Suggested replacement
+      description: What inline code replaces it? Use "removal" if it can simply be deleted, and explain why it is no longer needed.
+      placeholder: |
+        e.g. n % 2 !== 0
+        e.g. removal – no longer needed
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: |
+        Why should this replacement be added? For example:
+        - The package duplicates native functionality
+        - The package is small enough that it should be inlined
+    validations:
+      required: true
+
+  - type: textarea
+    id: availability
+    attributes:
+      label: Availability
+      description: If the inline code relies on newer language features or APIs, how long have they been available? Include browser/Node.js version support where relevant.
+    validations:
+      required: false
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Code example
+      description: A before/after snippet showing how to migrate. Required unless the suggested replacement is a removal.
+      render: js
+    validations:
+      required: false
