@@ -192,6 +192,12 @@
       "description": "You can use `instanceof Date`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object Date]\"`",
       "example": "const isDate = v instanceof Date;\n// for cross-realm\nconst isDateCrossRealm = Object.prototype.toString.call(v) === \"[object Date]\""
     },
+    "snippet::is-decimal": {
+      "id": "snippet::is-decimal",
+      "type": "simple",
+      "description": "You can check if a character, or a character code, is a decimal digit by comparing its character code against the `0`-`9` range.",
+      "example": "const isDecimal = (character) => {\n  const code =\n    typeof character === 'string' ? character.charCodeAt(0) : character;\n  return code >= 48 && code <= 57;\n};"
+    },
     "snippet::is-deflate-buffer": {
       "id": "snippet::is-deflate-buffer",
       "type": "simple",
@@ -814,6 +820,11 @@
       "type": "module",
       "moduleName": "is-date-object",
       "replacements": ["snippet::is-date"]
+    },
+    "is-decimal": {
+      "type": "module",
+      "moduleName": "is-decimal",
+      "replacements": ["snippet::is-decimal"]
     },
     "is-deflate": {
       "type": "module",
