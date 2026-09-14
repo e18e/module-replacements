@@ -267,7 +267,7 @@
     "snippet::is-lower-case": {
       "id": "snippet::is-lower-case",
       "type": "simple",
-      "description": "You can compare the string against its lower-cased form, and check it differs from its upper-cased form so that strings with no cased characters return `false`.",
+      "description": "You can compare the string against its lower-cased form to determine if the string is entirely lower case",
       "example": "const isLowerCase = (input, locale) =>\n  input.toLocaleLowerCase(locale) === input &&\n  input !== input.toLocaleUpperCase(locale)"
     },
     "snippet::is-map": {
