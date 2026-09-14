@@ -1,1355 +1,1668 @@
 {
-  "replacements": {
-    "snippet::array-coerce": {
-      "id": "snippet::array-coerce",
-      "type": "simple",
-      "description": "You can use a combination of a ternary operator and `Array.isArray` to make sure a value, `undefined`, `null` or an array is always returned as an array.",
-      "example": "(val == null ? [] : Array.isArray(val) ? val : [val])\n// Or if you need to convert an iterable into an array\nArray.from(iterable)"
-    },
-    "snippet::array-difference": {
-      "id": "snippet::array-difference",
-      "type": "simple",
-      "description": "You can use a combination of `filter` and `includes` to calculate the difference between two arrays.",
-      "example": "const difference = (a, b) => a.filter((item) => !b.includes(item))"
-    },
-    "snippet::array-filled-with": {
-      "id": "snippet::array-filled-with",
-      "type": "simple",
-      "description": "You can use `new Array` with `Array.prototype.fill` to create an array filled with identical elements",
-      "example": "new Array(length).fill(item);"
-    },
-    "snippet::array-flatten": {
-      "id": "snippet::array-flatten",
-      "type": "simple",
-      "description": "You can use `Array.prototype.flat` with `Infinity` as an argument to fully flatten an array.",
-      "example": "array.flat(Infinity)"
-    },
-    "snippet::array-from-count": {
-      "id": "snippet::array-from-count",
-      "type": "simple",
-      "description": "You can use `Array.from` to create an array of sequential integers",
-      "example": "Array.from({ length: n }, (_, i) => i);"
-    },
-    "snippet::array-from-count-with-start": {
-      "id": "snippet::array-from-count-with-start",
-      "type": "simple",
-      "description": "You can use `Array.from` to create an array of sequential integers starting from a specific integer",
-      "example": "Array.from({ length: end - start }, (_, i) => i + start);"
-    },
-    "snippet::array-last": {
-      "id": "snippet::array-last",
-      "type": "simple",
-      "description": "You can use `arr.at(-1)` if supported or `arr[arr.length - 1]` to get the last element of an array.",
-      "example": "const last = (arr) => arr.at(-1);\n// or in older environments\nconst lastLegacy = (arr) => arr[arr.length - 1]"
-    },
-    "snippet::array-slice-exclude-last-n": {
-      "id": "snippet::array-slice-exclude-last-n",
-      "type": "simple",
-      "description": "You can get all but the last n elements using `array.slice`",
-      "example": "array.slice(0, array.length - n)"
-    },
-    "snippet::array-union": {
-      "id": "snippet::array-union",
-      "type": "simple",
-      "description": "You can use a combination of the spread operator and `Set` to create a union of two arrays.",
-      "example": "const union = (a, b) => [...new Set([...a, ...b])]"
-    },
-    "snippet::array-unique": {
-      "id": "snippet::array-unique",
-      "type": "simple",
-      "description": "You can convert to and from a `Set` to remove duplicates from an array.",
-      "example": "const unique = (arr) => [...new Set(arr)]"
-    },
-    "snippet::assert": {
-      "id": "snippet::assert",
-      "type": "simple",
-      "description": "You can use a simple function to assert a value or an expression.",
-      "example": "function assert(val, msg) {\n  if (!val) throw new Error(msg)\n}"
-    },
-    "snippet::async-each": {
-      "id": "snippet::async-each",
-      "type": "simple",
-      "description": "You can use `Promise.all` with `Array.prototype.map` to do an async action with an array of items.",
-      "example": "Promise.all(items.map(asyncFn))"
-    },
-    "snippet::async-function-constructor": {
-      "id": "snippet::async-function-constructor",
-      "type": "simple",
-      "description": "You can get the `AsyncFunction` using `async function`.",
-      "example": "const AsyncFunction = (async () => {}).constructor"
-    },
-    "snippet::base64": {
-      "id": "snippet::base64",
-      "type": "simple",
-      "description": "Every modern runtime provides a way to convert byte array to and from base64.",
-      "example": "// From base64 to Uint8Array\nconst bytes = Uint8Array.fromBase64(base64)\n// From Uint8Array to base64\nconst base64 = bytes.toBase64()"
-    },
-    "snippet::base64-id": {
-      "id": "snippet::base64-id",
-      "type": "simple",
-      "description": "You can use `crypto.randomBytes` with `Buffer.prototype.toString` to generate a random base64 id",
-      "example": "import crypto from 'node:crypto'\nconst id = crypto.randomBytes(15).toString('base64').replaceAll('+', '-').replaceAll('/', '_')"
-    },
-    "snippet::call-bind": {
-      "id": "snippet::call-bind",
-      "type": "simple",
-      "description": "Every modern runtime provides a way to bind to the `call` method of a function.",
-      "example": "const fnBound = Function.call.bind(fn)"
-    },
-    "snippet::char-last": {
-      "id": "snippet::char-last",
-      "type": "simple",
-      "description": "You can use `str.at(-1)` if supported or `str[str.length - 1]` to get the last character of a string.",
-      "example": "const last = (str) => str.at(-1);\n// or in older environments\nconst lastLegacy = (str) => str[str.length - 1]"
-    },
-    "snippet::comver-to-semver": {
-      "id": "snippet::comver-to-semver",
-      "type": "simple",
-      "description": "You can use a ternary operator and string concatenation to add a trailing `.0`.",
-      "example": "const comverToSemver = (comver) => comver.includes('.') ? `${comver}.0` : `${comver}.0.0`"
-    },
-    "snippet::find-first-defined": {
-      "id": "snippet::find-first-defined",
-      "type": "simple",
-      "description": "You can use `Array.prototype.find` to find a first defined item.",
-      "example": "const defined = (...args) => args.find((v) => v !== undefined)"
-    },
-    "snippet::for-own": {
-      "id": "snippet::for-own",
-      "type": "simple",
-      "description": "You can use `Object.keys(obj).forEach` to iterate over the own enumerable properties of an object.",
-      "example": "Object.keys(obj).forEach(key => {\n  const value = obj[key];\n  // do something\n});"
-    },
-    "snippet::get-iterator": {
-      "id": "snippet::get-iterator",
-      "type": "simple",
-      "description": "Every modern runtime provides a way to get the iterator function through the `Symbol.iterator` symbol.",
-      "example": "const iterator = obj[Symbol.iterator]?.()"
-    },
-    "snippet::has-ansi": {
-      "id": "snippet::has-ansi",
-      "type": "simple",
-      "description": "You can use the `includes` method on the string to check if a specific ANSI byte is present.",
-      "example": "string.includes(\"\\u001b\") || string.includes(\"\\u009b\")"
-    },
-    "snippet::has-argv": {
-      "id": "snippet::has-argv",
-      "type": "simple",
-      "description": "You can use the `includes` method on the `process.argv` array to check if a flag is present.",
-      "example": "process.argv.includes('--flag')"
-    },
-    "snippet::indent-string": {
-      "id": "snippet::indent-string",
-      "type": "simple",
-      "description": "You can indent every non-empty line with `String.prototype.replace`, or use `/^/gm` to also indent empty lines, matching the package's `includeEmptyLines` option.",
-      "example": "const indentString = (string, count = 1, indent = ' ') =>\n  string.replace(/^(?!\\s*$)/gm, indent.repeat(count));"
-    },
-    "snippet::is-arguments": {
-      "id": "snippet::is-arguments",
-      "type": "simple",
-      "description": "You can use `Object.prototype.toString.call(obj) === \"[object Arguments]\"`",
-      "example": "const isArguments = (val) => Object.prototype.toString.call(val) === \"[object Arguments]\";"
-    },
-    "snippet::is-arraybuffer": {
-      "id": "snippet::is-arraybuffer",
-      "type": "simple",
-      "description": "You can use `instanceof ArrayBuffer`, or if cross-realm, use `Object.prototype.toString.call(obj) === \"[object ArrayBuffer]\"`",
-      "example": "const isArrayBuffer = obj instanceof ArrayBuffer;\n// for cross-realm\nconst isArrayBufferCrossRealm = Object.prototype.toString.call(obj) === \"[object ArrayBuffer]\""
-    },
-    "snippet::is-async-function": {
-      "id": "snippet::is-async-function",
-      "type": "simple",
-      "description": "You can use `typeof` and `Object.prototype.toString.call` to check if it's an async function",
-      "example": "const isAsyncFunction = (obj) => typeof obj === \"function\" && Object.prototype.toString.call(obj) === \"[object AsyncFunction]\""
-    },
-    "snippet::is-aws-lambda": {
-      "id": "snippet::is-aws-lambda",
-      "type": "simple",
-      "description": "You can check if the current environment is an AWS Lambda by checking if the `LAMBDA_TASK_ROOT` environment variables are set.",
-      "example": "Boolean(process.env.LAMBDA_TASK_ROOT)"
-    },
-    "snippet::is-bigint": {
-      "id": "snippet::is-bigint",
-      "type": "simple",
-      "description": "You can use `typeof` to check if a value is a bigint.",
-      "example": "typeof value === \"bigint\""
-    },
-    "snippet::is-boolean": {
-      "id": "snippet::is-boolean",
-      "type": "simple",
-      "description": "You can use `typeof` to check if a value is a boolean.",
-      "example": "typeof value === \"boolean\""
-    },
-    "snippet::is-ci": {
-      "id": "snippet::is-ci",
-      "type": "simple",
-      "description": "Every major CI provider sets a `CI` environment variable that you can use to detect if you're running in a CI environment.",
-      "example": "Boolean(process.env.CI)"
-    },
-    "snippet::is-date": {
-      "id": "snippet::is-date",
-      "type": "simple",
-      "description": "You can use `instanceof Date`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object Date]\"`",
-      "example": "const isDate = v instanceof Date;\n// for cross-realm\nconst isDateCrossRealm = Object.prototype.toString.call(v) === \"[object Date]\""
-    },
-    "snippet::is-deflate-buffer": {
-      "id": "snippet::is-deflate-buffer",
-      "type": "simple",
-      "description": "You can check the first two bytes of a buffer to detect if it's compressed using deflate.",
-      "example": "function isDeflate(buf) {\n  if (buf.length < 2 || buf[0] !== 0x78) return false;\n  const b = buf[1];\n  return b === 1 || b === 0x9c || b === 0xda;\n}"
-    },
-    "snippet::is-directory": {
-      "id": "snippet::is-directory",
-      "type": "simple",
-      "description": "You can call `isDirectory()` on the result of `stat` from `node:fs/promises`, or of `statSync` from `node:fs`, treating an `ENOENT` error as `false`.",
-      "example": "import { stat } from 'node:fs/promises'\n\nconst isDirectory = async (filepath) => {\n  try {\n    return (await stat(filepath)).isDirectory()\n  } catch (err) {\n    if (err.code === 'ENOENT') return false\n    throw err\n  }\n}"
-    },
-    "snippet::is-dotfile": {
-      "id": "snippet::is-dotfile",
-      "type": "simple",
-      "description": "You can test whether a path ends in a dotfile such as `.gitignore` using a regular expression.",
-      "example": "const isDotfile = (str) => /(?:\\/|^)\\.[^/.][^/]*$/.test(str)"
-    },
-    "snippet::is-electron": {
-      "id": "snippet::is-electron",
-      "type": "simple",
-      "description": "You can detect Electron by checking the renderer process type, `process.versions.electron`, or the user agent.",
-      "example": "function isElectron() {\n  return Boolean(\n    globalThis.window?.process?.type === \"renderer\" ||\n      globalThis.process?.versions?.electron ||\n      globalThis.navigator?.userAgent?.includes(\"Electron\")\n  );\n}"
-    },
-    "snippet::is-equal": {
-      "id": "snippet::is-equal",
-      "type": "simple",
-      "description": "You can determine if two values are equal using regular equality checks.",
-      "example": "a === b"
-    },
-    "snippet::is-even": {
-      "id": "snippet::is-even",
-      "type": "simple",
-      "description": "You can use the modulo operator to check if a number is even.",
-      "example": "(n % 2) === 0"
-    },
-    "snippet::is-function": {
-      "id": "snippet::is-function",
-      "type": "simple",
-      "description": "You can use `typeof` to check if a value is a function.",
-      "example": "typeof value === \"function\""
-    },
-    "snippet::is-generator-function": {
-      "id": "snippet::is-generator-function",
-      "type": "simple",
-      "description": "You can use `typeof` and `Object.prototype.toString.call` to check if a value is a generator function",
-      "example": "const isGeneratorFunction = (obj) => typeof obj === \"function\" && Object.prototype.toString.call(obj) === \"[object GeneratorFunction]\""
-    },
-    "snippet::is-gzip-buffer": {
-      "id": "snippet::is-gzip-buffer",
-      "type": "simple",
-      "description": "You can check first three bytes of a buffer to detect if it is a gzip file.",
-      "example": "function isGzip(buf) {\n  if (buf.length < 3) return false;\n  return buf[0] === 31 && buf[1] === 139 && buf[2] === 8;\n}"
-    },
-    "snippet::is-identifier-name": {
-      "id": "snippet::is-identifier-name",
-      "type": "simple",
-      "description": "You can test a string against the `ID_Start` and `ID_Continue` Unicode properties to check whether it is a valid identifier name, and so usable as an unquoted property.",
-      "example": "const isProperty = (str) => /^[$_\\p{ID_Start}][$\\p{ID_Continue}]*$/u.test(str)"
-    },
-    "snippet::is-in-ssh": {
-      "id": "snippet::is-in-ssh",
-      "type": "simple",
-      "description": "You can check if the current environment is SSH by checking if the `SSH_CONNECTION` environment variable is set.",
-      "example": "Boolean(process.env.SSH_CONNECTION)"
-    },
-    "snippet::is-interactive": {
-      "id": "snippet::is-interactive",
-      "type": "simple",
-      "description": "You can check if the current environment is interactive using `process.stdout.isTTY` and checking that it is not running in CI.",
-      "example": "Boolean(stream?.isTTY && !process.env.CI)"
-    },
-    "snippet::is-jpg-buffer": {
-      "id": "snippet::is-jpg-buffer",
-      "type": "simple",
-      "description": "You can check the first three bytes of a buffer against the JPEG file signature to detect if it is a JPEG image.",
-      "example": "function isJpg(buf) {\n  if (!buf || buf.length < 3) return false;\n  return buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff;\n}"
-    },
-    "snippet::is-map": {
-      "id": "snippet::is-map",
-      "type": "simple",
-      "description": "You can use `instanceof Map` to check if a value is a `Map`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object Map]\"`",
-      "example": "const isMap = v instanceof Map;\n// for cross-realm\nconst isMapCrossRealm = Object.prototype.toString.call(v) === \"[object Map]\""
-    },
-    "snippet::is-negative": {
-      "id": "snippet::is-negative",
-      "type": "simple",
-      "description": "You can check if a number is less than 0 to determine if it's negative.",
-      "example": "(n) => n < 0"
-    },
-    "snippet::is-negative-zero": {
-      "id": "snippet::is-negative-zero",
-      "type": "simple",
-      "description": "You can use `Object.is` to check if a value is negative zero.",
-      "example": "Object.is(n, -0)"
-    },
-    "snippet::is-nil": {
-      "id": "snippet::is-nil",
-      "type": "simple",
-      "description": "You can check if a value is `null` or `undefined` using loose equality with `null`.",
-      "example": "value == null"
-    },
-    "snippet::is-npm": {
-      "id": "snippet::is-npm",
-      "type": "simple",
-      "description": "If the current environment is npm the `npm_config_user_agent` environment variable will be set and start with `\"npm\"`.",
-      "example": "const isNpm = process.env.npm_config_user_agent?.startsWith(\"npm\")"
-    },
-    "snippet::is-null": {
-      "id": "snippet::is-null",
-      "type": "simple",
-      "description": "You can check if a value is `null` using regular equality checks.",
-      "example": "value === null"
-    },
-    "snippet::is-number": {
-      "id": "snippet::is-number",
-      "type": "simple",
-      "description": "You can use `typeof` to check if a value is a number.",
-      "example": "typeof value === \"number\""
-    },
-    "snippet::is-object": {
-      "id": "snippet::is-object",
-      "type": "simple",
-      "description": "You can use `typeof` to check if a value is an object and `Object.getPrototypeOf` to ensure it's a plain object.",
-      "example": "const isObject = (obj) => obj && typeof obj === \"object\" && (Object.getPrototypeOf(obj) === null || Object.getPrototypeOf(obj) === Object.prototype);"
-    },
-    "snippet::is-object-or-function": {
-      "id": "snippet::is-object-or-function",
-      "type": "simple",
-      "description": "You can use `typeof` to check if a value is an object or a function.",
-      "example": "const isObjectOrFunction = (v) => v !== null && (typeof v === \"object\" || typeof v === \"function\");"
-    },
-    "snippet::is-odd": {
-      "id": "snippet::is-odd",
-      "type": "simple",
-      "description": "You can use the modulo operator to check if a number is odd.",
-      "example": "(n % 2) === 1"
-    },
-    "snippet::is-path-equal-cwd": {
-      "id": "snippet::is-path-equal-cwd",
-      "type": "simple",
-      "description": "You can check if a path equals the current working directory using `path.relative`.",
-      "example": "import { relative } from 'node:path'\n\nconst isPathCwd = (p) => !relative(p, process.cwd())"
-    },
-    "snippet::is-png-buffer": {
-      "id": "snippet::is-png-buffer",
-      "type": "simple",
-      "description": "You can check the first eight bytes of a buffer against the PNG file signature to detect if it is a PNG image.",
-      "example": "function isPng(buf) {\n  if (!buf || buf.length < 8) return false;\n  return buf[0] === 0x89 && buf[1] === 0x50\n    && buf[2] === 0x4e && buf[3] === 0x47\n    && buf[4] === 0x0d && buf[5] === 0x0a\n    && buf[6] === 0x1a && buf[7] === 0x0a;\n}"
-    },
-    "snippet::is-posix-bracket": {
-      "id": "snippet::is-posix-bracket",
-      "type": "simple",
-      "description": "You can test for a POSIX bracket expression such as `[:alpha:]` using a regular expression.",
-      "example": "const isPosixBracket = (str) => /\\[([:.=+])(?:[^\\[\\]]|)+\\1\\]/.test(str);"
-    },
-    "snippet::is-primitve": {
-      "id": "snippet::is-primitve",
-      "type": "simple",
-      "description": "You can check `typeof` of a value to determine if it's a primitive. Note that `typeof null` is `\"object\"` so you need to check for `null` separately.",
-      "example": "const isPrimitive = (value) => value === null || (typeof value !== \"function\" && typeof value !== \"object\");"
-    },
-    "snippet::is-regexp": {
-      "id": "snippet::is-regexp",
-      "type": "simple",
-      "description": "You can use `instanceof RegExp` to check if a value is a regular expression, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object RegExp]\"`.",
-      "example": "const isRegExp = (v) => v instanceof RegExp;\n// for cross-realm\nconst isRegExpCrossRealm = Object.prototype.toString.call(v) === \"[object RegExp]\";"
-    },
-    "snippet::is-root-user": {
-      "id": "snippet::is-root-user",
-      "type": "simple",
-      "description": "You can use `process.getuid?.()` to check if a user is a root user.",
-      "example": "const isRootUser = process.getuid?.() === 0"
-    },
-    "snippet::is-set": {
-      "id": "snippet::is-set",
-      "type": "simple",
-      "description": "You can use `instanceof Set` to check if a value is a `Set`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object Set]\"`",
-      "example": "const isSet = v instanceof Set;\n// for cross-realm\nconst isSetCrossRealm = Object.prototype.toString.call(v) === \"[object Set]\""
-    },
-    "snippet::is-stream": {
-      "id": "snippet::is-stream",
-      "type": "simple",
-      "description": "`node:stream` provides `isReadable` and `isWritable` methods that can be used to check if a stream is readable or writable.",
-      "example": "import { isReadable, isWritable } from 'node:stream';\nconst isStream = (stream) => isReadable(stream) || isWritable(stream);"
-    },
-    "snippet::is-string": {
-      "id": "snippet::is-string",
-      "type": "simple",
-      "description": "You can use `typeof` to check if a value is a string.",
-      "example": "typeof value === \"string\""
-    },
-    "snippet::is-supported-regexp-flag": {
-      "id": "snippet::is-supported-regexp-flag",
-      "type": "simple",
-      "description": "The `RegExp` constructor throws on an unsupported or invalid flag, so you can check support with a `try`/`catch`.",
-      "example": "const isSupportedRegexpFlag = (flag) => {\n  try {\n    RegExp(\"\", flag);\n    return true;\n  } catch {\n    return false;\n  }\n};"
-    },
-    "snippet::is-symbol": {
-      "id": "snippet::is-symbol",
-      "type": "simple",
-      "description": "You can use `typeof` to check if a value is a symbol.",
-      "example": "typeof value === \"symbol\""
-    },
-    "snippet::is-touch-device": {
-      "id": "snippet::is-touch-device",
-      "type": "simple",
-      "description": "You can check if the current device is a touch device by checking the `'ontouchstart'` propery of the `window` object and `maxTouchPoints` of the `navigator` object.",
-      "example": "const isTouchDevice = window && ('ontouchstart' in window || navigator.maxTouchPoints)"
-    },
-    "snippet::is-travis": {
-      "id": "snippet::is-travis",
-      "type": "simple",
-      "description": "You can check if the current environment is Travis CI by checking if the `TRAVIS` environment variable is set.",
-      "example": "Boolean(process.env.TRAVIS)"
-    },
-    "snippet::is-typed-array": {
-      "id": "snippet::is-typed-array",
-      "type": "simple",
-      "description": "You can check if a value is a Typed Array using `ArrayBuffer.isView` and checking if it is not a `DataView`.",
-      "example": "const isTypedArray = (v) => ArrayBuffer.isView(v) && !(v instanceof DataView);"
-    },
-    "snippet::is-unc-path": {
-      "id": "snippet::is-unc-path",
-      "type": "simple",
-      "description": "You can test for a Windows UNC path such as `\\\\server\\share` using a regular expression.",
-      "example": "const isUncPath = (filepath) => /^[\\\\\\/]{2,}[^\\\\\\/]+[\\\\\\/]+[^\\\\\\/]+/.test(filepath)"
-    },
-    "snippet::is-undefined": {
-      "id": "snippet::is-undefined",
-      "type": "simple",
-      "description": "You can use `typeof` to check if a value is `undefined`.",
-      "example": "typeof value === \"undefined\""
-    },
-    "snippet::is-weakmap": {
-      "id": "snippet::is-weakmap",
-      "type": "simple",
-      "description": "You can use `instanceof WeakMap` to check if a value is a `WeakMap`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object WeakMap]\"`",
-      "example": "const isWeakMap = v instanceof WeakMap;\n// for cross-realm\nconst isWeakMapCrossRealm = Object.prototype.toString.call(v) === \"[object WeakMap]\""
-    },
-    "snippet::is-weakset": {
-      "id": "snippet::is-weakset",
-      "type": "simple",
-      "description": "You can use `instanceof WeakSet` to check if a value is a `WeakSet`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object WeakSet]\"`",
-      "example": "const isWeakSet = v instanceof WeakSet;\n// for cross-realm\nconst isWeakSetCrossRealm = Object.prototype.toString.call(v) === \"[object WeakSet]\""
-    },
-    "snippet::is-whitespace": {
-      "id": "snippet::is-whitespace",
-      "type": "simple",
-      "description": "You can check if a string contains only whitespace with `RegExp` or by trimming it and comparing it to an empty string.",
-      "example": "const isWhitespace = (str) => /^\\s*$/.test(str);"
-    },
-    "snippet::is-windows": {
-      "id": "snippet::is-windows",
-      "type": "simple",
-      "description": "You can check if the current environment is Windows by checking if `process.platform` is equal to \"win32\".",
-      "example": "const isWindows = () => process.platform === \"win32\";"
-    },
-    "snippet::is-word-character": {
-      "id": "snippet::is-word-character",
-      "type": "simple",
-      "description": "You can check if a character is a word character with a `RegExp`.",
-      "example": "const isWordChar = (c) => /\\w/.test(c);"
-    },
-    "snippet::is-wsl": {
-      "id": "snippet::is-wsl",
-      "type": "simple",
-      "description": "You can check if the current environment is WSL by checking if the `WSL_DISTRO_NAME` environment variable is set.",
-      "example": "Boolean(process.env.WSL_DISTRO_NAME)"
-    },
-    "snippet::json-file": {
-      "id": "snippet::json-file",
-      "type": "simple",
-      "description": "You can use `JSON` and `node:fs` to read and write JSON files.",
-      "example": "import * as fs from 'node:fs/promises'\nfs.readFile(file, 'utf8').then(JSON.parse)\nfs.writeFile(file, JSON.stringify(data, null, 2) + '\\n')"
-    },
-    "snippet::math-random": {
-      "id": "snippet::math-random",
-      "type": "simple",
-      "description": "You can use `Math.random()` or `crypto.getRandomValues` if cryptographic randomness is required.",
-      "example": "crypto.getRandomValues(new Uint32Array(1))[0] / (2 ** 32);\n// or\nMath.random();"
-    },
-    "snippet::min-indent": {
-      "id": "snippet::min-indent",
-      "type": "simple",
-      "description": "You can use a regular expression with `Array.prototype.reduce` to find the shortest leading whitespace across the lines of a string.",
-      "example": "const minIndent = (string) => (string.match(/^[ \\t]*(?=\\S)/gm) ?? ['']).reduce((r, a) => Math.min(r, a.length), Infinity)"
-    },
-    "snippet::noop": {
-      "id": "snippet::noop",
-      "type": "simple",
-      "description": "You can use an arrow function `() => {}` for a noop function.",
-      "example": "const noop = () => {}"
-    },
-    "snippet::object-exclude": {
-      "id": "snippet::object-exclude",
-      "type": "simple",
-      "description": "You can use `Object.fromEntries` with `Object.entries` and `Array.prototype.filter` to exclude specific keys from an object.",
-      "example": "const objectExclude = (obj, keys) => Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));"
-    },
-    "snippet::object-filter": {
-      "id": "snippet::object-filter",
-      "type": "simple",
-      "description": "You can use `Object.fromEntries` with `Object.entries` and `Array.prototype.filter` to filter an object's properties.",
-      "example": "const objectFilter = (obj, fn) => Object.fromEntries(Object.entries(obj).filter(fn));"
-    },
-    "snippet::object-invert-key-value": {
-      "id": "snippet::object-invert-key-value",
-      "type": "simple",
-      "description": "You can use `Object.fromEntries` with `Object.entries` to invert keys and values.",
-      "example": "Object.fromEntries(Object.entries(object).map(([k, v]) => [v, k]))"
-    },
-    "snippet::object-iterate": {
-      "id": "snippet::object-iterate",
-      "type": "simple",
-      "description": "You can use a `for...of` loop over `Object.entries` to iterate an object's own enumerable properties, and `break` to stop early.",
-      "example": "for (const [key, value] of Object.entries(obj)) {\n  if (key === 'stop') break\n  // do something\n}\n// Or for arrays\nfor (const [index, value] of arr.entries()) {\n  // do something\n}"
-    },
-    "snippet::object-map": {
-      "id": "snippet::object-map",
-      "type": "simple",
-      "description": "You can use `Object.fromEntries` with `Object.entries` and `Array.prototype.map` to map an object's properties.",
-      "example": "const objectMap = (obj, fn) => Object.fromEntries(Object.entries(obj).map(([k, v]) => fn(k, v)));"
-    },
-    "snippet::object-reduce": {
-      "id": "snippet::object-reduce",
-      "type": "simple",
-      "description": "You can use `Object.entries` and `Array.prototype.reduce`.",
-      "example": "const objectReduce = (obj, fn, initial) => Object.entries(obj).reduce((acc, [k, v]) => fn(acc, k, v), initial);"
-    },
-    "snippet::path-key": {
-      "id": "snippet::path-key",
-      "type": "simple",
-      "description": "You can use `Object.keys` with `Array.prototype.findLast` to find the case-insensitive `PATH` environment variable key.",
-      "example": "const pathKey = Object.keys(process.env).findLast((k) => k.toUpperCase() === 'PATH') ?? 'PATH';"
-    },
-    "snippet::path-root": {
-      "id": "snippet::path-root",
-      "type": "simple",
-      "description": "You can use `parse` from `node:path` and read its `root` property to get the root of a path.",
-      "example": "import { parse } from 'node:path'\n\nconst pathRoot = (filepath) => parse(filepath).root"
-    },
-    "snippet::regexp-copy": {
-      "id": "snippet::regexp-copy",
-      "type": "simple",
-      "description": "You can create a copy of a regular expression using the `RegExp` constructor.",
-      "example": "const copyRegExp = (regexp) => new RegExp(regexp);"
-    },
-    "snippet::set-function-length": {
-      "id": "snippet::set-function-length",
-      "type": "simple",
-      "description": "You can set `length` of a function using `Object.defineProperty`.",
-      "example": "const setFunctionLength = (fn, length) => Object.defineProperty(fn, 'length', { value: length, configurable: true });"
-    },
-    "snippet::set-function-name": {
-      "id": "snippet::set-function-name",
-      "type": "simple",
-      "description": "You can set `name` of a function using `Object.defineProperty`.",
-      "example": "const setFunctionName = (fn, name) => Object.defineProperty(fn, 'name', { value: name, configurable: true });"
-    },
-    "snippet::set-tostringtag": {
-      "id": "snippet::set-tostringtag",
-      "type": "simple",
-      "description": "You can set the `toStringTag` of an object using `Object.defineProperty`.",
-      "example": "const setToStringTag = (target, value) => Object.defineProperty(target, Symbol.toStringTag, { value, configurable: true });"
-    },
-    "snippet::shebang-regex": {
-      "id": "snippet::shebang-regex",
-      "type": "simple",
-      "description": "You can use `/^#!(.+)/` regex.",
-      "example": "const shebangRegex = /^#!(.+)/;"
-    },
-    "snippet::split-lines": {
-      "id": "snippet::split-lines",
-      "type": "simple",
-      "description": "You can split a string into lines using a regular expression.",
-      "example": "const splitLines = (str) => str.split(/\\r?\\n/);"
-    },
-    "snippet::strip-bom": {
-      "id": "snippet::strip-bom",
-      "type": "simple",
-      "description": "You can check if the first character of the string is the BOM and strip it using `String.prototype.slice` if it is.",
-      "example": "str.charCodeAt(0) === 0xFEFF ? str.slice(1) : str;"
-    },
-    "snippet::trim-repeated-characters": {
-      "id": "snippet::trim-repeated-characters",
-      "type": "simple",
-      "description": "You can trim repeated sequences of characters using `String.prototype.replace`.",
-      "example": "// Normal character\nstring.replace(/-{2,}/g, '-')\n\n// Special character\nstring.replace(/\\.{2,}/g, '.')\n\n// Multi-character sequence\nstring.replace(/(?:abc){2,}/g, 'abc')"
-    },
-    "snippet::typed-array-to-buffer": {
-      "id": "snippet::typed-array-to-buffer",
-      "type": "simple",
-      "description": "You can use `Buffer.from` to convert a Typed Array to `Buffer` and `ArrayBuffer.isView` to avoid a copy.",
-      "example": "ArrayBuffer.isView(arr)\n  ? Buffer.from(arr.buffer, arr.byteOffset, arr.byteLength)\n  : Buffer.from(arr)"
-    },
-    "snippet::typeof": {
-      "id": "snippet::typeof",
-      "type": "simple",
-      "description": "You can use `typeof` to get the type of a value, or `Object.prototype.toString.call` to get the internal [[Class]] of an object.",
-      "example": "const typeOf = (value) => typeof value;\n// for more specific types\nconst classOf = (value) => Object.prototype.toString.call(value);"
-    },
-    "snippet::unix-paths": {
-      "id": "snippet::unix-paths",
-      "type": "simple",
-      "description": "You can check the start of a path for the Windows extended-length path prefix and if it's not present, replace backslashes with forward slashes.",
-      "example": "path.startsWith('\\\\\\\\?\\\\') ? path : path.replace(/\\\\/g, '/')"
-    },
-    "snippet::uppercase-first-character": {
-      "id": "snippet::uppercase-first-character",
-      "type": "simple",
-      "description": "You can uppercase the first character.",
-      "example": "string.charAt(0).toUpperCase() + string.slice(1)"
-    },
-    "snippet::year": {
-      "id": "snippet::year",
-      "type": "simple",
-      "description": "You can use `new Date().getUTCFullYear()` to get the current year.",
-      "example": "new Date().getUTCFullYear()"
-    }
-  },
   "mappings": {
     "arr-diff": {
-      "type": "module",
       "moduleName": "arr-diff",
-      "replacements": ["snippet::array-difference"]
+      "replacements": [
+        "snippet::array-difference"
+      ],
+      "type": "module"
     },
     "arr-flatten": {
-      "type": "module",
       "moduleName": "arr-flatten",
-      "replacements": ["snippet::array-flatten"]
+      "replacements": [
+        "snippet::array-flatten"
+      ],
+      "type": "module"
     },
     "arr-union": {
-      "type": "module",
       "moduleName": "arr-union",
-      "replacements": ["snippet::array-union"]
+      "replacements": [
+        "snippet::array-union"
+      ],
+      "type": "module"
     },
     "array-back": {
-      "type": "module",
       "moduleName": "array-back",
-      "replacements": ["snippet::array-coerce"]
+      "replacements": [
+        "snippet::array-coerce"
+      ],
+      "type": "module"
     },
     "array-ify": {
-      "type": "module",
       "moduleName": "array-ify",
-      "replacements": ["snippet::array-coerce"]
+      "replacements": [
+        "snippet::array-coerce"
+      ],
+      "type": "module"
     },
     "array-initial": {
-      "type": "module",
       "moduleName": "array-initial",
-      "replacements": ["snippet::array-slice-exclude-last-n"]
+      "replacements": [
+        "snippet::array-slice-exclude-last-n"
+      ],
+      "type": "module"
     },
     "array-last": {
-      "type": "module",
       "moduleName": "array-last",
-      "replacements": ["snippet::array-last"]
+      "replacements": [
+        "snippet::array-last"
+      ],
+      "type": "module"
     },
     "array-range": {
-      "type": "module",
       "moduleName": "array-range",
-      "replacements": ["snippet::array-from-count-with-start"]
+      "replacements": [
+        "snippet::array-from-count-with-start"
+      ],
+      "type": "module"
     },
     "array-union": {
-      "type": "module",
       "moduleName": "array-union",
-      "replacements": ["snippet::array-union"]
+      "replacements": [
+        "snippet::array-union"
+      ],
+      "type": "module"
     },
     "array-uniq": {
-      "type": "module",
       "moduleName": "array-uniq",
-      "replacements": ["snippet::array-unique"]
+      "replacements": [
+        "snippet::array-unique"
+      ],
+      "type": "module"
     },
     "array-unique": {
-      "type": "module",
       "moduleName": "array-unique",
-      "replacements": ["snippet::array-unique"]
+      "replacements": [
+        "snippet::array-unique"
+      ],
+      "type": "module"
     },
     "arrify": {
-      "type": "module",
       "moduleName": "arrify",
-      "replacements": ["snippet::array-coerce"]
+      "replacements": [
+        "snippet::array-coerce"
+      ],
+      "type": "module"
     },
     "as-array": {
-      "type": "module",
       "moduleName": "as-array",
-      "replacements": ["snippet::array-coerce"]
+      "replacements": [
+        "snippet::array-coerce"
+      ],
+      "type": "module"
     },
     "async-each": {
-      "type": "module",
       "moduleName": "async-each",
-      "replacements": ["snippet::async-each"]
+      "replacements": [
+        "snippet::async-each"
+      ],
+      "type": "module"
     },
     "async-function": {
-      "type": "module",
       "moduleName": "async-function",
-      "replacements": ["snippet::async-function-constructor"]
+      "replacements": [
+        "snippet::async-function-constructor"
+      ],
+      "type": "module"
     },
     "base64-js": {
-      "type": "module",
       "moduleName": "base64-js",
-      "replacements": ["snippet::base64"]
+      "replacements": [
+        "snippet::base64"
+      ],
+      "type": "module"
     },
     "base64id": {
-      "type": "module",
       "moduleName": "base64id",
-      "replacements": ["snippet::base64-id"]
+      "replacements": [
+        "snippet::base64-id"
+      ],
+      "type": "module"
     },
     "call-bind": {
-      "type": "module",
       "moduleName": "call-bind",
-      "replacements": ["snippet::call-bind"]
+      "replacements": [
+        "snippet::call-bind"
+      ],
+      "type": "module"
     },
     "clone-regexp": {
-      "type": "module",
       "moduleName": "clone-regexp",
-      "replacements": ["snippet::regexp-copy"]
+      "replacements": [
+        "snippet::regexp-copy"
+      ],
+      "type": "module"
     },
     "comver-to-semver": {
-      "type": "module",
       "moduleName": "comver-to-semver",
-      "replacements": ["snippet::comver-to-semver"]
+      "replacements": [
+        "snippet::comver-to-semver"
+      ],
+      "type": "module"
     },
     "defined": {
-      "type": "module",
       "moduleName": "defined",
-      "replacements": ["snippet::find-first-defined"]
+      "replacements": [
+        "snippet::find-first-defined"
+      ],
+      "type": "module"
     },
     "es-get-iterator": {
-      "type": "module",
       "moduleName": "es-get-iterator",
-      "replacements": ["snippet::get-iterator"]
+      "replacements": [
+        "snippet::get-iterator"
+      ],
+      "type": "module"
     },
     "es-set-tostringtag": {
-      "type": "module",
       "moduleName": "es-set-tostringtag",
-      "replacements": ["snippet::set-tostringtag"]
+      "replacements": [
+        "snippet::set-tostringtag"
+      ],
+      "type": "module"
     },
     "except": {
-      "type": "module",
       "moduleName": "except",
-      "replacements": ["snippet::object-exclude"]
+      "replacements": [
+        "snippet::object-exclude"
+      ],
+      "type": "module"
     },
     "fast-base64-decode": {
-      "type": "module",
       "moduleName": "fast-base64-decode",
-      "replacements": ["snippet::base64"]
+      "replacements": [
+        "snippet::base64"
+      ],
+      "type": "module"
     },
     "filter-obj": {
-      "type": "module",
       "moduleName": "filter-obj",
-      "replacements": ["snippet::object-filter"]
+      "replacements": [
+        "snippet::object-filter"
+      ],
+      "type": "module"
     },
     "for-own": {
-      "type": "module",
       "moduleName": "for-own",
-      "replacements": ["snippet::for-own"]
+      "replacements": [
+        "snippet::for-own"
+      ],
+      "type": "module"
     },
     "has-ansi": {
-      "type": "module",
       "moduleName": "has-ansi",
-      "replacements": ["snippet::has-ansi"]
+      "replacements": [
+        "snippet::has-ansi"
+      ],
+      "type": "module"
     },
     "has-flag": {
-      "type": "module",
       "moduleName": "has-flag",
-      "replacements": ["snippet::has-argv"]
+      "replacements": [
+        "snippet::has-argv"
+      ],
+      "type": "module"
     },
     "indent-string": {
-      "type": "module",
       "moduleName": "indent-string",
-      "replacements": ["snippet::indent-string"]
+      "replacements": [
+        "snippet::indent-string"
+      ],
+      "type": "module"
     },
     "invert-kv": {
-      "type": "module",
       "moduleName": "invert-kv",
-      "replacements": ["snippet::object-invert-key-value"]
+      "replacements": [
+        "snippet::object-invert-key-value"
+      ],
+      "type": "module"
     },
     "iota-array": {
-      "type": "module",
       "moduleName": "iota-array",
-      "replacements": ["snippet::array-from-count"]
+      "replacements": [
+        "snippet::array-from-count"
+      ],
+      "type": "module"
     },
     "is-arguments": {
-      "type": "module",
       "moduleName": "is-arguments",
-      "replacements": ["snippet::is-arguments"]
+      "replacements": [
+        "snippet::is-arguments"
+      ],
+      "type": "module"
     },
     "is-array-buffer": {
-      "type": "module",
       "moduleName": "is-array-buffer",
-      "replacements": ["snippet::is-arraybuffer"]
+      "replacements": [
+        "snippet::is-arraybuffer"
+      ],
+      "type": "module"
     },
     "is-async-function": {
-      "type": "module",
       "moduleName": "is-async-function",
-      "replacements": ["snippet::is-async-function"]
+      "replacements": [
+        "snippet::is-async-function"
+      ],
+      "type": "module"
     },
     "is-bigint": {
-      "type": "module",
       "moduleName": "is-bigint",
-      "replacements": ["snippet::is-bigint"]
+      "replacements": [
+        "snippet::is-bigint"
+      ],
+      "type": "module"
     },
     "is-boolean-object": {
-      "type": "module",
       "moduleName": "is-boolean-object",
-      "replacements": ["snippet::is-boolean"]
+      "replacements": [
+        "snippet::is-boolean"
+      ],
+      "type": "module"
     },
     "is-ci": {
-      "type": "module",
       "moduleName": "is-ci",
-      "replacements": ["snippet::is-ci"]
+      "replacements": [
+        "snippet::is-ci"
+      ],
+      "type": "module"
     },
     "is-date-object": {
-      "type": "module",
       "moduleName": "is-date-object",
-      "replacements": ["snippet::is-date"]
+      "replacements": [
+        "snippet::is-date"
+      ],
+      "type": "module"
     },
     "is-deflate": {
-      "type": "module",
       "moduleName": "is-deflate",
-      "replacements": ["snippet::is-deflate-buffer"]
+      "replacements": [
+        "snippet::is-deflate-buffer"
+      ],
+      "type": "module"
     },
     "is-directory": {
-      "type": "module",
       "moduleName": "is-directory",
-      "replacements": ["snippet::is-directory"]
+      "replacements": [
+        "snippet::is-directory"
+      ],
+      "type": "module"
     },
     "is-dotfile": {
-      "type": "module",
       "moduleName": "is-dotfile",
-      "replacements": ["snippet::is-dotfile"]
+      "replacements": [
+        "snippet::is-dotfile"
+      ],
+      "type": "module"
     },
     "is-electron": {
-      "type": "module",
       "moduleName": "is-electron",
-      "replacements": ["snippet::is-electron"]
+      "replacements": [
+        "snippet::is-electron"
+      ],
+      "type": "module"
     },
     "is-even": {
-      "type": "module",
       "moduleName": "is-even",
-      "replacements": ["snippet::is-even"]
+      "replacements": [
+        "snippet::is-even"
+      ],
+      "type": "module"
     },
     "is-extendable": {
-      "type": "module",
       "moduleName": "is-extendable",
-      "replacements": ["snippet::is-object-or-function"]
+      "replacements": [
+        "snippet::is-object-or-function"
+      ],
+      "type": "module"
     },
     "is-function": {
-      "type": "module",
       "moduleName": "is-function",
-      "replacements": ["snippet::is-function"]
+      "replacements": [
+        "snippet::is-function"
+      ],
+      "type": "module"
     },
     "is-generator-function": {
-      "type": "module",
       "moduleName": "is-generator-function",
-      "replacements": ["snippet::is-generator-function"]
+      "replacements": [
+        "snippet::is-generator-function"
+      ],
+      "type": "module"
     },
     "is-gzip": {
-      "type": "module",
       "moduleName": "is-gzip",
-      "replacements": ["snippet::is-gzip-buffer"]
+      "replacements": [
+        "snippet::is-gzip-buffer"
+      ],
+      "type": "module"
     },
     "is-in-ci": {
-      "type": "module",
       "moduleName": "is-in-ci",
-      "replacements": ["snippet::is-ci"]
+      "replacements": [
+        "snippet::is-ci"
+      ],
+      "type": "module"
     },
     "is-in-ssh": {
-      "type": "module",
       "moduleName": "is-in-ssh",
-      "replacements": ["snippet::is-in-ssh"]
+      "replacements": [
+        "snippet::is-in-ssh"
+      ],
+      "type": "module"
     },
     "is-interactive": {
-      "type": "module",
       "moduleName": "is-interactive",
-      "replacements": ["snippet::is-interactive"]
+      "replacements": [
+        "snippet::is-interactive"
+      ],
+      "type": "module"
     },
     "is-jpg": {
-      "type": "module",
       "moduleName": "is-jpg",
-      "replacements": ["snippet::is-jpg-buffer"]
+      "replacements": [
+        "snippet::is-jpg-buffer"
+      ],
+      "type": "module"
     },
     "is-lambda": {
-      "type": "module",
       "moduleName": "is-lambda",
-      "replacements": ["snippet::is-aws-lambda"]
+      "replacements": [
+        "snippet::is-aws-lambda"
+      ],
+      "type": "module"
     },
     "is-map": {
-      "type": "module",
       "moduleName": "is-map",
-      "replacements": ["snippet::is-map"]
+      "replacements": [
+        "snippet::is-map"
+      ],
+      "type": "module"
     },
     "is-negative": {
-      "type": "module",
       "moduleName": "is-negative",
-      "replacements": ["snippet::is-negative"]
+      "replacements": [
+        "snippet::is-negative"
+      ],
+      "type": "module"
     },
     "is-negative-zero": {
-      "type": "module",
       "moduleName": "is-negative-zero",
-      "replacements": ["snippet::is-negative-zero"]
+      "replacements": [
+        "snippet::is-negative-zero"
+      ],
+      "type": "module"
     },
     "is-nil": {
-      "type": "module",
       "moduleName": "is-nil",
-      "replacements": ["snippet::is-nil"]
+      "replacements": [
+        "snippet::is-nil"
+      ],
+      "type": "module"
     },
     "is-npm": {
-      "type": "module",
       "moduleName": "is-npm",
-      "replacements": ["snippet::is-npm"]
+      "replacements": [
+        "snippet::is-npm"
+      ],
+      "type": "module"
     },
     "is-number": {
-      "type": "module",
       "moduleName": "is-number",
-      "replacements": ["snippet::is-number"]
+      "replacements": [
+        "snippet::is-number"
+      ],
+      "type": "module"
     },
     "is-number-object": {
-      "type": "module",
       "moduleName": "is-number-object",
-      "replacements": ["snippet::is-number"]
+      "replacements": [
+        "snippet::is-number"
+      ],
+      "type": "module"
     },
     "is-obj": {
-      "type": "module",
       "moduleName": "is-obj",
-      "replacements": ["snippet::is-object-or-function"]
+      "replacements": [
+        "snippet::is-object-or-function"
+      ],
+      "type": "module"
     },
     "is-object": {
-      "type": "module",
       "moduleName": "is-object",
-      "replacements": ["snippet::is-object"]
+      "replacements": [
+        "snippet::is-object"
+      ],
+      "type": "module"
     },
     "is-odd": {
-      "type": "module",
       "moduleName": "is-odd",
-      "replacements": ["snippet::is-odd"]
+      "replacements": [
+        "snippet::is-odd"
+      ],
+      "type": "module"
     },
     "is-path-cwd": {
-      "type": "module",
       "moduleName": "is-path-cwd",
-      "replacements": ["snippet::is-path-equal-cwd"]
+      "replacements": [
+        "snippet::is-path-equal-cwd"
+      ],
+      "type": "module"
     },
     "is-plain-obj": {
-      "type": "module",
       "moduleName": "is-plain-obj",
-      "replacements": ["snippet::is-object"]
+      "replacements": [
+        "snippet::is-object"
+      ],
+      "type": "module"
     },
     "is-plain-object": {
-      "type": "module",
       "moduleName": "is-plain-object",
-      "replacements": ["snippet::is-object"]
+      "replacements": [
+        "snippet::is-object"
+      ],
+      "type": "module"
     },
     "is-png": {
-      "type": "module",
       "moduleName": "is-png",
-      "replacements": ["snippet::is-png-buffer"]
+      "replacements": [
+        "snippet::is-png-buffer"
+      ],
+      "type": "module"
     },
     "is-posix-bracket": {
-      "type": "module",
       "moduleName": "is-posix-bracket",
-      "replacements": ["snippet::is-posix-bracket"]
+      "replacements": [
+        "snippet::is-posix-bracket"
+      ],
+      "type": "module"
     },
     "is-primitive": {
-      "type": "module",
       "moduleName": "is-primitive",
-      "replacements": ["snippet::is-primitve"]
+      "replacements": [
+        "snippet::is-primitve"
+      ],
+      "type": "module"
     },
     "is-property": {
-      "type": "module",
       "moduleName": "is-property",
-      "replacements": ["snippet::is-identifier-name"]
+      "replacements": [
+        "snippet::is-identifier-name"
+      ],
+      "type": "module"
     },
     "is-regex": {
-      "type": "module",
       "moduleName": "is-regex",
-      "replacements": ["snippet::is-regexp"]
+      "replacements": [
+        "snippet::is-regexp"
+      ],
+      "type": "module"
     },
     "is-regexp": {
-      "type": "module",
       "moduleName": "is-regexp",
-      "replacements": ["snippet::is-regexp"]
+      "replacements": [
+        "snippet::is-regexp"
+      ],
+      "type": "module"
     },
     "is-root": {
-      "type": "module",
       "moduleName": "is-root",
-      "replacements": ["snippet::is-root-user"]
+      "replacements": [
+        "snippet::is-root-user"
+      ],
+      "type": "module"
     },
     "is-set": {
-      "type": "module",
       "moduleName": "is-set",
-      "replacements": ["snippet::is-set"]
+      "replacements": [
+        "snippet::is-set"
+      ],
+      "type": "module"
     },
     "is-stream": {
-      "type": "module",
       "moduleName": "is-stream",
-      "replacements": ["snippet::is-stream"]
+      "replacements": [
+        "snippet::is-stream"
+      ],
+      "type": "module"
     },
     "is-string": {
-      "type": "module",
       "moduleName": "is-string",
-      "replacements": ["snippet::is-string"]
+      "replacements": [
+        "snippet::is-string"
+      ],
+      "type": "module"
     },
     "is-supported-regexp-flag": {
-      "type": "module",
       "moduleName": "is-supported-regexp-flag",
-      "replacements": ["snippet::is-supported-regexp-flag"]
+      "replacements": [
+        "snippet::is-supported-regexp-flag"
+      ],
+      "type": "module"
     },
     "is-symbol": {
-      "type": "module",
       "moduleName": "is-symbol",
-      "replacements": ["snippet::is-symbol"]
+      "replacements": [
+        "snippet::is-symbol"
+      ],
+      "type": "module"
     },
     "is-touch-device": {
-      "type": "module",
       "moduleName": "is-touch-device",
-      "replacements": ["snippet::is-touch-device"]
+      "replacements": [
+        "snippet::is-touch-device"
+      ],
+      "type": "module"
     },
     "is-travis": {
-      "type": "module",
       "moduleName": "is-travis",
-      "replacements": ["snippet::is-travis"]
+      "replacements": [
+        "snippet::is-travis"
+      ],
+      "type": "module"
     },
     "is-typedarray": {
-      "type": "module",
       "moduleName": "is-typedarray",
-      "replacements": ["snippet::is-typed-array"]
+      "replacements": [
+        "snippet::is-typed-array"
+      ],
+      "type": "module"
     },
     "is-unc-path": {
-      "type": "module",
       "moduleName": "is-unc-path",
-      "replacements": ["snippet::is-unc-path"]
+      "replacements": [
+        "snippet::is-unc-path"
+      ],
+      "type": "module"
+    },
+    "is-upper-case": {
+      "id": "is-upper-case",
+      "replacements": [
+        "snippet::is-upper-case"
+      ],
+      "type": "simple"
     },
     "is-whitespace": {
-      "type": "module",
       "moduleName": "is-whitespace",
-      "replacements": ["snippet::is-whitespace"]
+      "replacements": [
+        "snippet::is-whitespace"
+      ],
+      "type": "module"
     },
     "is-whitespace-character": {
-      "type": "module",
       "moduleName": "is-whitespace-character",
-      "replacements": ["snippet::is-whitespace"]
+      "replacements": [
+        "snippet::is-whitespace"
+      ],
+      "type": "module"
     },
     "is-windows": {
-      "type": "module",
       "moduleName": "is-windows",
-      "replacements": ["snippet::is-windows"]
+      "replacements": [
+        "snippet::is-windows"
+      ],
+      "type": "module"
     },
     "is-word-character": {
-      "type": "module",
       "moduleName": "is-word-character",
-      "replacements": ["snippet::is-word-character"]
+      "replacements": [
+        "snippet::is-word-character"
+      ],
+      "type": "module"
     },
     "is-wsl": {
-      "type": "module",
       "moduleName": "is-wsl",
-      "replacements": ["snippet::is-wsl"]
+      "replacements": [
+        "snippet::is-wsl"
+      ],
+      "type": "module"
     },
     "isobject": {
-      "type": "module",
       "moduleName": "isobject",
-      "replacements": ["snippet::is-object"]
+      "replacements": [
+        "snippet::is-object"
+      ],
+      "type": "module"
     },
     "isstream": {
-      "type": "module",
       "moduleName": "isstream",
-      "replacements": ["snippet::is-stream"]
+      "replacements": [
+        "snippet::is-stream"
+      ],
+      "type": "module"
     },
     "iterate-object": {
-      "type": "module",
       "moduleName": "iterate-object",
-      "replacements": ["snippet::object-iterate"]
+      "replacements": [
+        "snippet::object-iterate"
+      ],
+      "type": "module"
     },
     "js-base64": {
-      "type": "module",
       "moduleName": "js-base64",
-      "replacements": ["snippet::base64"]
+      "replacements": [
+        "snippet::base64"
+      ],
+      "type": "module"
     },
     "jsonfile": {
-      "type": "module",
       "moduleName": "jsonfile",
-      "replacements": ["snippet::json-file"]
+      "replacements": [
+        "snippet::json-file"
+      ],
+      "type": "module"
     },
     "kind-of": {
-      "type": "module",
       "moduleName": "kind-of",
-      "replacements": ["snippet::typeof"]
+      "replacements": [
+        "snippet::typeof"
+      ],
+      "type": "module"
     },
     "last-char": {
-      "type": "module",
       "moduleName": "last-char",
-      "replacements": ["snippet::char-last"]
+      "replacements": [
+        "snippet::char-last"
+      ],
+      "type": "module"
     },
     "libbase64": {
-      "type": "module",
       "moduleName": "libbase64",
-      "replacements": ["snippet::base64"]
+      "replacements": [
+        "snippet::base64"
+      ],
+      "type": "module"
     },
     "load-json-file": {
-      "type": "module",
       "moduleName": "load-json-file",
-      "replacements": ["snippet::json-file"]
+      "replacements": [
+        "snippet::json-file"
+      ],
+      "type": "module"
     },
     "lodash.castarray": {
-      "type": "module",
       "moduleName": "lodash.castarray",
-      "replacements": ["snippet::array-coerce"]
+      "replacements": [
+        "snippet::array-coerce"
+      ],
+      "type": "module"
     },
     "lodash.eq": {
-      "type": "module",
       "moduleName": "lodash.eq",
-      "replacements": ["snippet::is-equal"]
+      "replacements": [
+        "snippet::is-equal"
+      ],
+      "type": "module"
     },
     "lodash.isarraybuffer": {
-      "type": "module",
       "moduleName": "lodash.isarraybuffer",
-      "replacements": ["snippet::is-arraybuffer"]
+      "replacements": [
+        "snippet::is-arraybuffer"
+      ],
+      "type": "module"
     },
     "lodash.isboolean": {
-      "type": "module",
       "moduleName": "lodash.isboolean",
-      "replacements": ["snippet::is-boolean"]
+      "replacements": [
+        "snippet::is-boolean"
+      ],
+      "type": "module"
     },
     "lodash.isdate": {
-      "type": "module",
       "moduleName": "lodash.isdate",
-      "replacements": ["snippet::is-date"]
+      "replacements": [
+        "snippet::is-date"
+      ],
+      "type": "module"
     },
     "lodash.isfunction": {
-      "type": "module",
       "moduleName": "lodash.isfunction",
-      "replacements": ["snippet::is-function"]
+      "replacements": [
+        "snippet::is-function"
+      ],
+      "type": "module"
     },
     "lodash.ismap": {
-      "type": "module",
       "moduleName": "lodash.ismap",
-      "replacements": ["snippet::is-map"]
+      "replacements": [
+        "snippet::is-map"
+      ],
+      "type": "module"
     },
     "lodash.isnil": {
-      "type": "module",
       "moduleName": "lodash.isnil",
-      "replacements": ["snippet::is-nil"]
+      "replacements": [
+        "snippet::is-nil"
+      ],
+      "type": "module"
     },
     "lodash.isnull": {
-      "type": "module",
       "moduleName": "lodash.isnull",
-      "replacements": ["snippet::is-null"]
+      "replacements": [
+        "snippet::is-null"
+      ],
+      "type": "module"
     },
     "lodash.isnumber": {
-      "type": "module",
       "moduleName": "lodash.isnumber",
-      "replacements": ["snippet::is-number"]
+      "replacements": [
+        "snippet::is-number"
+      ],
+      "type": "module"
     },
     "lodash.isobject": {
-      "type": "module",
       "moduleName": "lodash.isobject",
-      "replacements": ["snippet::is-object"]
+      "replacements": [
+        "snippet::is-object"
+      ],
+      "type": "module"
     },
     "lodash.isplainobject": {
-      "type": "module",
       "moduleName": "lodash.isplainobject",
-      "replacements": ["snippet::is-object"]
+      "replacements": [
+        "snippet::is-object"
+      ],
+      "type": "module"
     },
     "lodash.isregexp": {
-      "type": "module",
       "moduleName": "lodash.isregexp",
-      "replacements": ["snippet::is-regexp"]
+      "replacements": [
+        "snippet::is-regexp"
+      ],
+      "type": "module"
     },
     "lodash.isset": {
-      "type": "module",
       "moduleName": "lodash.isset",
-      "replacements": ["snippet::is-set"]
+      "replacements": [
+        "snippet::is-set"
+      ],
+      "type": "module"
     },
     "lodash.isstring": {
-      "type": "module",
       "moduleName": "lodash.isstring",
-      "replacements": ["snippet::is-string"]
+      "replacements": [
+        "snippet::is-string"
+      ],
+      "type": "module"
     },
     "lodash.issymbol": {
-      "type": "module",
       "moduleName": "lodash.issymbol",
-      "replacements": ["snippet::is-symbol"]
+      "replacements": [
+        "snippet::is-symbol"
+      ],
+      "type": "module"
     },
     "lodash.istypedarray": {
-      "type": "module",
       "moduleName": "lodash.istypedarray",
-      "replacements": ["snippet::is-typed-array"]
+      "replacements": [
+        "snippet::is-typed-array"
+      ],
+      "type": "module"
     },
     "lodash.isundefined": {
-      "type": "module",
       "moduleName": "lodash.isundefined",
-      "replacements": ["snippet::is-undefined"]
+      "replacements": [
+        "snippet::is-undefined"
+      ],
+      "type": "module"
     },
     "lodash.isweakmap": {
-      "type": "module",
       "moduleName": "lodash.isweakmap",
-      "replacements": ["snippet::is-weakmap"]
+      "replacements": [
+        "snippet::is-weakmap"
+      ],
+      "type": "module"
     },
     "lodash.isweakset": {
-      "type": "module",
       "moduleName": "lodash.isweakset",
-      "replacements": ["snippet::is-weakset"]
+      "replacements": [
+        "snippet::is-weakset"
+      ],
+      "type": "module"
     },
     "lodash.noop": {
-      "type": "module",
       "moduleName": "lodash.noop",
-      "replacements": ["snippet::noop"]
+      "replacements": [
+        "snippet::noop"
+      ],
+      "type": "module"
     },
     "lodash.uniq": {
-      "type": "module",
       "moduleName": "lodash.uniq",
-      "replacements": ["snippet::array-unique"]
+      "replacements": [
+        "snippet::array-unique"
+      ],
+      "type": "module"
     },
     "map-obj": {
-      "type": "module",
       "moduleName": "map-obj",
-      "replacements": ["snippet::object-map"]
+      "replacements": [
+        "snippet::object-map"
+      ],
+      "type": "module"
     },
     "math-random": {
-      "type": "module",
       "moduleName": "math-random",
-      "replacements": ["snippet::math-random"]
+      "replacements": [
+        "snippet::math-random"
+      ],
+      "type": "module"
     },
     "min-indent": {
-      "type": "module",
       "moduleName": "min-indent",
-      "replacements": ["snippet::min-indent"]
+      "replacements": [
+        "snippet::min-indent"
+      ],
+      "type": "module"
     },
     "minimalistic-assert": {
-      "type": "module",
       "moduleName": "minimalistic-assert",
-      "replacements": ["snippet::assert"]
+      "replacements": [
+        "snippet::assert"
+      ],
+      "type": "module"
     },
     "object-filter": {
-      "type": "module",
       "moduleName": "object-filter",
-      "replacements": ["snippet::object-filter"]
+      "replacements": [
+        "snippet::object-filter"
+      ],
+      "type": "module"
     },
     "object.map": {
-      "type": "module",
       "moduleName": "object.map",
-      "replacements": ["snippet::object-map"]
+      "replacements": [
+        "snippet::object-map"
+      ],
+      "type": "module"
     },
     "object.reduce": {
-      "type": "module",
       "moduleName": "object.reduce",
-      "replacements": ["snippet::object-reduce"]
+      "replacements": [
+        "snippet::object-reduce"
+      ],
+      "type": "module"
     },
     "path-key": {
-      "type": "module",
       "moduleName": "path-key",
-      "replacements": ["snippet::path-key"]
+      "replacements": [
+        "snippet::path-key"
+      ],
+      "type": "module"
     },
     "path-name": {
-      "type": "module",
       "moduleName": "path-name",
-      "replacements": ["snippet::path-key"]
+      "replacements": [
+        "snippet::path-key"
+      ],
+      "type": "module"
     },
     "path-root": {
-      "type": "module",
       "moduleName": "path-root",
-      "replacements": ["snippet::path-root"],
-      "url": {"type": "e18e", "id": "path-root"}
+      "replacements": [
+        "snippet::path-root"
+      ],
+      "type": "module",
+      "url": {
+        "id": "path-root",
+        "type": "e18e"
+      }
     },
     "path-root-regex": {
-      "type": "module",
       "moduleName": "path-root-regex",
-      "replacements": ["snippet::path-root"],
-      "url": {"type": "e18e", "id": "path-root"}
+      "replacements": [
+        "snippet::path-root"
+      ],
+      "type": "module",
+      "url": {
+        "id": "path-root",
+        "type": "e18e"
+      }
     },
     "reduce-object": {
-      "type": "module",
       "moduleName": "reduce-object",
-      "replacements": ["snippet::object-reduce"]
+      "replacements": [
+        "snippet::object-reduce"
+      ],
+      "type": "module"
     },
     "repeat-element": {
-      "type": "module",
       "moduleName": "repeat-element",
-      "replacements": ["snippet::array-filled-with"]
+      "replacements": [
+        "snippet::array-filled-with"
+      ],
+      "type": "module"
     },
     "set-function-length": {
-      "type": "module",
       "moduleName": "set-function-length",
-      "replacements": ["snippet::set-function-length"]
+      "replacements": [
+        "snippet::set-function-length"
+      ],
+      "type": "module"
     },
     "set-function-name": {
-      "type": "module",
       "moduleName": "set-function-name",
-      "replacements": ["snippet::set-function-name"]
+      "replacements": [
+        "snippet::set-function-name"
+      ],
+      "type": "module"
     },
     "shebang-regex": {
-      "type": "module",
       "moduleName": "shebang-regex",
-      "replacements": ["snippet::shebang-regex"]
+      "replacements": [
+        "snippet::shebang-regex"
+      ],
+      "type": "module"
     },
     "slash": {
-      "type": "module",
       "moduleName": "slash",
-      "replacements": ["snippet::unix-paths"]
+      "replacements": [
+        "snippet::unix-paths"
+      ],
+      "type": "module"
     },
     "split-lines": {
-      "type": "module",
       "moduleName": "split-lines",
-      "replacements": ["snippet::split-lines"]
+      "replacements": [
+        "snippet::split-lines"
+      ],
+      "type": "module"
     },
     "strip-bom": {
-      "type": "module",
       "moduleName": "strip-bom",
-      "replacements": ["snippet::strip-bom"]
+      "replacements": [
+        "snippet::strip-bom"
+      ],
+      "type": "module"
     },
     "strip-bom-string": {
-      "type": "module",
       "moduleName": "strip-bom-string",
-      "replacements": ["snippet::strip-bom"]
+      "replacements": [
+        "snippet::strip-bom"
+      ],
+      "type": "module"
     },
     "toarray": {
-      "type": "module",
       "moduleName": "toarray",
-      "replacements": ["snippet::array-coerce"]
+      "replacements": [
+        "snippet::array-coerce"
+      ],
+      "type": "module"
     },
     "trim-repeated": {
-      "type": "module",
       "moduleName": "trim-repeated",
-      "replacements": ["snippet::trim-repeated-characters"]
+      "replacements": [
+        "snippet::trim-repeated-characters"
+      ],
+      "type": "module"
     },
     "typedarray-to-buffer": {
-      "type": "module",
       "moduleName": "typedarray-to-buffer",
-      "replacements": ["snippet::typed-array-to-buffer"]
+      "replacements": [
+        "snippet::typed-array-to-buffer"
+      ],
+      "type": "module"
     },
     "unc-path-regex": {
-      "type": "module",
       "moduleName": "unc-path-regex",
-      "replacements": ["snippet::is-unc-path"]
+      "replacements": [
+        "snippet::is-unc-path"
+      ],
+      "type": "module"
     },
     "uniq": {
-      "type": "module",
       "moduleName": "uniq",
-      "replacements": ["snippet::array-unique"]
+      "replacements": [
+        "snippet::array-unique"
+      ],
+      "type": "module"
     },
     "upper-case-first": {
-      "type": "module",
       "moduleName": "upper-case-first",
-      "replacements": ["snippet::uppercase-first-character"]
+      "replacements": [
+        "snippet::uppercase-first-character"
+      ],
+      "type": "module"
     },
     "util-arity": {
-      "type": "module",
       "moduleName": "util-arity",
-      "replacements": ["snippet::set-function-length"]
+      "replacements": [
+        "snippet::set-function-length"
+      ],
+      "type": "module"
     },
     "validate.io-function": {
-      "type": "module",
       "moduleName": "validate.io-function",
-      "replacements": ["snippet::is-function"]
+      "replacements": [
+        "snippet::is-function"
+      ],
+      "type": "module"
     },
     "year": {
-      "type": "module",
       "moduleName": "year",
-      "replacements": ["snippet::year"]
+      "replacements": [
+        "snippet::year"
+      ],
+      "type": "module"
+    }
+  },
+  "replacements": {
+    "snippet::array-coerce": {
+      "description": "You can use a combination of a ternary operator and `Array.isArray` to make sure a value, `undefined`, `null` or an array is always returned as an array.",
+      "example": "(val == null ? [] : Array.isArray(val) ? val : [val])\n// Or if you need to convert an iterable into an array\nArray.from(iterable)",
+      "id": "snippet::array-coerce",
+      "type": "simple"
+    },
+    "snippet::array-difference": {
+      "description": "You can use a combination of `filter` and `includes` to calculate the difference between two arrays.",
+      "example": "const difference = (a, b) => a.filter((item) => !b.includes(item))",
+      "id": "snippet::array-difference",
+      "type": "simple"
+    },
+    "snippet::array-filled-with": {
+      "description": "You can use `new Array` with `Array.prototype.fill` to create an array filled with identical elements",
+      "example": "new Array(length).fill(item);",
+      "id": "snippet::array-filled-with",
+      "type": "simple"
+    },
+    "snippet::array-flatten": {
+      "description": "You can use `Array.prototype.flat` with `Infinity` as an argument to fully flatten an array.",
+      "example": "array.flat(Infinity)",
+      "id": "snippet::array-flatten",
+      "type": "simple"
+    },
+    "snippet::array-from-count": {
+      "description": "You can use `Array.from` to create an array of sequential integers",
+      "example": "Array.from({ length: n }, (_, i) => i);",
+      "id": "snippet::array-from-count",
+      "type": "simple"
+    },
+    "snippet::array-from-count-with-start": {
+      "description": "You can use `Array.from` to create an array of sequential integers starting from a specific integer",
+      "example": "Array.from({ length: end - start }, (_, i) => i + start);",
+      "id": "snippet::array-from-count-with-start",
+      "type": "simple"
+    },
+    "snippet::array-last": {
+      "description": "You can use `arr.at(-1)` if supported or `arr[arr.length - 1]` to get the last element of an array.",
+      "example": "const last = (arr) => arr.at(-1);\n// or in older environments\nconst lastLegacy = (arr) => arr[arr.length - 1]",
+      "id": "snippet::array-last",
+      "type": "simple"
+    },
+    "snippet::array-slice-exclude-last-n": {
+      "description": "You can get all but the last n elements using `array.slice`",
+      "example": "array.slice(0, array.length - n)",
+      "id": "snippet::array-slice-exclude-last-n",
+      "type": "simple"
+    },
+    "snippet::array-union": {
+      "description": "You can use a combination of the spread operator and `Set` to create a union of two arrays.",
+      "example": "const union = (a, b) => [...new Set([...a, ...b])]",
+      "id": "snippet::array-union",
+      "type": "simple"
+    },
+    "snippet::array-unique": {
+      "description": "You can convert to and from a `Set` to remove duplicates from an array.",
+      "example": "const unique = (arr) => [...new Set(arr)]",
+      "id": "snippet::array-unique",
+      "type": "simple"
+    },
+    "snippet::assert": {
+      "description": "You can use a simple function to assert a value or an expression.",
+      "example": "function assert(val, msg) {\n  if (!val) throw new Error(msg)\n}",
+      "id": "snippet::assert",
+      "type": "simple"
+    },
+    "snippet::async-each": {
+      "description": "You can use `Promise.all` with `Array.prototype.map` to do an async action with an array of items.",
+      "example": "Promise.all(items.map(asyncFn))",
+      "id": "snippet::async-each",
+      "type": "simple"
+    },
+    "snippet::async-function-constructor": {
+      "description": "You can get the `AsyncFunction` using `async function`.",
+      "example": "const AsyncFunction = (async () => {}).constructor",
+      "id": "snippet::async-function-constructor",
+      "type": "simple"
+    },
+    "snippet::base64": {
+      "description": "Every modern runtime provides a way to convert byte array to and from base64.",
+      "example": "// From base64 to Uint8Array\nconst bytes = Uint8Array.fromBase64(base64)\n// From Uint8Array to base64\nconst base64 = bytes.toBase64()",
+      "id": "snippet::base64",
+      "type": "simple"
+    },
+    "snippet::base64-id": {
+      "description": "You can use `crypto.randomBytes` with `Buffer.prototype.toString` to generate a random base64 id",
+      "example": "import crypto from 'node:crypto'\nconst id = crypto.randomBytes(15).toString('base64').replaceAll('+', '-').replaceAll('/', '_')",
+      "id": "snippet::base64-id",
+      "type": "simple"
+    },
+    "snippet::call-bind": {
+      "description": "Every modern runtime provides a way to bind to the `call` method of a function.",
+      "example": "const fnBound = Function.call.bind(fn)",
+      "id": "snippet::call-bind",
+      "type": "simple"
+    },
+    "snippet::char-last": {
+      "description": "You can use `str.at(-1)` if supported or `str[str.length - 1]` to get the last character of a string.",
+      "example": "const last = (str) => str.at(-1);\n// or in older environments\nconst lastLegacy = (str) => str[str.length - 1]",
+      "id": "snippet::char-last",
+      "type": "simple"
+    },
+    "snippet::comver-to-semver": {
+      "description": "You can use a ternary operator and string concatenation to add a trailing `.0`.",
+      "example": "const comverToSemver = (comver) => comver.includes('.') ? `${comver}.0` : `${comver}.0.0`",
+      "id": "snippet::comver-to-semver",
+      "type": "simple"
+    },
+    "snippet::find-first-defined": {
+      "description": "You can use `Array.prototype.find` to find a first defined item.",
+      "example": "const defined = (...args) => args.find((v) => v !== undefined)",
+      "id": "snippet::find-first-defined",
+      "type": "simple"
+    },
+    "snippet::for-own": {
+      "description": "You can use `Object.keys(obj).forEach` to iterate over the own enumerable properties of an object.",
+      "example": "Object.keys(obj).forEach(key => {\n  const value = obj[key];\n  // do something\n});",
+      "id": "snippet::for-own",
+      "type": "simple"
+    },
+    "snippet::get-iterator": {
+      "description": "Every modern runtime provides a way to get the iterator function through the `Symbol.iterator` symbol.",
+      "example": "const iterator = obj[Symbol.iterator]?.()",
+      "id": "snippet::get-iterator",
+      "type": "simple"
+    },
+    "snippet::has-ansi": {
+      "description": "You can use the `includes` method on the string to check if a specific ANSI byte is present.",
+      "example": "string.includes(\"\\u001b\") || string.includes(\"\\u009b\")",
+      "id": "snippet::has-ansi",
+      "type": "simple"
+    },
+    "snippet::has-argv": {
+      "description": "You can use the `includes` method on the `process.argv` array to check if a flag is present.",
+      "example": "process.argv.includes('--flag')",
+      "id": "snippet::has-argv",
+      "type": "simple"
+    },
+    "snippet::indent-string": {
+      "description": "You can indent every non-empty line with `String.prototype.replace`, or use `/^/gm` to also indent empty lines, matching the package's `includeEmptyLines` option.",
+      "example": "const indentString = (string, count = 1, indent = ' ') =>\n  string.replace(/^(?!\\s*$)/gm, indent.repeat(count));",
+      "id": "snippet::indent-string",
+      "type": "simple"
+    },
+    "snippet::is-arguments": {
+      "description": "You can use `Object.prototype.toString.call(obj) === \"[object Arguments]\"`",
+      "example": "const isArguments = (val) => Object.prototype.toString.call(val) === \"[object Arguments]\";",
+      "id": "snippet::is-arguments",
+      "type": "simple"
+    },
+    "snippet::is-arraybuffer": {
+      "description": "You can use `instanceof ArrayBuffer`, or if cross-realm, use `Object.prototype.toString.call(obj) === \"[object ArrayBuffer]\"`",
+      "example": "const isArrayBuffer = obj instanceof ArrayBuffer;\n// for cross-realm\nconst isArrayBufferCrossRealm = Object.prototype.toString.call(obj) === \"[object ArrayBuffer]\"",
+      "id": "snippet::is-arraybuffer",
+      "type": "simple"
+    },
+    "snippet::is-async-function": {
+      "description": "You can use `typeof` and `Object.prototype.toString.call` to check if it's an async function",
+      "example": "const isAsyncFunction = (obj) => typeof obj === \"function\" && Object.prototype.toString.call(obj) === \"[object AsyncFunction]\"",
+      "id": "snippet::is-async-function",
+      "type": "simple"
+    },
+    "snippet::is-aws-lambda": {
+      "description": "You can check if the current environment is an AWS Lambda by checking if the `LAMBDA_TASK_ROOT` environment variables are set.",
+      "example": "Boolean(process.env.LAMBDA_TASK_ROOT)",
+      "id": "snippet::is-aws-lambda",
+      "type": "simple"
+    },
+    "snippet::is-bigint": {
+      "description": "You can use `typeof` to check if a value is a bigint.",
+      "example": "typeof value === \"bigint\"",
+      "id": "snippet::is-bigint",
+      "type": "simple"
+    },
+    "snippet::is-boolean": {
+      "description": "You can use `typeof` to check if a value is a boolean.",
+      "example": "typeof value === \"boolean\"",
+      "id": "snippet::is-boolean",
+      "type": "simple"
+    },
+    "snippet::is-ci": {
+      "description": "Every major CI provider sets a `CI` environment variable that you can use to detect if you're running in a CI environment.",
+      "example": "Boolean(process.env.CI)",
+      "id": "snippet::is-ci",
+      "type": "simple"
+    },
+    "snippet::is-date": {
+      "description": "You can use `instanceof Date`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object Date]\"`",
+      "example": "const isDate = v instanceof Date;\n// for cross-realm\nconst isDateCrossRealm = Object.prototype.toString.call(v) === \"[object Date]\"",
+      "id": "snippet::is-date",
+      "type": "simple"
+    },
+    "snippet::is-deflate-buffer": {
+      "description": "You can check the first two bytes of a buffer to detect if it's compressed using deflate.",
+      "example": "function isDeflate(buf) {\n  if (buf.length < 2 || buf[0] !== 0x78) return false;\n  const b = buf[1];\n  return b === 1 || b === 0x9c || b === 0xda;\n}",
+      "id": "snippet::is-deflate-buffer",
+      "type": "simple"
+    },
+    "snippet::is-directory": {
+      "description": "You can call `isDirectory()` on the result of `stat` from `node:fs/promises`, or of `statSync` from `node:fs`, treating an `ENOENT` error as `false`.",
+      "example": "import { stat } from 'node:fs/promises'\n\nconst isDirectory = async (filepath) => {\n  try {\n    return (await stat(filepath)).isDirectory()\n  } catch (err) {\n    if (err.code === 'ENOENT') return false\n    throw err\n  }\n}",
+      "id": "snippet::is-directory",
+      "type": "simple"
+    },
+    "snippet::is-dotfile": {
+      "description": "You can test whether a path ends in a dotfile such as `.gitignore` using a regular expression.",
+      "example": "const isDotfile = (str) => /(?:\\/|^)\\.[^/.][^/]*$/.test(str)",
+      "id": "snippet::is-dotfile",
+      "type": "simple"
+    },
+    "snippet::is-electron": {
+      "description": "You can detect Electron by checking the renderer process type, `process.versions.electron`, or the user agent.",
+      "example": "function isElectron() {\n  return Boolean(\n    globalThis.window?.process?.type === \"renderer\" ||\n      globalThis.process?.versions?.electron ||\n      globalThis.navigator?.userAgent?.includes(\"Electron\")\n  );\n}",
+      "id": "snippet::is-electron",
+      "type": "simple"
+    },
+    "snippet::is-equal": {
+      "description": "You can determine if two values are equal using regular equality checks.",
+      "example": "a === b",
+      "id": "snippet::is-equal",
+      "type": "simple"
+    },
+    "snippet::is-even": {
+      "description": "You can use the modulo operator to check if a number is even.",
+      "example": "(n % 2) === 0",
+      "id": "snippet::is-even",
+      "type": "simple"
+    },
+    "snippet::is-function": {
+      "description": "You can use `typeof` to check if a value is a function.",
+      "example": "typeof value === \"function\"",
+      "id": "snippet::is-function",
+      "type": "simple"
+    },
+    "snippet::is-generator-function": {
+      "description": "You can use `typeof` and `Object.prototype.toString.call` to check if a value is a generator function",
+      "example": "const isGeneratorFunction = (obj) => typeof obj === \"function\" && Object.prototype.toString.call(obj) === \"[object GeneratorFunction]\"",
+      "id": "snippet::is-generator-function",
+      "type": "simple"
+    },
+    "snippet::is-gzip-buffer": {
+      "description": "You can check first three bytes of a buffer to detect if it is a gzip file.",
+      "example": "function isGzip(buf) {\n  if (buf.length < 3) return false;\n  return buf[0] === 31 && buf[1] === 139 && buf[2] === 8;\n}",
+      "id": "snippet::is-gzip-buffer",
+      "type": "simple"
+    },
+    "snippet::is-identifier-name": {
+      "description": "You can test a string against the `ID_Start` and `ID_Continue` Unicode properties to check whether it is a valid identifier name, and so usable as an unquoted property.",
+      "example": "const isProperty = (str) => /^[$_\\p{ID_Start}][$\\p{ID_Continue}]*$/u.test(str)",
+      "id": "snippet::is-identifier-name",
+      "type": "simple"
+    },
+    "snippet::is-in-ssh": {
+      "description": "You can check if the current environment is SSH by checking if the `SSH_CONNECTION` environment variable is set.",
+      "example": "Boolean(process.env.SSH_CONNECTION)",
+      "id": "snippet::is-in-ssh",
+      "type": "simple"
+    },
+    "snippet::is-interactive": {
+      "description": "You can check if the current environment is interactive using `process.stdout.isTTY` and checking that it is not running in CI.",
+      "example": "Boolean(stream?.isTTY && !process.env.CI)",
+      "id": "snippet::is-interactive",
+      "type": "simple"
+    },
+    "snippet::is-jpg-buffer": {
+      "description": "You can check the first three bytes of a buffer against the JPEG file signature to detect if it is a JPEG image.",
+      "example": "function isJpg(buf) {\n  if (!buf || buf.length < 3) return false;\n  return buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff;\n}",
+      "id": "snippet::is-jpg-buffer",
+      "type": "simple"
+    },
+    "snippet::is-map": {
+      "description": "You can use `instanceof Map` to check if a value is a `Map`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object Map]\"`",
+      "example": "const isMap = v instanceof Map;\n// for cross-realm\nconst isMapCrossRealm = Object.prototype.toString.call(v) === \"[object Map]\"",
+      "id": "snippet::is-map",
+      "type": "simple"
+    },
+    "snippet::is-negative": {
+      "description": "You can check if a number is less than 0 to determine if it's negative.",
+      "example": "(n) => n < 0",
+      "id": "snippet::is-negative",
+      "type": "simple"
+    },
+    "snippet::is-negative-zero": {
+      "description": "You can use `Object.is` to check if a value is negative zero.",
+      "example": "Object.is(n, -0)",
+      "id": "snippet::is-negative-zero",
+      "type": "simple"
+    },
+    "snippet::is-nil": {
+      "description": "You can check if a value is `null` or `undefined` using loose equality with `null`.",
+      "example": "value == null",
+      "id": "snippet::is-nil",
+      "type": "simple"
+    },
+    "snippet::is-npm": {
+      "description": "If the current environment is npm the `npm_config_user_agent` environment variable will be set and start with `\"npm\"`.",
+      "example": "const isNpm = process.env.npm_config_user_agent?.startsWith(\"npm\")",
+      "id": "snippet::is-npm",
+      "type": "simple"
+    },
+    "snippet::is-null": {
+      "description": "You can check if a value is `null` using regular equality checks.",
+      "example": "value === null",
+      "id": "snippet::is-null",
+      "type": "simple"
+    },
+    "snippet::is-number": {
+      "description": "You can use `typeof` to check if a value is a number.",
+      "example": "typeof value === \"number\"",
+      "id": "snippet::is-number",
+      "type": "simple"
+    },
+    "snippet::is-object": {
+      "description": "You can use `typeof` to check if a value is an object and `Object.getPrototypeOf` to ensure it's a plain object.",
+      "example": "const isObject = (obj) => obj && typeof obj === \"object\" && (Object.getPrototypeOf(obj) === null || Object.getPrototypeOf(obj) === Object.prototype);",
+      "id": "snippet::is-object",
+      "type": "simple"
+    },
+    "snippet::is-object-or-function": {
+      "description": "You can use `typeof` to check if a value is an object or a function.",
+      "example": "const isObjectOrFunction = (v) => v !== null && (typeof v === \"object\" || typeof v === \"function\");",
+      "id": "snippet::is-object-or-function",
+      "type": "simple"
+    },
+    "snippet::is-odd": {
+      "description": "You can use the modulo operator to check if a number is odd.",
+      "example": "(n % 2) === 1",
+      "id": "snippet::is-odd",
+      "type": "simple"
+    },
+    "snippet::is-path-equal-cwd": {
+      "description": "You can check if a path equals the current working directory using `path.relative`.",
+      "example": "import { relative } from 'node:path'\n\nconst isPathCwd = (p) => !relative(p, process.cwd())",
+      "id": "snippet::is-path-equal-cwd",
+      "type": "simple"
+    },
+    "snippet::is-png-buffer": {
+      "description": "You can check the first eight bytes of a buffer against the PNG file signature to detect if it is a PNG image.",
+      "example": "function isPng(buf) {\n  if (!buf || buf.length < 8) return false;\n  return buf[0] === 0x89 && buf[1] === 0x50\n    && buf[2] === 0x4e && buf[3] === 0x47\n    && buf[4] === 0x0d && buf[5] === 0x0a\n    && buf[6] === 0x1a && buf[7] === 0x0a;\n}",
+      "id": "snippet::is-png-buffer",
+      "type": "simple"
+    },
+    "snippet::is-posix-bracket": {
+      "description": "You can test for a POSIX bracket expression such as `[:alpha:]` using a regular expression.",
+      "example": "const isPosixBracket = (str) => /\\[([:.=+])(?:[^\\[\\]]|)+\\1\\]/.test(str);",
+      "id": "snippet::is-posix-bracket",
+      "type": "simple"
+    },
+    "snippet::is-primitve": {
+      "description": "You can check `typeof` of a value to determine if it's a primitive. Note that `typeof null` is `\"object\"` so you need to check for `null` separately.",
+      "example": "const isPrimitive = (value) => value === null || (typeof value !== \"function\" && typeof value !== \"object\");",
+      "id": "snippet::is-primitve",
+      "type": "simple"
+    },
+    "snippet::is-regexp": {
+      "description": "You can use `instanceof RegExp` to check if a value is a regular expression, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object RegExp]\"`.",
+      "example": "const isRegExp = (v) => v instanceof RegExp;\n// for cross-realm\nconst isRegExpCrossRealm = Object.prototype.toString.call(v) === \"[object RegExp]\";",
+      "id": "snippet::is-regexp",
+      "type": "simple"
+    },
+    "snippet::is-root-user": {
+      "description": "You can use `process.getuid?.()` to check if a user is a root user.",
+      "example": "const isRootUser = process.getuid?.() === 0",
+      "id": "snippet::is-root-user",
+      "type": "simple"
+    },
+    "snippet::is-set": {
+      "description": "You can use `instanceof Set` to check if a value is a `Set`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object Set]\"`",
+      "example": "const isSet = v instanceof Set;\n// for cross-realm\nconst isSetCrossRealm = Object.prototype.toString.call(v) === \"[object Set]\"",
+      "id": "snippet::is-set",
+      "type": "simple"
+    },
+    "snippet::is-stream": {
+      "description": "`node:stream` provides `isReadable` and `isWritable` methods that can be used to check if a stream is readable or writable.",
+      "example": "import { isReadable, isWritable } from 'node:stream';\nconst isStream = (stream) => isReadable(stream) || isWritable(stream);",
+      "id": "snippet::is-stream",
+      "type": "simple"
+    },
+    "snippet::is-string": {
+      "description": "You can use `typeof` to check if a value is a string.",
+      "example": "typeof value === \"string\"",
+      "id": "snippet::is-string",
+      "type": "simple"
+    },
+    "snippet::is-supported-regexp-flag": {
+      "description": "The `RegExp` constructor throws on an unsupported or invalid flag, so you can check support with a `try`/`catch`.",
+      "example": "const isSupportedRegexpFlag = (flag) => {\n  try {\n    RegExp(\"\", flag);\n    return true;\n  } catch {\n    return false;\n  }\n};",
+      "id": "snippet::is-supported-regexp-flag",
+      "type": "simple"
+    },
+    "snippet::is-symbol": {
+      "description": "You can use `typeof` to check if a value is a symbol.",
+      "example": "typeof value === \"symbol\"",
+      "id": "snippet::is-symbol",
+      "type": "simple"
+    },
+    "snippet::is-touch-device": {
+      "description": "You can check if the current device is a touch device by checking the `'ontouchstart'` propery of the `window` object and `maxTouchPoints` of the `navigator` object.",
+      "example": "const isTouchDevice = window && ('ontouchstart' in window || navigator.maxTouchPoints)",
+      "id": "snippet::is-touch-device",
+      "type": "simple"
+    },
+    "snippet::is-travis": {
+      "description": "You can check if the current environment is Travis CI by checking if the `TRAVIS` environment variable is set.",
+      "example": "Boolean(process.env.TRAVIS)",
+      "id": "snippet::is-travis",
+      "type": "simple"
+    },
+    "snippet::is-typed-array": {
+      "description": "You can check if a value is a Typed Array using `ArrayBuffer.isView` and checking if it is not a `DataView`.",
+      "example": "const isTypedArray = (v) => ArrayBuffer.isView(v) && !(v instanceof DataView);",
+      "id": "snippet::is-typed-array",
+      "type": "simple"
+    },
+    "snippet::is-unc-path": {
+      "description": "You can test for a Windows UNC path such as `\\\\server\\share` using a regular expression.",
+      "example": "const isUncPath = (filepath) => /^[\\\\\\/]{2,}[^\\\\\\/]+[\\\\\\/]+[^\\\\\\/]+/.test(filepath)",
+      "id": "snippet::is-unc-path",
+      "type": "simple"
+    },
+    "snippet::is-undefined": {
+      "description": "You can use `typeof` to check if a value is `undefined`.",
+      "example": "typeof value === \"undefined\"",
+      "id": "snippet::is-undefined",
+      "type": "simple"
+    },
+    "snippet::is-upper-case": {
+      "description": "You can check if a string is upper case by comparing it to its upper case version.",
+      "example": "const isUpperCase = (str) => str === str.toUpperCase()",
+      "id": "snippet::is-upper-case",
+      "type": "simple"
+    },
+    "snippet::is-weakmap": {
+      "description": "You can use `instanceof WeakMap` to check if a value is a `WeakMap`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object WeakMap]\"`",
+      "example": "const isWeakMap = v instanceof WeakMap;\n// for cross-realm\nconst isWeakMapCrossRealm = Object.prototype.toString.call(v) === \"[object WeakMap]\"",
+      "id": "snippet::is-weakmap",
+      "type": "simple"
+    },
+    "snippet::is-weakset": {
+      "description": "You can use `instanceof WeakSet` to check if a value is a `WeakSet`, or if cross-realm, use `Object.prototype.toString.call(v) === \"[object WeakSet]\"`",
+      "example": "const isWeakSet = v instanceof WeakSet;\n// for cross-realm\nconst isWeakSetCrossRealm = Object.prototype.toString.call(v) === \"[object WeakSet]\"",
+      "id": "snippet::is-weakset",
+      "type": "simple"
+    },
+    "snippet::is-whitespace": {
+      "description": "You can check if a string contains only whitespace with `RegExp` or by trimming it and comparing it to an empty string.",
+      "example": "const isWhitespace = (str) => /^\\s*$/.test(str);",
+      "id": "snippet::is-whitespace",
+      "type": "simple"
+    },
+    "snippet::is-windows": {
+      "description": "You can check if the current environment is Windows by checking if `process.platform` is equal to \"win32\".",
+      "example": "const isWindows = () => process.platform === \"win32\";",
+      "id": "snippet::is-windows",
+      "type": "simple"
+    },
+    "snippet::is-word-character": {
+      "description": "You can check if a character is a word character with a `RegExp`.",
+      "example": "const isWordChar = (c) => /\\w/.test(c);",
+      "id": "snippet::is-word-character",
+      "type": "simple"
+    },
+    "snippet::is-wsl": {
+      "description": "You can check if the current environment is WSL by checking if the `WSL_DISTRO_NAME` environment variable is set.",
+      "example": "Boolean(process.env.WSL_DISTRO_NAME)",
+      "id": "snippet::is-wsl",
+      "type": "simple"
+    },
+    "snippet::json-file": {
+      "description": "You can use `JSON` and `node:fs` to read and write JSON files.",
+      "example": "import * as fs from 'node:fs/promises'\nfs.readFile(file, 'utf8').then(JSON.parse)\nfs.writeFile(file, JSON.stringify(data, null, 2) + '\\n')",
+      "id": "snippet::json-file",
+      "type": "simple"
+    },
+    "snippet::math-random": {
+      "description": "You can use `Math.random()` or `crypto.getRandomValues` if cryptographic randomness is required.",
+      "example": "crypto.getRandomValues(new Uint32Array(1))[0] / (2 ** 32);\n// or\nMath.random();",
+      "id": "snippet::math-random",
+      "type": "simple"
+    },
+    "snippet::min-indent": {
+      "description": "You can use a regular expression with `Array.prototype.reduce` to find the shortest leading whitespace across the lines of a string.",
+      "example": "const minIndent = (string) => (string.match(/^[ \\t]*(?=\\S)/gm) ?? ['']).reduce((r, a) => Math.min(r, a.length), Infinity)",
+      "id": "snippet::min-indent",
+      "type": "simple"
+    },
+    "snippet::noop": {
+      "description": "You can use an arrow function `() => {}` for a noop function.",
+      "example": "const noop = () => {}",
+      "id": "snippet::noop",
+      "type": "simple"
+    },
+    "snippet::object-exclude": {
+      "description": "You can use `Object.fromEntries` with `Object.entries` and `Array.prototype.filter` to exclude specific keys from an object.",
+      "example": "const objectExclude = (obj, keys) => Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));",
+      "id": "snippet::object-exclude",
+      "type": "simple"
+    },
+    "snippet::object-filter": {
+      "description": "You can use `Object.fromEntries` with `Object.entries` and `Array.prototype.filter` to filter an object's properties.",
+      "example": "const objectFilter = (obj, fn) => Object.fromEntries(Object.entries(obj).filter(fn));",
+      "id": "snippet::object-filter",
+      "type": "simple"
+    },
+    "snippet::object-invert-key-value": {
+      "description": "You can use `Object.fromEntries` with `Object.entries` to invert keys and values.",
+      "example": "Object.fromEntries(Object.entries(object).map(([k, v]) => [v, k]))",
+      "id": "snippet::object-invert-key-value",
+      "type": "simple"
+    },
+    "snippet::object-iterate": {
+      "description": "You can use a `for...of` loop over `Object.entries` to iterate an object's own enumerable properties, and `break` to stop early.",
+      "example": "for (const [key, value] of Object.entries(obj)) {\n  if (key === 'stop') break\n  // do something\n}\n// Or for arrays\nfor (const [index, value] of arr.entries()) {\n  // do something\n}",
+      "id": "snippet::object-iterate",
+      "type": "simple"
+    },
+    "snippet::object-map": {
+      "description": "You can use `Object.fromEntries` with `Object.entries` and `Array.prototype.map` to map an object's properties.",
+      "example": "const objectMap = (obj, fn) => Object.fromEntries(Object.entries(obj).map(([k, v]) => fn(k, v)));",
+      "id": "snippet::object-map",
+      "type": "simple"
+    },
+    "snippet::object-reduce": {
+      "description": "You can use `Object.entries` and `Array.prototype.reduce`.",
+      "example": "const objectReduce = (obj, fn, initial) => Object.entries(obj).reduce((acc, [k, v]) => fn(acc, k, v), initial);",
+      "id": "snippet::object-reduce",
+      "type": "simple"
+    },
+    "snippet::path-key": {
+      "description": "You can use `Object.keys` with `Array.prototype.findLast` to find the case-insensitive `PATH` environment variable key.",
+      "example": "const pathKey = Object.keys(process.env).findLast((k) => k.toUpperCase() === 'PATH') ?? 'PATH';",
+      "id": "snippet::path-key",
+      "type": "simple"
+    },
+    "snippet::path-root": {
+      "description": "You can use `parse` from `node:path` and read its `root` property to get the root of a path.",
+      "example": "import { parse } from 'node:path'\n\nconst pathRoot = (filepath) => parse(filepath).root",
+      "id": "snippet::path-root",
+      "type": "simple"
+    },
+    "snippet::regexp-copy": {
+      "description": "You can create a copy of a regular expression using the `RegExp` constructor.",
+      "example": "const copyRegExp = (regexp) => new RegExp(regexp);",
+      "id": "snippet::regexp-copy",
+      "type": "simple"
+    },
+    "snippet::set-function-length": {
+      "description": "You can set `length` of a function using `Object.defineProperty`.",
+      "example": "const setFunctionLength = (fn, length) => Object.defineProperty(fn, 'length', { value: length, configurable: true });",
+      "id": "snippet::set-function-length",
+      "type": "simple"
+    },
+    "snippet::set-function-name": {
+      "description": "You can set `name` of a function using `Object.defineProperty`.",
+      "example": "const setFunctionName = (fn, name) => Object.defineProperty(fn, 'name', { value: name, configurable: true });",
+      "id": "snippet::set-function-name",
+      "type": "simple"
+    },
+    "snippet::set-tostringtag": {
+      "description": "You can set the `toStringTag` of an object using `Object.defineProperty`.",
+      "example": "const setToStringTag = (target, value) => Object.defineProperty(target, Symbol.toStringTag, { value, configurable: true });",
+      "id": "snippet::set-tostringtag",
+      "type": "simple"
+    },
+    "snippet::shebang-regex": {
+      "description": "You can use `/^#!(.+)/` regex.",
+      "example": "const shebangRegex = /^#!(.+)/;",
+      "id": "snippet::shebang-regex",
+      "type": "simple"
+    },
+    "snippet::split-lines": {
+      "description": "You can split a string into lines using a regular expression.",
+      "example": "const splitLines = (str) => str.split(/\\r?\\n/);",
+      "id": "snippet::split-lines",
+      "type": "simple"
+    },
+    "snippet::strip-bom": {
+      "description": "You can check if the first character of the string is the BOM and strip it using `String.prototype.slice` if it is.",
+      "example": "str.charCodeAt(0) === 0xFEFF ? str.slice(1) : str;",
+      "id": "snippet::strip-bom",
+      "type": "simple"
+    },
+    "snippet::trim-repeated-characters": {
+      "description": "You can trim repeated sequences of characters using `String.prototype.replace`.",
+      "example": "// Normal character\nstring.replace(/-{2,}/g, '-')\n\n// Special character\nstring.replace(/\\.{2,}/g, '.')\n\n// Multi-character sequence\nstring.replace(/(?:abc){2,}/g, 'abc')",
+      "id": "snippet::trim-repeated-characters",
+      "type": "simple"
+    },
+    "snippet::typed-array-to-buffer": {
+      "description": "You can use `Buffer.from` to convert a Typed Array to `Buffer` and `ArrayBuffer.isView` to avoid a copy.",
+      "example": "ArrayBuffer.isView(arr)\n  ? Buffer.from(arr.buffer, arr.byteOffset, arr.byteLength)\n  : Buffer.from(arr)",
+      "id": "snippet::typed-array-to-buffer",
+      "type": "simple"
+    },
+    "snippet::typeof": {
+      "description": "You can use `typeof` to get the type of a value, or `Object.prototype.toString.call` to get the internal [[Class]] of an object.",
+      "example": "const typeOf = (value) => typeof value;\n// for more specific types\nconst classOf = (value) => Object.prototype.toString.call(value);",
+      "id": "snippet::typeof",
+      "type": "simple"
+    },
+    "snippet::unix-paths": {
+      "description": "You can check the start of a path for the Windows extended-length path prefix and if it's not present, replace backslashes with forward slashes.",
+      "example": "path.startsWith('\\\\\\\\?\\\\') ? path : path.replace(/\\\\/g, '/')",
+      "id": "snippet::unix-paths",
+      "type": "simple"
+    },
+    "snippet::uppercase-first-character": {
+      "description": "You can uppercase the first character.",
+      "example": "string.charAt(0).toUpperCase() + string.slice(1)",
+      "id": "snippet::uppercase-first-character",
+      "type": "simple"
+    },
+    "snippet::year": {
+      "description": "You can use `new Date().getUTCFullYear()` to get the current year.",
+      "example": "new Date().getUTCFullYear()",
+      "id": "snippet::year",
+      "type": "simple"
     }
   }
 }
