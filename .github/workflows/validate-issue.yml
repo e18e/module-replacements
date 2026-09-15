@@ -35,7 +35,15 @@ jobs:
         continue-on-error: true
         env:
           ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
         run: node scripts/validate-issue.ts
+      - name: Add npmx Link
+        if: hashFiles('issue-body.md') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GH_REPO: ${{ github.repository }}
+        run: gh issue edit "$ISSUE_NUMBER" --body-file issue-body.md
       - name: Comment on Issue
         if: steps.validate.outcome == 'failure' && hashFiles('issue-validation-failure.md') != ''
         env:

@@ -1,0 +1,52 @@
+name: Preferred replacement
+description: Recommend a lighter, faster, or maintained alternative package
+title: '[Replacement]: '
+labels: ['replacement', 'triage']
+type: replacement
+body:
+  - type: input
+    id: package
+    attributes:
+      label: Package to replace
+      description: The npm package name you are recommending a replacement for.
+      placeholder: e.g. chalk
+    validations:
+      required: true
+
+  - type: textarea
+    id: replacements
+    attributes:
+      label: Replacement package(s)
+      description: Which npm packages should replace it?
+      placeholder: |
+        e.g. picocolors
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: |
+        Why should this replacement be added? Include evidence where you can (e.g. install size, dependency count, benchmarks). For example:
+        - The replacement is significantly smaller or faster
+        - The package is unmaintained and the replacement is a maintained fork
+    validations:
+      required: true
+
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility
+      description: Does the replacement cover all primary functionality of the old package? Note any API differences, missing features, module format changes (e.g. ESM only), or minimum Node.js version.
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Code example (optional)
+      description: A before/after snippet showing how to migrate.
+      render: js
+    validations:
+      required: false

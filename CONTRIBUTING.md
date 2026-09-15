@@ -12,7 +12,7 @@ Basic information you should include in the issue:
 
 - The name of the module you want to replace.
 - The name of the module or native API you want to replace it with.
-- Which manifest you think it belongs in (see below)
+- Which manifest you think it belongs in (see below). Each manifest has its own issue template.
 - Why you think it should be replaced (e.g. security, performance, etc.)
 - Availability of the replacement (e.g. is it available in all LTS versions of Node, or only newer ones?)
 - A code example of how to migrate from the old module to the new one.
