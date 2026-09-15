@@ -2190,6 +2190,11 @@
       "moduleName": "a-sync-waterfall",
       "replacements": ["await"]
     },
+    "abab": {
+      "type": "module",
+      "moduleName": "abab",
+      "replacements": ["atob", "btoa"]
+    },
     "abort-controller": {
       "type": "module",
       "moduleName": "abort-controller",
