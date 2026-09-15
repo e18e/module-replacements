@@ -585,7 +585,7 @@
     "snippet::to-identifier": {
       "id": "snippet::to-identifier",
       "type": "simple",
-      "description": "You can split the string on spaces, capitalize the first character of each word, and remove anything that isn't a letter, digit, space or underscore.",
+      "description": "You can transform a string into an identifier (alphanumeric PascalCase) using `map` and a regular expression.",
       "example": "function toIdentifier(str) {\n  return str\n    .split(' ')\n    .map(t => t.charAt(0).toUpperCase() + t.slice(1))\n    .join('')\n    .replace(/[^ _0-9a-z]/gi, '')\n}"
     },
     "snippet::trim-repeated-characters": {
