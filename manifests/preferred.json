@@ -635,7 +635,7 @@
     "lodash": {
       "type": "module",
       "moduleName": "lodash",
-      "replacements": ["lodash-underscore", "es-toolkit"],
+      "replacements": ["lodash-underscore", "es-toolkit", "remeda"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
     "lodash-amd": {
@@ -653,7 +653,7 @@
     "lodash-es": {
       "type": "module",
       "moduleName": "lodash-es",
-      "replacements": ["lodash-underscore", "es-toolkit"],
+      "replacements": ["lodash-underscore", "es-toolkit", "remeda"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
     "lodash-fp": {
@@ -2787,7 +2787,7 @@
     "underscore": {
       "type": "module",
       "moduleName": "underscore",
-      "replacements": ["lodash-underscore", "es-toolkit"],
+      "replacements": ["lodash-underscore", "es-toolkit", "remeda"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
     "universal-deep-strict-equal": {
@@ -3639,6 +3639,11 @@
         "type": "node",
         "id": "api/readline.html#readlinecreateinterfaceoptions"
       }
+    },
+    "remeda": {
+      "id": "remeda",
+      "type": "documented",
+      "replacementModule": "remeda"
     },
     "rollup-plugin-visualizer": {
       "id": "rollup-plugin-visualizer",
