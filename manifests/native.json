@@ -2184,7 +2184,7 @@
     "abab": {
       "type": "module",
       "moduleName": "abab",
-      "replacements": ["atob", "btoa"]
+      "replacements": ["atob"]
     },
     "abort-controller": {
       "type": "module",
