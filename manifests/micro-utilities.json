@@ -249,8 +249,8 @@
     "snippet::is-hexadecimal": {
       "id": "snippet::is-hexadecimal",
       "type": "simple",
-      "description": "You can check if a character, or a character code, is a hexadecimal digit with a `RegExp` using the `ASCII_Hex_Digit` Unicode property.",
-      "example": "const isHexadecimal = (character) =>\n  /^\\p{ASCII_Hex_Digit}$/u.test(\n    typeof character === 'string'\n      ? character.slice(0, 1)\n      : String.fromCharCode(character)\n  );\n// for strings only\nconst isHexadecimalString = (str) => /^\\p{ASCII_Hex_Digit}/u.test(str);"
+      "description": "You can check if a string starts with a hexadecimal digit with a `RegExp` using the `ASCII_Hex_Digit` Unicode property.",
+      "example": "const isHexadecimal = (str) => /^\\p{ASCII_Hex_Digit}/u.test(str);"
     },
     "snippet::is-identifier-name": {
       "id": "snippet::is-identifier-name",
