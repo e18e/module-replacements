@@ -252,6 +252,12 @@
       "description": "You can check first three bytes of a buffer to detect if it is a gzip file.",
       "example": "function isGzip(buf) {\n  if (buf.length < 3) return false;\n  return buf[0] === 31 && buf[1] === 139 && buf[2] === 8;\n}"
     },
+    "snippet::is-hexadecimal": {
+      "id": "snippet::is-hexadecimal",
+      "type": "simple",
+      "description": "You can check if a string starts with a hexadecimal digit with a `RegExp` using the `ASCII_Hex_Digit` Unicode property.",
+      "example": "const isHexadecimal = (str) => /^\\p{ASCII_Hex_Digit}/u.test(str);"
+    },
     "snippet::is-identifier-name": {
       "id": "snippet::is-identifier-name",
       "type": "simple",
@@ -876,6 +882,11 @@
       "type": "module",
       "moduleName": "is-gzip",
       "replacements": ["snippet::is-gzip-buffer"]
+    },
+    "is-hexadecimal": {
+      "type": "module",
+      "moduleName": "is-hexadecimal",
+      "replacements": ["snippet::is-hexadecimal"]
     },
     "is-in-ci": {
       "type": "module",
