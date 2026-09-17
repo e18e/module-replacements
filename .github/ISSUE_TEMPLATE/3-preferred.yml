@@ -13,6 +13,15 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: link
+    attributes:
+      label: Package link
+      description: A link to the package on npmx or npmjs.
+      placeholder: e.g. https://npmx.dev/package/chalk
+    validations:
+      required: true
+
   - type: textarea
     id: replacements
     attributes:
