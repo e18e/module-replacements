@@ -147,8 +147,8 @@
     "snippet::is-alphabetical": {
       "id": "snippet::is-alphabetical",
       "type": "simple",
-      "description": "You can check if a character, or a character code, is an ASCII letter with a case-insensitive `RegExp`.",
-      "example": "const isAlphabetical = (character) =>\n  /^[a-z]$/i.test(\n    typeof character === 'string'\n      ? character.slice(0, 1)\n      : String.fromCharCode(character)\n  );\n// for strings only\nconst isAlphabeticalString = (str) => /^[a-z]/i.test(str);"
+      "description": "You can check if a string starts with an ASCII letter with a case-insensitive `RegExp`.",
+      "example": "const isAlphabetical = (str) => /^[a-z]/i.test(str);"
     },
     "snippet::is-arguments": {
       "id": "snippet::is-arguments",
