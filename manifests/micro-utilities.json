@@ -144,6 +144,12 @@
       "description": "You can indent every non-empty line with `String.prototype.replace`, or use `/^/gm` to also indent empty lines, matching the package's `includeEmptyLines` option.",
       "example": "const indentString = (string, count = 1, indent = ' ') =>\n  string.replace(/^(?!\\s*$)/gm, indent.repeat(count));"
     },
+    "snippet::is-alphabetical": {
+      "id": "snippet::is-alphabetical",
+      "type": "simple",
+      "description": "You can check if a string starts with an ASCII letter with a case-insensitive `RegExp`.",
+      "example": "const isAlphabetical = (str) => /^[a-z]/i.test(str);"
+    },
     "snippet::is-arguments": {
       "id": "snippet::is-arguments",
       "type": "simple",
@@ -791,6 +797,11 @@
       "type": "module",
       "moduleName": "iota-array",
       "replacements": ["snippet::array-from-count"]
+    },
+    "is-alphabetical": {
+      "type": "module",
+      "moduleName": "is-alphabetical",
+      "replacements": ["snippet::is-alphabetical"]
     },
     "is-arguments": {
       "type": "module",
