@@ -438,6 +438,12 @@
       "description": "You can use `typeof` to check if a value is `undefined`.",
       "example": "typeof value === \"undefined\""
     },
+    "snippet::is-upper-case": {
+      "id": "snippet::is-upper-case",
+      "type": "simple",
+      "description": "You can compare the string against its upper-cased form to determine if the string is entirely upper case",
+      "example": "const isUpperCase = (input, locale) =>\n  input.toLocaleUpperCase(locale) === input &&\n  input !== input.toLocaleLowerCase(locale)"
+    },
     "snippet::is-weakmap": {
       "id": "snippet::is-weakmap",
       "type": "simple",
@@ -1051,6 +1057,11 @@
       "type": "module",
       "moduleName": "is-unc-path",
       "replacements": ["snippet::is-unc-path"]
+    },
+    "is-upper-case": {
+      "type": "module",
+      "moduleName": "is-upper-case",
+      "replacements": ["snippet::is-upper-case"]
     },
     "is-whitespace": {
       "type": "module",
