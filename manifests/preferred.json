@@ -2558,6 +2558,12 @@
       "replacements": ["@rollup/plugin-babel"],
       "url": {"type": "e18e", "id": "rollup-plugin-babel"}
     },
+    "rollup-plugin-node-resolve": {
+      "type": "module",
+      "moduleName": "rollup-plugin-node-resolve",
+      "replacements": ["@rollup/plugin-node-resolve"],
+      "url": {"type": "e18e", "id": "rollup-plugin-node-resolve"}
+    },
     "rollup-plugin-terser": {
       "type": "module",
       "moduleName": "rollup-plugin-terser",
@@ -2959,6 +2965,11 @@
       "id": "@rollup/plugin-babel",
       "type": "documented",
       "replacementModule": "@rollup/plugin-babel"
+    },
+    "@rollup/plugin-node-resolve": {
+      "id": "@rollup/plugin-node-resolve",
+      "type": "documented",
+      "replacementModule": "@rollup/plugin-node-resolve"
     },
     "@rollup/plugin-terser": {
       "id": "@rollup/plugin-terser",
