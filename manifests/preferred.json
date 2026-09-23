@@ -2552,6 +2552,12 @@
       "replacements": ["fs.promises.rm", "fs.promises.rmdir", "premove"],
       "url": {"type": "e18e", "id": "rimraf"}
     },
+    "rollup-plugin-babel": {
+      "type": "module",
+      "moduleName": "rollup-plugin-babel",
+      "replacements": ["@rollup/plugin-babel"],
+      "url": {"type": "e18e", "id": "rollup-plugin-babel"}
+    },
     "rollup-plugin-terser": {
       "type": "module",
       "moduleName": "rollup-plugin-terser",
@@ -2948,6 +2954,11 @@
       "id": "@placemarkio/tokml",
       "type": "documented",
       "replacementModule": "@placemarkio/tokml"
+    },
+    "@rollup/plugin-babel": {
+      "id": "@rollup/plugin-babel",
+      "type": "documented",
+      "replacementModule": "@rollup/plugin-babel"
     },
     "@rollup/plugin-terser": {
       "id": "@rollup/plugin-terser",
