@@ -424,6 +424,12 @@
       "replacements": ["lucide"],
       "url": {"type": "e18e", "id": "feather"}
     },
+    "feathers-hooks-common": {
+      "type": "module",
+      "moduleName": "feathers-hooks-common",
+      "replacements": ["feathers-utils"],
+      "url": {"type": "e18e", "id": "feathers-hooks-common"}
+    },
     "find-cache-dir": {
       "type": "module",
       "moduleName": "find-cache-dir",
@@ -3341,6 +3347,11 @@
       "replacementModule": "fast-wrap-ansi"
     },
     "fdir": {"id": "fdir", "type": "documented", "replacementModule": "fdir"},
+    "feathers-utils": {
+      "id": "feathers-utils",
+      "type": "documented",
+      "replacementModule": "feathers-utils"
+    },
     "fetch": {
       "id": "fetch",
       "type": "native",
