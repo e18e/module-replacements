@@ -2412,6 +2412,12 @@
       "replacements": ["empathic", "pkg-types"],
       "url": {"type": "e18e", "id": "find-up"}
     },
+    "pako": {
+      "type": "module",
+      "moduleName": "pako",
+      "replacements": ["fflate", "node:zlib", "CompressionStream"],
+      "url": {"type": "e18e", "id": "pako"}
+    },
     "path-exists": {
       "type": "module",
       "moduleName": "path-exists",
@@ -3087,6 +3093,15 @@
       },
       "url": {"type": "mdn", "id": "Web/API/Clipboard_API"}
     },
+    "CompressionStream": {
+      "id": "CompressionStream",
+      "type": "native",
+      "webFeatureId": {
+        "featureId": "compression-streams",
+        "compatKey": "api.CompressionStream"
+      },
+      "url": {"type": "mdn", "id": "Web/API/Compression_Streams_API"}
+    },
     "Date": {
       "id": "Date",
       "type": "native",
@@ -3369,6 +3384,11 @@
       "webFeatureId": {"featureId": "fetch", "compatKey": "api.fetch"},
       "url": {"type": "mdn", "id": "Web/API/Fetch_API"}
     },
+    "fflate": {
+      "id": "fflate",
+      "type": "documented",
+      "replacementModule": "fflate"
+    },
     "find-proc": {
       "id": "find-proc",
       "type": "documented",
@@ -3600,6 +3620,12 @@
       "type": "native",
       "nodeFeatureId": {"moduleName": "test"},
       "url": {"type": "node", "id": "api/test.html"}
+    },
+    "node:zlib": {
+      "id": "node:zlib",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:zlib"},
+      "url": {"type": "node", "id": "api/zlib.html"}
     },
     "npm-check": {
       "id": "npm-check",
