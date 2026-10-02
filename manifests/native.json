@@ -3751,6 +3751,11 @@
       "moduleName": "util.promisify",
       "replacements": ["util.promisify"]
     },
+    "utils-merge": {
+      "type": "module",
+      "moduleName": "utils-merge",
+      "replacements": ["spread_syntax"]
+    },
     "validate.io-array": {
       "type": "module",
       "moduleName": "validate.io-array",
