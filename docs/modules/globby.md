@@ -14,6 +14,7 @@ If you don’t need `.gitignore` handling, prefer [`tinyglobby`](https://github.
 
 ```ts
 import { execSync } from 'node:child_process'
+import process from 'node:process'
 import { glob, escapePath } from 'tinyglobby'
 
 async function globWithGitignore(patterns, options = {}) {

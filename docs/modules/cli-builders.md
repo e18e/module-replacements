@@ -9,6 +9,7 @@ description: Modern alternatives to packages for building CLI applications
 [`sade`](https://github.com/lukeed/sade) is a small but powerful tool for building CLI applications for Node.js
 
 ```ts
+import process from 'node:process'
 import sade from 'sade'
 
 const prog = sade('my-cli')

@@ -3666,6 +3666,10 @@
     "process.loadEnvFile": {
       "id": "process.loadEnvFile",
       "type": "native",
+      "nodeFeatureId": {
+        "moduleName": "node:process",
+        "exportName": "loadEnvFile"
+      },
       "url": {"type": "node", "id": "api/process.html#processloadenvfilepath"}
     },
     "react-helmet-async": {

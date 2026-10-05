@@ -43,6 +43,7 @@ Push data over time example:
 
 ```ts
 import streamBuffers from 'stream-buffers' // [!code --]
+import { Buffer } from 'node:buffer'
 import { Readable } from 'node:stream' // [!code ++]
 
 const rs = new streamBuffers.ReadableStreamBuffer() // [!code --]
@@ -62,6 +63,7 @@ Control chunk size and frequency example:
 
 <!-- prettier-ignore -->
 ```ts
+import { Buffer } from 'node:buffer'
 import streamBuffers from 'stream-buffers' // [!code --]
 import { Readable } from 'node:stream' // [!code ++]
 import { setTimeout } from 'node:timers/promises' // [!code ++]

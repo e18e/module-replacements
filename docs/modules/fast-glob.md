@@ -15,6 +15,7 @@ Example:
 ```ts
 import fg from 'fast-glob' // [!code --]
 import { glob } from 'tinyglobby' // [!code ++]
+import process from 'node:process'
 
 const files = await fg('**/*.ts', { // [!code --]
 const files = await glob('**/*.ts', { // [!code ++]

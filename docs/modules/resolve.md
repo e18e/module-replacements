@@ -29,6 +29,7 @@ const path = resolveModulePath('my-module')
 [`oxc-resolver`](https://github.com/oxc-project/oxc-resolver)
 
 ```ts
+import process from 'node:process'
 import { ResolverFactory } from 'oxc-resolver'
 
 const resolver = new ResolverFactory()

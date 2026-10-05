@@ -11,6 +11,7 @@ description: Modern alternatives to the node-telegram-bot-api package
 Example:
 
 ```ts
+import process from 'node:process'
 import { Bot } from 'grammy'
 
 const bot = new Bot(process.env.TOKEN)

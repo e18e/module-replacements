@@ -11,6 +11,7 @@ description: Modern alternatives to CLI argument parsing packages using Node.js 
 Example:
 
 ```ts
+import process from 'node:process'
 import { parseArgs } from 'node:util'
 
 const { values, positionals } = parseArgs({
@@ -33,6 +34,7 @@ const { values, positionals } = parseArgs({
 Example:
 
 ```ts
+import process from 'node:process'
 import mri from 'mri'
 
 const options = mri(process.argv.slice(2), {

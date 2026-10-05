@@ -9,6 +9,8 @@ description: Modern alternatives to the get-stream package
 You can convert a stream to a string by using `Buffer.from` and a `for await`:
 
 ```ts
+import { Buffer } from 'node:buffer'
+
 async function streamToString(stream) {
   const chunks = []
   for await (const chunk of stream) {
@@ -41,6 +43,8 @@ async function streamToArray(stream) {
 You can convert a stream to a `Buffer` using [`Array.fromAsync`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fromAsync) with a mapper:
 
 ```ts
+import { Buffer } from 'node:buffer'
+
 async function streamToBuffer(stream) {
   const chunks = await Array.fromAsync(stream, (chunk) => Buffer.from(chunk))
   return Buffer.concat(chunks)
