@@ -142,7 +142,7 @@
       "id": "snippet::has-argv",
       "type": "simple",
       "description": "You can use the `includes` method on the `process.argv` array to check if a flag is present.",
-      "example": "import process from 'node:process'\n\nprocess.argv.includes('--flag')"
+      "example": "process.argv.includes('--flag')"
     },
     "snippet::indent-string": {
       "id": "snippet::indent-string",
@@ -178,7 +178,7 @@
       "id": "snippet::is-aws-lambda",
       "type": "simple",
       "description": "You can check if the current environment is an AWS Lambda by checking if the `LAMBDA_TASK_ROOT` environment variables are set.",
-      "example": "import process from 'node:process'\n\nBoolean(process.env.LAMBDA_TASK_ROOT)"
+      "example": "Boolean(process.env.LAMBDA_TASK_ROOT)"
     },
     "snippet::is-bigint": {
       "id": "snippet::is-bigint",
@@ -196,7 +196,7 @@
       "id": "snippet::is-ci",
       "type": "simple",
       "description": "Every major CI provider sets a `CI` environment variable that you can use to detect if you're running in a CI environment.",
-      "example": "import process from 'node:process'\n\nBoolean(process.env.CI)"
+      "example": "Boolean(process.env.CI)"
     },
     "snippet::is-date": {
       "id": "snippet::is-date",
@@ -280,13 +280,13 @@
       "id": "snippet::is-in-ssh",
       "type": "simple",
       "description": "You can check if the current environment is SSH by checking if the `SSH_CONNECTION` environment variable is set.",
-      "example": "import process from 'node:process'\n\nBoolean(process.env.SSH_CONNECTION)"
+      "example": "Boolean(process.env.SSH_CONNECTION)"
     },
     "snippet::is-interactive": {
       "id": "snippet::is-interactive",
       "type": "simple",
       "description": "You can check if the current environment is interactive using `process.stdout.isTTY` and checking that it is not running in CI.",
-      "example": "import process from 'node:process'\n\nBoolean(stream?.isTTY && !process.env.CI)"
+      "example": "Boolean(stream?.isTTY && !process.env.CI)"
     },
     "snippet::is-jpg-buffer": {
       "id": "snippet::is-jpg-buffer",
@@ -328,7 +328,7 @@
       "id": "snippet::is-npm",
       "type": "simple",
       "description": "If the current environment is npm the `npm_config_user_agent` environment variable will be set and start with `\"npm\"`.",
-      "example": "import process from 'node:process'\n\nconst isNpm = process.env.npm_config_user_agent?.startsWith(\"npm\")"
+      "example": "const isNpm = process.env.npm_config_user_agent?.startsWith(\"npm\")"
     },
     "snippet::is-null": {
       "id": "snippet::is-null",
@@ -364,7 +364,7 @@
       "id": "snippet::is-path-equal-cwd",
       "type": "simple",
       "description": "You can check if a path equals the current working directory using `path.relative`.",
-      "example": "import { relative } from 'node:path'\nimport process from 'node:process'\n\nconst isPathCwd = (p) => !relative(p, process.cwd())"
+      "example": "import { relative } from 'node:path'\n\nconst isPathCwd = (p) => !relative(p, process.cwd())"
     },
     "snippet::is-png-buffer": {
       "id": "snippet::is-png-buffer",
@@ -394,7 +394,7 @@
       "id": "snippet::is-root-user",
       "type": "simple",
       "description": "You can use `process.getuid?.()` to check if a user is a root user.",
-      "example": "import process from 'node:process'\n\nconst isRootUser = process.getuid?.() === 0"
+      "example": "const isRootUser = process.getuid?.() === 0"
     },
     "snippet::is-set": {
       "id": "snippet::is-set",
@@ -436,7 +436,7 @@
       "id": "snippet::is-travis",
       "type": "simple",
       "description": "You can check if the current environment is Travis CI by checking if the `TRAVIS` environment variable is set.",
-      "example": "import process from 'node:process'\n\nBoolean(process.env.TRAVIS)"
+      "example": "Boolean(process.env.TRAVIS)"
     },
     "snippet::is-typed-array": {
       "id": "snippet::is-typed-array",
@@ -478,7 +478,7 @@
       "id": "snippet::is-windows",
       "type": "simple",
       "description": "You can check if the current environment is Windows by checking if `process.platform` is equal to \"win32\".",
-      "example": "import process from 'node:process'\n\nconst isWindows = () => process.platform === \"win32\";"
+      "example": "const isWindows = () => process.platform === \"win32\";"
     },
     "snippet::is-word-character": {
       "id": "snippet::is-word-character",
@@ -490,7 +490,7 @@
       "id": "snippet::is-wsl",
       "type": "simple",
       "description": "You can check if the current environment is WSL by checking if the `WSL_DISTRO_NAME` environment variable is set.",
-      "example": "import process from 'node:process'\n\nBoolean(process.env.WSL_DISTRO_NAME)"
+      "example": "Boolean(process.env.WSL_DISTRO_NAME)"
     },
     "snippet::json-file": {
       "id": "snippet::json-file",
@@ -556,7 +556,7 @@
       "id": "snippet::path-key",
       "type": "simple",
       "description": "You can use `Object.keys` with `Array.prototype.findLast` to find the case-insensitive `PATH` environment variable key.",
-      "example": "import process from 'node:process'\n\nconst pathKey = Object.keys(process.env).findLast((k) => k.toUpperCase() === 'PATH') ?? 'PATH';"
+      "example": "const pathKey = Object.keys(process.env).findLast((k) => k.toUpperCase() === 'PATH') ?? 'PATH';"
     },
     "snippet::path-root": {
       "id": "snippet::path-root",
@@ -622,7 +622,7 @@
       "id": "snippet::typed-array-to-buffer",
       "type": "simple",
       "description": "You can use `Buffer.from` to convert a Typed Array to `Buffer` and `ArrayBuffer.isView` to avoid a copy.",
-      "example": "import { Buffer } from 'node:buffer'\n\nArrayBuffer.isView(arr)\n  ? Buffer.from(arr.buffer, arr.byteOffset, arr.byteLength)\n  : Buffer.from(arr)"
+      "example": "ArrayBuffer.isView(arr)\n  ? Buffer.from(arr.buffer, arr.byteOffset, arr.byteLength)\n  : Buffer.from(arr)"
     },
     "snippet::typeof": {
       "id": "snippet::typeof",
