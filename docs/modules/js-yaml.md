@@ -32,14 +32,22 @@ const text = stringify(obj) // [!code ++]
 
 Multi-document:
 
+<!-- prettier-ignore -->
 ```ts
 import yaml from 'js-yaml' // [!code --]
 import { parseAllDocuments } from 'yaml' // [!code ++]
 
 const out: any[] = [] // [!code --]
 yaml.loadAll(src, (d) => out.push(d)) // [!code --]
-const out = parseAllDocuments(src).map((d) => d.toJSON()) // [!code ++]
+const docs = parseAllDocuments(src) // [!code ++]
+if ('empty' in docs && docs.errors.length > 0) throw docs.errors[0] // [!code ++]
+const out = docs.map((d) => { // [!code ++]
+  if (d.errors.length > 0) throw d.errors[0] // [!code ++]
+  return d.toJSON() // [!code ++]
+}) // [!code ++]
 ```
+
+`parseAllDocuments` reports parsing errors instead of throwing them. Check the stream's errors when no documents are returned, and each document's `errors` array before conversion.
 
 ## Bun `YAML` API
 
