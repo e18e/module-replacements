@@ -4,7 +4,7 @@ description: Modern alternatives to the jszip package for creating and reading Z
 
 # Replacements for `jszip`
 
-`jszip` creates and reads ZIP archives. It went more than four years without a release before 3.10.2, and it still depends on `pako` 1, `readable-stream` 2 and the `lie` and `setimmediate` polyfills.
+`jszip` creates and reads ZIP archives. Its dependencies are dated: it still pulls in `pako` 1, `readable-stream` 2 and the `lie` (Promise) and `setimmediate` polyfills.
 
 ## `fflate`
 
