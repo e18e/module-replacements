@@ -638,6 +638,12 @@
       "replacements": ["jsx-ast-utils-x"],
       "url": {"type": "e18e", "id": "jsx-ast-utils"}
     },
+    "jszip": {
+      "type": "module",
+      "moduleName": "jszip",
+      "replacements": ["fflate"],
+      "url": {"type": "e18e", "id": "jszip"}
+    },
     "lodash": {
       "type": "module",
       "moduleName": "lodash",
