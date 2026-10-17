@@ -558,6 +558,12 @@
       "description": "You can use `Object.keys` with `Array.prototype.findLast` to find the case-insensitive `PATH` environment variable key.",
       "example": "const pathKey = Object.keys(process.env).findLast((k) => k.toUpperCase() === 'PATH') ?? 'PATH';"
     },
+    "snippet::path-relative": {
+      "id": "snippet::path-relative",
+      "type": "simple",
+      "description": "You can use `relative` and `dirname` from `node:path` to get the relative path from one file to another.",
+      "example": "import { dirname, relative } from 'node:path'\n\nconst relativeFromFile = (fromFile, to) => relative(dirname(fromFile), to)"
+    },
     "snippet::path-root": {
       "id": "snippet::path-root",
       "type": "simple",
@@ -1326,6 +1332,11 @@
       "type": "module",
       "moduleName": "reduce-object",
       "replacements": ["snippet::object-reduce"]
+    },
+    "relative": {
+      "type": "module",
+      "moduleName": "relative",
+      "replacements": ["snippet::path-relative"]
     },
     "repeat-element": {
       "type": "module",
