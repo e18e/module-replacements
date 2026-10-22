@@ -4,6 +4,8 @@ description: Modern alternative to the @better-auth/cli package for the Better A
 
 # Replacements for `@better-auth/cli`
 
+Better Auth deprecated `@better-auth/cli` and now publishes its CLI as `auth`.
+
 ## `auth`
 
 The Better Auth CLI is now published under the `auth` name, and `@better-auth/cli` is deprecated, so switch the dependency over.

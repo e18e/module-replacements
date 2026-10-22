@@ -56,6 +56,7 @@ There are different types of replacements available:
 When using the `documented` type, you should generally follow these guidelines:
 
 - The mapping should have a `url` which points to an e18e documentation page (i.e. those in the [modules](https://github.com/e18e/module-replacements/tree/main/docs/modules) directory of the repo) which describes the replacement and how to migrate to it. Documentation here will be automatically synced weekly to the e18e website.
+- The documentation page should open with a one sentence reason under the title, explaining why the module is being replaced (e.g. it is deprecated, no longer maintained, or the same job can now be done natively or with fewer dependencies)
 - The replacement does not necessarily need a `url` itself
 - The replacement does not need a `description`
 
