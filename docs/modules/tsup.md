@@ -4,6 +4,8 @@ description: Modern alternative to tsup for bundling TypeScript libraries
 
 # Replacements for `tsup`
 
+The `tsup` README says the project is no longer actively maintained and recommends `tsdown` instead.
+
 ## `tsdown`
 
 [tsdown](https://github.com/rolldown/tsdown) is the successor recommended by [tsup's own README](https://github.com/egoist/tsup). The project is effectively in maintenance mode. tsdown is built on Rolldown and is typically faster for library builds, with a largely drop-in config surface.
