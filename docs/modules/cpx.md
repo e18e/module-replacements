@@ -4,7 +4,7 @@ description: Modern alternatives to the cpx package for copying file globs with 
 
 # Replacements for `cpx`
 
-`cpx` hasn't had a release since 2016.
+`cpx` hasn't had a release since 2016 and has bugs and performance issues that are fixed by its replacement
 
 ## `cpx2`
 
