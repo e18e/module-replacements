@@ -358,6 +358,12 @@
       "replacements": ["eslint-plugin-import-x", "oxlint"],
       "url": {"type": "e18e", "id": "eslint-plugin-import"}
     },
+    "eslint-plugin-jsx-a11y": {
+      "type": "module",
+      "moduleName": "eslint-plugin-jsx-a11y",
+      "replacements": ["eslint-plugin-jsx-a11y-x", "oxlint"],
+      "url": {"type": "e18e", "id": "eslint-plugin-jsx-a11y"}
+    },
     "eslint-plugin-node": {
       "type": "module",
       "moduleName": "eslint-plugin-node",
@@ -3349,6 +3355,11 @@
       "id": "eslint-plugin-import-x",
       "type": "documented",
       "replacementModule": "eslint-plugin-import-x"
+    },
+    "eslint-plugin-jsx-a11y-x": {
+      "id": "eslint-plugin-jsx-a11y-x",
+      "type": "documented",
+      "replacementModule": "eslint-plugin-jsx-a11y-x"
     },
     "eslint-plugin-n": {
       "id": "eslint-plugin-n",
