@@ -78,6 +78,12 @@
       "description": "You can get the `AsyncFunction` using `async function`.",
       "example": "const AsyncFunction = (async () => {}).constructor"
     },
+    "snippet::bail": {
+      "id": "snippet::bail",
+      "type": "simple",
+      "description": "You can use a simple `if` statement to throw an error when a truthy value is provided.",
+      "example": "if (error) {\n  throw error\n}"
+    },
     "snippet::base64": {
       "id": "snippet::base64",
       "type": "simple",
@@ -730,6 +736,11 @@
       "type": "module",
       "moduleName": "async-function",
       "replacements": ["snippet::async-function-constructor"]
+    },
+    "bail": {
+      "type": "module",
+      "moduleName": "bail",
+      "replacements": ["snippet::bail"]
     },
     "base64-js": {
       "type": "module",
