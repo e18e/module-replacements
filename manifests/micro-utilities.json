@@ -378,8 +378,8 @@
       "description": "You can test for a POSIX bracket expression such as `[:alpha:]` using a regular expression.",
       "example": "const isPosixBracket = (str) => /\\[([:.=+])(?:[^\\[\\]]|)+\\1\\]/.test(str);"
     },
-    "snippet::is-primitve": {
-      "id": "snippet::is-primitve",
+    "snippet::is-primitive": {
+      "id": "snippet::is-primitive",
       "type": "simple",
       "description": "You can check `typeof` of a value to determine if it's a primitive. Note that `typeof null` is `\"object\"` so you need to check for `null` separately.",
       "example": "const isPrimitive = (value) => value === null || (typeof value !== \"function\" && typeof value !== \"object\");"
@@ -1024,7 +1024,7 @@
     "is-primitive": {
       "type": "module",
       "moduleName": "is-primitive",
-      "replacements": ["snippet::is-primitve"]
+      "replacements": ["snippet::is-primitive"]
     },
     "is-property": {
       "type": "module",
