@@ -723,6 +723,12 @@
       "url": {"type": "mdn", "id": "Web/API/EventTarget"},
       "webFeatureId": {"featureId": "events", "compatKey": "api.EventTarget"}
     },
+    "FormData": {
+      "id": "FormData",
+      "type": "native",
+      "url": {"type": "mdn", "id": "Web/API/FormData"},
+      "webFeatureId": {"featureId": "xhr", "compatKey": "api.FormData"}
+    },
     "Function.prototype.bind": {
       "id": "Function.prototype.bind",
       "type": "native",
@@ -2754,6 +2760,12 @@
       "type": "module",
       "moduleName": "foreachasync",
       "replacements": ["for...of"]
+    },
+    "form-data": {
+      "type": "module",
+      "moduleName": "form-data",
+      "replacements": ["FormData"],
+      "url": {"type": "e18e", "id": "form-data"}
     },
     "from": {
       "type": "module",
