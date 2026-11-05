@@ -2312,6 +2312,12 @@
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
+    "lru-cache": {
+      "type": "module",
+      "moduleName": "lru-cache",
+      "replacements": ["tiny-lru", "quick-lru"],
+      "url": {"type": "e18e", "id": "lru-cache"}
+    },
     "materialize-css": {
       "type": "module",
       "moduleName": "materialize-css",
@@ -3722,6 +3728,11 @@
       },
       "url": {"type": "node", "id": "api/process.html#processloadenvfilepath"}
     },
+    "quick-lru": {
+      "id": "quick-lru",
+      "type": "documented",
+      "replacementModule": "quick-lru"
+    },
     "react-helmet-async": {
       "id": "react-helmet-async",
       "type": "documented",
@@ -3803,6 +3814,11 @@
       "id": "tiny-invariant",
       "type": "documented",
       "replacementModule": "tiny-invariant"
+    },
+    "tiny-lru": {
+      "id": "tiny-lru",
+      "type": "documented",
+      "replacementModule": "tiny-lru"
     },
     "tiny-open": {
       "id": "tiny-open",
