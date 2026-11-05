@@ -546,6 +546,12 @@
       "description": "You can use a `for...of` loop over `Object.entries` to iterate an object's own enumerable properties, and `break` to stop early.",
       "example": "for (const [key, value] of Object.entries(obj)) {\n  if (key === 'stop') break\n  // do something\n}\n// Or for arrays\nfor (const [index, value] of arr.entries()) {\n  // do something\n}"
     },
+    "snippet::object-lowercase-keys": {
+      "id": "snippet::object-lowercase-keys",
+      "type": "simple",
+      "description": "You can use `Object.fromEntries` with `Object.entries` and `Array.prototype.map` to lowercase the keys of an object.",
+      "example": "Object.fromEntries(Object.entries(object).map(([k, v]) => [k.toLowerCase(), v]))"
+    },
     "snippet::object-map": {
       "id": "snippet::object-map",
       "type": "simple",
@@ -1281,6 +1287,11 @@
       "type": "module",
       "moduleName": "lodash.uniq",
       "replacements": ["snippet::array-unique"]
+    },
+    "lowercase-keys": {
+      "type": "module",
+      "moduleName": "lowercase-keys",
+      "replacements": ["snippet::object-lowercase-keys"]
     },
     "map-obj": {
       "type": "module",
