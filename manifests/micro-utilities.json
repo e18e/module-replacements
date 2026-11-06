@@ -504,6 +504,12 @@
       "description": "You can use `JSON` and `node:fs` to read and write JSON files.",
       "example": "import * as fs from 'node:fs/promises'\nfs.readFile(file, 'utf8').then(JSON.parse)\nfs.writeFile(file, JSON.stringify(data, null, 2) + '\\n')"
     },
+    "snippet::lazy-property": {
+      "id": "snippet::lazy-property",
+      "type": "simple",
+      "description": "You can define a self-overwriting getter that computes the value on first access and then replaces itself with a plain data property using `Object.defineProperty`.",
+      "example": "const obj = {\n  get prop() {\n    const value = computeExpensiveValue();\n    Object.defineProperty(this, 'prop', { value, writable: true, configurable: true, enumerable: true });\n    return value;\n  }\n};"
+    },
     "snippet::math-random": {
       "id": "snippet::math-random",
       "type": "simple",
@@ -772,6 +778,11 @@
       "type": "module",
       "moduleName": "comver-to-semver",
       "replacements": ["snippet::comver-to-semver"]
+    },
+    "define-lazy-prop": {
+      "type": "module",
+      "moduleName": "define-lazy-prop",
+      "replacements": ["snippet::lazy-property"]
     },
     "defined": {
       "type": "module",
