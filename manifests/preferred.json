@@ -584,6 +584,12 @@
       "replacements": ["html-minifier-next"],
       "url": {"type": "e18e", "id": "html-minifier"}
     },
+    "html-webpack-plugin": {
+      "type": "module",
+      "moduleName": "html-webpack-plugin",
+      "replacements": ["webpack.output.html"],
+      "url": {"type": "e18e", "id": "html-webpack-plugin"}
+    },
     "http-proxy": {
       "type": "module",
       "moduleName": "http-proxy",
@@ -3961,6 +3967,11 @@
     },
     "webpack.output.clean": {
       "id": "webpack.output.clean",
+      "type": "documented",
+      "replacementModule": "webpack"
+    },
+    "webpack.output.html": {
+      "id": "webpack.output.html",
       "type": "documented",
       "replacementModule": "webpack"
     },
