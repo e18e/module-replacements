@@ -540,6 +540,12 @@
       "description": "You can use a regular expression with `Array.prototype.reduce` to find the shortest leading whitespace across the lines of a string.",
       "example": "const minIndent = (string) => (string.match(/^[ \\t]*(?=\\S)/gm) ?? ['']).reduce((r, a) => Math.min(r, a.length), Infinity)"
     },
+    "snippet::nanoseconds-to-seconds": {
+      "id": "snippet::nanoseconds-to-seconds",
+      "type": "simple",
+      "description": "The result of `process.hrtime.bigint()` can be converted to a number and divided by `1e9` (1 billion) to compute the seconds.",
+      "example": "const seconds = Number(nanoseconds) / 1e9"
+    },
     "snippet::noop": {
       "id": "snippet::noop",
       "type": "simple",
@@ -811,6 +817,11 @@
       "type": "module",
       "moduleName": "comver-to-semver",
       "replacements": ["snippet::comver-to-semver"]
+    },
+    "convert-hrtime": {
+      "type": "module",
+      "moduleName": "convert-hrtime",
+      "replacements": ["snippet::nanoseconds-to-seconds"]
     },
     "define-lazy-prop": {
       "type": "module",
