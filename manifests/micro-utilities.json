@@ -120,6 +120,12 @@
       "description": "You can use an array of English weekday names instead of a dependency.",
       "example": "const days = [ \"sunday\", \"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\" ]"
     },
+    "snippet::error-with-code": {
+      "id": "snippet::error-with-code",
+      "type": "simple",
+      "description": "You can use `Object.assign` to add a `code` and any other properties to an error.",
+      "example": "const err = Object.assign(new Error('Not found'), { code: 'ENOENT', path })"
+    },
     "snippet::find-first-defined": {
       "id": "snippet::find-first-defined",
       "type": "simple",
@@ -793,6 +799,11 @@
       "type": "module",
       "moduleName": "english-days",
       "replacements": ["snippet::english-days"]
+    },
+    "err-code": {
+      "type": "module",
+      "moduleName": "err-code",
+      "replacements": ["snippet::error-with-code"]
     },
     "es-get-iterator": {
       "type": "module",
