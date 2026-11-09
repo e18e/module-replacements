@@ -108,6 +108,12 @@
       "description": "You can use `str.at(-1)` if supported or `str[str.length - 1]` to get the last character of a string.",
       "example": "const last = (str) => str.at(-1);\n// or in older environments\nconst lastLegacy = (str) => str[str.length - 1]"
     },
+    "snippet::collapse-whitespace": {
+      "id": "snippet::collapse-whitespace",
+      "type": "simple",
+      "description": "You can use `String.prototype.replace` with a `/\\s+/g` regular expression to collapse runs of whitespace into a single space, and `String.prototype.trim` to also remove it from the start and end.",
+      "example": "const collapseWhiteSpace = (str) => str.replace(/\\s+/g, ' ')\n// or to also trim the ends\nconst collapseWhiteSpaceAndTrim = (str) => str.trim().replace(/\\s+/g, ' ')"
+    },
     "snippet::comver-to-semver": {
       "id": "snippet::comver-to-semver",
       "type": "simple",
@@ -795,6 +801,11 @@
       "type": "module",
       "moduleName": "clone-regexp",
       "replacements": ["snippet::regexp-copy"]
+    },
+    "collapse-white-space": {
+      "type": "module",
+      "moduleName": "collapse-white-space",
+      "replacements": ["snippet::collapse-whitespace"]
     },
     "comver-to-semver": {
       "type": "module",
