@@ -2721,6 +2721,11 @@
       "moduleName": "event-target-shim",
       "replacements": ["EventTarget"]
     },
+    "execall": {
+      "type": "module",
+      "moduleName": "execall",
+      "replacements": ["String.prototype.matchAll"]
+    },
     "extend-shallow": {
       "type": "module",
       "moduleName": "extend-shallow",
