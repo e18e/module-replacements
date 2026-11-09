@@ -578,12 +578,6 @@
       "replacements": ["empathic"],
       "url": {"type": "e18e", "id": "has-yarn"}
     },
-    "html-minifier": {
-      "type": "module",
-      "moduleName": "html-minifier",
-      "replacements": ["html-minifier-next"],
-      "url": {"type": "e18e", "id": "html-minifier"}
-    },
     "http-proxy": {
       "type": "module",
       "moduleName": "http-proxy",
@@ -3502,11 +3496,6 @@
     },
     "h3": {"id": "h3", "type": "documented", "replacementModule": "h3"},
     "hono": {"id": "hono", "type": "documented", "replacementModule": "hono"},
-    "html-minifier-next": {
-      "id": "html-minifier-next",
-      "type": "documented",
-      "replacementModule": "html-minifier-next"
-    },
     "http-proxy-3": {
       "id": "http-proxy-3",
       "type": "documented",
