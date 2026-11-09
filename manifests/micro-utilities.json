@@ -9,8 +9,8 @@
     "snippet::array-difference": {
       "id": "snippet::array-difference",
       "type": "simple",
-      "description": "You can use a combination of `filter` and `includes` to calculate the difference between two arrays.",
-      "example": "const difference = (a, b) => a.filter((item) => !b.includes(item))"
+      "description": "You can use a `Set` with `Array.prototype.filter` to remove the values of one or more arrays from another array.",
+      "example": "const difference = (array, ...values) => {\n  const rest = new Set(values.flat())\n  return array.filter((x) => !rest.has(x))\n}"
     },
     "snippet::array-filled-with": {
       "id": "snippet::array-filled-with",
@@ -705,6 +705,11 @@
       "type": "module",
       "moduleName": "array-back",
       "replacements": ["snippet::array-coerce"]
+    },
+    "array-differ": {
+      "type": "module",
+      "moduleName": "array-differ",
+      "replacements": ["snippet::array-difference"]
     },
     "array-ify": {
       "type": "module",
