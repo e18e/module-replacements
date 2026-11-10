@@ -540,6 +540,12 @@
       "description": "You can use `Math.random()` or `crypto.getRandomValues` if cryptographic randomness is required.",
       "example": "crypto.getRandomValues(new Uint32Array(1))[0] / (2 ** 32);\n// or\nMath.random();"
     },
+    "snippet::merge-descriptors": {
+      "id": "snippet::merge-descriptors",
+      "type": "simple",
+      "description": "You can copy property descriptors (including getters and setters) from one object to another with `Object.defineProperties` and `Object.getOwnPropertyDescriptors`. To skip properties the destination already has, loop over `Object.getOwnPropertyNames` instead.",
+      "example": "const mergeDescriptors = (destination, source) =>\n  Object.defineProperties(destination, Object.getOwnPropertyDescriptors(source))"
+    },
     "snippet::min-indent": {
       "id": "snippet::min-indent",
       "type": "simple",
@@ -1368,6 +1374,11 @@
       "type": "module",
       "moduleName": "math-random",
       "replacements": ["snippet::math-random"]
+    },
+    "merge-descriptors": {
+      "type": "module",
+      "moduleName": "merge-descriptors",
+      "replacements": ["snippet::merge-descriptors"]
     },
     "min-indent": {
       "type": "module",
