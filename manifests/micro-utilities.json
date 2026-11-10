@@ -120,6 +120,12 @@
       "description": "You can use a ternary operator and string concatenation to add a trailing `.0`.",
       "example": "const comverToSemver = (comver) => comver.includes('.') ? `${comver}.0` : `${comver}.0.0`"
     },
+    "snippet::copy-descriptor": {
+      "id": "snippet::copy-descriptor",
+      "type": "simple",
+      "description": "You can use `Object.getOwnPropertyDescriptor` and `Object.defineProperty` to copy a property (including getters and setters) from one object to another, optionally under a new key.",
+      "example": "const copyDescriptor = (target, source, fromKey, toKey = fromKey) =>\n  Object.defineProperty(target, toKey, Object.getOwnPropertyDescriptor(source, fromKey))"
+    },
     "snippet::count-occurrences": {
       "id": "snippet::count-occurrences",
       "type": "simple",
@@ -852,6 +858,11 @@
       "type": "module",
       "moduleName": "convert-hrtime",
       "replacements": ["snippet::nanoseconds-to-seconds"]
+    },
+    "copy-descriptor": {
+      "type": "module",
+      "moduleName": "copy-descriptor",
+      "replacements": ["snippet::copy-descriptor"]
     },
     "define-lazy-prop": {
       "type": "module",
