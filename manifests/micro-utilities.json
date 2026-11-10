@@ -642,6 +642,12 @@
       "description": "You can create a copy of a regular expression using the `RegExp` constructor.",
       "example": "const copyRegExp = (regexp) => new RegExp(regexp);"
     },
+    "snippet::remove-trailing-separator": {
+      "id": "snippet::remove-trailing-separator",
+      "type": "simple",
+      "description": "You can use `String.prototype.replace` to remove trailing separators while keeping the first character, so `/` stays `/`. On Windows, use `[/\\\\]+` to also remove backslashes.",
+      "example": "const removeTrailingSeparator = (str) => str.replace(/(.)\\/+$/s, '$1')"
+    },
     "snippet::remove-trailing-slashes": {
       "id": "snippet::remove-trailing-slashes",
       "type": "simple",
@@ -1469,6 +1475,11 @@
       "type": "module",
       "moduleName": "relative",
       "replacements": ["snippet::path-relative"]
+    },
+    "remove-trailing-separator": {
+      "type": "module",
+      "moduleName": "remove-trailing-separator",
+      "replacements": ["snippet::remove-trailing-separator"]
     },
     "remove-trailing-slash": {
       "type": "module",
