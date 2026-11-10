@@ -2792,6 +2792,11 @@
       "moduleName": "from2-string",
       "replacements": ["Readable.from"]
     },
+    "fromentries": {
+      "type": "module",
+      "moduleName": "fromentries",
+      "replacements": ["Object.fromEntries"]
+    },
     "fs-exists-sync": {
       "type": "module",
       "moduleName": "fs-exists-sync",
