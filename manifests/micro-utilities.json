@@ -543,7 +543,7 @@
     "snippet::merge-descriptors": {
       "id": "snippet::merge-descriptors",
       "type": "simple",
-      "description": "You can copy property descriptors (including getters and setters) from one object to another with `Object.defineProperties` and `Object.getOwnPropertyDescriptors`. To skip properties the destination already has (the `overwrite = false` option), loop over `Object.getOwnPropertyNames` instead.",
+      "description": "You can copy property descriptors (including getters and setters) from one object to another with `Object.defineProperties` and `Object.getOwnPropertyDescriptors`. To skip properties the destination already has, loop over `Object.getOwnPropertyNames` instead.",
       "example": "const mergeDescriptors = (destination, source) =>\n  Object.defineProperties(destination, Object.getOwnPropertyDescriptors(source))"
     },
     "snippet::min-indent": {
