@@ -1707,10 +1707,7 @@
     "await": {
       "id": "await",
       "type": "native",
-      "url": {
-        "type": "mdn",
-        "id": "Web/JavaScript/Reference/Operators/await"
-      },
+      "url": {"type": "mdn", "id": "Web/JavaScript/Reference/Operators/await"},
       "webFeatureId": {
         "featureId": "async-await",
         "compatKey": "javascript.operators.await"
@@ -2074,10 +2071,7 @@
         "type": "node",
         "id": "api/process.html#processnexttickcallback-args"
       },
-      "nodeFeatureId": {
-        "moduleName": "process",
-        "exportName": "nextTick"
-      }
+      "nodeFeatureId": {"moduleName": "process", "exportName": "nextTick"}
     },
     "queueMicrotask": {
       "id": "queueMicrotask",
@@ -2196,11 +2190,7 @@
       "moduleName": "a-sync-waterfall",
       "replacements": ["await"]
     },
-    "abab": {
-      "type": "module",
-      "moduleName": "abab",
-      "replacements": ["atob"]
-    },
+    "abab": {"type": "module", "moduleName": "abab", "replacements": ["atob"]},
     "abort-controller": {
       "type": "module",
       "moduleName": "abort-controller",
@@ -3031,11 +3021,7 @@
       "moduleName": "left-pad",
       "replacements": ["String.prototype.padStart"]
     },
-    "lie": {
-      "type": "module",
-      "moduleName": "lie",
-      "replacements": ["Promise"]
-    },
+    "lie": {"type": "module", "moduleName": "lie", "replacements": ["Promise"]},
     "lodash.at": {
       "type": "module",
       "moduleName": "lodash.at",

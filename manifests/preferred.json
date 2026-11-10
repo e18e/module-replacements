@@ -3204,11 +3204,7 @@
       "type": "documented",
       "replacementModule": "ansis"
     },
-    "auth": {
-      "id": "auth",
-      "type": "documented",
-      "replacementModule": "auth"
-    },
+    "auth": {"id": "auth", "type": "documented", "replacementModule": "auth"},
     "bcryptjs": {
       "id": "bcryptjs",
       "type": "documented",
@@ -3794,11 +3790,7 @@
       },
       "url": {"type": "mdn", "id": "Web/API/Window/structuredClone"}
     },
-    "taze": {
-      "id": "taze",
-      "type": "documented",
-      "replacementModule": "taze"
-    },
+    "taze": {"id": "taze", "type": "documented", "replacementModule": "taze"},
     "tiny-invariant": {
       "id": "tiny-invariant",
       "type": "documented",
