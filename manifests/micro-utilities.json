@@ -126,6 +126,12 @@
       "description": "You can iterate through `String.prototype.indexOf` to count how often a character or substring occurs in a string.",
       "example": "const countOccurrences = (str, substr) => {\n  let count = 0\n  let index = str.indexOf(substr)\n  while (index !== -1) {\n    count++\n    index = str.indexOf(substr, index + substr.length)\n  }\n  return count\n}"
     },
+    "snippet::dns-equal": {
+      "id": "snippet::dns-equal",
+      "type": "simple",
+      "description": "DNS names compare case-insensitively for ASCII letters only (RFC 4343). You can lowercase `A`-`Z` with `String.prototype.replace` and compare the results. `String.prototype.toLowerCase` also lowercases non-ASCII characters, so use it only if your names are already ASCII.",
+      "example": "const lowerAscii = (str) => str.replace(/[A-Z]/g, (c) => c.toLowerCase())\nconst dnsEqual = (a, b) => lowerAscii(a) === lowerAscii(b)\n// or, if both names are ASCII-only\nconst dnsEqualAscii = (a, b) => a.toLowerCase() === b.toLowerCase()"
+    },
     "snippet::english-days": {
       "id": "snippet::english-days",
       "type": "simple",
@@ -821,6 +827,11 @@
       "type": "module",
       "moduleName": "defined",
       "replacements": ["snippet::find-first-defined"]
+    },
+    "dns-equal": {
+      "type": "module",
+      "moduleName": "dns-equal",
+      "replacements": ["snippet::dns-equal"]
     },
     "english-days": {
       "type": "module",
