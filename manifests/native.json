@@ -3405,6 +3405,11 @@
       "moduleName": "pad-left",
       "replacements": ["String.prototype.padStart"]
     },
+    "pad-right": {
+      "type": "module",
+      "moduleName": "pad-right",
+      "replacements": ["String.prototype.padEnd"]
+    },
     "parseint": {
       "type": "module",
       "moduleName": "parseint",
