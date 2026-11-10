@@ -678,6 +678,12 @@
       "description": "You can split a string into lines using a regular expression.",
       "example": "const splitLines = (str) => str.split(/\\r?\\n/);"
     },
+    "snippet::sponge-case": {
+      "id": "snippet::sponge-case",
+      "type": "simple",
+      "description": "You can use `Array.from` to iterate over the characters of a string and randomly change the case of each one.",
+      "example": "const spongeCase = (str, locale) =>\n  Array.from(str, (c) =>\n    Math.random() > 0.5 ? c.toLocaleUpperCase(locale) : c.toLocaleLowerCase(locale)\n  ).join('')"
+    },
     "snippet::strip-bom": {
       "id": "snippet::strip-bom",
       "type": "simple",
@@ -1504,6 +1510,11 @@
       "type": "module",
       "moduleName": "split-lines",
       "replacements": ["snippet::split-lines"]
+    },
+    "sponge-case": {
+      "type": "module",
+      "moduleName": "sponge-case",
+      "replacements": ["snippet::sponge-case"]
     },
     "strip-bom": {
       "type": "module",
