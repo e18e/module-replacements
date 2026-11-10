@@ -618,6 +618,12 @@
       "description": "You can create a copy of a regular expression using the `RegExp` constructor.",
       "example": "const copyRegExp = (regexp) => new RegExp(regexp);"
     },
+    "snippet::remove-trailing-slashes": {
+      "id": "snippet::remove-trailing-slashes",
+      "type": "simple",
+      "description": "You can use `String.prototype.replace` with a `/\\/+$/` regular expression to remove trailing slashes from a string.",
+      "example": "const removeTrailingSlash = (str) => str.replace(/\\/+$/, '')"
+    },
     "snippet::set-function-length": {
       "id": "snippet::set-function-length",
       "type": "simple",
@@ -1419,6 +1425,11 @@
       "type": "module",
       "moduleName": "relative",
       "replacements": ["snippet::path-relative"]
+    },
+    "remove-trailing-slash": {
+      "type": "module",
+      "moduleName": "remove-trailing-slash",
+      "replacements": ["snippet::remove-trailing-slashes"]
     },
     "repeat-element": {
       "type": "module",
