@@ -3774,6 +3774,11 @@
       "moduleName": "validate.io-array",
       "replacements": ["Array.isArray"]
     },
+    "validate.io-integer": {
+      "type": "module",
+      "moduleName": "validate.io-integer",
+      "replacements": ["Number.isInteger"]
+    },
     "w3c-hr-time": {
       "type": "module",
       "moduleName": "w3c-hr-time",
