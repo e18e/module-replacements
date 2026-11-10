@@ -420,6 +420,12 @@
       "description": "You can check `typeof` of a value to determine if it's a primitive. Note that `typeof null` is `\"object\"` so you need to check for `null` separately.",
       "example": "const isPrimitive = (value) => value === null || (typeof value !== \"function\" && typeof value !== \"object\");"
     },
+    "snippet::is-redirect": {
+      "id": "snippet::is-redirect",
+      "type": "simple",
+      "description": "You can check the status code against the set of codes (300, 301, 302, 303, 305, 307 and 308) with a `Set` or an array.",
+      "example": "const redirectCodes = new Set([300, 301, 302, 303, 305, 307, 308])\nconst isRedirect = (statusCode) => redirectCodes.has(statusCode)"
+    },
     "snippet::is-regexp": {
       "id": "snippet::is-regexp",
       "type": "simple",
@@ -1141,6 +1147,11 @@
       "type": "module",
       "moduleName": "is-property",
       "replacements": ["snippet::is-identifier-name"]
+    },
+    "is-redirect": {
+      "type": "module",
+      "moduleName": "is-redirect",
+      "replacements": ["snippet::is-redirect"]
     },
     "is-regex": {
       "type": "module",
