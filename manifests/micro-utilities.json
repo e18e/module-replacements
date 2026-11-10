@@ -552,6 +552,12 @@
       "description": "You can define a self-overwriting getter that computes the value on first access and then replaces itself with a plain data property using `Object.defineProperty`.",
       "example": "const obj = {\n  get prop() {\n    const value = computeExpensiveValue();\n    Object.defineProperty(this, 'prop', { value, writable: true, configurable: true, enumerable: true });\n    return value;\n  }\n};"
     },
+    "snippet::longest": {
+      "id": "snippet::longest",
+      "type": "simple",
+      "description": "You can use `Array.prototype.reduce` to find the longest string in an array. On ties the first one wins, and an empty array gives `undefined`.",
+      "example": "const longest = (arr) => arr.reduce((a, b) => (b.length > a.length ? b : a), arr[0])"
+    },
     "snippet::math-random": {
       "id": "snippet::math-random",
       "type": "simple",
@@ -1409,6 +1415,11 @@
       "type": "module",
       "moduleName": "lodash.uniq",
       "replacements": ["snippet::array-unique"]
+    },
+    "longest": {
+      "type": "module",
+      "moduleName": "longest",
+      "replacements": ["snippet::longest"]
     },
     "lowercase-keys": {
       "type": "module",
