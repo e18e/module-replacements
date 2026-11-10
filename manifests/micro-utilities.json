@@ -708,6 +708,12 @@
       "description": "You can check if the first character of the string is the BOM and strip it using `String.prototype.slice` if it is.",
       "example": "str.charCodeAt(0) === 0xFEFF ? str.slice(1) : str;"
     },
+    "snippet::strip-bom-buffer": {
+      "id": "snippet::strip-bom-buffer",
+      "type": "simple",
+      "description": "You can check the first three bytes for the UTF-8 byte order mark (`EF BB BF`) and slice them off.",
+      "example": "const stripBomBuffer = (bytes) =>\n  bytes[0] === 0xef && bytes[1] === 0xbb && bytes[2] === 0xbf ? bytes.slice(3) : bytes"
+    },
     "snippet::to-identifier": {
       "id": "snippet::to-identifier",
       "type": "simple",
@@ -1553,6 +1559,11 @@
       "type": "module",
       "moduleName": "strip-bom",
       "replacements": ["snippet::strip-bom"]
+    },
+    "strip-bom-buf": {
+      "type": "module",
+      "moduleName": "strip-bom-buf",
+      "replacements": ["snippet::strip-bom-buffer"]
     },
     "strip-bom-string": {
       "type": "module",
