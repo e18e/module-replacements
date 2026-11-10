@@ -69,7 +69,7 @@ When using the `native` type:
 
 When using the `simple` type:
 
-- The replacement should be of the form `snippet::{name}` where `name` is a suitable descriptive name for what the snippet does (e.g. `snippet:is-odd` for a snippet that checks if a number is odd)
+- The replacement should be of the form `snippet::{name}` where `name` is a suitable descriptive name for what the snippet does (e.g. `snippet::is-odd` for a snippet that checks if a number is odd)
 - The replacement description should be a short human-readable description of what the snippet does, and how it replaces the old module (e.g. "You can use arr.at(-1) to get the last element of an array")
 - The replacement should have an `example` which is purely code (i.e. it should be valid JS in its entirety) and should show the snippet
 
