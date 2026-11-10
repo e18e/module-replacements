@@ -1855,11 +1855,26 @@
       "nodeFeatureId": {"moduleName": "node:fs", "exportName": "mkdir"},
       "url": {"type": "node", "id": "api/fs.html#fspromisesmkdirpath-options"}
     },
+    "fs.promises.readdir": {
+      "id": "fs.promises.readdir",
+      "type": "native",
+      "nodeFeatureId": {
+        "moduleName": "node:fs/promises",
+        "exportName": "readdir"
+      },
+      "url": {"type": "node", "id": "api/fs.html#fspromisesreaddirpath-options"}
+    },
     "fs.promises.rm": {
       "id": "fs.promises.rm",
       "type": "native",
       "url": {"type": "node", "id": "api/fs.html#fspromisesrmpath-options"},
       "nodeFeatureId": {"moduleName": "node:fs/promises", "exportName": "rm"}
+    },
+    "fs.readdirSync": {
+      "id": "fs.readdirSync",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:fs", "exportName": "readdirSync"},
+      "url": {"type": "node", "id": "api/fs.html#fsreaddirsyncpath-options"}
     },
     "fs.realpath": {
       "id": "fs.realpath",
@@ -2792,6 +2807,12 @@
       "moduleName": "fs-exists-sync",
       "replacements": ["fs.existsSync"]
     },
+    "fs-readdir-recursive": {
+      "type": "module",
+      "moduleName": "fs-readdir-recursive",
+      "replacements": ["fs.readdirSync"],
+      "url": {"type": "e18e", "id": "recursive-readdir"}
+    },
     "fs-then-native": {
       "type": "module",
       "moduleName": "fs-then-native",
@@ -3010,6 +3031,12 @@
       "type": "module",
       "moduleName": "jsonify",
       "replacements": ["JSON"]
+    },
+    "klaw-sync": {
+      "type": "module",
+      "moduleName": "klaw-sync",
+      "replacements": ["fs.readdirSync"],
+      "url": {"type": "e18e", "id": "recursive-readdir"}
     },
     "last-index-of": {
       "type": "module",
@@ -3490,6 +3517,12 @@
       "type": "module",
       "moduleName": "randomfill",
       "replacements": ["crypto.randomFill"]
+    },
+    "recursive-readdir": {
+      "type": "module",
+      "moduleName": "recursive-readdir",
+      "replacements": ["fs.promises.readdir"],
+      "url": {"type": "e18e", "id": "recursive-readdir"}
     },
     "reflect.getprototypeof": {
       "type": "module",
