@@ -417,7 +417,7 @@
     "snippet::is-redirect": {
       "id": "snippet::is-redirect",
       "type": "simple",
-      "description": "You can check the status code against the redirect codes `is-redirect` uses (300, 301, 302, 303, 305, 307 and 308) with a `Set` or an array.",
+      "description": "You can check the status code against the set of codes (300, 301, 302, 303, 305, 307 and 308) with a `Set` or an array.",
       "example": "const redirectCodes = new Set([300, 301, 302, 303, 305, 307, 308])\nconst isRedirect = (statusCode) => redirectCodes.has(statusCode)"
     },
     "snippet::is-regexp": {
