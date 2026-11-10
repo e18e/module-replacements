@@ -168,6 +168,12 @@
       "description": "You can use the `includes` method on the `process.argv` array to check if a flag is present.",
       "example": "process.argv.includes('--flag')"
     },
+    "snippet::home-or-tmp": {
+      "id": "snippet::home-or-tmp",
+      "type": "simple",
+      "description": "You can use `homedir() || tmpdir()` in cases where the home directory either isn't set or doesn't exist.",
+      "example": "const homeOrTempDir = homedir() || tmpdir()"
+    },
     "snippet::indent-string": {
       "id": "snippet::indent-string",
       "type": "simple",
@@ -871,6 +877,11 @@
       "type": "module",
       "moduleName": "has-flag",
       "replacements": ["snippet::has-argv"]
+    },
+    "home-or-tmp": {
+      "type": "module",
+      "moduleName": "home-or-tmp",
+      "replacements": ["snippet::home-or-tmp"]
     },
     "indent-string": {
       "type": "module",
