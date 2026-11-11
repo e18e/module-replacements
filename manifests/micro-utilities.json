@@ -546,6 +546,12 @@
       "description": "You can define a self-overwriting getter that computes the value on first access and then replaces itself with a plain data property using `Object.defineProperty`.",
       "example": "const obj = {\n  get prop() {\n    const value = computeExpensiveValue();\n    Object.defineProperty(this, 'prop', { value, writable: true, configurable: true, enumerable: true });\n    return value;\n  }\n};"
     },
+    "snippet::lcm": {
+      "id": "snippet::lcm",
+      "type": "simple",
+      "description": "You can compute the least common multiple by dividing the product of two integers by their greatest common divisor (found with the Euclidean algorithm), and reduce over the inputs for more than two values.",
+      "example": "const gcd = (a, b) => (b === 0 ? Math.abs(a) : gcd(b, a % b))\nconst lcm = (...values) => values.reduce((a, b) => (a === 0 || b === 0 ? 0 : Math.abs((a / gcd(a, b)) * b)))"
+    },
     "snippet::math-random": {
       "id": "snippet::math-random",
       "type": "simple",
@@ -842,6 +848,11 @@
       "type": "module",
       "moduleName": "collapse-white-space",
       "replacements": ["snippet::collapse-whitespace"]
+    },
+    "compute-lcm": {
+      "type": "module",
+      "moduleName": "compute-lcm",
+      "replacements": ["snippet::lcm"]
     },
     "comver-to-semver": {
       "type": "module",
