@@ -549,7 +549,7 @@
     "snippet::lcm": {
       "id": "snippet::lcm",
       "type": "simple",
-      "description": "You can compute the least common multiple by dividing the product of two integers by their greatest common divisor (found with the Euclidean algorithm), and reduce over the inputs for more than two values.",
+      "description": "You can compute the least common multiple of two or more integers with a small `lcm` helper that reduces over the values.",
       "example": "const gcd = (a, b) => (b === 0 ? Math.abs(a) : gcd(b, a % b))\nconst lcm = (...values) => values.reduce((a, b) => (a === 0 || b === 0 ? 0 : Math.abs((a / gcd(a, b)) * b)))"
     },
     "snippet::math-random": {
