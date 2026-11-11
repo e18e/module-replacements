@@ -555,7 +555,7 @@
     "snippet::longest": {
       "id": "snippet::longest",
       "type": "simple",
-      "description": "You can use `Array.prototype.reduce` to find the longest string in an array. On ties the first one wins, and an empty array gives `undefined`.",
+      "description": "You can use `Array.prototype.reduce` to find the longest string in an array.",
       "example": "const longest = (arr) => arr.reduce((a, b) => (b.length > a.length ? b : a), arr[0])"
     },
     "snippet::math-random": {
