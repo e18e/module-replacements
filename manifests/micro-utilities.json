@@ -384,12 +384,6 @@
       "description": "You can use `typeof` to check if a value is a number.",
       "example": "typeof value === \"number\""
     },
-    "snippet::is-number-not-nan": {
-      "id": "snippet::is-number-not-nan",
-      "type": "simple",
-      "description": "You can use `typeof` together with `Number.isNaN` to check that a value is a number and not `NaN`.",
-      "example": "const isNumber = (value) => typeof value === 'number' && !Number.isNaN(value)"
-    },
     "snippet::is-object": {
       "id": "snippet::is-object",
       "type": "simple",
@@ -1613,7 +1607,7 @@
     "validate.io-number": {
       "type": "module",
       "moduleName": "validate.io-number",
-      "replacements": ["snippet::is-number-not-nan"]
+      "replacements": ["snippet::is-number"]
     },
     "year": {
       "type": "module",
