@@ -645,7 +645,7 @@
     "snippet::remove-trailing-separator": {
       "id": "snippet::remove-trailing-separator",
       "type": "simple",
-      "description": "You can use `String.prototype.replace` to remove trailing separators while keeping the first character, so `/` stays `/`. On Windows, use `[/\\\\]+` to also remove backslashes.",
+      "description": "You can use `String.prototype.replace` to remove trailing separators. On Windows, use `[/\\\\]+` to also remove backslashes.",
       "example": "const removeTrailingSeparator = (str) => str.replace(/(.)\\/+$/s, '$1')"
     },
     "snippet::remove-trailing-slashes": {
