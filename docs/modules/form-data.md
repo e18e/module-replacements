@@ -4,7 +4,7 @@ description: Modern alternatives to the form-data package for building multipart
 
 # Replacements for `form-data`
 
-`FormData` is built into Node.js and all modern browsers, and `fetch` sends it without any extra packages.
+**Motivation:** `FormData` is built into Node.js and all modern browsers, and `fetch` sends it without any extra packages.
 
 ## `FormData` (native, since Node.js 18.0.0)
 

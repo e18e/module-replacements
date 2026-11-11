@@ -4,7 +4,7 @@ description: Replace wait-for-expect with built-in assertion retries in Vitest o
 
 # Replacements for `wait-for-expect`
 
-Popular test runners such as Vitest and `node:test` provide built-in assertion retries, so projects using them can remove `wait-for-expect`.
+**Motivation:** Popular test runners such as Vitest and `node:test` provide built-in assertion retries, so projects using them can remove `wait-for-expect`.
 
 ## `vitest`
 

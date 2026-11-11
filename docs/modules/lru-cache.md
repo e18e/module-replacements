@@ -4,7 +4,7 @@ description: Modern alternatives to the lru-cache package for in-memory least-re
 
 # Replacements for `lru-cache`
 
-`lru-cache` publishes several builds of itself, which add up to about 3.3 MB installed, while these alternatives cover the common use cases in under 100 KB.
+**Motivation:** `lru-cache` publishes several builds of itself, which add up to about 3.3 MB installed, while these alternatives cover the common use cases in under 100 KB.
 
 If you rely on features like `fetchMethod`, `maxSize` with `sizeCalculation`, or stale-while-revalidate, `lru-cache` may still be the better fit.
 
