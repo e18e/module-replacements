@@ -9,8 +9,8 @@
     "snippet::array-difference": {
       "id": "snippet::array-difference",
       "type": "simple",
-      "description": "You can use a combination of `filter` and `includes` to calculate the difference between two arrays.",
-      "example": "const difference = (a, b) => a.filter((item) => !b.includes(item))"
+      "description": "You can use a `Set` with `Array.prototype.filter` to remove the values of one or more arrays from another array.",
+      "example": "const difference = (array, ...values) => {\n  const rest = new Set(values.flat())\n  return array.filter((x) => !rest.has(x))\n}"
     },
     "snippet::array-filled-with": {
       "id": "snippet::array-filled-with",
@@ -108,17 +108,41 @@
       "description": "You can use `str.at(-1)` if supported or `str[str.length - 1]` to get the last character of a string.",
       "example": "const last = (str) => str.at(-1);\n// or in older environments\nconst lastLegacy = (str) => str[str.length - 1]"
     },
+    "snippet::collapse-whitespace": {
+      "id": "snippet::collapse-whitespace",
+      "type": "simple",
+      "description": "You can use `String.prototype.replace` with a `/\\s+/g` regular expression to collapse runs of whitespace into a single space, and `String.prototype.trim` to also remove it from the start and end.",
+      "example": "const collapseWhiteSpace = (str) => str.replace(/\\s+/g, ' ')\n// or to also trim the ends\nconst collapseWhiteSpaceAndTrim = (str) => str.trim().replace(/\\s+/g, ' ')"
+    },
     "snippet::comver-to-semver": {
       "id": "snippet::comver-to-semver",
       "type": "simple",
       "description": "You can use a ternary operator and string concatenation to add a trailing `.0`.",
       "example": "const comverToSemver = (comver) => comver.includes('.') ? `${comver}.0` : `${comver}.0.0`"
     },
+    "snippet::count-occurrences": {
+      "id": "snippet::count-occurrences",
+      "type": "simple",
+      "description": "You can iterate through `String.prototype.indexOf` to count how often a character or substring occurs in a string.",
+      "example": "const countOccurrences = (str, substr) => {\n  let count = 0\n  let index = str.indexOf(substr)\n  while (index !== -1) {\n    count++\n    index = str.indexOf(substr, index + substr.length)\n  }\n  return count\n}"
+    },
+    "snippet::dns-equal": {
+      "id": "snippet::dns-equal",
+      "type": "simple",
+      "description": "DNS names compare case-insensitively for ASCII letters only (RFC 4343). You can lowercase `A`-`Z` with `String.prototype.replace` and compare the results. `String.prototype.toLowerCase` also lowercases non-ASCII characters, so use it only if your names are already ASCII.",
+      "example": "const lowerAscii = (str) => str.replace(/[A-Z]/g, (c) => c.toLowerCase())\nconst dnsEqual = (a, b) => lowerAscii(a) === lowerAscii(b)\n// or, if both names are ASCII-only\nconst dnsEqualAscii = (a, b) => a.toLowerCase() === b.toLowerCase()"
+    },
     "snippet::english-days": {
       "id": "snippet::english-days",
       "type": "simple",
       "description": "You can use an array of English weekday names instead of a dependency.",
       "example": "const days = [ \"sunday\", \"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\" ]"
+    },
+    "snippet::error-with-code": {
+      "id": "snippet::error-with-code",
+      "type": "simple",
+      "description": "You can use `Object.assign` to add a `code` and any other properties to an error.",
+      "example": "const err = Object.assign(new Error('Not found'), { code: 'ENOENT', path })"
     },
     "snippet::find-first-defined": {
       "id": "snippet::find-first-defined",
@@ -149,6 +173,12 @@
       "type": "simple",
       "description": "You can use the `includes` method on the `process.argv` array to check if a flag is present.",
       "example": "process.argv.includes('--flag')"
+    },
+    "snippet::home-or-tmp": {
+      "id": "snippet::home-or-tmp",
+      "type": "simple",
+      "description": "You can use `homedir() || tmpdir()` in cases where the home directory either isn't set or doesn't exist.",
+      "example": "const homeOrTempDir = homedir() || tmpdir()"
     },
     "snippet::indent-string": {
       "id": "snippet::indent-string",
@@ -330,6 +360,12 @@
       "description": "You can check if a value is `null` or `undefined` using loose equality with `null`.",
       "example": "value == null"
     },
+    "snippet::is-node": {
+      "id": "snippet::is-node",
+      "type": "simple",
+      "description": "You can check `process.versions.node` to detect Node.js.",
+      "example": "const isNode = Boolean(globalThis.process?.versions?.node)"
+    },
     "snippet::is-npm": {
       "id": "snippet::is-npm",
       "type": "simple",
@@ -389,6 +425,12 @@
       "type": "simple",
       "description": "You can check `typeof` of a value to determine if it's a primitive. Note that `typeof null` is `\"object\"` so you need to check for `null` separately.",
       "example": "const isPrimitive = (value) => value === null || (typeof value !== \"function\" && typeof value !== \"object\");"
+    },
+    "snippet::is-redirect": {
+      "id": "snippet::is-redirect",
+      "type": "simple",
+      "description": "You can check the status code against the set of codes (300, 301, 302, 303, 305, 307 and 308) with a `Set` or an array.",
+      "example": "const redirectCodes = new Set([300, 301, 302, 303, 305, 307, 308])\nconst isRedirect = (statusCode) => redirectCodes.has(statusCode)"
     },
     "snippet::is-regexp": {
       "id": "snippet::is-regexp",
@@ -504,17 +546,41 @@
       "description": "You can use `JSON` and `node:fs` to read and write JSON files.",
       "example": "import * as fs from 'node:fs/promises'\nfs.readFile(file, 'utf8').then(JSON.parse)\nfs.writeFile(file, JSON.stringify(data, null, 2) + '\\n')"
     },
+    "snippet::lazy-property": {
+      "id": "snippet::lazy-property",
+      "type": "simple",
+      "description": "You can define a self-overwriting getter that computes the value on first access and then replaces itself with a plain data property using `Object.defineProperty`.",
+      "example": "const obj = {\n  get prop() {\n    const value = computeExpensiveValue();\n    Object.defineProperty(this, 'prop', { value, writable: true, configurable: true, enumerable: true });\n    return value;\n  }\n};"
+    },
+    "snippet::longest": {
+      "id": "snippet::longest",
+      "type": "simple",
+      "description": "You can use `Array.prototype.reduce` to find the longest string in an array.",
+      "example": "const longest = (arr) => arr.reduce((a, b) => (b.length > a.length ? b : a), arr[0])"
+    },
     "snippet::math-random": {
       "id": "snippet::math-random",
       "type": "simple",
       "description": "You can use `Math.random()` or `crypto.getRandomValues` if cryptographic randomness is required.",
       "example": "crypto.getRandomValues(new Uint32Array(1))[0] / (2 ** 32);\n// or\nMath.random();"
     },
+    "snippet::merge-descriptors": {
+      "id": "snippet::merge-descriptors",
+      "type": "simple",
+      "description": "You can copy property descriptors (including getters and setters) from one object to another with `Object.defineProperties` and `Object.getOwnPropertyDescriptors`. To skip properties the destination already has, loop over `Object.getOwnPropertyNames` instead.",
+      "example": "const mergeDescriptors = (destination, source) =>\n  Object.defineProperties(destination, Object.getOwnPropertyDescriptors(source))"
+    },
     "snippet::min-indent": {
       "id": "snippet::min-indent",
       "type": "simple",
       "description": "You can use a regular expression with `Array.prototype.reduce` to find the shortest leading whitespace across the lines of a string.",
       "example": "const minIndent = (string) => (string.match(/^[ \\t]*(?=\\S)/gm) ?? ['']).reduce((r, a) => Math.min(r, a.length), Infinity)"
+    },
+    "snippet::nanoseconds-to-seconds": {
+      "id": "snippet::nanoseconds-to-seconds",
+      "type": "simple",
+      "description": "The result of `process.hrtime.bigint()` can be converted to a number and divided by `1e9` (1 billion) to compute the seconds.",
+      "example": "const seconds = Number(nanoseconds) / 1e9"
     },
     "snippet::noop": {
       "id": "snippet::noop",
@@ -588,6 +654,18 @@
       "description": "You can create a copy of a regular expression using the `RegExp` constructor.",
       "example": "const copyRegExp = (regexp) => new RegExp(regexp);"
     },
+    "snippet::remove-trailing-separator": {
+      "id": "snippet::remove-trailing-separator",
+      "type": "simple",
+      "description": "You can use `String.prototype.replace` to remove trailing separators. On Windows, use `[/\\\\]+` to also remove backslashes.",
+      "example": "const removeTrailingSeparator = (str) => str.replace(/(.)\\/+$/s, '$1')"
+    },
+    "snippet::remove-trailing-slashes": {
+      "id": "snippet::remove-trailing-slashes",
+      "type": "simple",
+      "description": "You can use `String.prototype.replace` with a `/\\/+$/` regular expression to remove trailing slashes from a string.",
+      "example": "const removeTrailingSlash = (str) => str.replace(/\\/+$/, '')"
+    },
     "snippet::set-function-length": {
       "id": "snippet::set-function-length",
       "type": "simple",
@@ -617,6 +695,12 @@
       "type": "simple",
       "description": "You can split a string into lines using a regular expression.",
       "example": "const splitLines = (str) => str.split(/\\r?\\n/);"
+    },
+    "snippet::sponge-case": {
+      "id": "snippet::sponge-case",
+      "type": "simple",
+      "description": "You can use `Array.from` to iterate over the characters of a string and randomly change the case of each one.",
+      "example": "const spongeCase = (str, locale) =>\n  Array.from(str, (c) =>\n    Math.random() > 0.5 ? c.toLocaleUpperCase(locale) : c.toLocaleLowerCase(locale)\n  ).join('')"
     },
     "snippet::strip-bom": {
       "id": "snippet::strip-bom",
@@ -687,6 +771,11 @@
       "type": "module",
       "moduleName": "array-back",
       "replacements": ["snippet::array-coerce"]
+    },
+    "array-differ": {
+      "type": "module",
+      "moduleName": "array-differ",
+      "replacements": ["snippet::array-difference"]
     },
     "array-ify": {
       "type": "module",
@@ -763,25 +852,60 @@
       "moduleName": "call-bind",
       "replacements": ["snippet::call-bind"]
     },
+    "ccount": {
+      "type": "module",
+      "moduleName": "ccount",
+      "replacements": ["snippet::count-occurrences"]
+    },
     "clone-regexp": {
       "type": "module",
       "moduleName": "clone-regexp",
       "replacements": ["snippet::regexp-copy"]
+    },
+    "collapse-white-space": {
+      "type": "module",
+      "moduleName": "collapse-white-space",
+      "replacements": ["snippet::collapse-whitespace"]
     },
     "comver-to-semver": {
       "type": "module",
       "moduleName": "comver-to-semver",
       "replacements": ["snippet::comver-to-semver"]
     },
+    "convert-hrtime": {
+      "type": "module",
+      "moduleName": "convert-hrtime",
+      "replacements": ["snippet::nanoseconds-to-seconds"]
+    },
+    "define-lazy-prop": {
+      "type": "module",
+      "moduleName": "define-lazy-prop",
+      "replacements": ["snippet::lazy-property"]
+    },
     "defined": {
       "type": "module",
       "moduleName": "defined",
       "replacements": ["snippet::find-first-defined"]
     },
+    "detect-node": {
+      "type": "module",
+      "moduleName": "detect-node",
+      "replacements": ["snippet::is-node"]
+    },
+    "dns-equal": {
+      "type": "module",
+      "moduleName": "dns-equal",
+      "replacements": ["snippet::dns-equal"]
+    },
     "english-days": {
       "type": "module",
       "moduleName": "english-days",
       "replacements": ["snippet::english-days"]
+    },
+    "err-code": {
+      "type": "module",
+      "moduleName": "err-code",
+      "replacements": ["snippet::error-with-code"]
     },
     "es-get-iterator": {
       "type": "module",
@@ -822,6 +946,11 @@
       "type": "module",
       "moduleName": "has-flag",
       "replacements": ["snippet::has-argv"]
+    },
+    "home-or-tmp": {
+      "type": "module",
+      "moduleName": "home-or-tmp",
+      "replacements": ["snippet::home-or-tmp"]
     },
     "indent-string": {
       "type": "module",
@@ -1047,6 +1176,11 @@
       "type": "module",
       "moduleName": "is-property",
       "replacements": ["snippet::is-identifier-name"]
+    },
+    "is-redirect": {
+      "type": "module",
+      "moduleName": "is-redirect",
+      "replacements": ["snippet::is-redirect"]
     },
     "is-regex": {
       "type": "module",
@@ -1288,6 +1422,11 @@
       "moduleName": "lodash.uniq",
       "replacements": ["snippet::array-unique"]
     },
+    "longest": {
+      "type": "module",
+      "moduleName": "longest",
+      "replacements": ["snippet::longest"]
+    },
     "lowercase-keys": {
       "type": "module",
       "moduleName": "lowercase-keys",
@@ -1302,6 +1441,11 @@
       "type": "module",
       "moduleName": "math-random",
       "replacements": ["snippet::math-random"]
+    },
+    "merge-descriptors": {
+      "type": "module",
+      "moduleName": "merge-descriptors",
+      "replacements": ["snippet::merge-descriptors"]
     },
     "min-indent": {
       "type": "module",
@@ -1360,6 +1504,16 @@
       "moduleName": "relative",
       "replacements": ["snippet::path-relative"]
     },
+    "remove-trailing-separator": {
+      "type": "module",
+      "moduleName": "remove-trailing-separator",
+      "replacements": ["snippet::remove-trailing-separator"]
+    },
+    "remove-trailing-slash": {
+      "type": "module",
+      "moduleName": "remove-trailing-slash",
+      "replacements": ["snippet::remove-trailing-slashes"]
+    },
     "repeat-element": {
       "type": "module",
       "moduleName": "repeat-element",
@@ -1389,6 +1543,11 @@
       "type": "module",
       "moduleName": "split-lines",
       "replacements": ["snippet::split-lines"]
+    },
+    "sponge-case": {
+      "type": "module",
+      "moduleName": "sponge-case",
+      "replacements": ["snippet::sponge-case"]
     },
     "strip-bom": {
       "type": "module",

@@ -4,7 +4,7 @@ description: Modern alternatives to the bcrypt package for password hashing
 
 # Replacements for `bcrypt`
 
-The `bcrypt` package can be replaced by native functionality in most runtimes, or more performant packages.
+**Motivation:** The `bcrypt` package can be replaced by native functionality in most runtimes, or more performant packages.
 
 ## `bcryptjs`
 

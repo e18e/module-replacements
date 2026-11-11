@@ -4,7 +4,7 @@ description: Modern alternatives to the istanbul-lib-coverage package
 
 # Replacements for `istanbul-lib-coverage`
 
-`istanbul-lib-coverage` is no longer maintained.
+**Motivation:** `istanbul-lib-coverage` is no longer maintained.
 
 ## `@vitest/istanbul-lib-coverage`
 

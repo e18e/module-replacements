@@ -56,7 +56,7 @@ There are different types of replacements available:
 When using the `documented` type, you should generally follow these guidelines:
 
 - The mapping should have a `url` which points to an e18e documentation page (i.e. those in the [modules](https://github.com/e18e/module-replacements/tree/main/docs/modules) directory of the repo) which describes the replacement and how to migrate to it. Documentation here will be automatically synced weekly to the e18e website.
-- The documentation page should open with a one sentence reason under the title, explaining why the module is being replaced (e.g. it is deprecated, no longer maintained, or the same job can now be done natively or with fewer dependencies)
+- The documentation page should open with a one sentence reason under the title, prefixed with a bold `**Motivation:**` label, explaining why the module is being replaced (e.g. it is deprecated, no longer maintained, or the same job can now be done natively or with fewer dependencies)
 - The replacement does not necessarily need a `url` itself
 - The replacement does not need a `description`
 
@@ -69,7 +69,7 @@ When using the `native` type:
 
 When using the `simple` type:
 
-- The replacement should be of the form `snippet::{name}` where `name` is a suitable descriptive name for what the snippet does (e.g. `snippet:is-odd` for a snippet that checks if a number is odd)
+- The replacement should be of the form `snippet::{name}` where `name` is a suitable descriptive name for what the snippet does (e.g. `snippet::is-odd` for a snippet that checks if a number is odd)
 - The replacement description should be a short human-readable description of what the snippet does, and how it replaces the old module (e.g. "You can use arr.at(-1) to get the last element of an array")
 - The replacement should have an `example` which is purely code (i.e. it should be valid JS in its entirety) and should show the snippet
 
