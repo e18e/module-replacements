@@ -360,6 +360,12 @@
       "description": "You can check if a value is `null` or `undefined` using loose equality with `null`.",
       "example": "value == null"
     },
+    "snippet::is-node": {
+      "id": "snippet::is-node",
+      "type": "simple",
+      "description": "You can check `process.versions.node` to detect Node.js.",
+      "example": "const isNode = Boolean(globalThis.process?.versions?.node)"
+    },
     "snippet::is-npm": {
       "id": "snippet::is-npm",
       "type": "simple",
@@ -868,6 +874,11 @@
       "type": "module",
       "moduleName": "defined",
       "replacements": ["snippet::find-first-defined"]
+    },
+    "detect-node": {
+      "type": "module",
+      "moduleName": "detect-node",
+      "replacements": ["snippet::is-node"]
     },
     "dns-equal": {
       "type": "module",
