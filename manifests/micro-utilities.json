@@ -318,6 +318,12 @@
       "description": "You can check if the current environment is SSH by checking if the `SSH_CONNECTION` environment variable is set.",
       "example": "Boolean(process.env.SSH_CONNECTION)"
     },
+    "snippet::is-integer-array": {
+      "id": "snippet::is-integer-array",
+      "type": "simple",
+      "description": "You can use `Array.isArray` and `Number.isInteger` to check that a value is a non-empty array of integers. Spreading the array makes empty slots count as `undefined`, so arrays with holes are rejected.",
+      "example": "const isIntegerArray = (value) =>\n  Array.isArray(value) && value.length > 0 && [...value].every(Number.isInteger)"
+    },
     "snippet::is-interactive": {
       "id": "snippet::is-interactive",
       "type": "simple",
@@ -1603,6 +1609,11 @@
       "type": "module",
       "moduleName": "validate.io-function",
       "replacements": ["snippet::is-function"]
+    },
+    "validate.io-integer-array": {
+      "type": "module",
+      "moduleName": "validate.io-integer-array",
+      "replacements": ["snippet::is-integer-array"]
     },
     "year": {
       "type": "module",
