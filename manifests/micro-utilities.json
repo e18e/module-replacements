@@ -444,6 +444,12 @@
       "description": "You can use `process.getuid?.()` to check if a user is a root user.",
       "example": "const isRootUser = process.getuid?.() === 0"
     },
+    "snippet::is-scoped": {
+      "id": "snippet::is-scoped",
+      "type": "simple",
+      "description": "You can use a regular expression to check whether a string is a scoped npm package name, or to find scoped package names in a larger string.",
+      "example": "// Check a whole string (is-scoped)\nconst isScoped = (string) => /^@[a-z\\d][\\w-.]+\\/[a-z\\d][\\w-.]*$/i.test(string)\n\n// Match scoped package names anywhere in a string (scoped-regex)\nconst scopedRegex = () => /@[a-z\\d][\\w-.]+\\/[a-z\\d][\\w-.]*/gi"
+    },
     "snippet::is-set": {
       "id": "snippet::is-set",
       "type": "simple",
@@ -1197,6 +1203,11 @@
       "moduleName": "is-root",
       "replacements": ["snippet::is-root-user"]
     },
+    "is-scoped": {
+      "type": "module",
+      "moduleName": "is-scoped",
+      "replacements": ["snippet::is-scoped"]
+    },
     "is-set": {
       "type": "module",
       "moduleName": "is-set",
@@ -1518,6 +1529,11 @@
       "type": "module",
       "moduleName": "repeat-element",
       "replacements": ["snippet::array-filled-with"]
+    },
+    "scoped-regex": {
+      "type": "module",
+      "moduleName": "scoped-regex",
+      "replacements": ["snippet::is-scoped"]
     },
     "set-function-length": {
       "type": "module",
