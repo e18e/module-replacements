@@ -4,7 +4,7 @@ description: Modern alternatives to the http-proxy package for HTTP and WebSocke
 
 # Replacements for `http-proxy`
 
-[`http-proxy`](https://github.com/http-party/node-http-proxy) has not been maintained since 2020 and has known crashes, memory leaks, and socket issues on modern Node.js versions.
+**Motivation:** [`http-proxy`](https://github.com/http-party/node-http-proxy) has not been maintained since 2020 and has known crashes, memory leaks, and socket issues on modern Node.js versions.
 
 ## `httpxy`
 

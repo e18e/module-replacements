@@ -4,7 +4,7 @@ description: Modern alternatives to the express package
 
 # Replacements for `express`
 
-Express has been the industry standard for years, but the ecosystem has shifted toward ESM-first, type-safe, and runtime-agnostic frameworks that offer significantly better performance and developer experience.
+**Motivation:** Express has been the industry standard for years, but the ecosystem has shifted toward ESM-first, type-safe, and runtime-agnostic frameworks that offer significantly better performance and developer experience.
 
 ## `h3`
 
