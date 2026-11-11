@@ -4,7 +4,7 @@ description: Modern alternatives to the html-webpack-plugin package for generati
 
 # Replacements for `html-webpack-plugin`
 
-Since webpack 5.109.0, webpack can generate HTML pages and use HTML files as entry points itself.
+**Motivation:** Since webpack 5.109.0, webpack can generate HTML pages and use HTML files as entry points itself.
 
 ## `output.html` (built-in, since webpack 5.109.0)
 
