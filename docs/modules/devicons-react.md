@@ -4,7 +4,7 @@ description: Modern alternatives to the devicons-react package for Devicon React
 
 # Replacements for `devicons-react`
 
-`devicons-react` is archived, and its author now maintains it as `@devicons-pack/react`.
+**Motivation:** `devicons-react` is archived, and its author now maintains it as `@devicons-pack/react`.
 
 ## `@devicons-pack/react`
 
