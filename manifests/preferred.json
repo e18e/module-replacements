@@ -442,6 +442,18 @@
       "replacements": ["feathers-utils"],
       "url": {"type": "e18e", "id": "feathers-hooks-common"}
     },
+    "fft-js": {
+      "type": "module",
+      "moduleName": "fft-js",
+      "replacements": ["fft.js"],
+      "url": {"type": "e18e", "id": "fftjs"}
+    },
+    "fftjs": {
+      "type": "module",
+      "moduleName": "fftjs",
+      "replacements": ["fft.js"],
+      "url": {"type": "e18e", "id": "fftjs"}
+    },
     "find-cache-dir": {
       "type": "module",
       "moduleName": "find-cache-dir",
@@ -3408,6 +3420,11 @@
       "id": "fflate",
       "type": "documented",
       "replacementModule": "fflate"
+    },
+    "fft.js": {
+      "id": "fft.js",
+      "type": "documented",
+      "replacementModule": "fft.js"
     },
     "find-proc": {
       "id": "find-proc",
