@@ -650,6 +650,12 @@
       "replacements": ["fflate"],
       "url": {"type": "e18e", "id": "jszip"}
     },
+    "kafkajs": {
+      "type": "module",
+      "moduleName": "kafkajs",
+      "replacements": ["@confluentinc/kafka-javascript", "@platformatic/kafka"],
+      "url": {"type": "e18e", "id": "kafkajs"}
+    },
     "lodash": {
       "type": "module",
       "moduleName": "lodash",
@@ -2952,6 +2958,11 @@
       "type": "documented",
       "replacementModule": "@11ty/gray-matter"
     },
+    "@confluentinc/kafka-javascript": {
+      "id": "@confluentinc/kafka-javascript",
+      "type": "documented",
+      "replacementModule": "@confluentinc/kafka-javascript"
+    },
     "@eslint-community/eslint-plugin-eslint-comments": {
       "id": "@eslint-community/eslint-plugin-eslint-comments",
       "type": "documented",
@@ -2996,6 +3007,11 @@
       "id": "@placemarkio/tokml",
       "type": "documented",
       "replacementModule": "@placemarkio/tokml"
+    },
+    "@platformatic/kafka": {
+      "id": "@platformatic/kafka",
+      "type": "documented",
+      "replacementModule": "@platformatic/kafka"
     },
     "@rollup/plugin-babel": {
       "id": "@rollup/plugin-babel",
