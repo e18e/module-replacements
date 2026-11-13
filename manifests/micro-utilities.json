@@ -1604,6 +1604,11 @@
       "moduleName": "validate.io-function",
       "replacements": ["snippet::is-function"]
     },
+    "validate.io-number": {
+      "type": "module",
+      "moduleName": "validate.io-number",
+      "replacements": ["snippet::is-number"]
+    },
     "year": {
       "type": "module",
       "moduleName": "year",
