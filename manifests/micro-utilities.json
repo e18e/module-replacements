@@ -1457,6 +1457,11 @@
       "moduleName": "minimalistic-assert",
       "replacements": ["snippet::assert"]
     },
+    "modify-values": {
+      "type": "module",
+      "moduleName": "modify-values",
+      "replacements": ["snippet::object-map"]
+    },
     "object-filter": {
       "type": "module",
       "moduleName": "object-filter",
