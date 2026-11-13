@@ -624,6 +624,12 @@
       "description": "You can use `Object.fromEntries` with `Object.entries` and `Array.prototype.map` to map an object's properties.",
       "example": "const objectMap = (obj, fn) => Object.fromEntries(Object.entries(obj).map(([k, v]) => fn(k, v)));"
     },
+    "snippet::object-omit": {
+      "id": "snippet::object-omit",
+      "type": "simple",
+      "description": "You can use `Object.fromEntries` with `Object.entries` and `Array.prototype.filter` to copy an object without the given keys.",
+      "example": "const omit = (obj, keys) => Object.fromEntries(Object.entries(obj).filter(([key]) => !keys.includes(key)))"
+    },
     "snippet::object-reduce": {
       "id": "snippet::object-reduce",
       "type": "simple",
@@ -1466,6 +1472,11 @@
       "type": "module",
       "moduleName": "object.map",
       "replacements": ["snippet::object-map"]
+    },
+    "object.omit": {
+      "type": "module",
+      "moduleName": "object.omit",
+      "replacements": ["snippet::object-omit"]
     },
     "object.reduce": {
       "type": "module",
