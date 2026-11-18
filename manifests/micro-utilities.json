@@ -696,6 +696,12 @@
       "description": "You can use `/^#!(.+)/` regex.",
       "example": "const shebangRegex = /^#!(.+)/;"
     },
+    "snippet::shorten-home-path": {
+      "id": "snippet::shorten-home-path",
+      "type": "simple",
+      "description": "You can use `os.homedir()` with `path.normalize` to replace the home directory at the start of a path with `~`.",
+      "example": "import { homedir } from 'node:os'\nimport { normalize, sep } from 'node:path'\n\nconst home = homedir()\nconst shortenHomePath = (path) => {\n  const normalized = normalize(path)\n  return normalized === home || normalized.startsWith(home + sep) ? '~' + normalized.slice(home.length) : normalized\n}"
+    },
     "snippet::split-lines": {
       "id": "snippet::split-lines",
       "type": "simple",
@@ -1569,6 +1575,11 @@
       "type": "module",
       "moduleName": "strip-bom-string",
       "replacements": ["snippet::strip-bom"]
+    },
+    "tildify": {
+      "type": "module",
+      "moduleName": "tildify",
+      "replacements": ["snippet::shorten-home-path"]
     },
     "toarray": {
       "type": "module",
