@@ -72,6 +72,12 @@
       "description": "You can use `Promise.all` with `Array.prototype.map` to do an async action with an array of items.",
       "example": "Promise.all(items.map(asyncFn))"
     },
+    "snippet::async-each-series": {
+      "id": "snippet::async-each-series",
+      "type": "simple",
+      "description": "You can use a `for await...of` loop to run an async function on each item one at a time, in order. Use `break` to stop early.",
+      "example": "for await (const item of items) {\n  await fn(item);\n}"
+    },
     "snippet::async-function-constructor": {
       "id": "snippet::async-function-constructor",
       "type": "simple",
@@ -1482,6 +1488,11 @@
       "type": "module",
       "moduleName": "object.reduce",
       "replacements": ["snippet::object-reduce"]
+    },
+    "p-each-series": {
+      "type": "module",
+      "moduleName": "p-each-series",
+      "replacements": ["snippet::async-each-series"]
     },
     "path-key": {
       "type": "module",
