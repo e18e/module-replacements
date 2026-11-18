@@ -714,6 +714,12 @@
       "description": "You can check if the first character of the string is the BOM and strip it using `String.prototype.slice` if it is.",
       "example": "str.charCodeAt(0) === 0xFEFF ? str.slice(1) : str;"
     },
+    "snippet::title-case": {
+      "id": "snippet::title-case",
+      "type": "simple",
+      "description": "You can lowercase the string and use `String.prototype.replace` to uppercase the first character after the start, whitespace or a hyphen.",
+      "example": "const titleCase = (str) => str.toLowerCase().replace(/(?:^|[\\s-])\\S/g, (m) => m.toUpperCase())"
+    },
     "snippet::to-identifier": {
       "id": "snippet::to-identifier",
       "type": "simple",
@@ -1569,6 +1575,11 @@
       "type": "module",
       "moduleName": "strip-bom-string",
       "replacements": ["snippet::strip-bom"]
+    },
+    "titleize": {
+      "type": "module",
+      "moduleName": "titleize",
+      "replacements": ["snippet::title-case"]
     },
     "toarray": {
       "type": "module",
