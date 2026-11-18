@@ -432,6 +432,12 @@
       "description": "You can check `typeof` of a value to determine if it's a primitive. Note that `typeof null` is `\"object\"` so you need to check for `null` separately.",
       "example": "const isPrimitive = (value) => value === null || (typeof value !== \"function\" && typeof value !== \"object\");"
     },
+    "snippet::is-promise": {
+      "id": "snippet::is-promise",
+      "type": "simple",
+      "description": "You can use `instanceof Promise` to check for a promise. If you also need to accept other thenables, wrap the value with `Promise.resolve()` instead of checking it.",
+      "example": "value instanceof Promise"
+    },
     "snippet::is-redirect": {
       "id": "snippet::is-redirect",
       "type": "simple",
@@ -1482,6 +1488,11 @@
       "type": "module",
       "moduleName": "object.reduce",
       "replacements": ["snippet::object-reduce"]
+    },
+    "p-is-promise": {
+      "type": "module",
+      "moduleName": "p-is-promise",
+      "replacements": ["snippet::is-promise"]
     },
     "path-key": {
       "type": "module",
