@@ -3248,6 +3248,11 @@
       "moduleName": "native-promise-only",
       "replacements": ["Promise"]
     },
+    "node-abort-controller": {
+      "type": "module",
+      "moduleName": "node-abort-controller",
+      "replacements": ["AbortController"]
+    },
     "node-domexception": {
       "type": "module",
       "moduleName": "node-domexception",
