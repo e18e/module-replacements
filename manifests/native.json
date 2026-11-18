@@ -3710,6 +3710,11 @@
       "moduleName": "to-data-view",
       "replacements": ["DataView"]
     },
+    "to-readable-stream": {
+      "type": "module",
+      "moduleName": "to-readable-stream",
+      "replacements": ["Readable.from"]
+    },
     "trim": {
       "type": "module",
       "moduleName": "trim",
