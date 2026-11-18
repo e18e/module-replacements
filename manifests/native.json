@@ -3378,6 +3378,11 @@
       "moduleName": "os-homedir",
       "replacements": ["os.homedir"]
     },
+    "os-locale": {
+      "type": "module",
+      "moduleName": "os-locale",
+      "replacements": ["Intl.DateTimeFormat"]
+    },
     "os-tmpdir": {
       "type": "module",
       "moduleName": "os-tmpdir",
