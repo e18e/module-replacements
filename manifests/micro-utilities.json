@@ -78,6 +78,12 @@
       "description": "You can get the `AsyncFunction` using `async function`.",
       "example": "const AsyncFunction = (async () => {}).constructor"
     },
+    "snippet::async-pipe": {
+      "id": "snippet::async-pipe",
+      "type": "simple",
+      "description": "You can use a `for...of` loop to pass a value through async functions one after another, awaiting each result.",
+      "example": "const pipe = (...fns) => async (input) => {\n  let value = input;\n  for (const fn of fns) {\n    value = await fn(value);\n  }\n  return value;\n};"
+    },
     "snippet::bail": {
       "id": "snippet::bail",
       "type": "simple",
@@ -1482,6 +1488,11 @@
       "type": "module",
       "moduleName": "object.reduce",
       "replacements": ["snippet::object-reduce"]
+    },
+    "p-pipe": {
+      "type": "module",
+      "moduleName": "p-pipe",
+      "replacements": ["snippet::async-pipe"]
     },
     "path-key": {
       "type": "module",
