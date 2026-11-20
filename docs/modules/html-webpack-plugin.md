@@ -31,7 +31,7 @@ module.exports = {
 
 ## HTML entry points (built-in, since webpack 5.109.0)
 
-If you use a `template`, make the HTML file the entry instead, and reference your script from it. webpack bundles the scripts and styles the page references, and rewrites their URLs.
+If you use a `template`, make the HTML file the entry instead, and reference your script from it. webpack bundles the scripts and styles the page references, and rewrites their URLs. Remove `html-loader` or any other loader for `.html` files from `module.rules`, otherwise webpack skips its built-in HTML handling and emits no page.
 
 <!-- prettier-ignore -->
 ```js
