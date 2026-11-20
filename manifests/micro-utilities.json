@@ -768,6 +768,12 @@
       "description": "You can use `String.prototype.replace` with a RegExp anchored to the start and end of the string to remove a substring from both ends.",
       "example": "str.replace(/^foo|foo$/g, '')"
     },
+    "snippet::title-case": {
+      "id": "snippet::title-case",
+      "type": "simple",
+      "description": "You can lowercase the string and use `String.prototype.replace` to uppercase the first character after the start, whitespace or a hyphen.",
+      "example": "const titleCase = (str) => str.toLowerCase().replace(/(?:^|[\\s-])\\S/g, (m) => m.toUpperCase())"
+    },
     "snippet::to-identifier": {
       "id": "snippet::to-identifier",
       "type": "simple",
@@ -1673,6 +1679,11 @@
       "type": "module",
       "moduleName": "tildify",
       "replacements": ["snippet::shorten-home-path"]
+    },
+    "titleize": {
+      "type": "module",
+      "moduleName": "titleize",
+      "replacements": ["snippet::title-case"]
     },
     "toarray": {
       "type": "module",
