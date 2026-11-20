@@ -711,7 +711,7 @@
     "snippet::strip-bom-buffer": {
       "id": "snippet::strip-bom-buffer",
       "type": "simple",
-      "description": "You can check the first three bytes for the UTF-8 byte order mark (`EF BB BF`) and slice them off.",
+      "description": "You can check the first three bytes for the UTF-8 byte order mark (`EF BB BF`) and remove them with `slice`.",
       "example": "const stripBomBuffer = (bytes) =>\n  bytes[0] === 0xef && bytes[1] === 0xbb && bytes[2] === 0xbf ? bytes.slice(3) : bytes"
     },
     "snippet::to-identifier": {
