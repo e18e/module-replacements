@@ -42,6 +42,12 @@
       "description": "You can use `arr.at(-1)` if supported or `arr[arr.length - 1]` to get the last element of an array.",
       "example": "const last = (arr) => arr.at(-1);\n// or in older environments\nconst lastLegacy = (arr) => arr[arr.length - 1]"
     },
+    "snippet::array-shallow-equal": {
+      "id": "snippet::array-shallow-equal",
+      "type": "simple",
+      "description": "You can compare the lengths and then use `Array.prototype.every` to check two arrays hold the same items in the same order.",
+      "example": "const arraysEqual = (a, b) => a === b || (a.length === b.length && a.every((value, i) => value === b[i]))"
+    },
     "snippet::array-slice-exclude-last-n": {
       "id": "snippet::array-slice-exclude-last-n",
       "type": "simple",
@@ -830,6 +836,11 @@
       "type": "module",
       "moduleName": "array-differ",
       "replacements": ["snippet::array-difference"]
+    },
+    "array-equal": {
+      "type": "module",
+      "moduleName": "array-equal",
+      "replacements": ["snippet::array-shallow-equal"]
     },
     "array-flatten": {
       "type": "module",
