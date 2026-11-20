@@ -105,6 +105,18 @@
         "compatKey": "javascript.builtins.Array.from"
       }
     },
+    "Array.fromAsync": {
+      "id": "Array.fromAsync",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Array/fromAsync"
+      },
+      "webFeatureId": {
+        "featureId": "array-fromasync",
+        "compatKey": "javascript.builtins.Array.fromAsync"
+      }
+    },
     "Array.isArray": {
       "id": "Array.isArray",
       "type": "native",
@@ -3380,6 +3392,11 @@
       "type": "module",
       "moduleName": "p-defer",
       "replacements": ["Promise.withResolvers"]
+    },
+    "p-map-series": {
+      "type": "module",
+      "moduleName": "p-map-series",
+      "replacements": ["Array.fromAsync"]
     },
     "p-try": {
       "type": "module",

@@ -2478,6 +2478,12 @@
       "replacements": ["package-manager-detector"],
       "url": {"type": "e18e", "id": "detect-package-manager"}
     },
+    "prop-types": {
+      "type": "module",
+      "moduleName": "prop-types",
+      "replacements": ["typescript"],
+      "url": {"type": "e18e", "id": "prop-types"}
+    },
     "q": {
       "type": "module",
       "moduleName": "q",
