@@ -12,7 +12,6 @@ description: Modern alternatives to the prop-types package for checking React pr
 
 Follow React's [TypeScript setup guide](https://react.dev/learn/typescript), then replace `propTypes` with TypeScript types:
 
-
 Before:
 
 ```javascript
