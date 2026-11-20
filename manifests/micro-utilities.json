@@ -813,6 +813,11 @@
       "moduleName": "array-differ",
       "replacements": ["snippet::array-difference"]
     },
+    "array-flatten": {
+      "type": "module",
+      "moduleName": "array-flatten",
+      "replacements": ["snippet::array-flatten"]
+    },
     "array-ify": {
       "type": "module",
       "moduleName": "array-ify",
