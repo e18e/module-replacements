@@ -81,6 +81,15 @@
         "compatKey": "api.AbortController.AbortController"
       }
     },
+    "AbortSignal.timeout": {
+      "id": "AbortSignal.timeout",
+      "type": "native",
+      "url": {"type": "mdn", "id": "Web/API/AbortSignal/timeout_static"},
+      "webFeatureId": {
+        "featureId": "abortsignal-timeout",
+        "compatKey": "api.AbortSignal.timeout_static"
+      }
+    },
     "AggregateError": {
       "id": "AggregateError",
       "type": "native",
@@ -3248,6 +3257,11 @@
       "moduleName": "native-promise-only",
       "replacements": ["Promise"]
     },
+    "node-abort-controller": {
+      "type": "module",
+      "moduleName": "node-abort-controller",
+      "replacements": ["AbortController"]
+    },
     "node-domexception": {
       "type": "module",
       "moduleName": "node-domexception",
@@ -3689,6 +3703,11 @@
       "moduleName": "time-stamp",
       "replacements": ["Intl.DateTimeFormat"]
     },
+    "timeout-signal": {
+      "type": "module",
+      "moduleName": "timeout-signal",
+      "replacements": ["AbortSignal.timeout"]
+    },
     "timezone-support": {
       "type": "module",
       "moduleName": "timezone-support",
@@ -3709,6 +3728,11 @@
       "type": "module",
       "moduleName": "to-data-view",
       "replacements": ["DataView"]
+    },
+    "to-readable-stream": {
+      "type": "module",
+      "moduleName": "to-readable-stream",
+      "replacements": ["Readable.from"]
     },
     "trim": {
       "type": "module",

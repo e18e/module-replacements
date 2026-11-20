@@ -42,6 +42,12 @@
       "description": "You can use `arr.at(-1)` if supported or `arr[arr.length - 1]` to get the last element of an array.",
       "example": "const last = (arr) => arr.at(-1);\n// or in older environments\nconst lastLegacy = (arr) => arr[arr.length - 1]"
     },
+    "snippet::array-shallow-equal": {
+      "id": "snippet::array-shallow-equal",
+      "type": "simple",
+      "description": "You can compare the lengths and then use `Array.prototype.every` to check two arrays hold the same items in the same order.",
+      "example": "const arraysEqual = (a, b) => a === b || (a.length === b.length && a.every((value, i) => value === b[i]))"
+    },
     "snippet::array-slice-exclude-last-n": {
       "id": "snippet::array-slice-exclude-last-n",
       "type": "simple",
@@ -72,11 +78,23 @@
       "description": "You can use `Promise.all` with `Array.prototype.map` to do an async action with an array of items.",
       "example": "Promise.all(items.map(asyncFn))"
     },
+    "snippet::async-each-series": {
+      "id": "snippet::async-each-series",
+      "type": "simple",
+      "description": "You can use a `for await...of` loop to run an async function on each item one at a time, in order. Use `break` to stop early.",
+      "example": "for await (const item of items) {\n  await fn(item);\n}"
+    },
     "snippet::async-function-constructor": {
       "id": "snippet::async-function-constructor",
       "type": "simple",
       "description": "You can get the `AsyncFunction` using `async function`.",
       "example": "const AsyncFunction = (async () => {}).constructor"
+    },
+    "snippet::async-pipe": {
+      "id": "snippet::async-pipe",
+      "type": "simple",
+      "description": "You can use a `for...of` loop to pass a value through async functions one after another, awaiting each result.",
+      "example": "const pipe = (...fns) => async (input) => {\n  let value = input;\n  for (const fn of fns) {\n    value = await fn(value);\n  }\n  return value;\n};"
     },
     "snippet::bail": {
       "id": "snippet::bail",
@@ -324,6 +342,12 @@
       "description": "You can check if the current environment is SSH by checking if the `SSH_CONNECTION` environment variable is set.",
       "example": "Boolean(process.env.SSH_CONNECTION)"
     },
+    "snippet::is-integer-array": {
+      "id": "snippet::is-integer-array",
+      "type": "simple",
+      "description": "You can use `Array.isArray` and `Number.isInteger` to check that a value is a non-empty array of integers. `findIndex` treats empty slots as `undefined`, so arrays with holes are rejected.",
+      "example": "const isIntegerArray = (value) =>\n  Array.isArray(value) &&\n  value.length > 0 &&\n  value.findIndex((v) => !Number.isInteger(v)) === -1"
+    },
     "snippet::is-interactive": {
       "id": "snippet::is-interactive",
       "type": "simple",
@@ -432,6 +456,12 @@
       "description": "You can check `typeof` of a value to determine if it's a primitive. Note that `typeof null` is `\"object\"` so you need to check for `null` separately.",
       "example": "const isPrimitive = (value) => value === null || (typeof value !== \"function\" && typeof value !== \"object\");"
     },
+    "snippet::is-promise": {
+      "id": "snippet::is-promise",
+      "type": "simple",
+      "description": "You can use `instanceof Promise` to check for a promise. If you also need to accept other thenables, wrap the value with `Promise.resolve()` instead of checking it.",
+      "example": "value instanceof Promise"
+    },
     "snippet::is-redirect": {
       "id": "snippet::is-redirect",
       "type": "simple",
@@ -449,6 +479,12 @@
       "type": "simple",
       "description": "You can use `process.getuid?.()` to check if a user is a root user.",
       "example": "const isRootUser = process.getuid?.() === 0"
+    },
+    "snippet::is-scoped": {
+      "id": "snippet::is-scoped",
+      "type": "simple",
+      "description": "You can use a regular expression to check whether a string is a scoped npm package name.",
+      "example": "const isScoped = (string) => /^@[a-z\\d][\\w-.]+\\/[a-z\\d][\\w-.]*$/i.test(string)"
     },
     "snippet::is-set": {
       "id": "snippet::is-set",
@@ -696,6 +732,12 @@
       "description": "You can use `/^#!(.+)/` regex.",
       "example": "const shebangRegex = /^#!(.+)/;"
     },
+    "snippet::shorten-home-path": {
+      "id": "snippet::shorten-home-path",
+      "type": "simple",
+      "description": "You can use `os.homedir()` with `path.normalize` to replace the home directory at the start of a path with `~`.",
+      "example": "import { homedir } from 'node:os'\nimport { normalize, sep } from 'node:path'\n\nconst home = homedir()\nconst shortenHomePath = (path) => {\n  const normalized = normalize(path)\n  return normalized === home || normalized.startsWith(home + sep) ? '~' + normalized.slice(home.length) : normalized\n}"
+    },
     "snippet::split-lines": {
       "id": "snippet::split-lines",
       "type": "simple",
@@ -713,6 +755,18 @@
       "type": "simple",
       "description": "You can check if the first character of the string is the BOM and strip it using `String.prototype.slice` if it is.",
       "example": "str.charCodeAt(0) === 0xFEFF ? str.slice(1) : str;"
+    },
+    "snippet::strip-bom-buffer": {
+      "id": "snippet::strip-bom-buffer",
+      "type": "simple",
+      "description": "You can check the first three bytes for the UTF-8 byte order mark (`EF BB BF`) and remove them with `slice`.",
+      "example": "const stripBomBuffer = (bytes) =>\n  bytes[0] === 0xef && bytes[1] === 0xbb && bytes[2] === 0xbf ? bytes.slice(3) : bytes"
+    },
+    "snippet::strip-surrounding-substring": {
+      "id": "snippet::strip-surrounding-substring",
+      "type": "simple",
+      "description": "You can use `String.prototype.replace` with a RegExp anchored to the start and end of the string to remove a substring from both ends.",
+      "example": "str.replace(/^foo|foo$/g, '')"
     },
     "snippet::title-case": {
       "id": "snippet::title-case",
@@ -788,6 +842,16 @@
       "type": "module",
       "moduleName": "array-differ",
       "replacements": ["snippet::array-difference"]
+    },
+    "array-equal": {
+      "type": "module",
+      "moduleName": "array-equal",
+      "replacements": ["snippet::array-shallow-equal"]
+    },
+    "array-flatten": {
+      "type": "module",
+      "moduleName": "array-flatten",
+      "replacements": ["snippet::array-flatten"]
     },
     "array-ify": {
       "type": "module",
@@ -1214,6 +1278,11 @@
       "moduleName": "is-root",
       "replacements": ["snippet::is-root-user"]
     },
+    "is-scoped": {
+      "type": "module",
+      "moduleName": "is-scoped",
+      "replacements": ["snippet::is-scoped"]
+    },
     "is-set": {
       "type": "module",
       "moduleName": "is-set",
@@ -1489,6 +1558,21 @@
       "moduleName": "object.reduce",
       "replacements": ["snippet::object-reduce"]
     },
+    "p-each-series": {
+      "type": "module",
+      "moduleName": "p-each-series",
+      "replacements": ["snippet::async-each-series"]
+    },
+    "p-is-promise": {
+      "type": "module",
+      "moduleName": "p-is-promise",
+      "replacements": ["snippet::is-promise"]
+    },
+    "p-pipe": {
+      "type": "module",
+      "moduleName": "p-pipe",
+      "replacements": ["snippet::async-pipe"]
+    },
     "path-key": {
       "type": "module",
       "moduleName": "path-key",
@@ -1536,6 +1620,11 @@
       "moduleName": "repeat-element",
       "replacements": ["snippet::array-filled-with"]
     },
+    "scoped-regex": {
+      "type": "module",
+      "moduleName": "scoped-regex",
+      "replacements": ["snippet::is-scoped"]
+    },
     "set-function-length": {
       "type": "module",
       "moduleName": "set-function-length",
@@ -1571,10 +1660,25 @@
       "moduleName": "strip-bom",
       "replacements": ["snippet::strip-bom"]
     },
+    "strip-bom-buf": {
+      "type": "module",
+      "moduleName": "strip-bom-buf",
+      "replacements": ["snippet::strip-bom-buffer"]
+    },
     "strip-bom-string": {
       "type": "module",
       "moduleName": "strip-bom-string",
       "replacements": ["snippet::strip-bom"]
+    },
+    "strip-outer": {
+      "type": "module",
+      "moduleName": "strip-outer",
+      "replacements": ["snippet::strip-surrounding-substring"]
+    },
+    "tildify": {
+      "type": "module",
+      "moduleName": "tildify",
+      "replacements": ["snippet::shorten-home-path"]
     },
     "titleize": {
       "type": "module",
@@ -1625,6 +1729,16 @@
       "type": "module",
       "moduleName": "validate.io-function",
       "replacements": ["snippet::is-function"]
+    },
+    "validate.io-integer-array": {
+      "type": "module",
+      "moduleName": "validate.io-integer-array",
+      "replacements": ["snippet::is-integer-array"]
+    },
+    "validate.io-number": {
+      "type": "module",
+      "moduleName": "validate.io-number",
+      "replacements": ["snippet::is-number"]
     },
     "year": {
       "type": "module",
