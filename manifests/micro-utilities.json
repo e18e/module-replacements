@@ -1553,6 +1553,11 @@
       "moduleName": "object.map",
       "replacements": ["snippet::object-map"]
     },
+    "object.omit": {
+      "type": "module",
+      "moduleName": "object.omit",
+      "replacements": ["snippet::object-exclude"]
+    },
     "object.reduce": {
       "type": "module",
       "moduleName": "object.reduce",
