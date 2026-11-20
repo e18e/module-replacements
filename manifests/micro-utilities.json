@@ -756,6 +756,12 @@
       "description": "You can check the first three bytes for the UTF-8 byte order mark (`EF BB BF`) and remove them with `slice`.",
       "example": "const stripBomBuffer = (bytes) =>\n  bytes[0] === 0xef && bytes[1] === 0xbb && bytes[2] === 0xbf ? bytes.slice(3) : bytes"
     },
+    "snippet::strip-surrounding-substring": {
+      "id": "snippet::strip-surrounding-substring",
+      "type": "simple",
+      "description": "You can use `String.prototype.replace` with a RegExp anchored to the start and end of the string to remove a substring from both ends.",
+      "example": "str.replace(/^foo|foo$/g, '')"
+    },
     "snippet::to-identifier": {
       "id": "snippet::to-identifier",
       "type": "simple",
@@ -1646,6 +1652,11 @@
       "type": "module",
       "moduleName": "strip-bom-string",
       "replacements": ["snippet::strip-bom"]
+    },
+    "strip-outer": {
+      "type": "module",
+      "moduleName": "strip-outer",
+      "replacements": ["snippet::strip-surrounding-substring"]
     },
     "tildify": {
       "type": "module",
