@@ -72,6 +72,12 @@
       "description": "You can use `Promise.all` with `Array.prototype.map` to do an async action with an array of items.",
       "example": "Promise.all(items.map(asyncFn))"
     },
+    "snippet::async-each-series": {
+      "id": "snippet::async-each-series",
+      "type": "simple",
+      "description": "You can use a `for await...of` loop to run an async function on each item one at a time, in order. Use `break` to stop early.",
+      "example": "for await (const item of items) {\n  await fn(item);\n}"
+    },
     "snippet::async-function-constructor": {
       "id": "snippet::async-function-constructor",
       "type": "simple",
@@ -324,6 +330,12 @@
       "description": "You can check if the current environment is SSH by checking if the `SSH_CONNECTION` environment variable is set.",
       "example": "Boolean(process.env.SSH_CONNECTION)"
     },
+    "snippet::is-integer-array": {
+      "id": "snippet::is-integer-array",
+      "type": "simple",
+      "description": "You can use `Array.isArray` and `Number.isInteger` to check that a value is a non-empty array of integers. `findIndex` treats empty slots as `undefined`, so arrays with holes are rejected.",
+      "example": "const isIntegerArray = (value) =>\n  Array.isArray(value) &&\n  value.length > 0 &&\n  value.findIndex((v) => !Number.isInteger(v)) === -1"
+    },
     "snippet::is-interactive": {
       "id": "snippet::is-interactive",
       "type": "simple",
@@ -455,6 +467,12 @@
       "type": "simple",
       "description": "You can use `process.getuid?.()` to check if a user is a root user.",
       "example": "const isRootUser = process.getuid?.() === 0"
+    },
+    "snippet::is-scoped": {
+      "id": "snippet::is-scoped",
+      "type": "simple",
+      "description": "You can use a regular expression to check whether a string is a scoped npm package name.",
+      "example": "const isScoped = (string) => /^@[a-z\\d][\\w-.]+\\/[a-z\\d][\\w-.]*$/i.test(string)"
     },
     "snippet::is-set": {
       "id": "snippet::is-set",
@@ -719,6 +737,12 @@
       "type": "simple",
       "description": "You can check if the first character of the string is the BOM and strip it using `String.prototype.slice` if it is.",
       "example": "str.charCodeAt(0) === 0xFEFF ? str.slice(1) : str;"
+    },
+    "snippet::strip-bom-buffer": {
+      "id": "snippet::strip-bom-buffer",
+      "type": "simple",
+      "description": "You can check the first three bytes for the UTF-8 byte order mark (`EF BB BF`) and remove them with `slice`.",
+      "example": "const stripBomBuffer = (bytes) =>\n  bytes[0] === 0xef && bytes[1] === 0xbb && bytes[2] === 0xbf ? bytes.slice(3) : bytes"
     },
     "snippet::to-identifier": {
       "id": "snippet::to-identifier",
@@ -1214,6 +1238,11 @@
       "moduleName": "is-root",
       "replacements": ["snippet::is-root-user"]
     },
+    "is-scoped": {
+      "type": "module",
+      "moduleName": "is-scoped",
+      "replacements": ["snippet::is-scoped"]
+    },
     "is-set": {
       "type": "module",
       "moduleName": "is-set",
@@ -1489,6 +1518,11 @@
       "moduleName": "object.reduce",
       "replacements": ["snippet::object-reduce"]
     },
+    "p-each-series": {
+      "type": "module",
+      "moduleName": "p-each-series",
+      "replacements": ["snippet::async-each-series"]
+    },
     "p-is-promise": {
       "type": "module",
       "moduleName": "p-is-promise",
@@ -1541,6 +1575,11 @@
       "moduleName": "repeat-element",
       "replacements": ["snippet::array-filled-with"]
     },
+    "scoped-regex": {
+      "type": "module",
+      "moduleName": "scoped-regex",
+      "replacements": ["snippet::is-scoped"]
+    },
     "set-function-length": {
       "type": "module",
       "moduleName": "set-function-length",
@@ -1575,6 +1614,11 @@
       "type": "module",
       "moduleName": "strip-bom",
       "replacements": ["snippet::strip-bom"]
+    },
+    "strip-bom-buf": {
+      "type": "module",
+      "moduleName": "strip-bom-buf",
+      "replacements": ["snippet::strip-bom-buffer"]
     },
     "strip-bom-string": {
       "type": "module",
@@ -1625,6 +1669,16 @@
       "type": "module",
       "moduleName": "validate.io-function",
       "replacements": ["snippet::is-function"]
+    },
+    "validate.io-integer-array": {
+      "type": "module",
+      "moduleName": "validate.io-integer-array",
+      "replacements": ["snippet::is-integer-array"]
+    },
+    "validate.io-number": {
+      "type": "module",
+      "moduleName": "validate.io-number",
+      "replacements": ["snippet::is-number"]
     },
     "year": {
       "type": "module",
