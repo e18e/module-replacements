@@ -1626,6 +1626,11 @@
       "moduleName": "validate.io-integer-array",
       "replacements": ["snippet::is-integer-array"]
     },
+    "validate.io-number": {
+      "type": "module",
+      "moduleName": "validate.io-number",
+      "replacements": ["snippet::is-number"]
+    },
     "year": {
       "type": "module",
       "moduleName": "year",
