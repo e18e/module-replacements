@@ -777,6 +777,18 @@
         "compatKey": "javascript.builtins.Intl.DateTimeFormat.DateTimeFormat"
       }
     },
+    "Intl.DateTimeFormat.prototype.resolvedOptions": {
+      "id": "Intl.DateTimeFormat.prototype.resolvedOptions",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions"
+      },
+      "webFeatureId": {
+        "featureId": "intl",
+        "compatKey": "javascript.builtins.Intl.DateTimeFormat.resolvedOptions"
+      }
+    },
     "Iterator": {
       "id": "Iterator",
       "type": "native",
@@ -3381,7 +3393,7 @@
     "os-locale": {
       "type": "module",
       "moduleName": "os-locale",
-      "replacements": ["Intl.DateTimeFormat"]
+      "replacements": ["Intl.DateTimeFormat.prototype.resolvedOptions"]
     },
     "os-tmpdir": {
       "type": "module",
