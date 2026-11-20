@@ -304,6 +304,12 @@
       "replacements": ["node:stream"],
       "url": {"type": "e18e", "id": "dev-null"}
     },
+    "devicons-react": {
+      "type": "module",
+      "moduleName": "devicons-react",
+      "replacements": ["@devicons-pack/react"],
+      "url": {"type": "e18e", "id": "devicons-react"}
+    },
     "dot-prop": {
       "type": "module",
       "moduleName": "dot-prop",
@@ -2957,6 +2963,11 @@
       "id": "@11ty/gray-matter",
       "type": "documented",
       "replacementModule": "@11ty/gray-matter"
+    },
+    "@devicons-pack/react": {
+      "id": "@devicons-pack/react",
+      "type": "documented",
+      "replacementModule": "@devicons-pack/react"
     },
     "@eslint-community/eslint-plugin-eslint-comments": {
       "id": "@eslint-community/eslint-plugin-eslint-comments",
