@@ -4,7 +4,7 @@ description: Modern alternatives to the recursive-readdir, fs-readdir-recursive 
 
 # Replacements for `recursive-readdir` / `fs-readdir-recursive` / `klaw-sync`
 
-Node.js can now list directories recursively on its own, so these packages are no longer needed
+**Motivation:** Node.js can now list directories recursively on its own, so these packages are no longer needed.
 
 ## Recursive `fs.readdir` (native, since Node.js v20.1.0 and v18.17.0)
 
@@ -14,7 +14,9 @@ Without `withFileTypes`, it returns paths relative to the directory you pass in,
 
 Results are not guaranteed to be in any particular order, so sort them if you rely on ordering.
 
-Symbolic links are returned as their own entries. If you only want regular files, filter with `dirent.isFile()` instead of `!dirent.isDirectory()`.
+Symlinked folders are handled differently. `recursive-readdir` and `fs-readdir-recursive` follow them, `klaw-sync` doesn't. With `withFileTypes: true`, `fs.promises.readdir` doesn't follow them, but `fs.readdirSync` does on Node.js v22 and later.
+
+Symbolic links are also returned as their own entries. If you only want regular files, filter with `dirent.isFile()` instead of `!dirent.isDirectory()`.
 
 Example migration from [`recursive-readdir`](https://github.com/jergason/recursive-readdir):
 
