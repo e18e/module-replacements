@@ -3003,6 +3003,11 @@
       "replacements": ["path.relative"],
       "url": {"type": "e18e", "id": "is-path-inside"}
     },
+    "is-url": {
+      "type": "module",
+      "moduleName": "is-url",
+      "replacements": ["URL.canParse"]
+    },
     "is-url-superb": {
       "type": "module",
       "moduleName": "is-url-superb",
