@@ -3610,6 +3610,11 @@
       "moduleName": "stream-shift",
       "replacements": ["Readable.read"]
     },
+    "stream-to-array": {
+      "type": "module",
+      "moduleName": "stream-to-array",
+      "replacements": ["Array.fromAsync"]
+    },
     "string.prototype.at": {
       "type": "module",
       "moduleName": "string.prototype.at",
