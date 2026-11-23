@@ -2154,6 +2154,15 @@
       "url": {"type": "node", "id": "api/stream.html#streamcomposestreams"},
       "nodeFeatureId": {"moduleName": "node:stream", "exportName": "compose"}
     },
+    "stream.pipeline": {
+      "id": "stream.pipeline",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:stream", "exportName": "pipeline"},
+      "url": {
+        "type": "node",
+        "id": "api/stream.html#streampipelinesource-transforms-destination-callback"
+      }
+    },
     "streamConsumers": {
       "id": "streamConsumers",
       "type": "native",
@@ -3508,6 +3517,11 @@
       "type": "module",
       "moduleName": "promish",
       "replacements": ["Promise"]
+    },
+    "pump": {
+      "type": "module",
+      "moduleName": "pump",
+      "replacements": ["stream.pipeline"]
     },
     "queue-microtask": {
       "type": "module",
