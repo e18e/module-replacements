@@ -2986,6 +2986,11 @@
       "moduleName": "is-finite",
       "replacements": ["Number.isFinite"]
     },
+    "is-integer": {
+      "type": "module",
+      "moduleName": "is-integer",
+      "replacements": ["Number.isInteger"]
+    },
     "is-nan": {
       "type": "module",
       "moduleName": "is-nan",
