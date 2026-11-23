@@ -2154,6 +2154,15 @@
       "url": {"type": "node", "id": "api/stream.html#streamcomposestreams"},
       "nodeFeatureId": {"moduleName": "node:stream", "exportName": "compose"}
     },
+    "stream.finished": {
+      "id": "stream.finished",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:stream", "exportName": "finished"},
+      "url": {
+        "type": "node",
+        "id": "api/stream.html#streamfinishedstream-options-callback"
+      }
+    },
     "streamConsumers": {
       "id": "streamConsumers",
       "type": "native",
@@ -2623,6 +2632,11 @@
       "type": "module",
       "moduleName": "encode-utf8",
       "replacements": ["TextEncoder.encode"]
+    },
+    "end-of-stream": {
+      "type": "module",
+      "moduleName": "end-of-stream",
+      "replacements": ["stream.finished"]
     },
     "ends-with": {
       "type": "module",
