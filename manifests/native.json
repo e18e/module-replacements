@@ -3710,6 +3710,11 @@
       "moduleName": "text-decoding",
       "replacements": ["TextDecoder"]
     },
+    "text-encoding": {
+      "type": "module",
+      "moduleName": "text-encoding",
+      "replacements": ["TextEncoder.encode", "TextDecoder"]
+    },
     "through2-map": {
       "type": "module",
       "moduleName": "through2-map",
