@@ -2175,6 +2175,21 @@
         "compatKey": "api.structuredClone"
       }
     },
+    "tty.WriteStream.prototype.getColorDepth": {
+      "id": "tty.WriteStream.prototype.getColorDepth",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:tty", "exportName": "WriteStream"},
+      "url": {"type": "node", "id": "api/tty.html#writestreamgetcolordepthenv"}
+    },
+    "tty.WriteStream.prototype.hasColors": {
+      "id": "tty.WriteStream.prototype.hasColors",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:tty", "exportName": "WriteStream"},
+      "url": {
+        "type": "node",
+        "id": "api/tty.html#writestreamhascolorscount-env"
+      }
+    },
     "util.inherits": {
       "id": "util.inherits",
       "type": "native",
@@ -2189,6 +2204,15 @@
       "type": "native",
       "url": {"type": "node", "id": "api/util.html#utilpromisifyoriginal"},
       "nodeFeatureId": {"moduleName": "util", "exportName": "promisify"}
+    },
+    "util.styleText": {
+      "id": "util.styleText",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:util", "exportName": "styleText"},
+      "url": {
+        "type": "node",
+        "id": "api/util.html#utilstyletextformat-text-options"
+      }
     },
     "zeptomatch": {
       "id": "zeptomatch",
@@ -3704,6 +3728,15 @@
       "type": "module",
       "moduleName": "string_decoder",
       "replacements": ["string_decoder"]
+    },
+    "supports-color": {
+      "type": "module",
+      "moduleName": "supports-color",
+      "replacements": [
+        "util.styleText",
+        "tty.WriteStream.prototype.hasColors",
+        "tty.WriteStream.prototype.getColorDepth"
+      ]
     },
     "symbol.prototype.description": {
       "type": "module",
