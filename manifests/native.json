@@ -2470,6 +2470,11 @@
       "moduleName": "auto-bind",
       "replacements": ["class_field_arrow_functions"]
     },
+    "base-64": {
+      "type": "module",
+      "moduleName": "base-64",
+      "replacements": ["btoa", "atob"]
+    },
     "big-integer": {
       "type": "module",
       "moduleName": "big-integer",
