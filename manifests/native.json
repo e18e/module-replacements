@@ -2966,6 +2966,11 @@
       "replacements": ["extends", "util.inherits"],
       "url": {"type": "e18e", "id": "inherits"}
     },
+    "into-stream": {
+      "type": "module",
+      "moduleName": "into-stream",
+      "replacements": ["Readable.from"]
+    },
     "is-arrayish": {
       "type": "module",
       "moduleName": "is-arrayish",
