@@ -153,7 +153,7 @@
     "snippet::deprecate": {
       "id": "snippet::deprecate",
       "type": "simple",
-      "description": "You can use `deprecate` from `node:util` in Node.js, Deno and Bun, which is what `util-deprecate` uses there. Its browser build calls `console.warn` once, on the first call, so a small wrapper can do the same.",
+      "description": "You can use `deprecate` from `node:util` in Node.js, Deno, and Bun. If you need browser support, call `console.warn` or throw errors manually.",
       "example": "import { deprecate } from 'node:util'\n\nconst oldFn = deprecate(fn, 'oldFn() is deprecated, use newFn()')\n\n// or in the browser, warn once on the first call\nconst deprecateInBrowser = (fn, msg) => {\n  let warned = false\n  return function (...args) {\n    if (!warned) {\n      console.warn(msg)\n      warned = true\n    }\n    return fn.apply(this, args)\n  }\n}"
     },
     "snippet::dns-equal": {
