@@ -2287,6 +2287,11 @@
       "moduleName": "array-every",
       "replacements": ["Array.prototype.every"]
     },
+    "array-find-index": {
+      "type": "module",
+      "moduleName": "array-find-index",
+      "replacements": ["Array.prototype.findIndex"]
+    },
     "array-from": {
       "type": "module",
       "moduleName": "array-from",
