@@ -3842,6 +3842,11 @@
       "moduleName": "url-parse",
       "replacements": ["URL"]
     },
+    "user-home": {
+      "type": "module",
+      "moduleName": "user-home",
+      "replacements": ["os.homedir"]
+    },
     "util.promisify": {
       "type": "module",
       "moduleName": "util.promisify",
