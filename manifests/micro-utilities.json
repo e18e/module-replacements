@@ -720,6 +720,12 @@
       "description": "You can use `String.prototype.replace` with a `/\\/+$/` regular expression to remove trailing slashes from a string.",
       "example": "const removeTrailingSlash = (str) => str.replace(/\\/+$/, '')"
     },
+    "snippet::run-once": {
+      "id": "snippet::run-once",
+      "type": "simple",
+      "description": "You can store the result the first time it is computed and return the stored value after that. Most code only needs this for one function, so a generic wrapper usually isn't needed.",
+      "example": "let value = null\nconst getExpensiveValue = () => {\n  if (value !== null) return value\n  value = computeExpensiveValue()\n  return value\n}"
+    },
     "snippet::set-function-length": {
       "id": "snippet::set-function-length",
       "type": "simple",
@@ -1584,6 +1590,11 @@
       "type": "module",
       "moduleName": "object.reduce",
       "replacements": ["snippet::object-reduce"]
+    },
+    "once": {
+      "type": "module",
+      "moduleName": "once",
+      "replacements": ["snippet::run-once"]
     },
     "p-each-series": {
       "type": "module",
