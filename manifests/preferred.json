@@ -2496,6 +2496,12 @@
       "replacements": ["typescript"],
       "url": {"type": "e18e", "id": "prop-types"}
     },
+    "protractor": {
+      "type": "module",
+      "moduleName": "protractor",
+      "replacements": ["@playwright/test", "webdriverio"],
+      "url": {"type": "e18e", "id": "protractor"}
+    },
     "q": {
       "type": "module",
       "moduleName": "q",
@@ -3014,6 +3020,11 @@
       "id": "@placemarkio/tokml",
       "type": "documented",
       "replacementModule": "@placemarkio/tokml"
+    },
+    "@playwright/test": {
+      "id": "@playwright/test",
+      "type": "documented",
+      "replacementModule": "@playwright/test"
     },
     "@rollup/plugin-babel": {
       "id": "@rollup/plugin-babel",
@@ -3952,6 +3963,11 @@
       "id": "vue-markdown-render",
       "type": "documented",
       "replacementModule": "vue-markdown-render"
+    },
+    "webdriverio": {
+      "id": "webdriverio",
+      "type": "documented",
+      "replacementModule": "webdriverio"
     },
     "webpack-bundle-analyzer": {
       "id": "webpack-bundle-analyzer",
