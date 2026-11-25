@@ -150,6 +150,12 @@
       "description": "You can iterate through `String.prototype.indexOf` to count how often a character or substring occurs in a string.",
       "example": "const countOccurrences = (str, substr) => {\n  let count = 0\n  let index = str.indexOf(substr)\n  while (index !== -1) {\n    count++\n    index = str.indexOf(substr, index + substr.length)\n  }\n  return count\n}"
     },
+    "snippet::deprecate": {
+      "id": "snippet::deprecate",
+      "type": "simple",
+      "description": "You can use `deprecate` from `node:util` in Node.js, Deno, and Bun. If you need browser support, call `console.warn` or throw errors manually.",
+      "example": "import { deprecate } from 'node:util'\n\nconst oldFn = deprecate(fn, 'oldFn() is deprecated, use newFn()')\n\n// or in the browser, warn once on the first call\nconst deprecateInBrowser = (fn, msg) => {\n  let warned = false\n  return function (...args) {\n    if (!warned) {\n      console.warn(msg)\n      warned = true\n    }\n    return fn.apply(this, args)\n  }\n}"
+    },
     "snippet::dns-equal": {
       "id": "snippet::dns-equal",
       "type": "simple",
@@ -1745,6 +1751,11 @@
       "type": "module",
       "moduleName": "util-arity",
       "replacements": ["snippet::set-function-length"]
+    },
+    "util-deprecate": {
+      "type": "module",
+      "moduleName": "util-deprecate",
+      "replacements": ["snippet::deprecate"]
     },
     "validate.io-function": {
       "type": "module",
