@@ -3444,6 +3444,11 @@
       "moduleName": "p-defer",
       "replacements": ["Promise.withResolvers"]
     },
+    "p-finally": {
+      "type": "module",
+      "moduleName": "p-finally",
+      "replacements": ["Promise.prototype.finally"]
+    },
     "p-map-series": {
       "type": "module",
       "moduleName": "p-map-series",
