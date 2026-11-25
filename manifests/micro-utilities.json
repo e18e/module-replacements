@@ -96,6 +96,12 @@
       "description": "You can use a `for...of` loop to pass a value through async functions one after another, awaiting each result.",
       "example": "const pipe = (...fns) => async (input) => {\n  let value = input;\n  for (const fn of fns) {\n    value = await fn(value);\n  }\n  return value;\n};"
     },
+    "snippet::async-reduce": {
+      "id": "snippet::async-reduce",
+      "type": "simple",
+      "description": "You can use a `for...of` loop with `await` to reduce the items one at a time, in order. Use `for await...of` if the items are promises.",
+      "example": "let acc = initial\nfor (const item of items) {\n  acc = await reducer(acc, item)\n}"
+    },
     "snippet::bail": {
       "id": "snippet::bail",
       "type": "simple",
@@ -1610,6 +1616,11 @@
       "type": "module",
       "moduleName": "p-pipe",
       "replacements": ["snippet::async-pipe"]
+    },
+    "p-reduce": {
+      "type": "module",
+      "moduleName": "p-reduce",
+      "replacements": ["snippet::async-reduce"]
     },
     "path-key": {
       "type": "module",
