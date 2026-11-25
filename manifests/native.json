@@ -2269,6 +2269,11 @@
       "moduleName": "array-every",
       "replacements": ["Array.prototype.every"]
     },
+    "array-from": {
+      "type": "module",
+      "moduleName": "array-from",
+      "replacements": ["Array.from"]
+    },
     "array-includes": {
       "type": "module",
       "moduleName": "array-includes",
