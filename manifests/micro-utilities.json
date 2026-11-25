@@ -1253,6 +1253,11 @@
       "moduleName": "is-primitive",
       "replacements": ["snippet::is-primitive"]
     },
+    "is-promise": {
+      "type": "module",
+      "moduleName": "is-promise",
+      "replacements": ["snippet::is-promise"]
+    },
     "is-property": {
       "type": "module",
       "moduleName": "is-property",

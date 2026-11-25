@@ -2154,6 +2154,24 @@
       "url": {"type": "node", "id": "api/stream.html#streamcomposestreams"},
       "nodeFeatureId": {"moduleName": "node:stream", "exportName": "compose"}
     },
+    "stream.finished": {
+      "id": "stream.finished",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:stream", "exportName": "finished"},
+      "url": {
+        "type": "node",
+        "id": "api/stream.html#streamfinishedstream-options-callback"
+      }
+    },
+    "stream.pipeline": {
+      "id": "stream.pipeline",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:stream", "exportName": "pipeline"},
+      "url": {
+        "type": "node",
+        "id": "api/stream.html#streampipelinesource-transforms-destination-callback"
+      }
+    },
     "streamConsumers": {
       "id": "streamConsumers",
       "type": "native",
@@ -2273,6 +2291,11 @@
       "type": "module",
       "moduleName": "array-find-index",
       "replacements": ["Array.prototype.findIndex"]
+    },
+    "array-from": {
+      "type": "module",
+      "moduleName": "array-from",
+      "replacements": ["Array.from"]
     },
     "array-includes": {
       "type": "module",
@@ -2628,6 +2651,11 @@
       "type": "module",
       "moduleName": "encode-utf8",
       "replacements": ["TextEncoder.encode"]
+    },
+    "end-of-stream": {
+      "type": "module",
+      "moduleName": "end-of-stream",
+      "replacements": ["stream.finished"]
     },
     "ends-with": {
       "type": "module",
@@ -2991,6 +3019,11 @@
       "moduleName": "is-finite",
       "replacements": ["Number.isFinite"]
     },
+    "is-integer": {
+      "type": "module",
+      "moduleName": "is-integer",
+      "replacements": ["Number.isInteger"]
+    },
     "is-nan": {
       "type": "module",
       "moduleName": "is-nan",
@@ -3309,6 +3342,11 @@
       "moduleName": "number-is-integer",
       "replacements": ["Number.isInteger"]
     },
+    "number-is-nan": {
+      "type": "module",
+      "moduleName": "number-is-nan",
+      "replacements": ["Number.isNaN"]
+    },
     "number.isfinite": {
       "type": "module",
       "moduleName": "number.isfinite",
@@ -3434,6 +3472,11 @@
       "moduleName": "p-defer",
       "replacements": ["Promise.withResolvers"]
     },
+    "p-finally": {
+      "type": "module",
+      "moduleName": "p-finally",
+      "replacements": ["Promise.prototype.finally"]
+    },
     "p-map-series": {
       "type": "module",
       "moduleName": "p-map-series",
@@ -3518,6 +3561,11 @@
       "type": "module",
       "moduleName": "promish",
       "replacements": ["Promise"]
+    },
+    "pump": {
+      "type": "module",
+      "moduleName": "pump",
+      "replacements": ["stream.pipeline"]
     },
     "queue-microtask": {
       "type": "module",
@@ -3826,6 +3874,11 @@
       "type": "module",
       "moduleName": "url-parse",
       "replacements": ["URL"]
+    },
+    "user-home": {
+      "type": "module",
+      "moduleName": "user-home",
+      "replacements": ["os.homedir"]
     },
     "util.promisify": {
       "type": "module",
