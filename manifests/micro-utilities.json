@@ -180,6 +180,12 @@
       "description": "You can use `Object.keys(obj).forEach` to iterate over the own enumerable properties of an object.",
       "example": "Object.keys(obj).forEach(key => {\n  const value = obj[key];\n  // do something\n});"
     },
+    "snippet::gcd": {
+      "id": "snippet::gcd",
+      "type": "simple",
+      "description": "You can compute the greatest common divisor of two integers with a small recursive `gcd` helper.",
+      "example": "const gcd = (a, b) => (b === 0 ? Math.abs(a) : gcd(b, a % b))"
+    },
     "snippet::get-iterator": {
       "id": "snippet::get-iterator",
       "type": "simple",
@@ -942,6 +948,11 @@
       "type": "module",
       "moduleName": "collapse-white-space",
       "replacements": ["snippet::collapse-whitespace"]
+    },
+    "compute-gcd": {
+      "type": "module",
+      "moduleName": "compute-gcd",
+      "replacements": ["snippet::gcd"]
     },
     "comver-to-semver": {
       "type": "module",
