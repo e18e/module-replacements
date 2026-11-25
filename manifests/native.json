@@ -3314,6 +3314,11 @@
       "moduleName": "number-is-integer",
       "replacements": ["Number.isInteger"]
     },
+    "number-is-nan": {
+      "type": "module",
+      "moduleName": "number-is-nan",
+      "replacements": ["Number.isNaN"]
+    },
     "number.isfinite": {
       "type": "module",
       "moduleName": "number.isfinite",
