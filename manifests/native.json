@@ -693,6 +693,15 @@
         "compatKey": "javascript.builtins.Date.now"
       }
     },
+    "EncodingAPI": {
+      "id": "EncodingAPI",
+      "type": "native",
+      "webFeatureId": {
+        "featureId": "text-encoding",
+        "compatKey": "api.TextEncoder"
+      },
+      "url": {"type": "mdn", "id": "Web/API/Encoding_API"}
+    },
     "Error": {
       "id": "Error",
       "type": "native",
@@ -3782,6 +3791,11 @@
       "type": "module",
       "moduleName": "text-decoding",
       "replacements": ["TextDecoder"]
+    },
+    "text-encoding": {
+      "type": "module",
+      "moduleName": "text-encoding",
+      "replacements": ["EncodingAPI"]
     },
     "through2-map": {
       "type": "module",
