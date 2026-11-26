@@ -156,6 +156,12 @@
       "description": "You can iterate through `String.prototype.indexOf` to count how often a character or substring occurs in a string.",
       "example": "const countOccurrences = (str, substr) => {\n  let count = 0\n  let index = str.indexOf(substr)\n  while (index !== -1) {\n    count++\n    index = str.indexOf(substr, index + substr.length)\n  }\n  return count\n}"
     },
+    "snippet::delay": {
+      "id": "snippet::delay",
+      "type": "simple",
+      "description": "You can use `setTimeout` from `node:timers/promises` in Node.js, Deno, and Bun. If you need browser support, wrap `setTimeout` in a promise.",
+      "example": "import { setTimeout as delay } from 'node:timers/promises'\n\nawait delay(1000)\n\n// or in the browser\nconst delayInBrowser = (ms) => new Promise((resolve) => setTimeout(resolve, ms))"
+    },
     "snippet::deprecate": {
       "id": "snippet::deprecate",
       "type": "simple",
@@ -997,6 +1003,11 @@
       "moduleName": "defined",
       "replacements": ["snippet::find-first-defined"]
     },
+    "delay": {
+      "type": "module",
+      "moduleName": "delay",
+      "replacements": ["snippet::delay"]
+    },
     "detect-node": {
       "type": "module",
       "moduleName": "detect-node",
@@ -1693,6 +1704,11 @@
       "type": "module",
       "moduleName": "slash",
       "replacements": ["snippet::unix-paths"]
+    },
+    "sleep-promise": {
+      "type": "module",
+      "moduleName": "sleep-promise",
+      "replacements": ["snippet::delay"]
     },
     "split-lines": {
       "type": "module",
