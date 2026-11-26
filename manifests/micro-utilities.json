@@ -618,6 +618,12 @@
       "description": "You can use `Array.prototype.reduce` to find the longest string in an array.",
       "example": "const longest = (arr) => arr.reduce((a, b) => (b.length > a.length ? b : a), arr[0])"
     },
+    "snippet::lowercase-first-character": {
+      "id": "snippet::lowercase-first-character",
+      "type": "simple",
+      "description": "You can lowercase the first character.",
+      "example": "string.charAt(0).toLowerCase() + string.slice(1)"
+    },
     "snippet::math-random": {
       "id": "snippet::math-random",
       "type": "simple",
@@ -1546,6 +1552,11 @@
       "type": "module",
       "moduleName": "longest",
       "replacements": ["snippet::longest"]
+    },
+    "lower-case-first": {
+      "type": "module",
+      "moduleName": "lower-case-first",
+      "replacements": ["snippet::lowercase-first-character"]
     },
     "lowercase-keys": {
       "type": "module",
