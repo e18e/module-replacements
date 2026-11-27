@@ -132,6 +132,12 @@
       "replacements": ["util.styleText", "picocolors", "ansis"],
       "url": {"type": "e18e", "id": "chalk"}
     },
+    "classnames": {
+      "type": "module",
+      "moduleName": "classnames",
+      "replacements": ["clsx"],
+      "url": {"type": "e18e", "id": "classnames"}
+    },
     "clean-webpack-plugin": {
       "type": "module",
       "moduleName": "clean-webpack-plugin",
@@ -352,6 +358,12 @@
       "replacements": ["eslint-plugin-import-x", "oxlint"],
       "url": {"type": "e18e", "id": "eslint-plugin-import"}
     },
+    "eslint-plugin-jsx-a11y": {
+      "type": "module",
+      "moduleName": "eslint-plugin-jsx-a11y",
+      "replacements": ["eslint-plugin-jsx-a11y-x", "oxlint"],
+      "url": {"type": "e18e", "id": "eslint-plugin-jsx-a11y"}
+    },
     "eslint-plugin-node": {
       "type": "module",
       "moduleName": "eslint-plugin-node",
@@ -423,6 +435,24 @@
       "moduleName": "feather-icons",
       "replacements": ["lucide"],
       "url": {"type": "e18e", "id": "feather"}
+    },
+    "feathers-hooks-common": {
+      "type": "module",
+      "moduleName": "feathers-hooks-common",
+      "replacements": ["feathers-utils"],
+      "url": {"type": "e18e", "id": "feathers-hooks-common"}
+    },
+    "fft-js": {
+      "type": "module",
+      "moduleName": "fft-js",
+      "replacements": ["fft.js"],
+      "url": {"type": "e18e", "id": "fftjs"}
+    },
+    "fftjs": {
+      "type": "module",
+      "moduleName": "fftjs",
+      "replacements": ["fft.js"],
+      "url": {"type": "e18e", "id": "fftjs"}
     },
     "find-cache-dir": {
       "type": "module",
@@ -560,11 +590,11 @@
       "replacements": ["empathic"],
       "url": {"type": "e18e", "id": "has-yarn"}
     },
-    "html-minifier": {
+    "html-webpack-plugin": {
       "type": "module",
-      "moduleName": "html-minifier",
-      "replacements": ["html-minifier-next"],
-      "url": {"type": "e18e", "id": "html-minifier"}
+      "moduleName": "html-webpack-plugin",
+      "replacements": ["webpack.output.html"],
+      "url": {"type": "e18e", "id": "html-webpack-plugin"}
     },
     "http-proxy": {
       "type": "module",
@@ -632,10 +662,16 @@
       "replacements": ["jsx-ast-utils-x"],
       "url": {"type": "e18e", "id": "jsx-ast-utils"}
     },
+    "jszip": {
+      "type": "module",
+      "moduleName": "jszip",
+      "replacements": ["fflate"],
+      "url": {"type": "e18e", "id": "jszip"}
+    },
     "lodash": {
       "type": "module",
       "moduleName": "lodash",
-      "replacements": ["lodash-underscore", "es-toolkit"],
+      "replacements": ["lodash-underscore", "es-toolkit", "remeda"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
     "lodash-amd": {
@@ -653,7 +689,7 @@
     "lodash-es": {
       "type": "module",
       "moduleName": "lodash-es",
-      "replacements": ["lodash-underscore", "es-toolkit"],
+      "replacements": ["lodash-underscore", "es-toolkit", "remeda"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
     "lodash-fp": {
@@ -2288,6 +2324,12 @@
       "replacements": ["lodash-underscore", "es-toolkit"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
+    "lru-cache": {
+      "type": "module",
+      "moduleName": "lru-cache",
+      "replacements": ["tiny-lru", "quick-lru"],
+      "url": {"type": "e18e", "id": "lru-cache"}
+    },
     "materialize-css": {
       "type": "module",
       "moduleName": "materialize-css",
@@ -2406,6 +2448,12 @@
       "replacements": ["empathic", "pkg-types"],
       "url": {"type": "e18e", "id": "find-up"}
     },
+    "pako": {
+      "type": "module",
+      "moduleName": "pako",
+      "replacements": ["fflate", "node:zlib", "CompressionStream"],
+      "url": {"type": "e18e", "id": "pako"}
+    },
     "path-exists": {
       "type": "module",
       "moduleName": "path-exists",
@@ -2447,6 +2495,18 @@
       "moduleName": "preferred-pm",
       "replacements": ["package-manager-detector"],
       "url": {"type": "e18e", "id": "detect-package-manager"}
+    },
+    "prop-types": {
+      "type": "module",
+      "moduleName": "prop-types",
+      "replacements": ["typescript"],
+      "url": {"type": "e18e", "id": "prop-types"}
+    },
+    "protractor": {
+      "type": "module",
+      "moduleName": "protractor",
+      "replacements": ["@playwright/test", "webdriverio"],
+      "url": {"type": "e18e", "id": "protractor"}
     },
     "q": {
       "type": "module",
@@ -2551,6 +2611,24 @@
       "moduleName": "rimraf",
       "replacements": ["fs.promises.rm", "fs.promises.rmdir", "premove"],
       "url": {"type": "e18e", "id": "rimraf"}
+    },
+    "rollup-plugin-babel": {
+      "type": "module",
+      "moduleName": "rollup-plugin-babel",
+      "replacements": ["@rollup/plugin-babel"],
+      "url": {"type": "e18e", "id": "rollup-plugin-babel"}
+    },
+    "rollup-plugin-commonjs": {
+      "type": "module",
+      "moduleName": "rollup-plugin-commonjs",
+      "replacements": ["@rollup/plugin-commonjs"],
+      "url": {"type": "e18e", "id": "rollup-plugin-commonjs"}
+    },
+    "rollup-plugin-node-resolve": {
+      "type": "module",
+      "moduleName": "rollup-plugin-node-resolve",
+      "replacements": ["@rollup/plugin-node-resolve"],
+      "url": {"type": "e18e", "id": "rollup-plugin-node-resolve"}
     },
     "rollup-plugin-terser": {
       "type": "module",
@@ -2787,7 +2865,7 @@
     "underscore": {
       "type": "module",
       "moduleName": "underscore",
-      "replacements": ["lodash-underscore", "es-toolkit"],
+      "replacements": ["lodash-underscore", "es-toolkit", "remeda"],
       "url": {"type": "e18e", "id": "lodash-underscore"}
     },
     "universal-deep-strict-equal": {
@@ -2949,6 +3027,26 @@
       "type": "documented",
       "replacementModule": "@placemarkio/tokml"
     },
+    "@playwright/test": {
+      "id": "@playwright/test",
+      "type": "documented",
+      "replacementModule": "@playwright/test"
+    },
+    "@rollup/plugin-babel": {
+      "id": "@rollup/plugin-babel",
+      "type": "documented",
+      "replacementModule": "@rollup/plugin-babel"
+    },
+    "@rollup/plugin-commonjs": {
+      "id": "@rollup/plugin-commonjs",
+      "type": "documented",
+      "replacementModule": "@rollup/plugin-commonjs"
+    },
+    "@rollup/plugin-node-resolve": {
+      "id": "@rollup/plugin-node-resolve",
+      "type": "documented",
+      "replacementModule": "@rollup/plugin-node-resolve"
+    },
     "@rollup/plugin-terser": {
       "id": "@rollup/plugin-terser",
       "type": "documented",
@@ -3048,6 +3146,15 @@
       },
       "url": {"type": "mdn", "id": "Web/API/Clipboard_API"}
     },
+    "CompressionStream": {
+      "id": "CompressionStream",
+      "type": "native",
+      "webFeatureId": {
+        "featureId": "compression-streams",
+        "compatKey": "api.CompressionStream"
+      },
+      "url": {"type": "mdn", "id": "Web/API/Compression_Streams_API"}
+    },
     "Date": {
       "id": "Date",
       "type": "native",
@@ -3132,11 +3239,7 @@
       "type": "documented",
       "replacementModule": "ansis"
     },
-    "auth": {
-      "id": "auth",
-      "type": "documented",
-      "replacementModule": "auth"
-    },
+    "auth": {"id": "auth", "type": "documented", "replacementModule": "auth"},
     "bcryptjs": {
       "id": "bcryptjs",
       "type": "documented",
@@ -3172,6 +3275,7 @@
       "type": "documented",
       "replacementModule": "cleye"
     },
+    "clsx": {"id": "clsx", "type": "documented", "replacementModule": "clsx"},
     "color": {
       "id": "color",
       "type": "documented",
@@ -3283,6 +3387,11 @@
       "type": "documented",
       "replacementModule": "eslint-plugin-import-x"
     },
+    "eslint-plugin-jsx-a11y-x": {
+      "id": "eslint-plugin-jsx-a11y-x",
+      "type": "documented",
+      "replacementModule": "eslint-plugin-jsx-a11y-x"
+    },
     "eslint-plugin-n": {
       "id": "eslint-plugin-n",
       "type": "documented",
@@ -3319,11 +3428,26 @@
       "replacementModule": "fast-wrap-ansi"
     },
     "fdir": {"id": "fdir", "type": "documented", "replacementModule": "fdir"},
+    "feathers-utils": {
+      "id": "feathers-utils",
+      "type": "documented",
+      "replacementModule": "feathers-utils"
+    },
     "fetch": {
       "id": "fetch",
       "type": "native",
       "webFeatureId": {"featureId": "fetch", "compatKey": "api.fetch"},
       "url": {"type": "mdn", "id": "Web/API/Fetch_API"}
+    },
+    "fflate": {
+      "id": "fflate",
+      "type": "documented",
+      "replacementModule": "fflate"
+    },
+    "fft.js": {
+      "id": "fft.js",
+      "type": "documented",
+      "replacementModule": "fft.js"
     },
     "find-proc": {
       "id": "find-proc",
@@ -3408,11 +3532,6 @@
     },
     "h3": {"id": "h3", "type": "documented", "replacementModule": "h3"},
     "hono": {"id": "hono", "type": "documented", "replacementModule": "hono"},
-    "html-minifier-next": {
-      "id": "html-minifier-next",
-      "type": "documented",
-      "replacementModule": "html-minifier-next"
-    },
     "http-proxy-3": {
       "id": "http-proxy-3",
       "type": "documented",
@@ -3557,6 +3676,12 @@
       "nodeFeatureId": {"moduleName": "test"},
       "url": {"type": "node", "id": "api/test.html"}
     },
+    "node:zlib": {
+      "id": "node:zlib",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:zlib"},
+      "url": {"type": "node", "id": "api/zlib.html"}
+    },
     "npm-check": {
       "id": "npm-check",
       "type": "removal",
@@ -3622,7 +3747,16 @@
     "process.loadEnvFile": {
       "id": "process.loadEnvFile",
       "type": "native",
+      "nodeFeatureId": {
+        "moduleName": "node:process",
+        "exportName": "loadEnvFile"
+      },
       "url": {"type": "node", "id": "api/process.html#processloadenvfilepath"}
+    },
+    "quick-lru": {
+      "id": "quick-lru",
+      "type": "documented",
+      "replacementModule": "quick-lru"
     },
     "react-helmet-async": {
       "id": "react-helmet-async",
@@ -3645,6 +3779,11 @@
         "type": "node",
         "id": "api/readline.html#readlinecreateinterfaceoptions"
       }
+    },
+    "remeda": {
+      "id": "remeda",
+      "type": "documented",
+      "replacementModule": "remeda"
     },
     "rollup-plugin-visualizer": {
       "id": "rollup-plugin-visualizer",
@@ -3691,15 +3830,16 @@
       },
       "url": {"type": "mdn", "id": "Web/API/Window/structuredClone"}
     },
-    "taze": {
-      "id": "taze",
-      "type": "documented",
-      "replacementModule": "taze"
-    },
+    "taze": {"id": "taze", "type": "documented", "replacementModule": "taze"},
     "tiny-invariant": {
       "id": "tiny-invariant",
       "type": "documented",
       "replacementModule": "tiny-invariant"
+    },
+    "tiny-lru": {
+      "id": "tiny-lru",
+      "type": "documented",
+      "replacementModule": "tiny-lru"
     },
     "tiny-open": {
       "id": "tiny-open",
@@ -3830,6 +3970,11 @@
       "type": "documented",
       "replacementModule": "vue-markdown-render"
     },
+    "webdriverio": {
+      "id": "webdriverio",
+      "type": "documented",
+      "replacementModule": "webdriverio"
+    },
     "webpack-bundle-analyzer": {
       "id": "webpack-bundle-analyzer",
       "type": "documented",
@@ -3842,6 +3987,11 @@
     },
     "webpack.output.clean": {
       "id": "webpack.output.clean",
+      "type": "documented",
+      "replacementModule": "webpack"
+    },
+    "webpack.output.html": {
+      "id": "webpack.output.html",
       "type": "documented",
       "replacementModule": "webpack"
     },

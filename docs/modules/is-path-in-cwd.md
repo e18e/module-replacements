@@ -8,6 +8,7 @@ description: Native alternatives to the is-path-in-cwd package for checking whet
 
 ```ts
 import path from 'node:path'
+import process from 'node:process'
 
 const isPathInside = (childPath, parentPath) => {
   const relation = path.relative(parentPath, childPath)

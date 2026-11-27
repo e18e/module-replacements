@@ -81,6 +81,15 @@
         "compatKey": "api.AbortController.AbortController"
       }
     },
+    "AbortSignal.timeout": {
+      "id": "AbortSignal.timeout",
+      "type": "native",
+      "url": {"type": "mdn", "id": "Web/API/AbortSignal/timeout_static"},
+      "webFeatureId": {
+        "featureId": "abortsignal-timeout",
+        "compatKey": "api.AbortSignal.timeout_static"
+      }
+    },
     "AggregateError": {
       "id": "AggregateError",
       "type": "native",
@@ -103,6 +112,18 @@
       "webFeatureId": {
         "featureId": "array-from",
         "compatKey": "javascript.builtins.Array.from"
+      }
+    },
+    "Array.fromAsync": {
+      "id": "Array.fromAsync",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Array/fromAsync"
+      },
+      "webFeatureId": {
+        "featureId": "array-fromasync",
+        "compatKey": "javascript.builtins.Array.fromAsync"
       }
     },
     "Array.isArray": {
@@ -723,6 +744,12 @@
       "url": {"type": "mdn", "id": "Web/API/EventTarget"},
       "webFeatureId": {"featureId": "events", "compatKey": "api.EventTarget"}
     },
+    "FormData": {
+      "id": "FormData",
+      "type": "native",
+      "url": {"type": "mdn", "id": "Web/API/FormData"},
+      "webFeatureId": {"featureId": "xhr", "compatKey": "api.FormData"}
+    },
     "Function.prototype.bind": {
       "id": "Function.prototype.bind",
       "type": "native",
@@ -757,6 +784,18 @@
       "webFeatureId": {
         "featureId": "intl",
         "compatKey": "javascript.builtins.Intl.DateTimeFormat.DateTimeFormat"
+      }
+    },
+    "Intl.DateTimeFormat.prototype.resolvedOptions": {
+      "id": "Intl.DateTimeFormat.prototype.resolvedOptions",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions"
+      },
+      "webFeatureId": {
+        "featureId": "intl",
+        "compatKey": "javascript.builtins.Intl.DateTimeFormat.resolvedOptions"
       }
     },
     "Iterator": {
@@ -1701,10 +1740,7 @@
     "await": {
       "id": "await",
       "type": "native",
-      "url": {
-        "type": "mdn",
-        "id": "Web/JavaScript/Reference/Operators/await"
-      },
+      "url": {"type": "mdn", "id": "Web/JavaScript/Reference/Operators/await"},
       "webFeatureId": {
         "featureId": "async-await",
         "compatKey": "javascript.operators.await"
@@ -2068,10 +2104,7 @@
         "type": "node",
         "id": "api/process.html#processnexttickcallback-args"
       },
-      "nodeFeatureId": {
-        "moduleName": "process",
-        "exportName": "nextTick"
-      }
+      "nodeFeatureId": {"moduleName": "process", "exportName": "nextTick"}
     },
     "queueMicrotask": {
       "id": "queueMicrotask",
@@ -2120,6 +2153,24 @@
       "type": "native",
       "url": {"type": "node", "id": "api/stream.html#streamcomposestreams"},
       "nodeFeatureId": {"moduleName": "node:stream", "exportName": "compose"}
+    },
+    "stream.finished": {
+      "id": "stream.finished",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:stream", "exportName": "finished"},
+      "url": {
+        "type": "node",
+        "id": "api/stream.html#streamfinishedstream-options-callback"
+      }
+    },
+    "stream.pipeline": {
+      "id": "stream.pipeline",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:stream", "exportName": "pipeline"},
+      "url": {
+        "type": "node",
+        "id": "api/stream.html#streampipelinesource-transforms-destination-callback"
+      }
     },
     "streamConsumers": {
       "id": "streamConsumers",
@@ -2190,11 +2241,7 @@
       "moduleName": "a-sync-waterfall",
       "replacements": ["await"]
     },
-    "abab": {
-      "type": "module",
-      "moduleName": "abab",
-      "replacements": ["atob"]
-    },
+    "abab": {"type": "module", "moduleName": "abab", "replacements": ["atob"]},
     "abort-controller": {
       "type": "module",
       "moduleName": "abort-controller",
@@ -2239,6 +2286,16 @@
       "type": "module",
       "moduleName": "array-every",
       "replacements": ["Array.prototype.every"]
+    },
+    "array-find-index": {
+      "type": "module",
+      "moduleName": "array-find-index",
+      "replacements": ["Array.prototype.findIndex"]
+    },
+    "array-from": {
+      "type": "module",
+      "moduleName": "array-from",
+      "replacements": ["Array.from"]
     },
     "array-includes": {
       "type": "module",
@@ -2441,6 +2498,11 @@
       "moduleName": "auto-bind",
       "replacements": ["class_field_arrow_functions"]
     },
+    "base-64": {
+      "type": "module",
+      "moduleName": "base-64",
+      "replacements": ["btoa", "atob"]
+    },
     "big-integer": {
       "type": "module",
       "moduleName": "big-integer",
@@ -2595,6 +2657,11 @@
       "moduleName": "encode-utf8",
       "replacements": ["TextEncoder.encode"]
     },
+    "end-of-stream": {
+      "type": "module",
+      "moduleName": "end-of-stream",
+      "replacements": ["stream.finished"]
+    },
     "ends-with": {
       "type": "module",
       "moduleName": "ends-with",
@@ -2715,6 +2782,11 @@
       "moduleName": "event-target-shim",
       "replacements": ["EventTarget"]
     },
+    "execall": {
+      "type": "module",
+      "moduleName": "execall",
+      "replacements": ["String.prototype.matchAll"]
+    },
     "extend-shallow": {
       "type": "module",
       "moduleName": "extend-shallow",
@@ -2755,6 +2827,12 @@
       "moduleName": "foreachasync",
       "replacements": ["for...of"]
     },
+    "form-data": {
+      "type": "module",
+      "moduleName": "form-data",
+      "replacements": ["FormData"],
+      "url": {"type": "e18e", "id": "form-data"}
+    },
     "from": {
       "type": "module",
       "moduleName": "from",
@@ -2774,6 +2852,11 @@
       "type": "module",
       "moduleName": "from2-string",
       "replacements": ["Readable.from"]
+    },
+    "fromentries": {
+      "type": "module",
+      "moduleName": "fromentries",
+      "replacements": ["Object.fromEntries"]
     },
     "fs-exists-sync": {
       "type": "module",
@@ -2921,6 +3004,11 @@
       "replacements": ["extends", "util.inherits"],
       "url": {"type": "e18e", "id": "inherits"}
     },
+    "into-stream": {
+      "type": "module",
+      "moduleName": "into-stream",
+      "replacements": ["Readable.from"]
+    },
     "is-arrayish": {
       "type": "module",
       "moduleName": "is-arrayish",
@@ -2941,6 +3029,11 @@
       "moduleName": "is-finite",
       "replacements": ["Number.isFinite"]
     },
+    "is-integer": {
+      "type": "module",
+      "moduleName": "is-integer",
+      "replacements": ["Number.isInteger"]
+    },
     "is-nan": {
       "type": "module",
       "moduleName": "is-nan",
@@ -2957,6 +3050,11 @@
       "moduleName": "is-path-inside",
       "replacements": ["path.relative"],
       "url": {"type": "e18e", "id": "is-path-inside"}
+    },
+    "is-url": {
+      "type": "module",
+      "moduleName": "is-url",
+      "replacements": ["URL.canParse"]
     },
     "is-url-superb": {
       "type": "module",
@@ -3009,11 +3107,7 @@
       "moduleName": "left-pad",
       "replacements": ["String.prototype.padStart"]
     },
-    "lie": {
-      "type": "module",
-      "moduleName": "lie",
-      "replacements": ["Promise"]
-    },
+    "lie": {"type": "module", "moduleName": "lie", "replacements": ["Promise"]},
     "lodash.at": {
       "type": "module",
       "moduleName": "lodash.at",
@@ -3228,6 +3322,11 @@
       "moduleName": "native-promise-only",
       "replacements": ["Promise"]
     },
+    "node-abort-controller": {
+      "type": "module",
+      "moduleName": "node-abort-controller",
+      "replacements": ["AbortController"]
+    },
     "node-domexception": {
       "type": "module",
       "moduleName": "node-domexception",
@@ -3252,6 +3351,11 @@
       "type": "module",
       "moduleName": "number-is-integer",
       "replacements": ["Number.isInteger"]
+    },
+    "number-is-nan": {
+      "type": "module",
+      "moduleName": "number-is-nan",
+      "replacements": ["Number.isNaN"]
     },
     "number.isfinite": {
       "type": "module",
@@ -3358,6 +3462,11 @@
       "moduleName": "os-homedir",
       "replacements": ["os.homedir"]
     },
+    "os-locale": {
+      "type": "module",
+      "moduleName": "os-locale",
+      "replacements": ["Intl.DateTimeFormat.prototype.resolvedOptions"]
+    },
     "os-tmpdir": {
       "type": "module",
       "moduleName": "os-tmpdir",
@@ -3373,6 +3482,16 @@
       "moduleName": "p-defer",
       "replacements": ["Promise.withResolvers"]
     },
+    "p-finally": {
+      "type": "module",
+      "moduleName": "p-finally",
+      "replacements": ["Promise.prototype.finally"]
+    },
+    "p-map-series": {
+      "type": "module",
+      "moduleName": "p-map-series",
+      "replacements": ["Array.fromAsync"]
+    },
     "p-try": {
       "type": "module",
       "moduleName": "p-try",
@@ -3382,6 +3501,11 @@
       "type": "module",
       "moduleName": "pad-left",
       "replacements": ["String.prototype.padStart"]
+    },
+    "pad-right": {
+      "type": "module",
+      "moduleName": "pad-right",
+      "replacements": ["String.prototype.padEnd"]
     },
     "parseint": {
       "type": "module",
@@ -3447,6 +3571,11 @@
       "type": "module",
       "moduleName": "promish",
       "replacements": ["Promise"]
+    },
+    "pump": {
+      "type": "module",
+      "moduleName": "pump",
+      "replacements": ["stream.pipeline"]
     },
     "queue-microtask": {
       "type": "module",
@@ -3543,6 +3672,11 @@
       "type": "module",
       "moduleName": "stream-shift",
       "replacements": ["Readable.read"]
+    },
+    "stream-to-array": {
+      "type": "module",
+      "moduleName": "stream-to-array",
+      "replacements": ["Array.fromAsync"]
     },
     "string.prototype.at": {
       "type": "module",
@@ -3659,6 +3793,11 @@
       "moduleName": "time-stamp",
       "replacements": ["Intl.DateTimeFormat"]
     },
+    "timeout-signal": {
+      "type": "module",
+      "moduleName": "timeout-signal",
+      "replacements": ["AbortSignal.timeout"]
+    },
     "timezone-support": {
       "type": "module",
       "moduleName": "timezone-support",
@@ -3679,6 +3818,11 @@
       "type": "module",
       "moduleName": "to-data-view",
       "replacements": ["DataView"]
+    },
+    "to-readable-stream": {
+      "type": "module",
+      "moduleName": "to-readable-stream",
+      "replacements": ["Readable.from"]
     },
     "trim": {
       "type": "module",
@@ -3746,15 +3890,30 @@
       "moduleName": "url-parse",
       "replacements": ["URL"]
     },
+    "user-home": {
+      "type": "module",
+      "moduleName": "user-home",
+      "replacements": ["os.homedir"]
+    },
     "util.promisify": {
       "type": "module",
       "moduleName": "util.promisify",
       "replacements": ["util.promisify"]
     },
+    "utils-merge": {
+      "type": "module",
+      "moduleName": "utils-merge",
+      "replacements": ["spread_syntax"]
+    },
     "validate.io-array": {
       "type": "module",
       "moduleName": "validate.io-array",
       "replacements": ["Array.isArray"]
+    },
+    "validate.io-integer": {
+      "type": "module",
+      "moduleName": "validate.io-integer",
+      "replacements": ["Number.isInteger"]
     },
     "w3c-hr-time": {
       "type": "module",

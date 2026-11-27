@@ -4,7 +4,7 @@ description: Modern alternatives to the tsc package for the TypeScript compiler
 
 # Replacements for `tsc`
 
-The npm package [`tsc`](https://github.com/basarat/tsc) is **not** the TypeScript compiler — it is a deprecated stub that prints _"This is not the tsc command you are looking for"_ when run.
+**Motivation:** The npm package [`tsc`](https://github.com/basarat/tsc) is **not** the TypeScript compiler — it is a deprecated stub that prints _"This is not the tsc command you are looking for"_ when run.
 
 ## `typescript`
 

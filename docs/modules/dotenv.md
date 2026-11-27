@@ -12,6 +12,7 @@ It throws if the file is missing. Defaults to `.env` in the current working dire
 
 ```ts
 import dotenv from 'dotenv' // [!code --]
+import process from 'node:process' // [!code ++]
 
 dotenv.config({ path: '.env' }) // [!code --]
 process.loadEnvFile('.env') // [!code ++]
