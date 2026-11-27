@@ -2642,6 +2642,12 @@
       "replacements": ["crypto.timingSafeEqual"],
       "url": {"type": "e18e", "id": "buffer-equal-constant-time"}
     },
+    "sanitize-html": {
+      "type": "module",
+      "moduleName": "sanitize-html",
+      "replacements": ["neosanitize"],
+      "url": {"type": "e18e", "id": "sanitize-html"}
+    },
     "scmp": {
       "type": "module",
       "moduleName": "scmp",
@@ -3640,6 +3646,11 @@
       "id": "neoqs",
       "type": "documented",
       "replacementModule": "neoqs"
+    },
+    "neosanitize": {
+      "id": "neosanitize",
+      "type": "documented",
+      "replacementModule": "neosanitize"
     },
     "neotraverse": {
       "id": "neotraverse",
