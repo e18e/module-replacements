@@ -234,6 +234,12 @@
       "description": "You can check if a character is an ASCII letter by using a case-insensitive `RegExp`.",
       "example": "const isAlphabetical = (char) => /^[a-z]$/i.test(char);"
     },
+    "snippet::is-alphanumerical": {
+      "id": "snippet::is-alphanumerical",
+      "type": "simple",
+      "description": "You can check if the first character of a string, or a character code, is ASCII alphanumerical by comparing its code against the `0`-`9`, `A`-`Z`, and `a`-`z` ranges.",
+      "example": "const isAlphanumerical = (character) => {\n  const code =\n    typeof character === 'string' ? character.charCodeAt(0) : character;\n  return (code >= 48 && code <= 57) ||\n    (code >= 65 && code <= 90) ||\n    (code >= 97 && code <= 122);\n};"
+    },
     "snippet::is-arguments": {
       "id": "snippet::is-arguments",
       "type": "simple",
@@ -1081,6 +1087,11 @@
       "type": "module",
       "moduleName": "is-alphabetical",
       "replacements": ["snippet::is-alphabetical"]
+    },
+    "is-alphanumerical": {
+      "type": "module",
+      "moduleName": "is-alphanumerical",
+      "replacements": ["snippet::is-alphanumerical"]
     },
     "is-arguments": {
       "type": "module",
