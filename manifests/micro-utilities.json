@@ -690,6 +690,12 @@
       "description": "You can use `Object.entries` and `Array.prototype.reduce`.",
       "example": "const objectReduce = (obj, fn, initial) => Object.entries(obj).reduce((acc, [k, v]) => fn(acc, k, v), initial);"
     },
+    "snippet::object-shallow-equal": {
+      "id": "snippet::object-shallow-equal",
+      "type": "simple",
+      "description": "You can compare the number of own keys and then use `Array.prototype.every` with `Object.hasOwn` to check each value with `===`.",
+      "example": "const shallowEqual = (a, b) =>\n  a === b ||\n  (typeof a === 'object' && a !== null && typeof b === 'object' && b !== null &&\n    Object.keys(a).length === Object.keys(b).length &&\n    Object.keys(a).every((key) => Object.hasOwn(b, key) && a[key] === b[key]))"
+    },
     "snippet::path-key": {
       "id": "snippet::path-key",
       "type": "simple",
@@ -1683,6 +1689,19 @@
       "type": "module",
       "moduleName": "set-function-name",
       "replacements": ["snippet::set-function-name"]
+    },
+    "shallow-equal": {
+      "type": "module",
+      "moduleName": "shallow-equal",
+      "replacements": [
+        "snippet::object-shallow-equal",
+        "snippet::array-shallow-equal"
+      ]
+    },
+    "shallowequal": {
+      "type": "module",
+      "moduleName": "shallowequal",
+      "replacements": ["snippet::object-shallow-equal"]
     },
     "shebang-regex": {
       "type": "module",
