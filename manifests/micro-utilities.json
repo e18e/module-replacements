@@ -612,6 +612,12 @@
       "description": "You can define a self-overwriting getter that computes the value on first access and then replaces itself with a plain data property using `Object.defineProperty`.",
       "example": "const obj = {\n  get prop() {\n    const value = computeExpensiveValue();\n    Object.defineProperty(this, 'prop', { value, writable: true, configurable: true, enumerable: true });\n    return value;\n  }\n};"
     },
+    "snippet::lcm": {
+      "id": "snippet::lcm",
+      "type": "simple",
+      "description": "You can compute the least common multiple of two or more integers with a small `lcm` helper that reduces over the values.",
+      "example": "const gcd = (a, b) => (b === 0 ? Math.abs(a) : gcd(b, a % b))\nconst lcm = (...values) => values.length < 2 ? null : values.reduce((a, b) => (a === 0 || b === 0 ? 0 : Math.abs((a / gcd(a, b)) * b)))"
+    },
     "snippet::longest": {
       "id": "snippet::longest",
       "type": "simple",
@@ -971,6 +977,11 @@
       "type": "module",
       "moduleName": "compute-gcd",
       "replacements": ["snippet::gcd"]
+    },
+    "compute-lcm": {
+      "type": "module",
+      "moduleName": "compute-lcm",
+      "replacements": ["snippet::lcm"]
     },
     "comver-to-semver": {
       "type": "module",
@@ -1636,13 +1647,19 @@
       "type": "module",
       "moduleName": "path-root",
       "replacements": ["snippet::path-root"],
-      "url": {"type": "e18e", "id": "path-root"}
+      "url": {
+        "type": "e18e",
+        "id": "path-root"
+      }
     },
     "path-root-regex": {
       "type": "module",
       "moduleName": "path-root-regex",
       "replacements": ["snippet::path-root"],
-      "url": {"type": "e18e", "id": "path-root"}
+      "url": {
+        "type": "e18e",
+        "id": "path-root"
+      }
     },
     "reduce-object": {
       "type": "module",
