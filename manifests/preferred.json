@@ -442,6 +442,18 @@
       "replacements": ["feathers-utils"],
       "url": {"type": "e18e", "id": "feathers-hooks-common"}
     },
+    "fft-js": {
+      "type": "module",
+      "moduleName": "fft-js",
+      "replacements": ["fft.js"],
+      "url": {"type": "e18e", "id": "fftjs"}
+    },
+    "fftjs": {
+      "type": "module",
+      "moduleName": "fftjs",
+      "replacements": ["fft.js"],
+      "url": {"type": "e18e", "id": "fftjs"}
+    },
     "find-cache-dir": {
       "type": "module",
       "moduleName": "find-cache-dir",
@@ -577,6 +589,12 @@
       "moduleName": "has-yarn",
       "replacements": ["empathic"],
       "url": {"type": "e18e", "id": "has-yarn"}
+    },
+    "html-webpack-plugin": {
+      "type": "module",
+      "moduleName": "html-webpack-plugin",
+      "replacements": ["webpack.output.html"],
+      "url": {"type": "e18e", "id": "html-webpack-plugin"}
     },
     "http-proxy": {
       "type": "module",
@@ -2478,6 +2496,18 @@
       "replacements": ["package-manager-detector"],
       "url": {"type": "e18e", "id": "detect-package-manager"}
     },
+    "prop-types": {
+      "type": "module",
+      "moduleName": "prop-types",
+      "replacements": ["typescript"],
+      "url": {"type": "e18e", "id": "prop-types"}
+    },
+    "protractor": {
+      "type": "module",
+      "moduleName": "protractor",
+      "replacements": ["@playwright/test", "webdriverio"],
+      "url": {"type": "e18e", "id": "protractor"}
+    },
     "q": {
       "type": "module",
       "moduleName": "q",
@@ -2997,6 +3027,11 @@
       "type": "documented",
       "replacementModule": "@placemarkio/tokml"
     },
+    "@playwright/test": {
+      "id": "@playwright/test",
+      "type": "documented",
+      "replacementModule": "@playwright/test"
+    },
     "@rollup/plugin-babel": {
       "id": "@rollup/plugin-babel",
       "type": "documented",
@@ -3408,6 +3443,11 @@
       "id": "fflate",
       "type": "documented",
       "replacementModule": "fflate"
+    },
+    "fft.js": {
+      "id": "fft.js",
+      "type": "documented",
+      "replacementModule": "fft.js"
     },
     "find-proc": {
       "id": "find-proc",
@@ -3930,6 +3970,11 @@
       "type": "documented",
       "replacementModule": "vue-markdown-render"
     },
+    "webdriverio": {
+      "id": "webdriverio",
+      "type": "documented",
+      "replacementModule": "webdriverio"
+    },
     "webpack-bundle-analyzer": {
       "id": "webpack-bundle-analyzer",
       "type": "documented",
@@ -3942,6 +3987,11 @@
     },
     "webpack.output.clean": {
       "id": "webpack.output.clean",
+      "type": "documented",
+      "replacementModule": "webpack"
+    },
+    "webpack.output.html": {
+      "id": "webpack.output.html",
       "type": "documented",
       "replacementModule": "webpack"
     },

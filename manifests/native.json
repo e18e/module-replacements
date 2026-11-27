@@ -81,6 +81,15 @@
         "compatKey": "api.AbortController.AbortController"
       }
     },
+    "AbortSignal.timeout": {
+      "id": "AbortSignal.timeout",
+      "type": "native",
+      "url": {"type": "mdn", "id": "Web/API/AbortSignal/timeout_static"},
+      "webFeatureId": {
+        "featureId": "abortsignal-timeout",
+        "compatKey": "api.AbortSignal.timeout_static"
+      }
+    },
     "AggregateError": {
       "id": "AggregateError",
       "type": "native",
@@ -103,6 +112,18 @@
       "webFeatureId": {
         "featureId": "array-from",
         "compatKey": "javascript.builtins.Array.from"
+      }
+    },
+    "Array.fromAsync": {
+      "id": "Array.fromAsync",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Array/fromAsync"
+      },
+      "webFeatureId": {
+        "featureId": "array-fromasync",
+        "compatKey": "javascript.builtins.Array.fromAsync"
       }
     },
     "Array.isArray": {
@@ -763,6 +784,18 @@
       "webFeatureId": {
         "featureId": "intl",
         "compatKey": "javascript.builtins.Intl.DateTimeFormat.DateTimeFormat"
+      }
+    },
+    "Intl.DateTimeFormat.prototype.resolvedOptions": {
+      "id": "Intl.DateTimeFormat.prototype.resolvedOptions",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions"
+      },
+      "webFeatureId": {
+        "featureId": "intl",
+        "compatKey": "javascript.builtins.Intl.DateTimeFormat.resolvedOptions"
       }
     },
     "Iterator": {
@@ -2121,6 +2154,24 @@
       "url": {"type": "node", "id": "api/stream.html#streamcomposestreams"},
       "nodeFeatureId": {"moduleName": "node:stream", "exportName": "compose"}
     },
+    "stream.finished": {
+      "id": "stream.finished",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:stream", "exportName": "finished"},
+      "url": {
+        "type": "node",
+        "id": "api/stream.html#streamfinishedstream-options-callback"
+      }
+    },
+    "stream.pipeline": {
+      "id": "stream.pipeline",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:stream", "exportName": "pipeline"},
+      "url": {
+        "type": "node",
+        "id": "api/stream.html#streampipelinesource-transforms-destination-callback"
+      }
+    },
     "streamConsumers": {
       "id": "streamConsumers",
       "type": "native",
@@ -2235,6 +2286,16 @@
       "type": "module",
       "moduleName": "array-every",
       "replacements": ["Array.prototype.every"]
+    },
+    "array-find-index": {
+      "type": "module",
+      "moduleName": "array-find-index",
+      "replacements": ["Array.prototype.findIndex"]
+    },
+    "array-from": {
+      "type": "module",
+      "moduleName": "array-from",
+      "replacements": ["Array.from"]
     },
     "array-includes": {
       "type": "module",
@@ -2437,6 +2498,11 @@
       "moduleName": "auto-bind",
       "replacements": ["class_field_arrow_functions"]
     },
+    "base-64": {
+      "type": "module",
+      "moduleName": "base-64",
+      "replacements": ["btoa", "atob"]
+    },
     "big-integer": {
       "type": "module",
       "moduleName": "big-integer",
@@ -2590,6 +2656,11 @@
       "type": "module",
       "moduleName": "encode-utf8",
       "replacements": ["TextEncoder.encode"]
+    },
+    "end-of-stream": {
+      "type": "module",
+      "moduleName": "end-of-stream",
+      "replacements": ["stream.finished"]
     },
     "ends-with": {
       "type": "module",
@@ -2933,6 +3004,11 @@
       "replacements": ["extends", "util.inherits"],
       "url": {"type": "e18e", "id": "inherits"}
     },
+    "into-stream": {
+      "type": "module",
+      "moduleName": "into-stream",
+      "replacements": ["Readable.from"]
+    },
     "is-arrayish": {
       "type": "module",
       "moduleName": "is-arrayish",
@@ -2953,6 +3029,11 @@
       "moduleName": "is-finite",
       "replacements": ["Number.isFinite"]
     },
+    "is-integer": {
+      "type": "module",
+      "moduleName": "is-integer",
+      "replacements": ["Number.isInteger"]
+    },
     "is-nan": {
       "type": "module",
       "moduleName": "is-nan",
@@ -2969,6 +3050,11 @@
       "moduleName": "is-path-inside",
       "replacements": ["path.relative"],
       "url": {"type": "e18e", "id": "is-path-inside"}
+    },
+    "is-url": {
+      "type": "module",
+      "moduleName": "is-url",
+      "replacements": ["URL.canParse"]
     },
     "is-url-superb": {
       "type": "module",
@@ -3236,6 +3322,11 @@
       "moduleName": "native-promise-only",
       "replacements": ["Promise"]
     },
+    "node-abort-controller": {
+      "type": "module",
+      "moduleName": "node-abort-controller",
+      "replacements": ["AbortController"]
+    },
     "node-domexception": {
       "type": "module",
       "moduleName": "node-domexception",
@@ -3260,6 +3351,11 @@
       "type": "module",
       "moduleName": "number-is-integer",
       "replacements": ["Number.isInteger"]
+    },
+    "number-is-nan": {
+      "type": "module",
+      "moduleName": "number-is-nan",
+      "replacements": ["Number.isNaN"]
     },
     "number.isfinite": {
       "type": "module",
@@ -3366,6 +3462,11 @@
       "moduleName": "os-homedir",
       "replacements": ["os.homedir"]
     },
+    "os-locale": {
+      "type": "module",
+      "moduleName": "os-locale",
+      "replacements": ["Intl.DateTimeFormat.prototype.resolvedOptions"]
+    },
     "os-tmpdir": {
       "type": "module",
       "moduleName": "os-tmpdir",
@@ -3380,6 +3481,16 @@
       "type": "module",
       "moduleName": "p-defer",
       "replacements": ["Promise.withResolvers"]
+    },
+    "p-finally": {
+      "type": "module",
+      "moduleName": "p-finally",
+      "replacements": ["Promise.prototype.finally"]
+    },
+    "p-map-series": {
+      "type": "module",
+      "moduleName": "p-map-series",
+      "replacements": ["Array.fromAsync"]
     },
     "p-try": {
       "type": "module",
@@ -3460,6 +3571,11 @@
       "type": "module",
       "moduleName": "promish",
       "replacements": ["Promise"]
+    },
+    "pump": {
+      "type": "module",
+      "moduleName": "pump",
+      "replacements": ["stream.pipeline"]
     },
     "queue-microtask": {
       "type": "module",
@@ -3556,6 +3672,11 @@
       "type": "module",
       "moduleName": "stream-shift",
       "replacements": ["Readable.read"]
+    },
+    "stream-to-array": {
+      "type": "module",
+      "moduleName": "stream-to-array",
+      "replacements": ["Array.fromAsync"]
     },
     "string.prototype.at": {
       "type": "module",
@@ -3672,6 +3793,11 @@
       "moduleName": "time-stamp",
       "replacements": ["Intl.DateTimeFormat"]
     },
+    "timeout-signal": {
+      "type": "module",
+      "moduleName": "timeout-signal",
+      "replacements": ["AbortSignal.timeout"]
+    },
     "timezone-support": {
       "type": "module",
       "moduleName": "timezone-support",
@@ -3692,6 +3818,11 @@
       "type": "module",
       "moduleName": "to-data-view",
       "replacements": ["DataView"]
+    },
+    "to-readable-stream": {
+      "type": "module",
+      "moduleName": "to-readable-stream",
+      "replacements": ["Readable.from"]
     },
     "trim": {
       "type": "module",
@@ -3758,6 +3889,11 @@
       "type": "module",
       "moduleName": "url-parse",
       "replacements": ["URL"]
+    },
+    "user-home": {
+      "type": "module",
+      "moduleName": "user-home",
+      "replacements": ["os.homedir"]
     },
     "util.promisify": {
       "type": "module",

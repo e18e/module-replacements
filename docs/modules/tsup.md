@@ -4,7 +4,7 @@ description: Modern alternative to tsup for bundling TypeScript libraries
 
 # Replacements for `tsup`
 
-The `tsup` README says the project is no longer actively maintained and recommends `tsdown` instead.
+**Motivation:** The `tsup` README says the project is no longer actively maintained and recommends `tsdown` instead.
 
 ## `tsdown`
 

@@ -4,7 +4,7 @@ description: Modern alternatives to the css-loader package
 
 # Replacements for `css-loader`
 
-`css-loader` is deprecated. webpack parses CSS itself, so the loader can be dropped from your config along with `style-loader` and `mini-css-extract-plugin`.
+**Motivation:** `css-loader` is deprecated. webpack parses CSS itself, so the loader can be dropped from your config along with `style-loader` and `mini-css-extract-plugin`.
 
 ## Built-in CSS support
 

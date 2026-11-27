@@ -4,7 +4,7 @@ description: Modern alternatives to the gray-matter package for parsing front ma
 
 # Replacements for `gray-matter`
 
-`gray-matter` has not been maintained since 2019 and carries known security issues, including eval-based JavaScript front matter (RCE) and an outdated `js-yaml` dependency with DoS vulnerabilities. [`@11ty/gray-matter`](https://github.com/11ty/gray-matter) is a maintained fork used by Eleventy v4 and Docusaurus.
+**Motivation:** `gray-matter` has not been maintained since 2019 and carries known security issues, including eval-based JavaScript front matter (RCE) and an outdated `js-yaml` dependency with DoS vulnerabilities. [`@11ty/gray-matter`](https://github.com/11ty/gray-matter) is a maintained fork used by Eleventy v4 and Docusaurus.
 
 ## `@11ty/gray-matter`
 

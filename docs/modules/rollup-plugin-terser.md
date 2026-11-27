@@ -4,7 +4,7 @@ description: Modern alternatives to the rollup-plugin-terser package for minifyi
 
 # Replacements for `rollup-plugin-terser`
 
-`rollup-plugin-terser` is deprecated and archived, and the Rollup team now maintains it as `@rollup/plugin-terser`.
+**Motivation:** `rollup-plugin-terser` is deprecated and archived, and the Rollup team now maintains it as `@rollup/plugin-terser`.
 
 ## `@rollup/plugin-terser`
 

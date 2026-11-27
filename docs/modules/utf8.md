@@ -4,7 +4,7 @@ description: Modern alternatives to the utf8 package for UTF-8 encoding and deco
 
 # Replacements for `utf8`
 
-Modern Node and browsers provide native UTF-8 APIs, so this dependency is rarely needed.
+**Motivation:** Modern Node and browsers provide native UTF-8 APIs, so this dependency is rarely needed.
 
 ## TextEncoder/TextDecoder (native)
 

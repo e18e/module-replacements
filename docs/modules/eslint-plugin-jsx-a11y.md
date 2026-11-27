@@ -4,7 +4,7 @@ description: Modern alternatives to eslint-plugin-jsx-a11y for accessibility lin
 
 # Replacements for `eslint-plugin-jsx-a11y`
 
-`eslint-plugin-jsx-a11y` still supports very old ESLint and Node versions, which pulls in far more dependencies than it needs.
+**Motivation:** `eslint-plugin-jsx-a11y` still supports very old ESLint and Node versions, which pulls in far more dependencies than it needs.
 
 ## `eslint-plugin-jsx-a11y-x`
 

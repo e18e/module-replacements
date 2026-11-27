@@ -4,7 +4,7 @@ description: Modern alternatives to the mockdate package for mocking time in tes
 
 # Replacements for `mockdate`
 
-`mockdate` is mainly used in tests, and modern test runners already include built-in APIs for mocking time without pulling in an extra dependency.
+**Motivation:** `mockdate` is mainly used in tests, and modern test runners already include built-in APIs for mocking time without pulling in an extra dependency.
 
 ## `vitest`
 

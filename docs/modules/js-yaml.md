@@ -4,7 +4,7 @@ description: Modern alternatives to js-yaml for YAML parsing and stringifying
 
 # Replacements for `js-yaml`
 
-The alternatives below can offer better spec compliance, smaller install sizes.
+**Motivation:** The alternatives below can offer better spec compliance, smaller install sizes.
 
 ## `yaml`
 
