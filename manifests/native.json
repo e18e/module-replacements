@@ -2178,6 +2178,15 @@
       "url": {"type": "node", "id": "api/webstreams.html#utility-consumers"},
       "nodeFeatureId": {"moduleName": "node:stream/consumers"}
     },
+    "streams": {
+      "id": "streams",
+      "type": "native",
+      "webFeatureId": {
+        "featureId": "streams",
+        "compatKey": "api.ReadableStream"
+      },
+      "url": {"type": "mdn", "id": "Web/API/Streams_API"}
+    },
     "string_decoder": {
       "id": "string_decoder",
       "type": "native",
@@ -3924,6 +3933,11 @@
       "type": "module",
       "moduleName": "weak-map",
       "replacements": ["WeakMap"]
+    },
+    "web-streams-polyfill": {
+      "type": "module",
+      "moduleName": "web-streams-polyfill",
+      "replacements": ["streams"]
     },
     "whatwg-url": {
       "type": "module",
