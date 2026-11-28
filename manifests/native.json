@@ -2236,6 +2236,11 @@
       "moduleName": "@babel/plugin-transform-object-rest-spread",
       "replacements": ["spread_syntax"]
     },
+    "@ungap/structured-clone": {
+      "type": "module",
+      "moduleName": "@ungap/structured-clone",
+      "replacements": ["structuredClone"]
+    },
     "a-sync-waterfall": {
       "type": "module",
       "moduleName": "a-sync-waterfall",
