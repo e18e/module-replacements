@@ -3317,6 +3317,11 @@
       "replacements": ["fs.promises.mkdir"],
       "url": {"type": "e18e", "id": "mkdirp"}
     },
+    "mz": {
+      "type": "module",
+      "moduleName": "mz",
+      "replacements": ["fs.promises"]
+    },
     "native-promise-only": {
       "type": "module",
       "moduleName": "native-promise-only",
@@ -3782,6 +3787,16 @@
       "type": "module",
       "moduleName": "text-decoding",
       "replacements": ["TextDecoder"]
+    },
+    "thenify": {
+      "type": "module",
+      "moduleName": "thenify",
+      "replacements": ["util.promisify"]
+    },
+    "thenify-all": {
+      "type": "module",
+      "moduleName": "thenify-all",
+      "replacements": ["util.promisify"]
     },
     "through2-map": {
       "type": "module",
