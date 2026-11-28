@@ -180,6 +180,12 @@
       "description": "You can use `Object.assign` to add a `code` and any other properties to an error.",
       "example": "const err = Object.assign(new Error('Not found'), { code: 'ENOENT', path })"
     },
+    "snippet::expand-home-path": {
+      "id": "snippet::expand-home-path",
+      "type": "simple",
+      "description": "You can use `os.homedir()` with `String.prototype.replace` to replace a leading `~` with the home directory.",
+      "example": "import { homedir } from 'node:os'\n\nconst untildify = (path) => path.replace(/^~(?=$|[/\\\\])/, homedir())"
+    },
     "snippet::find-first-defined": {
       "id": "snippet::find-first-defined",
       "type": "simple",
@@ -1763,6 +1769,11 @@
       "type": "module",
       "moduleName": "uniq",
       "replacements": ["snippet::array-unique"]
+    },
+    "untildify": {
+      "type": "module",
+      "moduleName": "untildify",
+      "replacements": ["snippet::expand-home-path"]
     },
     "upper-case-first": {
       "type": "module",
